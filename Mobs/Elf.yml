@@ -1,0 +1,17 @@
+Elf:
+  Type: ZOMBIE
+  Display: '&e&lエルフ'
+  Health: 21
+  Damage: 2
+  Disguise:
+    Type: Elf
+  Equipment:
+  - Iron_Sword:0
+  Options:
+    MovementSpeed: 0.3
+    FollowRange: 6
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    AttackSpeed: 0.35
+    Silent: true
+    PreventOtherDrops: true

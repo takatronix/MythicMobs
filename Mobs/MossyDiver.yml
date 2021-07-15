@@ -1,0 +1,23 @@
+MossyDiver:
+  Type: ZOMBIE
+  Display: '&f&lモスダイバー'
+  Health: 42
+  Damage: 5
+  Disguise:
+    Type: MossyDiver
+  Drops:
+  - MossyDiver_nautilus_shell 1 0.3
+  - exp 2 0.4
+  Equipment:
+  - nautilus_shell MAINHAND
+  Options:
+    MovementSpeed: 0.35
+    FollowRange: 16
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    AttackSpeed: 0.3
+    KnockbackResistance: 0.55
+    Silent: true
+    PreventOtherDrops: true
+  Skills:
+  - potion{t=DOLPHINS_GRACE;d=100000;p=false} @self ~onSpawn

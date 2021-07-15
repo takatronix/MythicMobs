@@ -1,0 +1,22 @@
+Mimic:
+  Type: HUSK
+  Display: '&6&lミミック'
+  Health: 32
+  Damage: 5
+  Equipment:
+  - Mimic_Head HEAD
+  Drops:
+  - Mimic_Paper 1 0.3
+  - exp 3 0.4
+  Options:
+    MovementSpeed: 0.47
+    FollowRange: 20
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    AttackSpeed: 0.35
+    KnockbackResistance: 0.5
+    Silent: true
+    PreventOtherDrops: true
+  Skills:
+  - sound{s=block.chest.close;p=0} ~onDeath
+  - sound{s=block.chest.locked;p=0;v=0.6} ~onDamaged

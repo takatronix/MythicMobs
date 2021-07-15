@@ -1,0 +1,19 @@
+gejigeji:
+  Type: SILVERFISH
+  Display: '&6&lゲジゲジ'
+  Health: 8
+  Damage: 3
+  Options:
+    Silent: true
+    PreventBlockInfection: true
+    FollowRange: 16
+    AttackSpeed: 0.2
+    MovementSpeed: 0.19
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    KnockbackResistance: 0.15
+    PreventOtherDrops: true
+  Drops:
+  - gejigeji_egg 1 0.24
+  - exp 1 0.4
+

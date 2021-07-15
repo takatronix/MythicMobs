@@ -1,0 +1,233 @@
+Man10_G:
+  Type: ZOMBIE
+  Display: '&aMan10'
+  Health: 20
+  Damage: 2
+  Equipment:
+  - LIME_WOOL HEAD
+  Drops:
+  - LIME_WOOL{display="&6◆ まんじゅう(緑)";lore="緑色のまんじゅう"} 1 0.3
+  Options:
+    MovementSpeed: 0.25
+    Despawn: false
+    ApplyInvisibility: true
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+  Skills:
+
+Man10_W:
+  Type: ZOMBIE
+  Display: '&fMan10'
+  Health: 25
+  Damage: 4
+  Equipment:
+  - WHITE_WOOL HEAD
+  Drops:
+  - WHITE_WOOL{display="&6◆ まんじゅう(白)";lore="白色のまんじゅう"} 1 0.3
+  Options:
+    MovementSpeed: 0.3
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    ApplyInvisibility: true
+    Despawn: false
+  Skills:
+  - mount{type=Man10_G} ~onSpawn
+
+Man10_P:
+  Type: ZOMBIE
+  Display: '&dMan10'
+  Health: 30
+  Damage: 5
+  Equipment:
+  - PINK_WOOL HEAD
+  Drops:
+  - PINK_WOOL{display="&6◆ まんじゅう(桃)";lore="ピンク色のまんじゅう"} 1 0.3
+  Options:
+    MovementSpeed: 0.4
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    ApplyInvisibility: true
+    Despawn: false
+  Skills:
+  - mount{type=Man10_W} ~onSpawn
+
+GreenBatMan:
+  Type: ZOMBIE
+  Display: '&a&l緑バットぶんぶん丸'
+  Health: 40
+  Damage: 5
+  Equipment:
+  - SteveHelm HEAD
+  - SteveChest CHEST
+  - SteveLegs LEGS
+  - SteveBoots FEET
+  - SteveBat HAND
+  Drops:
+  - LIME_DYE{display="&6◆ 緑の色素";lore="緑バットぶんぶん丸の防具から抽出された色素。"} 1 0.3
+  Options:
+    MovementSpeed: 0.3
+    Despawn: false
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+  Disguise:
+    Type: Steve
+
+FreezeZombie:
+  Type: ZOMBIE
+  Display: '&b&lれいとうゾンビ'
+  Health: 40
+  Damage: 5
+  Equipment:
+  - ICE HEAD
+  - FreezeChest CHEST
+  - FreezeLegs LEGS
+  - FreezeBoots FEET
+  - IRON_SWORD HAND
+  Drops:
+  - ICE{display="&6◆ つめたいこおり";lore="263Kの氷"} 1 0.3
+  Options:
+    MovementSpeed: 0.4
+    AlwaysShowName: true
+    Despawn: false
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+
+SnowMan1:
+  Type: HUSK
+  Display: '&b&lゆきだるま'
+  Health: 35
+  Damage: 5
+  Drops:
+  - SNOWBALL{display="&6◆ ゆきだま";lore="中に石が入ってる…"} 1 0.3
+  Skills:
+  - shoot{type=SNOWBALL;velocity=0.5;damage=6} @target ~onTimer:60
+  Options:
+    MovementSpeed: 0.2
+    AlwaysShowName: true
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+  Disguise:
+    Type: Snowman
+
+Slime1:
+  Type: SLIME
+  Display: '&a&lスライム'
+  Health: 30
+  Damage: 5
+  Drops:
+  - SLIME_BALL{display=&6◆ スライムの核";lore="最初の敵といえばスライムだよね！"} 1 0.3
+  Options:
+    MovementSpeed: 0.4
+    AlwaysShowName: true
+    PreventMobKillDrops: true
+    PreventSlimeSplit: true
+    PreventOtherDrops: true
+    Size: 2
+
+
+Spider1:
+  Type: SPIDER
+  Display: '&6&lくも'
+  Health: 25
+  Damage: 6
+  Drops:
+  - SPIDER_EYE{display=&6◆ くものめ";lore="普通のクモの目に比べて少し毒性が少ない"} 1 0.3
+  Options:
+    MovementSpeed: 0.3
+    AlwaysShowName: true
+    PreventSlimeSplit: true
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+
+KingSlime:
+  Type: SLIME
+  Display: '&2&lキングスライム'
+  Health: 100
+  Damage: 8
+  BossBar:
+    Enabled: true
+    Title: '&2&lキングスライム'
+    Range: 20
+    Color: GREEN
+    Style: SOLID
+  Options:
+    MovementSpeed: 0.4
+    PreventSlimeSplit: true
+    AlwaysShowName: true
+    Size: 5
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+  Skills:
+  - summon{type=KnightSlime;amount=2;r=0} @self ~onDeath 
+  - summon{type=KingSlime_2;amount=1;r=0} @self ~onDeath
+  - leap{velocity=100} @PIR{r=30} ~onTimer:40
+
+KnightSlime:
+  Type: SLIME
+  Display: '&2&lキングスライム'
+  Health: 50
+  Damage: 5
+  Options:
+    MovementSpeed: 0.4
+    PreventSlimeSplit: true
+    AlwaysShowName: true
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    Size: 3
+  Skills:
+  - potion{type=POISON;duration=200;level=2} @PIR{r=10} ~onDeath
+  - leap{velocity=100} @PIR{r=30} ~onTimer:40
+
+KingSlime_2:
+  Type: SLIME
+  Display: '&2&lキングスライム'
+  Health: 50
+  Damage: 5
+  BossBar:
+    Enabled: true
+    Title: '&2&lキングスライム'
+    Range: 20
+    Color: GREEN
+    Style: SOLID
+  Options:
+    MovementSpeed: 0.4
+    PreventSlimeSplit: true
+    AlwaysShowName: true
+    Size: 3
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+  Skills:
+  - summon{type=KingSlime_3;amout=1} @self ~onDeath
+  - leap{velocity=100} @PIR{r=30} ~onTimer:40
+
+KingSlime_3:
+  Type: ZOMBIE
+  Display: '&e&lシン&2&l・キングスライム'
+  Health: 80
+  Damage: 6
+  Options:
+    MovementSpeed: 0.5
+    AlwaysShowName: true
+    KnockbackResistance: 0.8
+    PreventMobKillDrops: true
+    FollowRange: 30
+    PreventOtherDrops: true
+  BossBar:
+    Enabled: true
+    Title: '&e&lシン&2&l・キングスライム'
+    Range: 20
+    Color: GREEN
+    Style: SOLID
+  Equipment:
+  - SLIME_BLOCK HEAD
+  - IRON_CHESTPLATE CHEST
+  - IRON_LEGGINGS LEGS
+  - IRON_BOOTS FEET
+  - NETHERITE_SWORD HAND
+  - IRON_SWORD OFFHAND
+  Skills:
+  - command{c="minecraft:give <trigger.name> slime_block{display:{Name:'[{"text":" ","italic":false},{"text":"◆","color":"gold"},{"text":"キングスライムの","color":"dark_green"},{"text":"核","color":"yellow"}]',Lore:['[{"text":"シン・キングスライムの頭についていた核","italic":false}]','[{"text":"ねちょねちょしている","italic":false}]']},Enchantments:[{id:unbreaking,lvl:1}],HideFlags:1} 1"} @Trigger ~onDeath
+  - command{c="dm end <trigger.name> pve1"} @Trigger ~onDeath
+  - command{c="lp user <target.name> permission set pve.1"} @PIR{r=10} ~onDeath
+  - remove @MIR{r=20;t=KnightSlime} ~onDeath
+

@@ -1,0 +1,25 @@
+PvE1FlowerZombie4:
+  MobName: FlowerZombie
+  World: pve
+  X: 29
+  Y: 32
+  Z: 1
+  Radius: 0
+  UseTimer: true
+  MaxMobs: '1'
+  MobLevel: '1'
+  MobsPerSpawn: 1
+  Cooldown: 6
+  CooldownTimer: 0
+  Warmup: 4
+  WarmupTimer: 0
+  CheckForPlayers: true
+  ActivationRange: 40
+  ScalingRange: 25.0
+  LeashRange: 16
+  HealOnLeash: false
+  ResetThreatOnLeash: false
+  ShowFlames: false
+  Breakable: false
+  Conditions: []
+  ActiveMobs: 0

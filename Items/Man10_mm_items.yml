@@ -1,0 +1,55 @@
+SteveBat:
+  Id: IRON_SWORD
+  Model: 6
+  Enchantments:
+  - DURABILITY:3
+
+
+SteveHelm:
+  Id: leather_helmet
+  Enchantments:
+  - DURABILITY:3
+  Options:
+    Color: 0,255,8
+
+SteveChest:
+  Id: leather_chestplate
+  Enchantments:
+  - DURABILITY:3
+  Options:
+    Color: 0,255,8
+
+SteveLegs:
+  Id: leather_leggings
+  Enchantments:
+  - DURABILITY:3
+  Options:
+    Color: 0,255,8
+
+SteveBoots:
+  Id: leather_boots
+  Enchantments:
+  - DURABILITY:3
+  Options:
+    Color: 0,255,8
+
+FreezeChest:
+  Id: leather_chestplate
+  Enchantments:
+  - DURABILITY:3
+  Options:
+    Color: 0,251,255
+
+FreezeLegs:
+  Id: leather_leggings
+  Enchantments:
+  - DURABILITY:3
+  Options:
+    Color: 0,251,255
+
+FreezeBoots:
+  Id: leather_boots
+  Enchantments:
+  - DURABILITY:3
+  Options:
+    Color: 0,251,255

@@ -1,0 +1,36 @@
+Megalodon:
+  Type: GUARDIAN
+  Display: '&f&lメガロドン'
+  Health: 50
+  Damage: 6
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  Drops:
+  - Megalodon_Fin 1 0.28
+  - exp 3 0.4
+  Disguise:
+    Type: DROWNED
+  Equipment:
+  - Shark_Head HEAD
+  Options:
+    MovementSpeed: 0.2
+    FollowRange: 16
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    AttackSpeed: 0.3
+    KnockbackResistance: 0.55
+    Silent: true
+    PreventOtherDrops: true
+  Skills:
+  - potion{t=INVISIBILITY;d=100000;p=false} @self ~onSpawn
+  - potion{t=DOLPHINS_GRACE;d=100000;p=false} @self ~onSpawn
+  - sound{s=entity.strider.eat;p=0.4} ~onAttack
+  - sound{s=entity.fox.bite;p=0.3} ~onAttack
+  - sound{s=entity.hoglin.converted_to_zombified;p=0.6} ~onDeath
+  - sound{s=entity.zoglin.hurt;p=1.4} ~onDamaged

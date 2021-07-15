@@ -1,0 +1,20 @@
+MossyGolem:
+  Type: HOGLIN
+  Display: '&f&lモスゴーレム'
+  Health: 46
+  Damage: 4
+  Disguise:
+    Type: MossyGolem
+  Drops:
+  - MossyGolem_green_dye 1 0.3
+  - exp 2 0.4
+  Equipment:
+  Options:
+    MovementSpeed: 0.2
+    FollowRange: 16
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    AttackSpeed: 0.1
+    KnockbackResistance: 0.65
+    Silent: true
+    PreventOtherDrops: true

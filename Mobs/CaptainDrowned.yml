@@ -1,0 +1,23 @@
+CaptainDrowned:
+  Type: ZOMBIE
+  Display: '&f&lキャプテン・ドラウンド'
+  Health: 54
+  Damage: 6
+  Disguise:
+    Type: CaptainDrowned
+  Drops:
+  - exp 2 0.4
+  Equipment:
+  - Parrot_Shoulder HEAD
+  - Pirate_Sword MAINHAND
+  - Golden_Chest OFFHAND
+  Options:
+    MovementSpeed: 0.3
+    FollowRange: 16
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    AttackSpeed: 0.3
+    KnockbackResistance: 0.45
+    Silent: true
+    PreventOtherDrops: true
+  Skills:

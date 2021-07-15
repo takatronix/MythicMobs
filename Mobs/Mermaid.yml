@@ -1,0 +1,23 @@
+Mermaid:
+  Type: GUARDIAN
+  Display: '&f&lマーメイド'
+  Health: 36
+  Damage: 4
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  Disguise:
+    Type: Mermaid
+  Options:
+    FollowRange: 16
+    Silent: true
+    AttackSpeed: 0.3
+    MovementSpeed: 0.37
+    PreventOtherDrops: true
+  Skills:
+  - potion{t=DOLPHINS_GRACE;d=100000;p=false} @self ~onSpawn

@@ -1,0 +1,25 @@
+PvE1gejigeji1:
+  MobName: gejigeji
+  World: pve
+  X: 24
+  Y: 19
+  Z: -1
+  Radius: 0
+  UseTimer: true
+  MaxMobs: '1'
+  MobLevel: '1'
+  MobsPerSpawn: 1
+  Cooldown: 6
+  CooldownTimer: 0
+  Warmup: 6
+  WarmupTimer: 0
+  CheckForPlayers: true
+  ActivationRange: 40
+  ScalingRange: 25.0
+  LeashRange: 16
+  HealOnLeash: false
+  ResetThreatOnLeash: false
+  ShowFlames: false
+  Breakable: false
+  Conditions: []
+  ActiveMobs: 0

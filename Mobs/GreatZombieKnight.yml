@@ -1,0 +1,24 @@
+GreatZombieKnight:
+  Type: ZOMBIE
+  Display: '&6&lグレートゾンビナイト'
+  Health: 45
+  Damage: 4
+  Disguise: GreatZombieKnight
+  Drops:
+  - GreatZombieKnight_iron_nugget 1 0.3
+  - exp 4 1
+  Equipment:
+  - ZombieKnight_Head HEAD
+  - IRON_CHESTPLATE CHEST
+  - GreatZombieKnight_Sword MAINHAND
+  Options:
+    MovementSpeed: 0.25
+    FollowRange: 20
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    AttackSpeed: 0.15
+    KnockbackResistance: 0.8
+    Silent: false
+    PreventOtherDrops: true
+  Skills:
+  - sound{s=entity.player.attack.sweep;p=0.7} ~onAttack

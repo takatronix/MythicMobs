@@ -1,0 +1,21 @@
+SkullArmy:
+  Type: Skeleton
+  Display: '&6&lがいこつへい'
+  Health: 28
+  Damage: 4
+  Equipment:
+  - SkullArmy_Head:4
+  - SkullArmy_Bow:0
+  Drops:
+  - SkullArmy_Bone 1 0.3
+  - exp 3 0.4
+  Options:
+    Silent: false
+    AlwaysShowName: true
+    PreventSunburn: true
+    FollowRange: 24
+    AttackSpeed: 0.25
+    KnockbackResistance: 1
+    PreventRandomEquipment: true
+    PreventOtherDrops: true
+    MovementSpeed: 0.001
