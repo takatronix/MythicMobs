@@ -8,6 +8,8 @@ FlowerZombie:
   Drops:
   - FlowerZombie_azure_bluet 1 0.3
   - exp 2 0.4
+  Disguise:
+    Type: FlowerZombie
   Options:
     MovementSpeed: 0.3
     FollowRange: 16
