@@ -1,7 +1,7 @@
 Elf:
   Type: ZOMBIE
   Display: '&e&lエルフ'
-  Health: 21
+  Health: 25
   Damage: 2
   Disguise:
     Type: Elf
