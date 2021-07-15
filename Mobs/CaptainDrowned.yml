@@ -17,7 +17,7 @@ CaptainDrowned:
     PreventRandomEquipment: true
     PreventSunburn: true
     AttackSpeed: 0.3
-    KnockbackResistance: 0.45
+    KnockbackResistance: 0.55
     Silent: true
     PreventOtherDrops: true
   Skills:
