@@ -8,7 +8,7 @@ Man10_G:
   Drops:
   - LIME_WOOL{display="&6◆ まんじゅう(緑)";lore="緑色のまんじゅう"} 1 0.3
   Options:
-    MovementSpeed: 0.25
+    MovementSpeed: 0.2
     Despawn: false
     ApplyInvisibility: true
     PreventMobKillDrops: true
@@ -25,7 +25,7 @@ Man10_W:
   Drops:
   - WHITE_WOOL{display="&6◆ まんじゅう(白)";lore="白色のまんじゅう"} 1 0.3
   Options:
-    MovementSpeed: 0.3
+    MovementSpeed: 0.25
     PreventMobKillDrops: true
     PreventOtherDrops: true
     ApplyInvisibility: true
@@ -43,7 +43,7 @@ Man10_P:
   Drops:
   - PINK_WOOL{display="&6◆ まんじゅう(桃)";lore="ピンク色のまんじゅう"} 1 0.3
   Options:
-    MovementSpeed: 0.4
+    MovementSpeed: 0.3
     PreventMobKillDrops: true
     PreventOtherDrops: true
     ApplyInvisibility: true
@@ -65,7 +65,7 @@ GreenBatMan:
   Drops:
   - LIME_DYE{display="&6◆ 緑の色素";lore="緑バットぶんぶん丸の防具から抽出された色素。"} 1 0.3
   Options:
-    MovementSpeed: 0.3
+    MovementSpeed: 0.25
     Despawn: false
     PreventMobKillDrops: true
     PreventOtherDrops: true
@@ -86,7 +86,7 @@ FreezeZombie:
   Drops:
   - ICE{display="&6◆ つめたいこおり";lore="263Kの氷"} 1 0.3
   Options:
-    MovementSpeed: 0.4
+    MovementSpeed: 0.3
     AlwaysShowName: true
     Despawn: false
     PreventMobKillDrops: true
@@ -133,7 +133,7 @@ Spider1:
   Drops:
   - SPIDER_EYE{display=&6◆ くものめ";lore="普通のクモの目に比べて少し毒性が少ない"} 1 0.3
   Options:
-    MovementSpeed: 0.3
+    MovementSpeed: 0.25
     AlwaysShowName: true
     PreventSlimeSplit: true
     PreventMobKillDrops: true
