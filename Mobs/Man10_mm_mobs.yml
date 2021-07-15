@@ -1,7 +1,7 @@
 Man10_G:
   Type: ZOMBIE
   Display: '&aMan10'
-  Health: 20
+  Health: 15
   Damage: 2
   Equipment:
   - LIME_WOOL HEAD
@@ -18,8 +18,8 @@ Man10_G:
 Man10_W:
   Type: ZOMBIE
   Display: '&fMan10'
-  Health: 25
-  Damage: 4
+  Health: 20
+  Damage: 3
   Equipment:
   - WHITE_WOOL HEAD
   Drops:
@@ -36,8 +36,8 @@ Man10_W:
 Man10_P:
   Type: ZOMBIE
   Display: '&dMan10'
-  Health: 30
-  Damage: 5
+  Health: 25
+  Damage: 4
   Equipment:
   - PINK_WOOL HEAD
   Drops:
@@ -54,8 +54,8 @@ Man10_P:
 GreenBatMan:
   Type: ZOMBIE
   Display: '&a&l緑バットぶんぶん丸'
-  Health: 40
-  Damage: 5
+  Health: 30
+  Damage: 2
   Equipment:
   - SteveHelm HEAD
   - SteveChest CHEST
@@ -75,8 +75,8 @@ GreenBatMan:
 FreezeZombie:
   Type: ZOMBIE
   Display: '&b&lれいとうゾンビ'
-  Health: 40
-  Damage: 5
+  Health: 30
+  Damage: 2
   Equipment:
   - ICE HEAD
   - FreezeChest CHEST
@@ -95,12 +95,12 @@ FreezeZombie:
 SnowMan1:
   Type: HUSK
   Display: '&b&lゆきだるま'
-  Health: 35
+  Health: 25
   Damage: 5
   Drops:
   - SNOWBALL{display="&6◆ ゆきだま";lore="中に石が入ってる…"} 1 0.3
   Skills:
-  - shoot{type=SNOWBALL;velocity=0.5;damage=6} @target ~onTimer:60
+  - shoot{type=SNOWBALL;velocity=0.5;damage=4} @target ~onTimer:60
   Options:
     MovementSpeed: 0.2
     AlwaysShowName: true
@@ -112,8 +112,8 @@ SnowMan1:
 Slime1:
   Type: SLIME
   Display: '&a&lスライム'
-  Health: 30
-  Damage: 5
+  Health: 20
+  Damage: 3
   Drops:
   - SLIME_BALL{display=&6◆ スライムの核";lore="最初の敵といえばスライムだよね！"} 1 0.3
   Options:
@@ -128,8 +128,8 @@ Slime1:
 Spider1:
   Type: SPIDER
   Display: '&6&lくも'
-  Health: 25
-  Damage: 6
+  Health: 20
+  Damage: 3
   Drops:
   - SPIDER_EYE{display=&6◆ くものめ";lore="普通のクモの目に比べて少し毒性が少ない"} 1 0.3
   Options:
