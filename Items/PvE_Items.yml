@@ -11,8 +11,8 @@ Mimic_Head:
   Model: 649
 
 Shark_Head:
-  Id: IRON_HOE
-  Model: 539
+  Id: DIAMOND_HOE
+  Model: 2
 
 ZombieKnight_Head:
   Id: player_head
@@ -21,20 +21,20 @@ ZombieKnight_Head:
     SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWNjMzcwMjdlNTZmYWJkZDA0YmQzNTc0ZmUwZjQxM2JjMTY1Y2RmOWY4ZGY5NmFiZjdmYzA1M2E3ZDJlOTZjYiJ9fX0=
 
 NightHawk_Head:
-  Id: IRON_HOE
-  Model: 366
+  Id: DIAMOND_HOE
+  Model: 1
 
 Emoji_Head1:
-  Id: IRON_HOE
-  Model: 26
+  Id: WOODEN_HOE
+  Model: 1
 
 Emoji_Head2:
-  Id: IRON_HOE
-  Model: 673
+  Id: WOODEN_HOE
+  Model: 2
 
 GreatZombieKnight_Sword:
   Id: iron_sword
-  Model: 12
+  Model: 1
 
 SkullArmy_Bow:
   Id: Bow
@@ -54,6 +54,21 @@ Pirate_Sword:
   Id: IRON_HOE
   Model: 754
 
+#---PvE0 Drops---
+
+emojikun_red_dye:
+  Id: red_dye
+  Display: '&d◆&f◆&a◆ &r仮面のカケラ'
+  Amount: 1
+  Lore:
+  - '&fえもじくんの仮面からはがれたもの。'
+
+NightHawk_feather:
+  Id: feather
+  Display: '&d◆&f◆&a◆ &rナイトホークの羽根'
+  Amount: 1
+  Lore:
+  - '&fナイトホークから落ちた羽根。'
 
 #---PvE1 Drops---
 
@@ -130,20 +145,6 @@ MossyGolem_green_dye:
   Amount: 1
   Lore:
   - '&fモスゴーレムに付いていたコケ。'
-
-emojikun_red_dye:
-  Id: red_dye
-  Display: '&d◆&f◆&a◆ &r仮面のカケラ'
-  Amount: 1
-  Lore:
-  - '&fえもじくんの仮面からはがれたもの。'
-
-NightHawk_feather:
-  Id: feather
-  Display: '&d◆&f◆&a◆ &rナイトホークの羽根'
-  Amount: 1
-  Lore:
-  - '&fナイトホークから落ちた羽根。'
 
 CaptainDrowned_book:
   Id: book
