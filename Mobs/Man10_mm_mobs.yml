@@ -6,7 +6,7 @@ Man10_G:
   Equipment:
   - LIME_WOOL HEAD
   Drops:
-  - LIME_WOOL{display="&6◆ まんじゅう(緑)";lore="緑色のまんじゅう"} 1 0.3
+  - LIME_WOOL{display="&d◆&f◆&a◆ まんじゅう(緑)";lore="緑色のまんじゅう"} 1 0.3
   Options:
     MovementSpeed: 0.2
     Despawn: false
@@ -23,7 +23,7 @@ Man10_W:
   Equipment:
   - WHITE_WOOL HEAD
   Drops:
-  - WHITE_WOOL{display="&6◆ まんじゅう(白)";lore="白色のまんじゅう"} 1 0.3
+  - WHITE_WOOL{display="&d◆&f◆&a◆ &fまんじゅう(白)";lore="白色のまんじゅう"} 1 0.3
   Options:
     MovementSpeed: 0.25
     PreventMobKillDrops: true
@@ -41,7 +41,7 @@ Man10_P:
   Equipment:
   - PINK_WOOL HEAD
   Drops:
-  - PINK_WOOL{display="&6◆ まんじゅう(桃)";lore="ピンク色のまんじゅう"} 1 0.3
+  - PINK_WOOL{display="&d◆&f◆&a◆ &dまんじゅう(桃)";lore="ピンク色のまんじゅう"} 1 0.3
   Options:
     MovementSpeed: 0.3
     PreventMobKillDrops: true
@@ -63,7 +63,7 @@ GreenBatMan:
   - SteveBoots FEET
   - SteveBat HAND
   Drops:
-  - LIME_DYE{display="&6◆ 緑の色素";lore="緑バットぶんぶん丸の防具から抽出された色素。"} 1 0.3
+  - LIME_DYE{display="&d◆&f◆&a◆ &a緑の色素";lore="緑バットぶんぶん丸の防具から抽出された色素。"} 1 0.3
   Options:
     MovementSpeed: 0.25
     Despawn: false
@@ -84,7 +84,7 @@ FreezeZombie:
   - FreezeBoots FEET
   - IRON_SWORD HAND
   Drops:
-  - ICE{display="&6◆ つめたいこおり";lore="263Kの氷"} 1 0.3
+  - ICE{display="&d◆&f◆&a◆ &bつめたいこおり";lore="263Kの氷"} 1 0.3
   Options:
     MovementSpeed: 0.3
     AlwaysShowName: true
@@ -98,7 +98,7 @@ SnowMan1:
   Health: 25
   Damage: 5
   Drops:
-  - SNOWBALL{display="&6◆ ゆきだま";lore="中に石が入ってる…"} 1 0.3
+  - SNOWBALL{display="&d◆&f◆&a◆ &fゆきだま";lore="中に石が入ってる…"} 1 0.3
   Skills:
   - shoot{type=SNOWBALL;velocity=0.5;damage=4} @target ~onTimer:60
   Options:
@@ -115,7 +115,7 @@ Slime1:
   Health: 20
   Damage: 3
   Drops:
-  - SLIME_BALL{display=&6◆ スライムの核";lore="最初の敵といえばスライムだよね！"} 1 0.3
+  - SLIME_BALL{display="&d◆&f◆&a◆ &aスライムの核";lore="最初の敵といえばスライムだよね！"} 1 0.3
   Options:
     MovementSpeed: 0.4
     AlwaysShowName: true
@@ -131,7 +131,7 @@ Spider1:
   Health: 20
   Damage: 3
   Drops:
-  - SPIDER_EYE{display=&6◆ くものめ";lore="普通のクモの目に比べて少し毒性が少ない"} 1 0.3
+  - SPIDER_EYE{display="&d◆&f◆&a◆ &6くものめ";lore="普通のクモの目に比べて少し毒性が少ない"} 1 0.3
   Options:
     MovementSpeed: 0.25
     AlwaysShowName: true
