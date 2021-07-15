@@ -2,13 +2,13 @@ PirateDrowned:
   Type: ZOMBIE
   Display: '&f&lパイレーツドラウンド'
   Health: 30
-  Damage: 5
+  Damage: 3
   Disguise:
     Type: PirateDrowned
   Drops:
   - exp 2 0.4
   Equipment:
-  - Pirate_Sword MAINHAND
+  - golden_sword MAINHAND
   Options:
     MovementSpeed: 0.3
     FollowRange: 16
