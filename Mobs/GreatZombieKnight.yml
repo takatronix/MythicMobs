@@ -16,7 +16,7 @@ GreatZombieKnight:
     FollowRange: 20
     PreventRandomEquipment: true
     PreventSunburn: true
-    AttackSpeed: 0.15
+    AttackSpeed: 0.05
     KnockbackResistance: 0.8
     Silent: false
     PreventOtherDrops: true
