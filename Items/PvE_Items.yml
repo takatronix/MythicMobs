@@ -7,8 +7,8 @@ SkullArmy_Head:
     SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDQxODZhY2JmZGYyYjc5ZGIwNDFmOTU3NWY4ZTAyZjU5MGY2YTUxZWY0NjRiM2M0YzIxNWRmZGFhMGVkYTlhNCJ9fX0=
 
 Mimic_Head:
-  Id: IRON_HOE
-  Model: 649
+  Id: STONE_HOE
+  Model: 26
 
 Shark_Head:
   Id: DIAMOND_HOE
@@ -43,22 +43,22 @@ SkullArmy_Bow:
   - ARROW_KNOCKBACK:1
 
 Golden_Chest:
-  Id: IRON_HOE
-  Model: 647
+  Id: STONE_HOE
+  Model: 28
 
 Parrot_Shoulder:
-  Id: IRON_HOE
-  Model: 21
+  Id: WOODEN_HOE
+  Model: 10
 
 Pirate_Sword:
-  Id: IRON_HOE
-  Model: 754
+  Id: IRON_SWORD
+  Model: 8
 
 TwinZombie_Head:
   Id: WOODEN_HOE
   Model: 6
 
-#---PvE0 Drops---
+#---PvE0 Drops without others---
 
 emojikun_red_dye:
   Id: red_dye
