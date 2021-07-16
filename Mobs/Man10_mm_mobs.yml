@@ -13,7 +13,8 @@ Man10_G:
     ApplyInvisibility: true
     PreventMobKillDrops: true
     PreventOtherDrops: true
-  Skills:
+    PreventRandomEquipment: true
+    Silent: true
 
 Man10_W:
   Type: ZOMBIE
@@ -30,6 +31,8 @@ Man10_W:
     PreventOtherDrops: true
     ApplyInvisibility: true
     Despawn: false
+    PreventRandomEquipment: true
+    Silent: true
   Skills:
   - mount{type=Man10_G} ~onSpawn
 
@@ -48,14 +51,16 @@ Man10_P:
     PreventOtherDrops: true
     ApplyInvisibility: true
     Despawn: false
+    PreventRandomEquipment: true
+    Silent: true
   Skills:
   - mount{type=Man10_W} ~onSpawn
 
 GreenBatMan:
   Type: ZOMBIE
   Display: '&a&l緑バットぶんぶん丸'
-  Health: 30
-  Damage: 2
+  Health: 25
+  Damage: 1
   Equipment:
   - SteveHelm HEAD
   - SteveChest CHEST
@@ -106,6 +111,7 @@ SnowMan1:
     AlwaysShowName: true
     PreventMobKillDrops: true
     PreventOtherDrops: true
+    PreventRandomEquipment: true
   Disguise:
     Type: Snowman
 
@@ -126,7 +132,7 @@ Slime1:
 
 
 Spider1:
-  Type: SPIDER
+  Type: ZOMBIE
   Display: '&6&lくも'
   Health: 20
   Damage: 3
@@ -138,6 +144,8 @@ Spider1:
     PreventSlimeSplit: true
     PreventMobKillDrops: true
     PreventOtherDrops: true
+  Disguise:
+    Type: Spider
 
 KingSlime:
   Type: SLIME
