@@ -12,7 +12,7 @@ Megalodon:
   - 1 players
   - 2 attacker
   Drops:
-  - Megalodon_Fin 1 0.28
+  - Megalodon_Fin 1 0.25
   - exp 3 0.4
   Disguise:
     Type: DROWNED
@@ -29,7 +29,6 @@ Megalodon:
     Silent: true
     PreventOtherDrops: true
   Skills:
-  - potion{t=INVISIBILITY;d=100000;p=false} @self ~onSpawn
   - potion{t=DOLPHINS_GRACE;d=100000;p=false} @self ~onSpawn
   - sound{s=entity.strider.eat;p=0.4} ~onAttack
   - sound{s=entity.fox.bite;p=0.3} ~onAttack
