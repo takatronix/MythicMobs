@@ -1,2 +1,4 @@
 # MythicMobs
-Man10MythicMobs
+
+
+Man10Server PVE用モブ
