@@ -1,16 +1,24 @@
 NightHawk:
-  Type: PHANTOM
+  Type: PARROT
   Display: '&d&lナイ&f&lトホ&a&lーク'
   Health: 14
   Damage: 2
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
   Equipment:
   - NightHawk_Head HEAD
   Drops:
   - NightHawk_feather 1 0.3
   - exp 1 0.4
   Options:
-    MovementSpeed: 0.7
-    FollowRange: 16
+    MovementSpeed: 0.3
+    FollowRange: 24
     PreventRandomEquipment: true
     PreventSunburn: true
     AttackSpeed: 0.2
@@ -24,5 +32,6 @@ NightHawk:
   - potion{t=INVISIBILITY;d=100000;p=false} @self ~onSpawn
   - sound{s=entity.parrot.death;p=0.7} ~onDeath
   - sound{s=entity.parrot.hurt;p=0.7} ~onDamaged
-  - sound{s=entity.bee.sting;p=0.7} ~onAttack
+  - sound{s=entity.bee.sting;p=1.2} ~onAttack
   - sound{s=entity.parrot.fly;p=0.7} ~onCombat
+  - lunge{velocity=2;velocityY=-1} @self ~onTimer:55 0.48
