@@ -1,9 +1,13 @@
+#---Equipments---
+
 SteveBat:
   Id: IRON_SWORD
   Model: 6
   Enchantments:
   - DURABILITY:3
-
+  Attributes:
+    MainHand:
+      Damage: 0
 
 SteveHelm:
   Id: leather_helmet
@@ -53,3 +57,61 @@ FreezeBoots:
   - DURABILITY:3
   Options:
     Color: 0,251,255
+
+#---Drops---
+
+Man10_LIME_WOOL:
+  Id: lime_wool
+  Display: '&d◆&f◆&a◆ &fだんご&a(緑)'
+  Amount: 1
+  Lore:
+  - '&f緑色のだんご。'
+
+Man10_WHITE_WOOL:
+  Id: white_wool
+  Display: '&d◆&f◆&a◆ &fだんご(白)'
+  Amount: 1
+  Lore:
+  - '&f白色のだんご。'
+
+Man10_PINK_WOOL:
+  Id: pink_wool
+  Display: '&d◆&f◆&a◆ &fだんご&d(桃)'
+  Amount: 1
+  Lore:
+  - '&f桃色のだんご。'
+
+GreenBatMan_STICK:
+  Id: stick
+  Display: '&d◆&f◆&a◆ &fバットのカケラ'
+  Amount: 1
+  Lore:
+  - '&fサヨナラホームラン！'
+
+FreezeZombie_ICE:
+  Id: ice
+  Display: '&d◆&f◆&a◆ &fシャキシャキこおり'
+  Amount: 1
+  Lore:
+  - '&fれいとうゾンビのホレイザイ'
+
+Snowman_SUGAR:
+  Id: sugar
+  Display: '&d◆&f◆&a◆ &fメレンゲ雪'
+  Amount: 1
+  Lore:
+  - '&fメレンゲのようにやわらかい雪。'
+
+SLIME_SLIME_BALL:
+  Id: slime_ball
+  Display: '&d◆&f◆&a◆ &fスライムの核'
+  Amount: 1
+  Lore:
+  - '&fぷるぷるしてる！'
+
+Spider_SPIDER_EYE:
+  Id: spider_eye
+  Display: '&d◆&f◆&a◆ &fドライアイ'
+  Amount: 1
+  Lore:
+  - '&f空をながめるのはほどほどに！'
