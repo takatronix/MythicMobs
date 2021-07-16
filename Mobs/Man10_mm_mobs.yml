@@ -1,66 +1,70 @@
 Man10_G:
   Type: ZOMBIE
   Display: '&aMan10'
-  Health: 15
-  Damage: 2
+  Health: 16
+  Damage: 1
   Equipment:
   - LIME_WOOL HEAD
   Drops:
-  - LIME_WOOL{display="&d◆&f◆&a◆ まんじゅう(緑)";lore="緑色のまんじゅう"} 1 0.3
+  - Man10_LIME_WOOL 1 0.3
   Options:
     MovementSpeed: 0.2
-    Despawn: false
     ApplyInvisibility: true
     PreventMobKillDrops: true
     PreventOtherDrops: true
+    PreventSunburn: true
     PreventRandomEquipment: true
     Silent: true
+  Skills:
+  - sound{s=entity.generic.eat;p=1.2} ~onDamaged
 
 Man10_W:
   Type: ZOMBIE
   Display: '&fMan10'
   Health: 20
-  Damage: 3
+  Damage: 2
   Equipment:
   - WHITE_WOOL HEAD
   Drops:
-  - WHITE_WOOL{display="&d◆&f◆&a◆ &fまんじゅう(白)";lore="白色のまんじゅう"} 1 0.3
+  - Man10_WHITE_WOOL 1 0.3
   Options:
     MovementSpeed: 0.25
     PreventMobKillDrops: true
     PreventOtherDrops: true
     ApplyInvisibility: true
-    Despawn: false
+    PreventSunburn: true
     PreventRandomEquipment: true
     Silent: true
   Skills:
   - mount{type=Man10_G} ~onSpawn
+  - sound{s=entity.generic.eat;p=1.0} ~onDamaged
 
 Man10_P:
   Type: ZOMBIE
   Display: '&dMan10'
-  Health: 25
-  Damage: 4
+  Health: 24
+  Damage: 3
   Equipment:
   - PINK_WOOL HEAD
   Drops:
-  - PINK_WOOL{display="&d◆&f◆&a◆ &dまんじゅう(桃)";lore="ピンク色のまんじゅう"} 1 0.3
+  - Man10_PINK_WOOL 1 0.3
   Options:
     MovementSpeed: 0.3
     PreventMobKillDrops: true
     PreventOtherDrops: true
     ApplyInvisibility: true
-    Despawn: false
+    PreventSunburn: true
     PreventRandomEquipment: true
     Silent: true
   Skills:
   - mount{type=Man10_W} ~onSpawn
+  - sound{s=entity.generic.eat;p=0.8} ~onDamaged
 
 GreenBatMan:
   Type: ZOMBIE
-  Display: '&a&l緑バットぶんぶん丸'
-  Health: 25
-  Damage: 1
+  Display: '&d&l緑バット&f&lぶんぶん&a&l丸'
+  Health: 24
+  Damage: 3
   Equipment:
   - SteveHelm HEAD
   - SteveChest CHEST
@@ -68,47 +72,58 @@ GreenBatMan:
   - SteveBoots FEET
   - SteveBat HAND
   Drops:
-  - LIME_DYE{display="&d◆&f◆&a◆ &a緑の色素";lore="緑バットぶんぶん丸の防具から抽出された色素。"} 1 0.3
+  - GreenBatMan_LIME_DYE 1 0.3
   Options:
-    MovementSpeed: 0.25
-    Despawn: false
+    MovementSpeed: 0.22
+    AttackSpeed: 0.03
+    FollowRange: 16
+    PreventRandomEquipment: true
+    PreventSunburn: true
     PreventMobKillDrops: true
     PreventOtherDrops: true
   Disguise:
     Type: Steve
+  Skills:
+  - effect:particles{p=sweepAttack;a=5;hs=0.35;vs=0.35;y=1} @target ~onAttack
 
 FreezeZombie:
   Type: ZOMBIE
-  Display: '&b&lれいとうゾンビ'
-  Health: 30
-  Damage: 2
+  Display: '&d&lれい&f&lとう&a&lゾンビ'
+  Health: 27
+  Damage: 4
   Equipment:
   - ICE HEAD
   - FreezeChest CHEST
   - FreezeLegs LEGS
   - FreezeBoots FEET
-  - IRON_SWORD HAND
+  - STONE_SWORD HAND
   Drops:
-  - ICE{display="&d◆&f◆&a◆ &bつめたいこおり";lore="263Kの氷"} 1 0.3
+  - FreezeZombie_ICE 1 0.3
   Options:
-    MovementSpeed: 0.3
-    AlwaysShowName: true
-    Despawn: false
+    MovementSpeed: 0.18
+    PreventSunburn: true
     PreventMobKillDrops: true
     PreventOtherDrops: true
+    PreventRandomEquipment: true
 
 SnowMan1:
-  Type: HUSK
-  Display: '&b&lゆきだるま'
-  Health: 25
-  Damage: 5
+  Type: ZOMBIE
+  Display: '&d&lゆき&f&lまん&a&lじゅう'
+  Health: 24
+  Damage: 0
+  AIGoalSelectors:
+  - 0 lookatplayers
+  - 1 fleeplayers
+  AITargetSelectors:
+  - 0 players
+  - 1 attacker
   Drops:
-  - SNOWBALL{display="&d◆&f◆&a◆ &fゆきだま";lore="中に石が入ってる…"} 1 0.3
+  - Snowman_SUGAR 1 0.3
   Skills:
-  - shoot{type=SNOWBALL;velocity=0.5;damage=4} @target ~onTimer:60
+  - shoot{type=SNOWBALL;velocity=0.5;damage=3} @target ~onTimer:50 0.75
   Options:
     MovementSpeed: 0.2
-    AlwaysShowName: true
+    PreventSunburn: true
     PreventMobKillDrops: true
     PreventOtherDrops: true
     PreventRandomEquipment: true
@@ -117,35 +132,35 @@ SnowMan1:
 
 Slime1:
   Type: SLIME
-  Display: '&a&lスライム'
-  Health: 20
+  Display: '&d&lスラ&f&lた&a&lろう'
+  Health: 18
   Damage: 3
   Drops:
-  - SLIME_BALL{display="&d◆&f◆&a◆ &aスライムの核";lore="最初の敵といえばスライムだよね！"} 1 0.3
+  - SLIME_SLIME_BALL 1 0.3
   Options:
     MovementSpeed: 0.4
-    AlwaysShowName: true
     PreventMobKillDrops: true
     PreventSlimeSplit: true
     PreventOtherDrops: true
     Size: 2
 
-
 Spider1:
   Type: ZOMBIE
-  Display: '&6&lくも'
-  Health: 20
+  Display: '&d&lたそ&f&lがれの&a&lクモ'
+  Health: 22
   Damage: 3
   Drops:
-  - SPIDER_EYE{display="&d◆&f◆&a◆ &6くものめ";lore="普通のクモの目に比べて少し毒性が少ない"} 1 0.3
+  - Spider_SPIDER_EYE 1 0.3
   Options:
     MovementSpeed: 0.25
-    AlwaysShowName: true
+    PreventSunburn: true
     PreventSlimeSplit: true
     PreventMobKillDrops: true
     PreventOtherDrops: true
   Disguise:
     Type: Spider
+
+#---Boss Mob---
 
 KingSlime:
   Type: SLIME
