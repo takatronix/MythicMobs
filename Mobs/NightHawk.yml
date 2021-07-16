@@ -1,7 +1,7 @@
 NightHawk:
   Type: PARROT
   Display: '&d&lナイ&f&lトホ&a&lーク'
-  Health: 14
+  Health: 11
   Damage: 2
   AIGoalSelectors:
   - 0 clear
@@ -19,6 +19,7 @@ NightHawk:
   Options:
     MovementSpeed: 0.3
     FollowRange: 24
+    ApplyInvisibility: true
     PreventRandomEquipment: true
     PreventSunburn: true
     AttackSpeed: 0.2
@@ -29,7 +30,6 @@ NightHawk:
   Disguise:
     Type: ZOMBIE
   Skills:
-  - potion{t=INVISIBILITY;d=100000;p=false} @self ~onSpawn
   - sound{s=entity.parrot.death;p=0.7} ~onDeath
   - sound{s=entity.parrot.hurt;p=0.7} ~onDamaged
   - sound{s=entity.bee.sting;p=1.2} ~onAttack

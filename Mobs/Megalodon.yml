@@ -21,6 +21,7 @@ Megalodon:
   Options:
     MovementSpeed: 0.2
     FollowRange: 16
+    ApplyInvisibility: true
     PreventRandomEquipment: true
     PreventSunburn: true
     AttackSpeed: 0.3
