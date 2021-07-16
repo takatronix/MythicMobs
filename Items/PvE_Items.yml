@@ -54,6 +54,10 @@ Pirate_Sword:
   Id: IRON_HOE
   Model: 754
 
+TwinZombie_Head:
+  Id: WOODEN_HOE
+  Model: 6
+
 #---PvE0 Drops---
 
 emojikun_red_dye:
@@ -152,4 +156,11 @@ CaptainDrowned_book:
   Amount: 1
   Lore:
   - '&fキャプテン・ドラウンドが毎日書いていた'
-  - '&f使い古された日誌。'
+  - '&f使い古された航海日誌。'
+
+PirateDrowned_gold_nugget:
+  Id: gold_nugget
+  Display: '&f◆ 海賊の金歯'
+  Amount: 1
+  Lore:
+  - '&f海賊たちの口から抜けた金色の歯。'
