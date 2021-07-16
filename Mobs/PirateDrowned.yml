@@ -6,6 +6,7 @@ PirateDrowned:
   Disguise:
     Type: PirateDrowned
   Drops:
+  - PirateDrowned_gold_nugget 1 0.3
   - exp 2 0.4
   Equipment:
   - golden_sword MAINHAND
