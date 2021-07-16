@@ -6,6 +6,7 @@ CaptainDrowned:
   Disguise:
     Type: CaptainDrowned
   Drops:
+  - CaptainDrowned_book 1 0.25
   - exp 2 0.4
   Equipment:
   - Parrot_Shoulder HEAD
