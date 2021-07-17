@@ -72,7 +72,7 @@ GreenBatMan:
   - SteveBoots FEET
   - SteveBat HAND
   Drops:
-  - GreenBatMan_LIME_DYE 1 0.3
+  - GreenBatMan_STICK 1 0.3
   Options:
     MovementSpeed: 0.22
     AttackSpeed: 0.03
