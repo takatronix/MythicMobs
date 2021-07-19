@@ -1,8 +1,8 @@
 PirateDrowned:
   Type: ZOMBIE
   Display: '&f&lパイレーツドラウンド'
-  Health: 30
-  Damage: 3
+  Health: 40
+  Damage: 4
   Disguise:
     Type: PirateDrowned
   Drops:
@@ -11,11 +11,17 @@ PirateDrowned:
   Equipment:
   - golden_sword MAINHAND
   Options:
-    MovementSpeed: 0.3
+    MovementSpeed: 0.33
     FollowRange: 16
     PreventRandomEquipment: true
     PreventSunburn: true
-    AttackSpeed: 0.24
-    KnockbackResistance: 0.45
+    AttackSpeed: 0.3
+    KnockbackResistance: 0.55
     Silent: true
     PreventOtherDrops: true
+  Skills:
+  - effect:particles{p=enchanted_hit;a=12;hs=0.65;vs=0.65;y=1} @target ~onAttack
+  - sound{s=entity.player.attack.sweep;p=0.7} ~onAttack
+  - sound{s=entity.drowned.death;p=0.8} ~onDeath
+  - sound{s=entity.drowned.hurt;p=1.2} ~onDamaged
+
