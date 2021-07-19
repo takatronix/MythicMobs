@@ -20,6 +20,18 @@ ZombieKnight_Head:
   Options:
     SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWNjMzcwMjdlNTZmYWJkZDA0YmQzNTc0ZmUwZjQxM2JjMTY1Y2RmOWY4ZGY5NmFiZjdmYzA1M2E3ZDJlOTZjYiJ9fX0=
 
+ZombieKnight_Chestplate:
+  Id: IRON_CHESTPLATE
+  Attributes:
+    Chest:
+      Armor: 0
+
+ZombieKnight_Sword:
+  Id: IRON_SWORD
+  Attributes:
+    MainHand:
+      Damage: 0
+
 NightHawk_Head:
   Id: DIAMOND_HOE
   Model: 1
@@ -53,10 +65,6 @@ Parrot_Shoulder:
 Pirate_Sword:
   Id: IRON_SWORD
   Model: 8
-
-TwinZombie_Head:
-  Id: WOODEN_HOE
-  Model: 6
 
 #---PvE0 Drops without others---
 
