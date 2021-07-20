@@ -1,0 +1,29 @@
+FireflySquid:
+  Type: GUARDIAN
+  Display: '&f&lホタルイカ'
+  Health: 40
+  Damage: 4
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll
+  AITargetSelectors:
+  - 1 players
+  - 2 attacker
+  Disguise:
+    Type: Glow_Squid
+  Drops:
+  - Ikasu_Ink 1 0.3
+  Options:
+    MovementSpeed: 0.24
+    FollowRange: 16
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    AttackSpeed: 0.2
+    KnockbackResistance: 0.65
+    Silent: false
+    PreventOtherDrops: true
+  Skills:
+  - skill{s=FireFlyAway} ~onDamaged <70% 0.3
+  
+
