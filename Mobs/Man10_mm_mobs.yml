@@ -227,11 +227,11 @@ KingSlime_3:
   Type: ZOMBIE
   Display: '&e&lシン&2&l・キングスライム'
   Health: 80
-  Damage: 6
+  Damage: 3
   Options:
-    MovementSpeed: 0.5
+    MovementSpeed: 0.4
     AlwaysShowName: true
-    KnockbackResistance: 0.8
+    KnockbackResistance: 0.6
     PreventMobKillDrops: true
     FollowRange: 30
     PreventOtherDrops: true
