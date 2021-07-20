@@ -2,7 +2,7 @@
 
 MossyDiverShoot:
   Skills:
-  - projectile{bulletType=ITEM;material=nautilus_shell;oT=MossyDiverShootTick;sE=true;sB=false;oH=MossyDiverShootHit;i=1;d=50;v=4;mr=16} @target
+  - projectile{bulletType=ITEM;material=nautilus_shell;oT=MossyDiverShootTick;sE=true;sB=true;oH=MossyDiverShootHit;i=1;d=50;v=4;mr=16} @target
   - sound{s=entity.experience_bottle.throw;p=0}
 MossyDiverShootTick:
   Skills:
@@ -26,3 +26,12 @@ MermaidSong_HIT:
   - effect:particles{p=note;a=30;hS=0.4;vS=0.4}
   - effect:sound{s=block.note_block.didgeridoo;p=0.4}
   - damage{a=5;i=false}
+
+#---FireflySquid---
+
+FireFlyAway:
+  Skills:
+  - disengage @self
+  - effect:particles{p=squid_ink;a=64;hs=0.8;vs=0.8} @selflocation
+  - delay 6
+  - potion{t=BLINDNESS;d=50;l=0;p=false;i=false}
