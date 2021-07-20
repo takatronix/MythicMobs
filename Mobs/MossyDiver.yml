@@ -11,7 +11,7 @@ MossyDiver:
   Equipment:
   - nautilus_shell MAINHAND
   Options:
-    MovementSpeed: 0.35
+    MovementSpeed: 0.15
     FollowRange: 16
     PreventRandomEquipment: true
     PreventSunburn: true
@@ -21,3 +21,6 @@ MossyDiver:
     PreventOtherDrops: true
   Skills:
   - potion{t=DOLPHINS_GRACE;d=100000;p=false} @self ~onSpawn
+  - skill{s=MossyDiverShoot} @target ~onTimer:65 0.6
+  - sound{s=entity.drowned.death_water;p=0.5} ~onDeath
+  - sound{s=entity.drowned.hurt_water;p=0.5} ~onDamaged
