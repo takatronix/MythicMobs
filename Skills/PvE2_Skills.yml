@@ -24,7 +24,7 @@ MermaidSong_TICK:
 MermaidSong_HIT:
   Skills:
   - effect:particles{p=note;a=30;hS=0.4;vS=0.4}
-  - effect:sound{s=block.note_block.didgeridoo;p=0.4}
+  - sound{s=block.note_block.didgeridoo;p=0.4}
   - damage{a=5;i=false}
 
 #---FireflySquid---
@@ -33,5 +33,6 @@ FireFlyAway:
   Skills:
   - disengage @self
   - effect:particles{p=squid_ink;a=64;hs=0.8;vs=0.8} @selflocation
+  - sound{s=entity.squid.squirt;p=1.4}
   - delay 6
   - potion{t=BLINDNESS;d=50;l=0;p=false;i=false}
