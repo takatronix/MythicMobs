@@ -1,23 +1,30 @@
 Mermaid:
   Type: GUARDIAN
   Display: '&f&lマーメイド'
-  Health: 36
-  Damage: 4
+  Health: 38
+  Damage: 3
   AIGoalSelectors:
   - 0 clear
   - 1 meleeattack
   - 2 randomstroll
   AITargetSelectors:
-  - 0 clear
   - 1 players
   - 2 attacker
+  Drops:
+  - Mermaid_prismarine_crystals 1 0.3
+  - exp 2 0.4
   Disguise:
     Type: Mermaid
   Options:
     FollowRange: 16
     Silent: true
-    AttackSpeed: 0.3
-    MovementSpeed: 0.37
+    AttackSpeed: 0.1
+    MovementSpeed: 0.35
+    KnockbackResistance: 0.35
     PreventOtherDrops: true
   Skills:
   - potion{t=DOLPHINS_GRACE;d=100000;p=false} @self ~onSpawn
+  - skill{s=MermaidSong} @target ~onTimer:90 0.65
+  - sound{s=entity.salmon.flop;p=1.2} ~onAttack
+  - sound{s=entity.ghast.death;p=1.4;v=0.4} ~onDeath
+  - sound{s=entity.ghast.hurt;p=1.4;v=0.4} ~onDamaged
