@@ -1,7 +1,7 @@
 FireflySquid:
   Type: GUARDIAN
   Display: '&f&lホタルイカ'
-  Health: 40
+  Health: 42
   Damage: 4
   AIGoalSelectors:
   - 0 clear
