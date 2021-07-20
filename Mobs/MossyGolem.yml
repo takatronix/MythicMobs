@@ -1,20 +1,26 @@
 MossyGolem:
-  Type: HOGLIN
+  Type: Zombie
   Display: '&f&lモスゴーレム'
   Health: 46
-  Damage: 4
+  Damage: 6
   Disguise:
     Type: MossyGolem
   Drops:
   - MossyGolem_green_dye 1 0.3
-  - exp 2 0.4
+  - exp 3 0.4
   Equipment:
   Options:
-    MovementSpeed: 0.2
+    MovementSpeed: 0.24
     FollowRange: 16
     PreventRandomEquipment: true
     PreventSunburn: true
     AttackSpeed: 0.1
-    KnockbackResistance: 0.65
+    KnockbackResistance: 1.0
     Silent: true
     PreventOtherDrops: true
+  Skills:
+  - throw{velocity=5;velocityY=4} @target ~onAttack
+  - sound{s=entity.iron_golem.attack;p=0.6} ~onAttack
+  - sound{s=entity.iron_golem.death;p=0.6} ~onDeath
+  - sound{s=entity.iron_golem.hurt;p=1.4} ~onDamaged
+
