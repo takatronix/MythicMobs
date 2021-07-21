@@ -1,7 +1,7 @@
 CaptainDrowned:
   Type: ZOMBIE
   Display: '&f&lキャプテン・ドラウンド'
-  Health: 54
+  Health: 60
   Damage: 6
   Disguise:
     Type: CaptainDrowned
@@ -13,12 +13,37 @@ CaptainDrowned:
   - Pirate_Sword MAINHAND
   - Golden_Chest OFFHAND
   Options:
-    MovementSpeed: 0.3
+    MovementSpeed: 0.35
     FollowRange: 16
     PreventRandomEquipment: true
     PreventSunburn: true
     AttackSpeed: 0.3
-    KnockbackResistance: 0.55
+    KnockbackResistance: 0.75
     Silent: true
     PreventOtherDrops: true
   Skills:
+  - skill{s=CaptainDrownedSummon} =65%
+
+ParrotMinion:
+  Type: PARROT
+  Display: '&f&lキャプテン・ミニオン'
+  Health: 32
+  Damage: 4
+  Drops:
+  - exp 1 0.4
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll
+  AITargetSelectors:
+  - 1 players
+  - 2 attacker
+  Options:
+    Color: RED
+    MovementSpeed: 0.3
+    FollowRange: 16
+    AttackSpeed: 0.3
+    KnockbackResistance: 0.55
+    PreventOtherDrops: true
+  Skills:
+  - lunge{velocity=1;velocityY=-1} @self ~onTimer:65 0.5
