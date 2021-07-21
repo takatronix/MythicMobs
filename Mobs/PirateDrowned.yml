@@ -1,5 +1,5 @@
 PirateDrowned:
-  Type: ZOMBIE
+  Type: VINDICATOR
   Display: '&f&lパイレーツドラウンド'
   Health: 40
   Damage: 4
@@ -11,12 +11,12 @@ PirateDrowned:
   Equipment:
   - golden_sword MAINHAND
   Options:
-    MovementSpeed: 0.33
+    MovementSpeed: 0.34
     FollowRange: 16
     PreventRandomEquipment: true
     PreventSunburn: true
     AttackSpeed: 0.3
-    KnockbackResistance: 0.55
+    KnockbackResistance: 0.6
     Silent: true
     PreventOtherDrops: true
   Skills:
