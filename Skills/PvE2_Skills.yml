@@ -2,14 +2,14 @@
 
 MossyDiverShoot:
   Skills:
-  - projectile{bulletType=ITEM;material=nautilus_shell;oT=MossyDiverShootTick;sE=true;sB=true;oH=MossyDiverShootHit;i=1;d=50;v=4;mr=16} @target
+  - projectile{bulletType=ITEM;material=nautilus_shell;oT=MossyDiverShootTick;sE=true;sB=true;oH=MossyDiverShootHit;i=1;v=11;mr=16;vO=2;g=0.9} @target 
   - sound{s=entity.experience_bottle.throw;p=0}
 MossyDiverShootTick:
   Skills:
-  - effect:particles{p=dolphin;a=20;hs=0.15;vs=0.15} @origin
+  - effect:particles{p=dolphin;a=3;hs=0.15;vs=0.15} @origin
 MossyDiverShootHit:
   Skills:
-  - damage{a=5}
+  - damage{a=3;ia=true}
   - sound{s=ambient.underwater.exit;p=2}
 
 #---Mermaid---
@@ -36,3 +36,13 @@ FireFlyAway:
   - sound{s=entity.squid.squirt;p=1.4}
   - delay 6
   - potion{t=BLINDNESS;d=50;l=0;p=false;i=false}
+
+#---CaptainDrowned---
+
+CaptainDrownedSummon:
+  Skills:
+  - equip{item=air HEAD}
+  - effect:particles{p=explosion_normal;a=10;hS=0.15;vS=0.15;y=2;size=1} @self 
+  - delay 2
+  - sound{s=entity.parrot.fly;v=1.6}
+  - summon{t=ParrotMinion;a=1;yr=1;yu=true} @self
