@@ -13,7 +13,7 @@ CaptainDrowned:
   - Pirate_Sword MAINHAND
   - Golden_Chest OFFHAND
   Options:
-    MovementSpeed: 0.35
+    MovementSpeed: 0.33
     FollowRange: 16
     PreventRandomEquipment: true
     PreventSunburn: true
@@ -23,6 +23,11 @@ CaptainDrowned:
     PreventOtherDrops: true
   Skills:
   - skill{s=CaptainDrownedSummon} =65%
+  - sound{s=block.note_block.flute;v=0.55} =65%
+  - effect:particles{p=enchanted_hit;a=12;hs=0.65;vs=0.65;y=1} @target ~onAttack
+  - sound{s=entity.player.attack.sweep;p=1.4} ~onAttack
+  - sound{s=entity.drowned.death;p=0.7} ~onDeath
+  - sound{s=entity.drowned.hurt;p=0.7} ~onDamaged
 
 ParrotMinion:
   Type: PARROT
@@ -46,4 +51,4 @@ ParrotMinion:
     KnockbackResistance: 0.55
     PreventOtherDrops: true
   Skills:
-  - lunge{velocity=1;velocityY=-1} @self ~onTimer:65 0.5
+  - lunge{velocity=1;velocityY=-1} @self ~onTimer:60 0.55
