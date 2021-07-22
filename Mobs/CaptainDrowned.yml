@@ -36,11 +36,11 @@ ParrotMinion:
   - 1 meleeattack
   - 2 randomstroll
   AITargetSelectors:
+  - 0 clear
   - 1 players
-  - 2 attacker
   Options:
     Color: RED
-    MovementSpeed: 0.3
+    MovementSpeed: 0.38
     FollowRange: 16
     AttackSpeed: 0.3
     KnockbackResistance: 0.55
