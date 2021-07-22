@@ -7,7 +7,7 @@ CaptainDrowned:
     Type: CaptainDrowned
   Drops:
   - CaptainDrowned_book 1 0.25
-  - exp 2 0.4
+  - exp 4 0.5
   Equipment:
   - Parrot_Shoulder HEAD
   - Pirate_Sword MAINHAND
