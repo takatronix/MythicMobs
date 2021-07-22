@@ -44,5 +44,4 @@ CaptainDrownedSummon:
   - equip{item=air HEAD}
   - effect:particles{p=explosion_normal;a=10;hS=0.15;vS=0.15;y=2;size=1} @self 
   - delay 2
-  - sound{s=entity.parrot.fly;v=1.6}
   - summon{t=ParrotMinion;a=1;yr=1;yu=true} @self
