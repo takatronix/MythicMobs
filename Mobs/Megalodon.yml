@@ -10,7 +10,6 @@ Megalodon:
   AITargetSelectors:
   - 0 clear
   - 1 players
-  - 2 attacker
   Drops:
   - Megalodon_Fin 1 0.25
   - exp 3 0.4
