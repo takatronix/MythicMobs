@@ -8,8 +8,8 @@ FireflySquid:
   - 1 meleeattack
   - 2 randomstroll
   AITargetSelectors:
+  - 0 clear
   - 1 players
-  - 2 attacker
   Disguise:
     Type: Glow_Squid
   Drops:
