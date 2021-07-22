@@ -2,14 +2,14 @@
 
 MossyDiverShoot:
   Skills:
-  - projectile{bulletType=ITEM;material=nautilus_shell;oT=MossyDiverShootTick;sE=true;sB=true;oH=MossyDiverShootHit;i=1;v=11;mr=16;vO=2;g=0.9} @target 
-  - sound{s=entity.experience_bottle.throw;p=0}
+  - projectile{bulletType=ITEM;material=nautilus_shell;oT=MossyDiverShootTick;sE=true;sB=true;oH=MossyDiverShootHit;i=1;v=11;mr=16;vO=2;g=0.9} @PIR{r=6}
+  - sound{s=entity.experience_bottle.throw;p=0} @PIR{r=6}
 MossyDiverShootTick:
   Skills:
   - effect:particles{p=dolphin;a=3;hs=0.15;vs=0.15} @origin
 MossyDiverShootHit:
   Skills:
-  - damage{a=3;ia=true}
+  - damage{a=4;ia=true}
   - sound{s=ambient.underwater.exit;p=2}
 
 #---Mermaid---
