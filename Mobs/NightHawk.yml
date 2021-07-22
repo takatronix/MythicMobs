@@ -10,7 +10,6 @@ NightHawk:
   AITargetSelectors:
   - 0 clear
   - 1 players
-  - 2 attacker
   Equipment:
   - NightHawk_Head HEAD
   Drops:
