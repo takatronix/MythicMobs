@@ -116,7 +116,6 @@ SnowMan1:
   - 1 fleeplayers
   AITargetSelectors:
   - 0 players
-  - 1 attacker
   Drops:
   - Snowman_SUGAR 1 0.3
   Skills:
