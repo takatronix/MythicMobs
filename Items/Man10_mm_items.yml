@@ -93,7 +93,7 @@ FreezeZombie_ICE:
   Display: '&d◆&f◆&a◆ &fシャキシャキこおり'
   Amount: 1
   Lore:
-  - '&fれいとうゾンビのホレイザイ'
+  - '&fれいとうゾンビのホレイザイ。'
 
 Snowman_SUGAR:
   Id: sugar
