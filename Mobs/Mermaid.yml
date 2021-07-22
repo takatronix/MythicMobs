@@ -8,8 +8,8 @@ Mermaid:
   - 1 meleeattack
   - 2 randomstroll
   AITargetSelectors:
+  - 0 clear
   - 1 players
-  - 2 attacker
   Drops:
   - Mermaid_prismarine_crystals 1 0.3
   - exp 2 0.4
