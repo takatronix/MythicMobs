@@ -33,3 +33,4 @@ BabyWaterDragon:
   - command{c="lp user <target.name> permission set pve.2"} @PIR{r=10} ~onDeath
   - skill{s=WaterBreath} @target ~onTimer:80
   - skill{s=Gekirin} @self ~onDamaged <25%
+  - effect:particles{p=villager_angry;amount=20;speed=0;hS=0.3;vS=0.3} @self
