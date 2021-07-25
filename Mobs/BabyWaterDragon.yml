@@ -12,6 +12,12 @@ BabyWaterDragon:
   - 1 players
   Disguise:
     Type: AXOLOTL
+  BossBar:
+    Enabled: true
+    Title: '&9&lベビーウォータードラゴン'
+    Range: 20
+    Color: BLUE
+    Style: SOLID
   Options:
     MovementSpeed: 0.1
     FollowRange: 20
