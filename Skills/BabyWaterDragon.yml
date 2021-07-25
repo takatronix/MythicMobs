@@ -10,6 +10,6 @@ WaterBreath-Hit:
   - potion{type=SLOW;duration=100;l=1}
 Gekirin:
   Skills:
-  - potion{type=SPEED;duration=100000;l=10}
+  - potion{type=SPEED;duration=100000;l=15}
   - potion{type=DAMAGE_RESISTANCE;duration=100000;l=1}
   - potion{type=INCREASE_DAMAGE;duration=100000;l=1}
