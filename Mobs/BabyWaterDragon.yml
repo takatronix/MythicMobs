@@ -1,5 +1,5 @@
 BabyWaterDragon:
-  Type: AXOLOTL
+  Type: DROWNED
   Display: '&9&lベビーウォータードラゴン'
   Health: 500
   Damage: 6
@@ -10,8 +10,10 @@ BabyWaterDragon:
   AITargetSelectors:
   - 0 clear
   - 1 players
+  Disguise:
+    Type: AXOLOTL
   Options:
-    MovementSpeed: 0.4
+    MovementSpeed: 0.6
     FollowRange: 20
     PreventRandomEquipment: true
     AlwaysShowName: true
@@ -23,3 +25,4 @@ BabyWaterDragon:
   - command{c="minecraft:give <trigger.name> slime_block{display:{Name:'[{"text":" ","italic":false},{"text":"◆","color":"gold"},{"text":"キングスライムの","color":"dark_green"},{"text":"核","color":"yellow"}]',Lore:['[{"text":"シン・キングスライムの頭についていた核","italic":false}]','[{"text":"ねちょねちょしている","italic":false}]']},Enchantments:[{id:unbreaking,lvl:1}],HideFlags:1} 1"} @Trigger ~onDeath
   - command{c="dm end <trigger.name> pve2"} @Trigger ~onDeath
   - command{c="lp user <target.name> permission set pve.2"} @PIR{r=10} ~onDeath
+  - skill{s=WaterBreath} @target ~onTimer:60

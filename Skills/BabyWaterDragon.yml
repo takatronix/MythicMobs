@@ -1,0 +1,10 @@
+WaterBreath:
+  Skills:
+  - projectile{onTick=WaterBreath-Tick;onHit=WaterBreath-Hit;v=8;i=1;hR=2;vR=2;sE=false}
+WaterBreath-Tick:
+  Skills:
+  - effect:particles{p=dripwater;amount=40;speed=0;hS=0.4;vS=0.4} @origin
+WaterBreath-Hit:
+  Skills:
+  - damage{a=10}
+  - potion{type=SLOW;duration=100;l=1}
