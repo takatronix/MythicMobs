@@ -28,7 +28,7 @@ BabyWaterDragon:
     Silent: true
     PreventOtherDrops: true
   Skills:
-  - command{c="minecraft:give <trigger.name> prismarine_crystals{display:{Name:'[{"text":" ","italic":false},{"text":"◆","color":"gray"},{"text":" 幼水龍の鱗","color":"gray"}]',Lore:['[{"text":"ベビーウォータードラゴンの鱗","italic":false}]','[{"text":"水をはじき、速く泳げるようになっている","italic":false}]']},Enchantments:[{id:mending,lvl:1}],HideFlags:1} 1"} @Trigger ~onDeath
+  - command{c="minecraft:give <trigger.name> prismarine_crystals{display:{Name:'[{"text":" ","italic":false},{"text":"◆","color":"gray"},{"text":" ","color":"gray"},{"text":"幼水龍の鱗","color":"blue"}]',Lore:['[{"text":"ベビーウォータードラゴンの鱗","italic":false}]','[{"text":"水をはじき、速く泳げるようになっている","italic":false}]']},Enchantments:[{id:mending,lvl:1}],HideFlags:1} 1"} @Trigger ~onDeath
   - command{c="dm end <trigger.name> pve2"} @Trigger ~onDeath
   - command{c="lp user <target.name> permission set pve.2"} @PIR{r=10} ~onDeath
   - skill{s=WaterBreath} @target ~onTimer:80
