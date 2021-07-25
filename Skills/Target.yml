@@ -45,14 +45,14 @@ Target6Move:
 Target7Move:
   Skills:
   - runaigoalselector{goal=gotolocation 92,1,135}
-  - runaigoalselector{goal=gotolocation 92,1,142}
+  - runaigoalselector{goal=gotolocation 92,1,140}
   - delay 175
   - remove @self
 
 Target8Move:
   Skills:
   - runaigoalselector{goal=gotolocation 94,5,108}
-  - runaigoalselector{goal=gotolocation 94,5,115}
+  - runaigoalselector{goal=gotolocation 94,5,113}
   - delay 175
   - remove @self
 
@@ -66,7 +66,7 @@ Target9Move:
 Target10Move:
   Skills:
   - runaigoalselector{goal=gotolocation 94,7,133}
-  - runaigoalselector{goal=gotolocation 94,7,140}
+  - runaigoalselector{goal=gotolocation 94,7,138}
   - delay 175
   - remove @self
 
@@ -83,52 +83,52 @@ Target11Move:
 Target12Move:
   Skills:
   - teleportto{location=71,2,143} @self
-  - delay 120
+  - delay 100
   - teleportto{location=78,5,147} @self
-  - delay 120
+  - delay 100
   - remove @self
 
 Target13Move:
   Skills:
-  - runaigoalselector{goal=gotolocation 73,1,149}
-  - runaigoalselector{goal=gotolocation 75,1,150}
+  - runaigoalselector{goal=gotolocation 73,1,150}
+  - runaigoalselector{goal=gotolocation 75,1,148}
   - delay 95
   - remove @self
 
 Target14Move:
   Skills:
-  - runaigoalselector{goal=gotolocation 77,1,143}
-  - runaigoalselector{goal=gotolocation 84,1,152}
+  - runaigoalselector{goal=gotolocation 77,1,150}
+  - runaigoalselector{goal=gotolocation 84,1,143}
   - delay 255
   - remove @self
 
 Target15Move:
   Skills:
   - runaigoalselector{goal=gotolocation 80,1,147}
-  - runaigoalselector{goal=gotolocation 78,1,153}
+  - runaigoalselector{goal=gotolocation 78,1,151}
   - delay 135
   - remove @self
 
 Target16Move:
   Skills:
   - runaigoalselector{goal=gotolocation 85,1,142}
-  - runaigoalselector{goal=gotolocation 85,1,148}
+  - runaigoalselector{goal=gotolocation 85,1,146}
   - delay 95
   - remove @self
 
 #Teleport
 Target17Move:
   Skills:
-  - teleportto{location=89,1,151} @self
-  - delay 120
-  - teleportto{location=88,4,144} @self
-  - delay 120
+  - teleportto{location=89,2,151} @self
+  - delay 100
+  - teleportto{location=88,5,144} @self
+  - delay 100
   - remove @self
 
 Target18Move:
   Skills:
   - runaigoalselector{goal=gotolocation 91,1,143}
-  - runaigoalselector{goal=gotolocation 92,1,152}
+  - runaigoalselector{goal=gotolocation 92,1,150}
   - delay 255
   - remove @self
 
