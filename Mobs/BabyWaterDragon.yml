@@ -13,7 +13,7 @@ BabyWaterDragon:
   Disguise:
     Type: AXOLOTL
   Options:
-    MovementSpeed: 0.3
+    MovementSpeed: 0.1
     FollowRange: 20
     PreventRandomEquipment: true
     AlwaysShowName: true
