@@ -84,9 +84,9 @@ Target10Move:
 
 Target11Move:
   Skills:
-  - runaigoalselector{goal=gotolocation 69,2,147}
+  - runaigoalselector{goal=gotolocation 69,2,148}
   - delay 60
-  - runaigoalselector{goal=gotolocation 69,2,141}  #下の座標がスポーンする位置と同じ
+  - runaigoalselector{goal=gotolocation 69,2,142}
   - delay 60
   - remove @self
 
