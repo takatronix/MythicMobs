@@ -330,6 +330,7 @@ Target11:
   - skill{s=Target11Move} ~onSpawn
   - remove @self ~onDamaged
   - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
+  - command{c=scoreboard players add <trigger.name> gun_score 1} @self ~onDamaged
 
 Target12:
   Type: Zombie
@@ -359,6 +360,7 @@ Target12:
   - skill{s=Target12Move} ~onSpawn
   - remove @self ~onDamaged
   - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
+  - command{c=scoreboard players add <trigger.name> gun_score 1} @self ~onDamaged
 
 Target13:
   Type: Zombie
@@ -388,6 +390,7 @@ Target13:
   - skill{s=Target13Move} ~onSpawn
   - remove @self ~onDamaged
   - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
+  - command{c=scoreboard players add <trigger.name> gun_score 1} @self ~onDamaged
 
 Target14:
   Type: Zombie
@@ -417,6 +420,7 @@ Target14:
   - skill{s=Target14Move} ~onSpawn
   - remove @self ~onDamaged
   - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
+  - command{c=scoreboard players add <trigger.name> gun_score 1} @self ~onDamaged
 
 Target15:
   Type: Zombie
@@ -446,6 +450,7 @@ Target15:
   - skill{s=Target15Move} ~onSpawn
   - remove @self ~onDamaged
   - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
+  - command{c=scoreboard players add <trigger.name> gun_score 1} @self ~onDamaged
 
 Target16:
   Type: Zombie
@@ -475,6 +480,7 @@ Target16:
   - skill{s=Target16Move} ~onSpawn
   - remove @self ~onDamaged
   - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
+  - command{c=scoreboard players add <trigger.name> gun_score 1} @self ~onDamaged
 
 Target17:
   Type: Zombie
@@ -504,6 +510,7 @@ Target17:
   - skill{s=Target17Move} ~onSpawn
   - remove @self ~onDamaged
   - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
+  - command{c=scoreboard players add <trigger.name> gun_score 1} @self ~onDamaged
 
 Target18:
   Type: Zombie
@@ -533,3 +540,4 @@ Target18:
   - skill{s=Target18Move} ~onSpawn
   - remove @self ~onDamaged
   - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
+  - command{c=scoreboard players add <trigger.name> gun_score 1} @self ~onDamaged
