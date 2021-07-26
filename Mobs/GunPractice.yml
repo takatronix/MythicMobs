@@ -28,6 +28,7 @@ Target1:
   - skill{s=Target1Move} ~onSpawn
   - remove @self ~onDamaged
   - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
+  - command{c=scoreboard players add <trigger.name> gun_score 1} @self ~onDamaged
 
 Target2:
   Type: Zombie
