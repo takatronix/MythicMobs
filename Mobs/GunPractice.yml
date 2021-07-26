@@ -27,7 +27,7 @@ Target1:
   Skills:
   - skill{s=Target1Move} ~onSpawn
   - remove @self ~onDamaged
-  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.5}
+  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
 
 Target2:
   Type: Zombie
@@ -56,7 +56,7 @@ Target2:
   Skills:
   - skill{s=Target2Move} ~onSpawn
   - remove @self ~onDamaged
-  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.5}
+  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
 
 Target3:
   Type: Zombie
@@ -85,7 +85,7 @@ Target3:
   Skills:
   - skill{s=Target3Move} ~onSpawn
   - remove @self ~onDamaged
-  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.5}
+  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
 
 Target4:
   Type: Zombie
@@ -114,7 +114,7 @@ Target4:
   Skills:
   - skill{s=Target4Move} ~onSpawn
   - remove @self ~onDamaged
-  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.5}
+  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
 
 Target5:
   Type: Zombie
@@ -143,7 +143,7 @@ Target5:
   Skills:
   - skill{s=Target5Move} ~onSpawn
   - remove @self ~onDamaged
-  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.5}
+  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
 
 Target6:
   Type: Zombie
@@ -172,7 +172,7 @@ Target6:
   Skills:
   - skill{s=Target6Move} ~onSpawn
   - remove @self ~onDamaged
-  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.5}
+  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
 
 Target7:
   Type: Zombie
@@ -201,7 +201,7 @@ Target7:
   Skills:
   - skill{s=Target7Move} ~onSpawn
   - remove @self ~onDamaged
-  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.5}
+  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
 
 Target8:
   Type: Zombie
@@ -230,7 +230,7 @@ Target8:
   Skills:
   - skill{s=Target8Move} ~onSpawn
   - remove @self ~onDamaged
-  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.5}
+  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
 
 Target9:
   Type: Zombie
@@ -259,7 +259,7 @@ Target9:
   Skills:
   - skill{s=Target9Move} ~onSpawn
   - remove @self ~onDamaged
-  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.5}
+  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
 
 Target10:
   Type: Zombie
@@ -288,7 +288,7 @@ Target10:
   Skills:
   - skill{s=Target10Move} ~onSpawn
   - remove @self ~onDamaged
-  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.5}
+  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
 
 #--- 小さい練習場---
 
@@ -319,7 +319,7 @@ Target11:
   Skills:
   - skill{s=Target11Move} ~onSpawn
   - remove @self ~onDamaged
-  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.5}
+  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
 
 Target12:
   Type: Zombie
@@ -348,7 +348,7 @@ Target12:
   Skills:
   - skill{s=Target12Move} ~onSpawn
   - remove @self ~onDamaged
-  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.5}
+  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
 
 Target13:
   Type: Zombie
@@ -377,7 +377,7 @@ Target13:
   Skills:
   - skill{s=Target13Move} ~onSpawn
   - remove @self ~onDamaged
-  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.5}
+  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
 
 Target14:
   Type: Zombie
@@ -406,7 +406,7 @@ Target14:
   Skills:
   - skill{s=Target14Move} ~onSpawn
   - remove @self ~onDamaged
-  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.5}
+  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
 
 Target15:
   Type: Zombie
@@ -435,7 +435,7 @@ Target15:
   Skills:
   - skill{s=Target15Move} ~onSpawn
   - remove @self ~onDamaged
-  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.5}
+  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
 
 Target16:
   Type: Zombie
@@ -464,7 +464,7 @@ Target16:
   Skills:
   - skill{s=Target16Move} ~onSpawn
   - remove @self ~onDamaged
-  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.5}
+  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
 
 Target17:
   Type: Zombie
@@ -493,7 +493,7 @@ Target17:
   Skills:
   - skill{s=Target17Move} ~onSpawn
   - remove @self ~onDamaged
-  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.5}
+  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
 
 Target18:
   Type: Zombie
@@ -522,4 +522,4 @@ Target18:
   Skills:
   - skill{s=Target18Move} ~onSpawn
   - remove @self ~onDamaged
-  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.5}
+  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
