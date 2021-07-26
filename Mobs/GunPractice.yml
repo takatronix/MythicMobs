@@ -118,7 +118,7 @@ Target4:
   - skill{s=Target4Move} ~onSpawn
   - remove @self ~onDamaged
   - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
-  - command{c=scoreboard players add <trigger.name> gun_score 1} @self ~onDamaged
+  - command{c=scoreboard players add <trigger.name> gun_score 2} @self ~onDamaged
 
 Target5:
   Type: Zombie
@@ -148,7 +148,7 @@ Target5:
   - skill{s=Target5Move} ~onSpawn
   - remove @self ~onDamaged
   - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
-  - command{c=scoreboard players add <trigger.name> gun_score 1} @self ~onDamaged
+  - command{c=scoreboard players add <trigger.name> gun_score 2} @self ~onDamaged
 
 Target6:
   Type: Zombie
@@ -178,7 +178,7 @@ Target6:
   - skill{s=Target6Move} ~onSpawn
   - remove @self ~onDamaged
   - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
-  - command{c=scoreboard players add <trigger.name> gun_score 2} @self ~onDamaged
+  - command{c=scoreboard players add <trigger.name> gun_score 3} @self ~onDamaged
 
 Target7:
   Type: Zombie
@@ -208,7 +208,7 @@ Target7:
   - skill{s=Target7Move} ~onSpawn
   - remove @self ~onDamaged
   - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
-  - command{c=scoreboard players add <trigger.name> gun_score 2} @self ~onDamaged
+  - command{c=scoreboard players add <trigger.name> gun_score 3} @self ~onDamaged
 
 Target8:
   Type: Zombie
@@ -238,7 +238,7 @@ Target8:
   - skill{s=Target8Move} ~onSpawn
   - remove @self ~onDamaged
   - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
-  - command{c=scoreboard players add <trigger.name> gun_score 3} @self ~onDamaged
+  - command{c=scoreboard players add <trigger.name> gun_score 4} @self ~onDamaged
 
 Target9:
   Type: Zombie
@@ -268,7 +268,7 @@ Target9:
   - skill{s=Target9Move} ~onSpawn
   - remove @self ~onDamaged
   - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
-  - command{c=scoreboard players add <trigger.name> gun_score 3} @self ~onDamaged
+  - command{c=scoreboard players add <trigger.name> gun_score 4} @self ~onDamaged
 
 Target10:
   Type: Zombie
@@ -298,7 +298,7 @@ Target10:
   - skill{s=Target10Move} ~onSpawn
   - remove @self ~onDamaged
   - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
-  - command{c=scoreboard players add <trigger.name> gun_score 3} @self ~onDamaged
+  - command{c=scoreboard players add <trigger.name> gun_score 4} @self ~onDamaged
 
 #--- 小さい練習場---
 
