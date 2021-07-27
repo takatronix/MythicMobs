@@ -250,6 +250,5 @@ KingSlime_3:
   Skills:
   - command{c="minecraft:give <trigger.name> slime_block{display:{Name:'[{"text":" ","italic":false},{"text":"◆","color":"gold"},{"text":" キングスライムの","color":"dark_green"},{"text":"核","color":"yellow"}]',Lore:['[{"text":"シン・キングスライムの頭についていた核","italic":false}]','[{"text":"ねちょねちょしている","italic":false}]']},Enchantments:[{id:unbreaking,lvl:1}],HideFlags:1} 1"} @Trigger ~onDeath
   - command{c="dm end <trigger.name> pve1"} @Trigger ~onDeath
-  - command{c="lp user <target.name> permission set pve.1"} @PIR{r=10} ~onDeath
   - remove @MIR{r=20;t=KnightSlime} ~onDeath
 
