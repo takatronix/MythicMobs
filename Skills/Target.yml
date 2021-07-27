@@ -1,0 +1,150 @@
+#--- 大きい練習場---
+
+Target1Move:
+  Skills:
+  - runaigoalselector{goal=gotolocation 71,2,115}
+  - delay 120
+  - runaigoalselector{goal=gotolocation 71,2,106}
+  - delay 120
+  - remove @self
+
+Target2Move:
+  Skills:
+  - runaigoalselector{goal=gotolocation 76,2,127}
+  - delay 120
+  - runaigoalselector{goal=gotolocation 76,2,118}
+  - delay 120
+  - remove @self
+
+Target3Move:
+  Skills:
+  - runaigoalselector{goal=gotolocation 75,2,140}
+  - delay 120
+  - runaigoalselector{goal=gotolocation 75,2,131}
+  - delay 120
+  - remove @self
+
+Target4Move:
+  Skills:
+  - runaigoalselector{goal=gotolocation 80,2,134}
+  - delay 100
+  - runaigoalselector{goal=gotolocation 80,2,126}
+  - delay 100
+  - remove @self
+
+Target5Move:
+  Skills:
+  - runaigoalselector{goal=gotolocation 83,2,117}
+  - delay 100
+  - runaigoalselector{goal=gotolocation 83,2,109}
+  - delay 100
+  - remove @self
+
+Target6Move:
+  Skills:
+  - runaigoalselector{goal=gotolocation 91,2,122}
+  - delay 80
+  - runaigoalselector{goal=gotolocation 91,2,115}
+  - delay 80
+  - remove @self
+
+Target7Move:
+  Skills:
+  - runaigoalselector{goal=gotolocation 92,2,141}
+  - delay 80
+  - runaigoalselector{goal=gotolocation 92,2,134}
+  - delay 80
+  - remove @self
+
+Target8Move:
+  Skills:
+  - runaigoalselector{goal=gotolocation 94,6,114}
+  - delay 80
+  - runaigoalselector{goal=gotolocation 94,6,107}
+  - delay 80
+  - remove @self
+
+Target9Move:
+  Skills:
+  - runaigoalselector{goal=gotolocation 94,6,128}
+  - delay 80
+  - runaigoalselector{goal=gotolocation 94,6,120}
+  - delay 80
+  - remove @self
+
+Target10Move:
+  Skills:
+  - runaigoalselector{goal=gotolocation 94,8,139}
+  - delay 80
+  - runaigoalselector{goal=gotolocation 94,8,132}
+  - delay 80
+  - remove @self
+
+#--- 小さい練習場---
+
+Target11Move:
+  Skills:
+  - runaigoalselector{goal=gotolocation 69,2,148}
+  - delay 60
+  - runaigoalselector{goal=gotolocation 69,2,142}
+  - delay 60
+  - remove @self
+
+#Teleport
+Target12Move:
+  Skills:
+  - teleportto{location=74,2,145} @self
+  - delay 90
+  - teleportto{location=78,5,147} @self
+  - delay 90
+  - remove @self
+
+Target13Move:
+  Skills:
+  - runaigoalselector{goal=gotolocation 72,2,151}
+  - delay 55
+  - runaigoalselector{goal=gotolocation 77,2,146}
+  - delay 55
+  - remove @self
+
+Target14Move:
+  Skills:
+  - runaigoalselector{goal=gotolocation 86,2,152}
+  - delay 160
+  - runaigoalselector{goal=gotolocation 76,2,142}
+  - delay 200
+  - remove @self
+
+Target15Move:
+  Skills:
+  - runaigoalselector{goal=gotolocation 77,2,152}
+  - delay 80
+  - runaigoalselector{goal=gotolocation 82,2,147}
+  - delay 80
+  - remove @self
+
+Target16Move:
+  Skills:
+  - runaigoalselector{goal=gotolocation 85,2,148}
+  - delay 55
+  - runaigoalselector{goal=gotolocation 85,2,141}
+  - delay 60
+  - remove @self
+
+#Teleport
+Target17Move:
+  Skills:
+  - teleportto{location=89,2,151} @self
+  - delay 90
+  - teleportto{location=88,5,144} @self
+  - delay 90
+  - remove @self
+
+Target18Move:
+  Skills:
+  - runaigoalselector{goal=gotolocation 92,2,152}
+  - delay 120
+  - runaigoalselector{goal=gotolocation 92,2,142}
+  - delay 120
+  - remove @self
+

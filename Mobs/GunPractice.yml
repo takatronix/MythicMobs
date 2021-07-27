@@ -1,0 +1,543 @@
+#--- 大きい練習場---
+
+Target1:
+  Type: Zombie
+  Health: 20
+  Damage: 0
+  Disguise:
+    Type: Target
+  Equipment:
+  - Target HEAD
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.15
+    FollowRange: 0
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    AttackSpeed: 0
+    KnockbackResistance: 1
+    ApplyInvisibility: true
+    NoAI: false
+    Silent: true
+    PreventOtherDrops: true
+  Skills:
+  - skill{s=Target1Move} ~onSpawn
+  - remove @self ~onDamaged
+  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
+  - command{c=scoreboard players add <trigger.name> gun_score 1} @self ~onDamaged
+
+Target2:
+  Type: Zombie
+  Health: 20
+  Damage: 0
+  Disguise:
+    Type: Target
+  Equipment:
+  - Target HEAD
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.15
+    FollowRange: 0
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    AttackSpeed: 0
+    KnockbackResistance: 1
+    ApplyInvisibility: true
+    NoAI: false
+    Silent: true
+    PreventOtherDrops: true
+  Skills:
+  - skill{s=Target2Move} ~onSpawn
+  - remove @self ~onDamaged
+  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
+  - command{c=scoreboard players add <trigger.name> gun_score 1} @self ~onDamaged
+
+Target3:
+  Type: Zombie
+  Health: 20
+  Damage: 0
+  Disguise:
+    Type: Target
+  Equipment:
+  - Target HEAD
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.15
+    FollowRange: 0
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    AttackSpeed: 0
+    KnockbackResistance: 1
+    ApplyInvisibility: true
+    NoAI: false
+    Silent: true
+    PreventOtherDrops: true
+  Skills:
+  - skill{s=Target3Move} ~onSpawn
+  - remove @self ~onDamaged
+  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
+  - command{c=scoreboard players add <trigger.name> gun_score 1} @self ~onDamaged
+
+Target4:
+  Type: Zombie
+  Health: 20
+  Damage: 0
+  Disguise:
+    Type: Target
+  Equipment:
+  - Target HEAD
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.15
+    FollowRange: 0
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    AttackSpeed: 0
+    KnockbackResistance: 1
+    ApplyInvisibility: true
+    NoAI: false
+    Silent: true
+    PreventOtherDrops: true
+  Skills:
+  - skill{s=Target4Move} ~onSpawn
+  - remove @self ~onDamaged
+  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
+  - command{c=scoreboard players add <trigger.name> gun_score 2} @self ~onDamaged
+
+Target5:
+  Type: Zombie
+  Health: 20
+  Damage: 0
+  Disguise:
+    Type: Target
+  Equipment:
+  - Target HEAD
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.15
+    FollowRange: 0
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    AttackSpeed: 0
+    KnockbackResistance: 1
+    ApplyInvisibility: true
+    NoAI: false
+    Silent: true
+    PreventOtherDrops: true
+  Skills:
+  - skill{s=Target5Move} ~onSpawn
+  - remove @self ~onDamaged
+  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
+  - command{c=scoreboard players add <trigger.name> gun_score 2} @self ~onDamaged
+
+Target6:
+  Type: Zombie
+  Health: 20
+  Damage: 0
+  Disguise:
+    Type: Target
+  Equipment:
+  - Target HEAD
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.15
+    FollowRange: 0
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    AttackSpeed: 0
+    KnockbackResistance: 1
+    ApplyInvisibility: true
+    NoAI: false
+    Silent: true
+    PreventOtherDrops: true
+  Skills:
+  - skill{s=Target6Move} ~onSpawn
+  - remove @self ~onDamaged
+  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
+  - command{c=scoreboard players add <trigger.name> gun_score 3} @self ~onDamaged
+
+Target7:
+  Type: Zombie
+  Health: 20
+  Damage: 0
+  Disguise:
+    Type: Target
+  Equipment:
+  - Target HEAD
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.15
+    FollowRange: 0
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    AttackSpeed: 0
+    KnockbackResistance: 1
+    ApplyInvisibility: true
+    NoAI: false
+    Silent: true
+    PreventOtherDrops: true
+  Skills:
+  - skill{s=Target7Move} ~onSpawn
+  - remove @self ~onDamaged
+  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
+  - command{c=scoreboard players add <trigger.name> gun_score 3} @self ~onDamaged
+
+Target8:
+  Type: Zombie
+  Health: 20
+  Damage: 0
+  Disguise:
+    Type: Target
+  Equipment:
+  - Target HEAD
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.15
+    FollowRange: 0
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    AttackSpeed: 0
+    KnockbackResistance: 1
+    ApplyInvisibility: true
+    NoAI: false
+    Silent: true
+    PreventOtherDrops: true
+  Skills:
+  - skill{s=Target8Move} ~onSpawn
+  - remove @self ~onDamaged
+  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
+  - command{c=scoreboard players add <trigger.name> gun_score 4} @self ~onDamaged
+
+Target9:
+  Type: Zombie
+  Health: 20
+  Damage: 0
+  Disguise:
+    Type: Target
+  Equipment:
+  - Target HEAD
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.15
+    FollowRange: 0
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    AttackSpeed: 0
+    KnockbackResistance: 1
+    ApplyInvisibility: true
+    NoAI: false
+    Silent: true
+    PreventOtherDrops: true
+  Skills:
+  - skill{s=Target9Move} ~onSpawn
+  - remove @self ~onDamaged
+  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
+  - command{c=scoreboard players add <trigger.name> gun_score 4} @self ~onDamaged
+
+Target10:
+  Type: Zombie
+  Health: 20
+  Damage: 0
+  Disguise:
+    Type: Target
+  Equipment:
+  - Target HEAD
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.15
+    FollowRange: 0
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    AttackSpeed: 0
+    KnockbackResistance: 1
+    ApplyInvisibility: true
+    NoAI: false
+    Silent: true
+    PreventOtherDrops: true
+  Skills:
+  - skill{s=Target10Move} ~onSpawn
+  - remove @self ~onDamaged
+  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
+  - command{c=scoreboard players add <trigger.name> gun_score 4} @self ~onDamaged
+
+#--- 小さい練習場---
+
+Target11:
+  Type: Zombie
+  Health: 20
+  Damage: 0
+  Disguise:
+    Type: Target
+  Equipment:
+  - Target HEAD
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.15
+    FollowRange: 0
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    AttackSpeed: 0
+    KnockbackResistance: 1
+    ApplyInvisibility: true
+    NoAI: false
+    Silent: true
+    PreventOtherDrops: true
+  Skills:
+  - skill{s=Target11Move} ~onSpawn
+  - remove @self ~onDamaged
+  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
+  - command{c=scoreboard players add <trigger.name> gun_score 1} @self ~onDamaged
+
+Target12:
+  Type: Zombie
+  Health: 20
+  Damage: 0
+  Disguise:
+    Type: Target
+  Equipment:
+  - Target HEAD
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.15
+    FollowRange: 0
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    AttackSpeed: 0
+    KnockbackResistance: 1
+    ApplyInvisibility: true
+    NoAI: false
+    Silent: true
+    PreventOtherDrops: true
+  Skills:
+  - skill{s=Target12Move} ~onSpawn
+  - remove @self ~onDamaged
+  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
+  - command{c=scoreboard players add <trigger.name> gun_score 1} @self ~onDamaged
+
+Target13:
+  Type: Zombie
+  Health: 20
+  Damage: 0
+  Disguise:
+    Type: Target
+  Equipment:
+  - Target HEAD
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.15
+    FollowRange: 0
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    AttackSpeed: 0
+    KnockbackResistance: 1
+    ApplyInvisibility: true
+    NoAI: false
+    Silent: true
+    PreventOtherDrops: true
+  Skills:
+  - skill{s=Target13Move} ~onSpawn
+  - remove @self ~onDamaged
+  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
+  - command{c=scoreboard players add <trigger.name> gun_score 1} @self ~onDamaged
+
+Target14:
+  Type: Zombie
+  Health: 20
+  Damage: 0
+  Disguise:
+    Type: Target
+  Equipment:
+  - Target HEAD
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.15
+    FollowRange: 0
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    AttackSpeed: 0
+    KnockbackResistance: 1
+    ApplyInvisibility: true
+    NoAI: false
+    Silent: true
+    PreventOtherDrops: true
+  Skills:
+  - skill{s=Target14Move} ~onSpawn
+  - remove @self ~onDamaged
+  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
+  - command{c=scoreboard players add <trigger.name> gun_score 1} @self ~onDamaged
+
+Target15:
+  Type: Zombie
+  Health: 20
+  Damage: 0
+  Disguise:
+    Type: Target
+  Equipment:
+  - Target HEAD
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.15
+    FollowRange: 0
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    AttackSpeed: 0
+    KnockbackResistance: 1
+    ApplyInvisibility: true
+    NoAI: false
+    Silent: true
+    PreventOtherDrops: true
+  Skills:
+  - skill{s=Target15Move} ~onSpawn
+  - remove @self ~onDamaged
+  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
+  - command{c=scoreboard players add <trigger.name> gun_score 1} @self ~onDamaged
+
+Target16:
+  Type: Zombie
+  Health: 20
+  Damage: 0
+  Disguise:
+    Type: Target
+  Equipment:
+  - Target HEAD
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.15
+    FollowRange: 0
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    AttackSpeed: 0
+    KnockbackResistance: 1
+    ApplyInvisibility: true
+    NoAI: false
+    Silent: true
+    PreventOtherDrops: true
+  Skills:
+  - skill{s=Target16Move} ~onSpawn
+  - remove @self ~onDamaged
+  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
+  - command{c=scoreboard players add <trigger.name> gun_score 1} @self ~onDamaged
+
+Target17:
+  Type: Zombie
+  Health: 20
+  Damage: 0
+  Disguise:
+    Type: Target
+  Equipment:
+  - Target HEAD
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.15
+    FollowRange: 0
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    AttackSpeed: 0
+    KnockbackResistance: 1
+    ApplyInvisibility: true
+    NoAI: false
+    Silent: true
+    PreventOtherDrops: true
+  Skills:
+  - skill{s=Target17Move} ~onSpawn
+  - remove @self ~onDamaged
+  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
+  - command{c=scoreboard players add <trigger.name> gun_score 1} @self ~onDamaged
+
+Target18:
+  Type: Zombie
+  Health: 20
+  Damage: 0
+  Disguise:
+    Type: Target
+  Equipment:
+  - Target HEAD
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.15
+    FollowRange: 0
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    AttackSpeed: 0
+    KnockbackResistance: 1
+    ApplyInvisibility: true
+    NoAI: false
+    Silent: true
+    PreventOtherDrops: true
+  Skills:
+  - skill{s=Target18Move} ~onSpawn
+  - remove @self ~onDamaged
+  - sound{s=entity.experience_orb.pickup;p=0.7;v=0.3}
+  - command{c=scoreboard players add <trigger.name> gun_score 1} @self ~onDamaged
