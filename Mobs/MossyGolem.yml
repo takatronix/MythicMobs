@@ -7,7 +7,7 @@ MossyGolem:
     Type: MossyGolem
   Drops:
   - MossyGolem_green_dye 1 0.3
-  - exp 3 0.4
+  - exp 6 1
   Equipment:
   Options:
     MovementSpeed: 0.24
