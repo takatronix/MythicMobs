@@ -1,7 +1,7 @@
 Megalodon:
   Type: GUARDIAN
   Display: '&f&lメガロドン'
-  Health: 50
+  Health: 46
   Damage: 5
   AIGoalSelectors:
   - 0 clear
