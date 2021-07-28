@@ -7,7 +7,7 @@ Mimic:
   - Mimic_Head HEAD
   Drops:
   - Mimic_Paper 1 0.3
-  - exp 3 0.4
+  - exp 6 1
   Options:
     MovementSpeed: 0.47
     FollowRange: 20
