@@ -7,7 +7,7 @@ PirateDrowned:
     Type: PirateDrowned
   Drops:
   - PirateDrowned_gold_nugget 1 0.3
-  - exp 2 0.4
+  - exp 5 1
   Equipment:
   - golden_sword MAINHAND
   Options:
@@ -16,7 +16,7 @@ PirateDrowned:
     PreventRandomEquipment: true
     PreventSunburn: true
     AttackSpeed: 0.3
-    KnockbackResistance: 0.6
+    KnockbackResistance: 0.55
     Silent: true
     PreventOtherDrops: true
   Skills:
