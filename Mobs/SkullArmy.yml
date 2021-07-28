@@ -8,7 +8,7 @@ SkullArmy:
   - SkullArmy_Bow:0
   Drops:
   - SkullArmy_Bone 1 0.3
-  - exp 3 0.4
+  - exp 6 1
   Options:
     Silent: false
     AlwaysShowName: true
