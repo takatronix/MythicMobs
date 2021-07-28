@@ -14,7 +14,7 @@ FireflySquid:
     Type: Glow_Squid
   Drops:
   - Ikasu_Ink 1 0.3
-  - exp 2 0.4
+  - exp 5 1
   Options:
     MovementSpeed: 0.24
     FollowRange: 16
