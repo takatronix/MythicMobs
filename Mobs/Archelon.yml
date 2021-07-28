@@ -12,7 +12,7 @@ Archelon:
   - 1 players
   Drops:
   - Archelon_shell 1 0.3
-  - exp 2 0.4
+  - exp 5 1
   Disguise:
     Type: Turtle
   Options:
