@@ -172,3 +172,10 @@ PirateDrowned_gold_nugget:
   Amount: 1
   Lore:
   - '&f海賊たちの口から抜けた金色の歯。'
+
+Archelon_shell:
+  Id: bowl
+  Display: '&f◆ アーケロンの甲羅'
+  Amount: 1
+  Lore:
+  - '&f古代の亀の甲羅。'
