@@ -14,7 +14,7 @@ NightHawk:
   - NightHawk_Head HEAD
   Drops:
   - NightHawk_feather 1 0.3
-  - exp 1 0.4
+  - exp 4 1
   Options:
     MovementSpeed: 0.3
     FollowRange: 24
