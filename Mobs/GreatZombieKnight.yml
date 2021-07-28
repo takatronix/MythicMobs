@@ -6,7 +6,7 @@ GreatZombieKnight:
   Disguise: GreatZombieKnight
   Drops:
   - GreatZombieKnight_iron_nugget 1 0.25
-  - exp 4 0.5
+  - exp 7 1
   Equipment:
   - ZombieKnight_Head HEAD
   - IRON_CHESTPLATE CHEST
