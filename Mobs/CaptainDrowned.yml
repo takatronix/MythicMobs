@@ -7,7 +7,7 @@ CaptainDrowned:
     Type: CaptainDrowned
   Drops:
   - CaptainDrowned_book 1 0.25
-  - exp 4 0.5
+  - exp 7 1
   Equipment:
   - Parrot_Shoulder HEAD
   - Pirate_Sword MAINHAND
@@ -35,7 +35,7 @@ ParrotMinion:
   Health: 32
   Damage: 4
   Drops:
-  - exp 1 0.4
+  - exp 4 1
   AIGoalSelectors:
   - 0 clear
   - 1 meleeattack
