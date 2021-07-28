@@ -14,12 +14,12 @@ MossyDiver:
     Type: MossyDiver
   Drops:
   - MossyDiver_nautilus_shell 1 0.3
-  - exp 2 0.4
+  - exp 5 1
   Equipment:
   - nautilus_shell MAINHAND
   Options:
     MovementSpeed: 0.25
-    FollowRange: 16
+    FollowRange: 24
     PreventRandomEquipment: true
     PreventSunburn: true
     AttackSpeed: 0.3
