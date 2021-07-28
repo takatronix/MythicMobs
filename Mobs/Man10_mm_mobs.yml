@@ -7,6 +7,7 @@ Man10_G:
   - LIME_WOOL HEAD
   Drops:
   - Man10_LIME_WOOL 1 0.3
+  - exp 3 1
   Options:
     MovementSpeed: 0.2
     ApplyInvisibility: true
@@ -27,6 +28,7 @@ Man10_W:
   - WHITE_WOOL HEAD
   Drops:
   - Man10_WHITE_WOOL 1 0.3
+  - exp 3 1
   Options:
     MovementSpeed: 0.25
     PreventMobKillDrops: true
@@ -48,6 +50,7 @@ Man10_P:
   - PINK_WOOL HEAD
   Drops:
   - Man10_PINK_WOOL 1 0.3
+  - exp 3 1
   Options:
     MovementSpeed: 0.3
     PreventMobKillDrops: true
@@ -73,6 +76,7 @@ GreenBatMan:
   - SteveBat HAND
   Drops:
   - GreenBatMan_STICK 1 0.3
+  - exp 5 1
   Options:
     MovementSpeed: 0.22
     AttackSpeed: 0.03
@@ -99,6 +103,7 @@ FreezeZombie:
   - STONE_SWORD HAND
   Drops:
   - FreezeZombie_ICE 1 0.3
+  - exp 5 1
   Options:
     MovementSpeed: 0.18
     PreventSunburn: true
@@ -118,6 +123,7 @@ SnowMan1:
   - 0 players
   Drops:
   - Snowman_SUGAR 1 0.3
+  - exp 5 1
   Skills:
   - shoot{type=SNOWBALL;velocity=0.5;damage=3} @target ~onTimer:50 0.75
   Options:
@@ -136,6 +142,7 @@ Slime1:
   Damage: 3
   Drops:
   - SLIME_SLIME_BALL 1 0.3
+  - exp 4 1
   Options:
     MovementSpeed: 0.4
     PreventMobKillDrops: true
@@ -150,6 +157,7 @@ Spider1:
   Damage: 3
   Drops:
   - Spider_SPIDER_EYE 1 0.3
+  - exp 5 1
   Options:
     MovementSpeed: 0.25
     PreventSunburn: true
