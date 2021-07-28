@@ -101,7 +101,7 @@ ZombieKnight_iron_nugget:
   Id: iron_nugget
   Display: '&6◆ よろいのカケラ'
   Lore:
-  - '&6ゾンビナイト&rのよろいのカケラ。'
+  - '&fゾンビナイトのよろいのカケラ。'
 
 GreatZombieKnight_iron_nugget:
   Id: iron_nugget
@@ -113,13 +113,13 @@ FlowerZombie_azure_bluet:
   Id: azure_bluet
   Display: '&6◆ シロツメクサ'
   Lore:
-  - '&6フラワーゾンビ&rが大切にしていた花。'
+  - '&fフラワーゾンビが大切にしていた花。'
 
 SkullArmy_Bone:
   Id: Bone
   Display: '&6◆ かたいホネ'
   Lore:
-  - '&6がいこつへい&rから落ちたホネ。'
+  - '&fがいこつへいから落ちたホネ。'
 
 #---PvE2 Drops---
 
