@@ -15,5 +15,5 @@ gejigeji:
     PreventOtherDrops: true
   Drops:
   - gejigeji_egg 1 0.24
-  - exp 1 0.4
+  - exp 4 1
 
