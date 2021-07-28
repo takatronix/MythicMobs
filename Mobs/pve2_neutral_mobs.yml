@@ -1,0 +1,40 @@
+Archelon:
+  Type: GUARDIAN
+  Display: '&f&lアーケロン'
+  Health: 43
+  Damage: 5
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 attacker
+  Drops:
+  - Archelon_shell 1 0.3
+  - exp 2 0.4
+  Disguise:
+    Type: Turtle
+  Options:
+    FollowRange: 16
+    Silent: true
+    AttackSpeed: 0.1
+    MovementSpeed: 0.20
+    KnockbackResistance: 0.8
+    PreventOtherDrops: true
+  Skills:
+  - sound{s=entity.strider.eat;p=0.6} ~onAttack
+  - sound{s=entity.turtle.death;p=0.6} ~onDeath
+  - sound{s=entity.turtle.hurt;p=0.6} ~onDamaged
+  - lunge{v=1} @target ~onTimer:100 0.55
+
+TropicalFish:
+  Type: TROPICAL_FISH
+  Health: 8
+  Faction: Fish
+  AIGoalSelectors:
+  - 0 clear
+  - 1 randomstroll
+  Options:
+    Silent: false
+    PreventOtherDrops: true
