@@ -5,6 +5,10 @@ PirateDrowned:
   Damage: 4
   Disguise:
     Type: PirateDrowned
+  AIGoalSelectors:
+  - 0 meleeattack
+  AITargetSelectors:
+  - 0 player
   Drops:
   - PirateDrowned_gold_nugget 1 0.3
   - exp 5 1
@@ -20,6 +24,7 @@ PirateDrowned:
     Silent: true
     PreventOtherDrops: true
   Skills:
+  - potion{t=DOLPHINS_GRACE;d=100000;p=false} @self ~onSpawn
   - effect:particles{p=enchanted_hit;a=12;hs=0.65;vs=0.65;y=1} @target ~onAttack
   - sound{s=entity.player.attack.sweep;p=0.7} ~onAttack
   - sound{s=entity.drowned.death;p=1.2} ~onDeath
