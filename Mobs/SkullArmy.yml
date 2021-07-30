@@ -13,7 +13,7 @@ SkullArmy:
     Silent: false
     AlwaysShowName: true
     PreventSunburn: true
-    FollowRange: 24
+    FollowRange: 30
     AttackSpeed: 0.25
     KnockbackResistance: 1
     PreventRandomEquipment: true
