@@ -25,6 +25,7 @@ NightHawk:
     KnockbackResistance: 0.3
     Silent: true
     PreventOtherDrops: true
+    ModifyBoundingBox: true
     Size: 8
   Disguise:
     Type: ZOMBIE
