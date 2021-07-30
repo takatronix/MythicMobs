@@ -26,6 +26,7 @@ Megalodon:
     AttackSpeed: 0.3
     KnockbackResistance: 0.55
     Silent: true
+    ModifyBoundingBox: true
     PreventOtherDrops: true
   Skills:
   - potion{t=DOLPHINS_GRACE;d=100000;p=false} @self ~onSpawn
