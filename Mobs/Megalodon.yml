@@ -8,11 +8,10 @@ Megalodon:
   - 1 meleeattack
   - 2 randomstroll
   AITargetSelectors:
-  - 0 clear
   - 1 players
   Drops:
   - Megalodon_Fin 1 0.25
-  - exp 6 1
+  - exp 7 1
   Disguise:
     Type: DROWNED
   Equipment:
@@ -24,7 +23,7 @@ Megalodon:
     PreventRandomEquipment: true
     PreventSunburn: true
     AttackSpeed: 0.3
-    KnockbackResistance: 0.55
+    KnockbackResistance: 0.65
     Silent: true
     ModifyBoundingBox: true
     PreventOtherDrops: true
