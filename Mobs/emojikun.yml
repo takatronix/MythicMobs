@@ -7,7 +7,7 @@ emojikun:
   - Emoji_Head1 HEAD
   Drops:
   - emojikun_red_dye 1 0.3
-  - exp 5 1
+  - exp 6 1
   Options:
     MovementSpeed: 0.3
     FollowRange: 16
