@@ -2,12 +2,14 @@ CaptainDrowned:
   Type: ZOMBIE
   Display: '&f&lキャプテン・ドラウンド'
   Health: 60
-  Damage: 6
+  Damage: 7
   Disguise:
     Type: CaptainDrowned
+  AITargetSelectors:
+  - 1 players
   Drops:
   - CaptainDrowned_book 1 0.25
-  - exp 7 1
+  - exp 8 1
   Equipment:
   - Parrot_Shoulder HEAD
   - Pirate_Sword MAINHAND
@@ -18,30 +20,30 @@ CaptainDrowned:
     PreventRandomEquipment: true
     PreventSunburn: true
     AttackSpeed: 0.3
-    KnockbackResistance: 0.75
+    KnockbackResistance: 0.8
     Silent: true
     PreventOtherDrops: true
   Skills:
-  - skill{s=CaptainDrownedSummon} =65%
-  - sound{s=block.note_block.flute;v=0.55} =65%
+  - skill{s=CaptainDrownedSummon} =70%
+  - sound{s=block.note_block.flute;v=0.55} =70%
   - effect:particles{p=enchanted_hit;a=12;hs=0.65;vs=0.65;y=1} @target ~onAttack
   - sound{s=entity.player.attack.sweep;p=1.4} ~onAttack
   - sound{s=entity.drowned.death;p=0.7} ~onDeath
   - sound{s=entity.drowned.hurt;p=0.7} ~onDamaged
+  - signal{s=CaptainDead} @MIR{r=10;t=ParrotMinion} ~onDeath
 
 ParrotMinion:
   Type: PARROT
   Display: '&f&lキャプテン・ミニオン'
-  Health: 32
-  Damage: 4
+  Health: 16
+  Damage: 5
   Drops:
-  - exp 4 1
+  - exp 5 1
   AIGoalSelectors:
   - 0 clear
   - 1 meleeattack
   - 2 randomstroll
   AITargetSelectors:
-  - 0 clear
   - 1 players
   Options:
     Color: RED
@@ -51,4 +53,5 @@ ParrotMinion:
     KnockbackResistance: 0.55
     PreventOtherDrops: true
   Skills:
-  - lunge{velocity=1;velocityY=-1} @self ~onTimer:60 0.55
+  - lunge{velocity=1;velocityY=-1} @self ~onTimer:55 0.65
+  - remove @self ~onSignal:CaptainDead
