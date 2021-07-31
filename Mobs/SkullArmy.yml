@@ -3,17 +3,19 @@ SkullArmy:
   Display: '&6&lがいこつへい'
   Health: 28
   Damage: 4
+  AITargetSelectors:
+  - 1 players
   Equipment:
   - SkullArmy_Head:4
   - SkullArmy_Bow:0
   Drops:
   - SkullArmy_Bone 1 0.3
-  - exp 6 1
+  - exp 7 1
   Options:
     Silent: false
     AlwaysShowName: true
     PreventSunburn: true
-    FollowRange: 30
+    FollowRange: 32
     AttackSpeed: 0.25
     KnockbackResistance: 1
     PreventRandomEquipment: true
