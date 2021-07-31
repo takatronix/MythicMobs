@@ -1,13 +1,17 @@
 Mimic:
-  Type: HUSK
+  Type: ZOMBIE
   Display: '&6&lミミック'
-  Health: 32
+  Health: 28
   Damage: 5
+  Disguise:
+    Type: HUSK
   Equipment:
   - Mimic_Head HEAD
+  AITargetSelectors:
+  - 1 players
   Drops:
   - Mimic_Paper 1 0.3
-  - exp 6 1
+  - exp 7 1
   Options:
     MovementSpeed: 0.47
     FollowRange: 20
