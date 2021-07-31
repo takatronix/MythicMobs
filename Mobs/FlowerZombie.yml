@@ -5,9 +5,11 @@ FlowerZombie:
   Damage: 2
   Equipment:
   - Bow MAINHAND
+  AITargetSelectors:
+  - 1 players
   Drops:
   - FlowerZombie_azure_bluet 1 0.3
-  - exp 5 1
+  - exp 6 1
   Disguise:
     Type: FlowerZombie
   Options:
@@ -15,7 +17,7 @@ FlowerZombie:
     FollowRange: 16
     PreventRandomEquipment: true
     PreventSunburn: true
-    AttackSpeed: 0.27
+    AttackSpeed: 0.18
     KnockbackResistance: 0.15
     Silent: true
     PreventOtherDrops: true
