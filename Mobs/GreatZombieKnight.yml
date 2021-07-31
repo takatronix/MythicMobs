@@ -4,9 +4,11 @@ GreatZombieKnight:
   Health: 45
   Damage: 4
   Disguise: GreatZombieKnight
+  AITargetSelectors:
+  - 1 players
   Drops:
   - GreatZombieKnight_iron_nugget 1 0.25
-  - exp 7 1
+  - exp 8 1
   Equipment:
   - ZombieKnight_Head HEAD
   - IRON_CHESTPLATE CHEST
