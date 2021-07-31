@@ -115,3 +115,23 @@ Spider_SPIDER_EYE:
   Amount: 1
   Lore:
   - '&f空をながめるのはほどほどに！'
+
+KingSlime_Core:
+  Id: slime_block
+  Display: '&6◆ &2キングスライムの&e核'
+  Amount: 1
+  Enchantments:
+  - DURABILITY:1
+  Lore:
+  - 'シン・キングスライムの頭についていた核'
+  - 'ねちょねちょしている'
+
+BabyWaterDragon_Scale:
+  Id: prismarine_crystals
+  Display: '&7◆ &9幼水龍の鱗'
+  Amount: 1
+  Enchantments:
+  - DURABILITY:1
+  Lore:
+  - 'ベビーウォータードラゴンの鱗'
+  - '水を弾き、速く動けるようになっている'
