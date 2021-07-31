@@ -5,13 +5,11 @@ PirateDrowned:
   Damage: 4
   Disguise:
     Type: PirateDrowned
-  AIGoalSelectors:
-  - 0 meleeattack
   AITargetSelectors:
-  - 0 player
+  - 1 players
   Drops:
   - PirateDrowned_gold_nugget 1 0.3
-  - exp 5 1
+  - exp 6 1
   Equipment:
   - golden_sword MAINHAND
   Options:
