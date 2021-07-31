@@ -3,9 +3,11 @@ ZombieKnight:
   Display: '&6&lゾンビナイト'
   Health: 30
   Damage: 5
+  AITargetSelectors:
+  - 1 players
   Drops:
   - ZombieKnight_iron_nugget 1 0.3
-  - exp 5 1
+  - exp 6 1
   Equipment:
   - ZombieKnight_Head HEAD
   - ZombieKnight_Chestplate CHEST
