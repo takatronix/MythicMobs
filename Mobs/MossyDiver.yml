@@ -8,13 +8,12 @@ MossyDiver:
   - 1 meleeattack
   - 2 randomstroll
   AITargetSelectors:
-  - 0 clear
   - 1 players
   Disguise:
     Type: MossyDiver
   Drops:
   - MossyDiver_nautilus_shell 1 0.3
-  - exp 5 1
+  - exp 6 1
   Equipment:
   - nautilus_shell MAINHAND
   Options:
