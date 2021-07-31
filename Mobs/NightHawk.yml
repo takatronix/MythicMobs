@@ -8,13 +8,12 @@ NightHawk:
   - 1 meleeattack
   - 2 randomstroll
   AITargetSelectors:
-  - 0 clear
   - 1 players
   Equipment:
   - NightHawk_Head HEAD
   Drops:
   - NightHawk_feather 1 0.3
-  - exp 4 1
+  - exp 5 1
   Options:
     MovementSpeed: 0.3
     FollowRange: 24
