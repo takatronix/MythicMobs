@@ -1,0 +1,28 @@
+AmethystMage:
+  Type: Skeleton
+  Display: '&e&lアメジストメイジ'
+  Health: 74
+  Damage: 5
+  AITargetSelectors:
+  - 1 players
+  Drops:
+  - exp 5 1
+  - AmethystMage_purple_dye 1 0.25
+  Disguise:
+    Type: AmethystMage
+  Equipment:
+  - AmethystMage_Wand MAINHAND
+  Options:
+    MovementSpeed: 0.1
+    FollowRange: 24
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    AttackSpeed: 0.24
+    Silent: true
+    KnockbackResistance: 0.8
+    PreventOtherDrops: true
+  Skills:
+  - skill{s=AmethystMageShoot} @target ~onTimer:60 >65% 0.7
+  - skill{s=AmethystMageMissile} @target ~onTimer:80 <64% 0.75
+  - sound{s=entity.stray.death;p=0.7} @self ~onDeath
+  - sound{s=entity.stray.hurt;p=0.7} @self ~onDamaged
