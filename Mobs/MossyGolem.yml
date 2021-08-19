@@ -22,7 +22,7 @@ MossyGolem:
     PreventOtherDrops: true
   Skills:
   - throw{velocity=5;velocityY=4} @target ~onAttack
-  - sound{s=entity.iron_golem.attack;p=0.6} ~onAttack
-  - sound{s=entity.iron_golem.death;p=0.6} ~onDeath
-  - sound{s=entity.iron_golem.hurt;p=1.4} ~onDamaged
+  - sound{s=entity.iron_golem.attack;p=0.6} @self ~onAttack
+  - sound{s=entity.iron_golem.death;p=0.6} @self ~onDeath
+  - sound{s=entity.iron_golem.hurt;p=1.4} @self ~onDamaged
 
