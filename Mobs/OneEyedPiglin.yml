@@ -1,0 +1,29 @@
+OneEyedPiglin:
+  Type: piglin_brute
+  Display: '&e&lせきがんピグリン'
+  Health: 62
+  Damage: 8
+  AITargetSelectors:
+  - 1 players
+  Drops:
+  - exp 5 1
+  - OneEyedPiglin_Bone 1 0.3
+  Disguise:
+    Type: OneEyedPiglin
+  Equipment:
+  - OneEyedPiglin_Axe MAINHAND
+  Options:
+    MovementSpeed: 0.28
+    FollowRange: 16
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    AttackSpeed: 0.1
+    Silent: true
+    KnockbackResistance: 0.75
+    PreventOtherDrops: true
+  Skills:
+  - skill{s=OneEyedPiglinStun} @target ~onAttack <99% 0.17
+  - potion{t=SLOW_DIGGING;d=100000;l=6;p=false} @self ~onSpawn
+  - sound{s=entity.player.attack.crit;p=0.4} @self ~onAttack
+  - sound{s=entity.piglin_brute.hurt;p=0.5} @self ~onDamaged
+  - sound{s=entity.piglin_brute.death;p=0.5} @self ~onDeath
