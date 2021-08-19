@@ -23,5 +23,5 @@ FlowerZombie:
     PreventOtherDrops: true
   Skills:
   - potion{t=POISON;d=34;l=0;p=false} @target ~onAttack
-  - sound{s=block.grass.place;p=1.3} ~onDamaged
-  - sound{s=block.grass.break;p=0.5} ~onDeath
+  - sound{s=block.grass.place;p=1.3} @self ~onDamaged
+  - sound{s=block.grass.break;p=0.5} @self ~onDeath
