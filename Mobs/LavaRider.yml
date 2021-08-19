@@ -1,0 +1,51 @@
+LavaRider:
+  Type: Zombie
+  Display: '&e&lラヴァライダー'
+  Health: 50
+  Damage: 5
+  AITargetSelectors:
+  - 1 players
+  Drops:
+  - exp 5 1
+  - LavaRider_redstone 1 0.3
+  Disguise:
+    Type: LavaRider
+  Equipment:
+  Options:
+    MovementSpeed: 0.2
+    FollowRange: 16
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    Silent: true
+    AttackSpeed: 0.24
+    KnockbackResistance: 0.45
+    PreventOtherDrops: true
+  Skills:
+ # - mount{t=LavaCube} ~onSpawn
+  - skill{s=LavaFlamethrower} @target ~onTimer:60 >65% 0.7
+  - sound{s=entity.strider.death;p=0.6} @self ~onDeath
+  - sound{s=entity.strider.hurt;p=0.6} @self ~onDamaged
+
+LavaCube:
+  Type: MAGMA_CUBE
+  Display: ''
+  Health: 30
+  Damage: 3
+  AITargetSelectors:
+  - 1 players
+  Drop:
+  - exp 5 1
+  Disguise:
+  Options:
+    MovementSpeed: 0.26
+    FollowRange: 16
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    AttackSpeed: 0.24
+    KnockbackResistance: 0.45
+    PreventOtherDrops: true
+    PreventSlimeSplit: true
+    Size: 2
+  Skills:
+  - effect:particles{p=EXPLOSION_LARGE;a=8;vs=0.4;hs=0.4;s=0;y=0} @origin ~onDeath
+
