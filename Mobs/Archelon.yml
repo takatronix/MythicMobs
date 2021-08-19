@@ -22,7 +22,7 @@ Archelon:
     KnockbackResistance: 0.8
     PreventOtherDrops: true
   Skills:
-  - sound{s=entity.strider.eat;p=0.6} ~onAttack
-  - sound{s=entity.turtle.death;p=0.6} ~onDeath
-  - sound{s=entity.turtle.hurt;p=0.6} ~onDamaged
+  - sound{s=entity.strider.eat;p=0.6} @self ~onAttack
+  - sound{s=entity.turtle.death;p=0.6} @self ~onDeath
+  - sound{s=entity.turtle.hurt;p=0.6} @self ~onDamaged
   - lunge{v=1} @target ~onTimer:100 0.55
