@@ -1,0 +1,130 @@
+#---MinerSkeleton---
+PickaxeThrow:
+  Skills:
+  - projectile{bulletType=ITEM;material=iron_pickaxe;oT=PickaxeThrowTick;oH=PickaxeThrowHit;bulletSpin=300;i=1;hnp=true;v=10;mr=20;vO=2;g=0.9}
+  - sound{s=entity.player.attack.sweep;p=0.7;v=1.0}
+  - delay 4
+  - sound{s=entity.player.attack.sweep;p=0.5;v=1.1}
+  - delay 4
+  - sound{s=entity.player.attack.sweep;p=0.7;v=1.1}
+  - delay 4
+  - sound{s=entity.player.attack.sweep;p=0.5;v=1.0}
+PickaxeThrowTick:
+  Skills:
+  - effect:particles{p=crit;a=1;hs=0;vs=0} @origin
+PickaxeThrowHit:
+  Skills:
+  - damage{a=6;pkb=false}
+  - sound{s=entity.player.attack.strong;p=0.5}
+  - effect:itemspray{i=iron_nugget;a=8;v=2,d=55,r=3,yv=1} @target
+
+#---AmethystMage---
+AmethystMageShoot:
+  Conditions:
+  - targetwithin{d=1} false
+  Skills:
+  - projectile{bulletType=MYTHICITEM;material=AmethystMage_Projectile;oT=AmethystMageShootTick;sE=true;sB=true;oH=AmethystMageShootHit;oE=AmethystMageShootEnd;i=2;d=120;v=12;mr=24;syo=0;sfo=0;sso=0.4} @target
+  - sound{s=entity.illusioner.cast_spell;p=1.4}
+AmethystMageShootTick:
+  Skills:
+  - effect:particles{p=reddust;c=#46185a;a=20;hs=0.2;vs=0.2} @origin{yoffset=1}
+AmethystMageShootHit:
+  Skills:
+  - damage{a=10}
+  - sound{s=entity.illusioner.mirror_move;p=1.6}
+AmethystMageShootEnd:
+  Skills:
+  - effect:particleorbital{p=reddust;c=#6a467a;a=10;ticks=40;points=64;r=2;yo=0.7;rotx=45;roty=45;avx=1.25;avy=1.5;d=120;i=1} @origin
+  - effect:particleorbital{p=reddust;c=#582f6a;a=10;points=64;ticks=40;r=2;yo=0.7;rotx=-45;roty=-45;avx=1.5;avy=1.25;d=120;i=1} @origin
+
+AmethystMageMissile:
+  Conditions:
+  - targetwithin{d=2} false
+  Skills:
+  - missile{oT=AmethystMageMissileTick;oS=AmethystMageMissileStart;oH=AmethystMageMissileHit;oE=AmethystMageMissileEnd;i=1;v=6;mr=12;sso=-0.4}
+  - sound{s=entity.illusioner.cast_spell;p=0.8}
+AmethystMageMissileTick:
+  Skills:
+  - effect:particles{p=reddust;c=#46185a;a=20;hs=0.2;vs=0.2} @origin{yoffset=0;xoffset=-1}
+AmethystMageMissileHit:
+  Skills:
+  - damage{a=6}
+  - sound{s=entity.illusioner.mirror_move;p=1.2}
+  - effect:particleorbital{p=reddust;c=#6a467a;a=10;ticks=40;points=64;r=2;yo=0.7;rotx=45;roty=45;avx=1.25;avy=1.5;d=120;i=1} @origin
+AmethystMageMissileEnd:
+  Skills:
+  - effect:particleorbital{p=reddust;c=#6a467a;a=10;ticks=40;points=64;r=2;yo=0.7;rotx=45;roty=45;avx=1.25;avy=1.5;d=120;i=1} @origin
+  - effect:particleorbital{p=reddust;c=#582f6a;a=10;points=64;ticks=40;r=2;yo=0.7;rotx=-45;roty=-45;avx=1.5;avy=1.25;d=120;i=1} @origin
+
+#---DiamondCreeper---
+DiamondCreeper_Explode:
+  Skills:
+  - damage{a=4;ia=true}
+  - effect:particles{p=EXPLOSION_HUGE;a=1;vs=0.45;hs=0.45;s=0} @origin
+  - sound{s=entity.generic.explode;p=0.8}
+  - effect:itemspray{i=diamond;a=8;v=2;yv=1;d=60} @origin
+
+#---JadeKnight---
+JadeKnigtAttack:
+  Skills:
+  - effect:particles{p=SCRAPE;a=5;hs=0.3;vs=0.3;y=1} @target
+  - sound{s=entity.player.attack.sweep;p=1.2}
+JadeKnightRush:
+  Skills:
+  - teleport{sh=2;sv=0} @target
+  - effect:particles{p=sweepAttack;a=3;vs=0.35;hs=0.35;s=0;y=1} @target
+  - damage{a=5;i=false} @target
+  - effect:sound{s=entity.player.attack.sweep;v=1;p=0.6}
+  - delay 5
+  - teleport{sh=3;sv=0} @target
+  - effect:particles{p=sweepAttack;a=4;vs=0.4;hs=0.4;s=0;y=0} @target
+  - damage{a=5;i=false} @target
+  - effect:sound{s=entity.player.attack.sweep;v=0.8;p=1}
+  - delay 5
+  - teleport{sh=2;sv=0} @target
+  - effect:particles{p=sweepAttack;a=3;vs=0.35;hs=0.35;s=0;y=1} @target
+  - damage{a=5;i=false} @target
+  - effect:sound{s=entity.player.attack.sweep;v=1;p=0.6}
+  - delay 5
+  - teleport{sh=3;sv=0} @target
+  - effect:particles{p=sweepAttack;a=4;vs=0.4;hs=0.4;s=0;y=0} @target
+  - damage{a=5;i=false} @target
+  - effect:sound{s=entity.player.attack.sweep;v=0.8;p=1}
+
+#---LavaRider---
+LavaFlamethrower:
+  TargetConditions:
+  - distance{d=0to2} true
+  Skills:
+  - projectile{i=2;oT=LavaFlamethrowerTick;oH=LavaFlamethrowerHit;mr=8;sE=false} @target
+LavaFlamethrowerTick:
+  Skills:
+  - effect:particles{particle=DRIP_LAVA;a=12;s=0.05;hs=0.25;vs=0.25} @origin
+LavaFlamethrowerHit:
+  Skills:
+  - damage{a=1;pkb=false}
+  - ignite{t=50} 0.85
+
+
+#---OneEyedPiglin---
+OneEyedPiglinStun:
+  Skills:
+  - sound{s=block.anvil.land;p=0.5;v=0.6}
+  - stun{d=30;f=true} @target
+  - effect:particleorbital{p=reddust;color=#edc226;a=10;ticks=30;points=64;i=1;r=0.6;an=1;y=2;yo=0.7} @targetlocation
+  - effect:itemspray{i=gold_nugget;a=8;v=1;yv=1;d=55} @trigger
+
+#---StoneGuardian---
+StoneGuardianShoot:
+  Conditions:
+  - targetwithin{d=2} false
+  Skills:
+  - projectile{bulletType=MYTHICITEM;material=StoneGuardian_Stone;oT=StoneGuardianShootTick;sE=true;sB=true;oH=StoneGuardianShootHit;i=1;v=11;mr=16;vO=1;g=0.9} @PIR{r=8}
+  - sound{s=entity.experience_bottle.throw;p=0.2} @PIR{r=8}
+StoneGuardianShootTick:
+  Skills:
+  - effect:particles{p=CAMPFIRE_COSY_SMOKE;a=3;hs=0.15;vs=0.15} @origin
+StoneGuardianShootHit:
+  Skills:
+  - damage{a=7;ia=false}
+  - sound{s=entity.item.break;p=0.3}
