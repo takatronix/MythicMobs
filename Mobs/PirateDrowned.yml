@@ -24,7 +24,7 @@ PirateDrowned:
   Skills:
   - potion{t=DOLPHINS_GRACE;d=100000;p=false} @self ~onSpawn
   - effect:particles{p=enchanted_hit;a=12;hs=0.65;vs=0.65;y=1} @target ~onAttack
-  - sound{s=entity.player.attack.sweep;p=0.7} ~onAttack
-  - sound{s=entity.drowned.death;p=1.2} ~onDeath
-  - sound{s=entity.drowned.hurt;p=1.2} ~onDamaged
+  - sound{s=entity.player.attack.sweep;p=0.7} @self ~onAttack
+  - sound{s=entity.drowned.death;p=1.2} @self ~onDeath
+  - sound{s=entity.drowned.hurt;p=1.2} @self ~onDamaged
 
