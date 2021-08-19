@@ -1,0 +1,25 @@
+DiamondCreeper:
+  Type: VINDICATOR
+  Display: '&e&lダイヤモンドクリーパー'
+  Health: 54
+  Damage: 2
+  AITargetSelectors:
+  - 1 players
+  Drops:
+  - exp 5 1
+  - DiamondCreeper_Gunpowder 1 0.3
+  Disguise:
+    Type: DiamondCreeper
+  Options:
+    MovementSpeed: 0.3
+    FollowRange: 16
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    AttackSpeed: 0.24
+    Silent: true
+    KnockbackResistance: 0.55
+    PreventOtherDrops: true
+  Skills:
+  - skill{s=DiamondCreeper_Explode} @PIR{r=2} ~onAttack 0.14
+  - sound{s=entity.creeper.death;p=1.2;v=0.8} @self ~onDeath
+  - sound{s=entity.creeper.hurt;p=1.2;v=0.8} @self ~onDamaged
