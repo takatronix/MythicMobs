@@ -1,0 +1,30 @@
+StoneGuardian:
+  Type: ZOMBIE
+  Display: '&e&l石の番人'
+  Health: 56
+  Damage: 6
+  AITargetSelectors:
+  - 1 players
+  Drops:
+  - exp 5 1
+  - StoneGuardian_gray_dye 1 0.3
+  Disguise:
+    Type: StoneGuardian
+  Equipment:
+  - StoneGuardian_Stone MAINHAND
+  Options:
+    MovementSpeed: 0.2
+    FollowRange: 16
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    AttackSpeed: 0.1
+    Silent: true
+    KnockbackResistance: 0.75
+    PreventOtherDrops: true
+  Skills:
+  - potion{t=SLOW_DIGGING;d=100000;l=6;p=false} @self ~onSpawn
+  - skill{s=StoneGuardianShoot} @target ~onTimer:75 0.75
+  - sound{s=entity.iron_golem.attack;p=0.4} @self ~onAttack
+  - sound{s=block.gilded_blackstone.break;p=0.5;v=2} @self ~onDeath
+  - sound{s=block.gilded_blackstone.hit;p=0.5;v=2} @self ~onDamaged
+  - throw{v=2} @target ~onAttack
