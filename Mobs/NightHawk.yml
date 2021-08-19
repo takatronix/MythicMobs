@@ -29,8 +29,8 @@ NightHawk:
   Disguise:
     Type: ZOMBIE
   Skills:
-  - sound{s=entity.parrot.death;p=0.7} ~onDeath
-  - sound{s=entity.parrot.hurt;p=0.7} ~onDamaged
-  - sound{s=entity.bee.sting;p=1.2} ~onAttack
+  - sound{s=entity.parrot.death;p=0.7} @self ~onDeath
+  - sound{s=entity.parrot.hurt;p=0.7} @self ~onDamaged
+  - sound{s=entity.bee.sting;p=1.2} @self ~onAttack
   - sound{s=entity.parrot.fly;p=0.7} ~onCombat
   - lunge{velocity=1;velocityY=-1} @self ~onTimer:55 0.48
