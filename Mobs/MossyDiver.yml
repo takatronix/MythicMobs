@@ -28,5 +28,5 @@ MossyDiver:
   Skills:
   - potion{t=DOLPHINS_GRACE;d=100000;p=false} @self ~onSpawn
   - skill{s=MossyDiverShoot} @target ~onTimer:65 0.65
-  - sound{s=entity.drowned.death_water;p=0.5} ~onDeath
-  - sound{s=entity.drowned.hurt_water;p=0.5} ~onDamaged
+  - sound{s=entity.drowned.death_water;p=0.5} @self ~onDeath
+  - sound{s=entity.drowned.hurt_water;p=0.5} @self ~onDamaged
