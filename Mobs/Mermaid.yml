@@ -24,6 +24,6 @@ Mermaid:
   Skills:
   - potion{t=DOLPHINS_GRACE;d=100000;p=false} @self ~onSpawn
   - skill{s=MermaidSong} @target ~onTimer:90 0.65
-  - sound{s=entity.salmon.flop;p=1.2} ~onAttack
-  - sound{s=entity.ghast.death;p=1.4;v=0.4} ~onDeath
-  - sound{s=entity.ghast.hurt;p=1.4;v=0.4} ~onDamaged
+  - sound{s=entity.salmon.flop;p=1.2} @self ~onAttack
+  - sound{s=entity.ghast.death;p=1.4;v=0.4} @self ~onDeath
+  - sound{s=entity.ghast.hurt;p=1.4;v=0.4} @self ~onDamaged
