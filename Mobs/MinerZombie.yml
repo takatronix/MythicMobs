@@ -1,0 +1,28 @@
+MinerZombie:
+  Type: ZOMBIE
+  Display: '&e&l炭鉱ゾンビ'
+  Health: 50
+  Damage: 5
+  AITargetSelectors:
+  - 1 players
+  Drops:
+  - exp 6 1
+  - MinerZombie_Coal 1 0.3
+  Disguise:
+    Type: MinerZombie
+  Equipment:
+  - stone_pickaxe MAINHAND
+  - coal OFFHAND
+  Options:
+    MovementSpeed: 0.3
+    FollowRange: 16
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    AttackSpeed: 0.24
+    Silent: true
+    KnockbackResistance: 0.45
+    PreventOtherDrops: true
+  Skills:
+  - effect:particles{p=SMOKE_NORMAL;a=8;hs=0.45;vs=0.45;y=1} @target ~onAttack
+  - sound{s=entity.zombie.death;p=0.8} @self ~onDeath
+  - sound{s=entity.zombie.hurt;p=0.8} @self ~onDamaged
