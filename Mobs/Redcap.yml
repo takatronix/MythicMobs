@@ -1,0 +1,57 @@
+Redcap:
+  Type: ZOMBIE
+  Display: '&e&lレッドキャップ'
+  Health: 50
+  Damage: 5
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll
+  AITargetSelectors:
+  - 1 players
+  Drops:
+  - exp 6 1
+  Disguise:
+    Type: Redcap
+  Equipment:
+  - Redcap_Axe MAINHAND
+  Options:
+    MovementSpeed: 0.15
+    FollowRange: 16
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    AttackSpeed: 0.24
+    Silent: true
+    KnockbackResistance: 0.45
+    PreventOtherDrops: true
+  Skills:
+  - skill{s=RedcapStoneTrap} ~onTimer:20
+  - skill{s=RedcapAway} ~onDamaged <50%
+  - skill{s=LegTrapThrow} @target ~onTimer:120
+  - skill{s=RedCapDeath} ~onDeath
+
+LegTrap:
+  Type: ZOMBIE
+  Display: ''
+  Health: 20
+  Damage: 0
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  AITargetSelectors:
+  - players
+  Equipment:
+  - LegTrap_Open HEAD
+  Options:
+    Collidable: false
+    Invincible: true
+    MovementSpeed: 0.01
+    FollowRange: 2
+    Silent: true
+    ApplyInvisibility: true
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    PreventOtherDrops: true
+  Skills:
+  - skill{s=LegTrapActivate} ~onAttack =100%
+  - skill{s=LegTrapRemove} ~onSignal:RedCapDead
