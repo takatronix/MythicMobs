@@ -22,5 +22,5 @@ Mimic:
     Silent: true
     PreventOtherDrops: true
   Skills:
-  - sound{s=block.chest.close;p=0} ~onDeath
-  - sound{s=block.chest.locked;p=0;v=0.6} ~onDamaged
+  - sound{s=block.chest.close;p=0} @self ~onDeath
+  - sound{s=block.chest.locked;p=0;v=0.6} @self ~onDamaged
