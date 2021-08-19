@@ -1,0 +1,75 @@
+#RedCap
+#石ブロック上にいる時、ターゲットへスプラッシュポーションを投げる
+RedcapStoneTrap:
+  Conditions:
+  - onblock{m=STONE} true
+  Skills:
+  - shootpotion{type=SLOW;duration=80;level=3;velocity=3} @target
+
+#プレイヤーが半径5ブロックにいる時、プレイヤーから距離をとる
+RedcapAway:
+  Conditions:
+  - playerwithin{r=5} true
+  Skills:
+  - runaigoalselector{goal=clear} @self
+  - runaigoalselector{goal=fleeplayers} @self
+
+
+RedcapGoldTrap:
+  Conditions:
+  - onblock{m=STONE} true
+  Skills:
+  - shootpotion{type=SLOW;duration=80;level=3;velocity=3} @target
+
+#自分の半径のランダム座標へ山なりにトラバサミを投げ、その座標にLegTrapをスポーン
+LegTrapThrow:
+#  Cooldown: 5
+  Skills:
+  - projectile{bulletType=MYTHICITEM;material=LegTrap_Open;oT=LegTrapThrowTick;oH=LegTrapThrowHit;oE=LegTrapThrowEnd;i=1;hp=false;hnp=false;sE=false;v=7;mr=16;vO=2;g=0.9} @RLNTE{a=1;r=4;s=2;minr=3}
+  - sound{s=entity.splash_potion.throw;p=0.6}
+LegTrapThrowTick:
+  Skills:
+  - effect:particles{p=crit;a=1;hs=0;vs=0} @origin
+#LegTrapThrowHit:
+#  Skills:
+#  - sound{s=entity.player.attack.strong;p=0.5}
+#  - effect:itemspray{i=iron_nugget;a=8;v=2,d=55,r=3,yv=1} @target
+LegTrapThrowEnd:
+  Skills:
+  - effect:particles{p=smoke;a=10;hs=0.25;vs=0.4} @origin
+  - sound{s=entity.horse.armor;p=0.5} @origin
+  - delay 2
+  - summon{t=LegTrap}
+
+#死亡時、パーティクルと範囲内のプレイヤーへメッセージと周りのLegTrapを削除
+RedCapDeath:
+  Skills:
+  - effect:particlesphere{p=cloud;a=40;hS=0.6;vS=0.6;s=3;r=6} @self 
+  - delay 8
+  - message{m="<mob.name>&f<&co> ぐはっ、ここまでか...。"} @PIR{r=30}
+  - delay 20
+  - signal{s=RedCapDead} @MIR{r=30;t=LegTrap}
+
+
+#LegTrap
+#攻撃時AIを無くして頭に別の3Dモデルを装備、パーティクルとダメージとポーション効果を付与し、遅延で自身を消滅
+LegTrapActivate:
+  Skills:
+  - runaigoalselector{goal=clear} @self
+  - equip{item=LegTrap_Close HEAD}
+  - sound{s=block.anvil.place;p=0.6;v=0.5} @self
+  - delay 1
+  - effect:particles{p=smoke;a=10;hs=0.25;vs=0.4} @origin
+  - damage{a=4;ia=true} @PIR{r=2}
+  - potion{t=SLOW;d=120;l=4;p=false;icon=false} @PIR{r=2}
+  - delay 100
+  - remove @self
+
+LegTrapRemove:
+  Skills:
+  - effect:particles{p=cloud;a=5;hs=0.25;vs=0.25} @origin
+  - sound{s=entity.item.break;p=0.6;v=0.6} @self
+  - delay 4
+  - remove @self
+  
+
