@@ -25,11 +25,11 @@ CaptainDrowned:
     PreventOtherDrops: true
   Skills:
   - skill{s=CaptainDrownedSummon} =70%
-  - sound{s=block.note_block.flute;v=0.55} =70%
+  - sound{s=block.note_block.flute;v=0.55} @self =70%
   - effect:particles{p=enchanted_hit;a=12;hs=0.65;vs=0.65;y=1} @target ~onAttack
-  - sound{s=entity.player.attack.sweep;p=1.4} ~onAttack
-  - sound{s=entity.drowned.death;p=0.7} ~onDeath
-  - sound{s=entity.drowned.hurt;p=0.7} ~onDamaged
+  - sound{s=entity.player.attack.sweep;p=1.4} @self ~onAttack
+  - sound{s=entity.drowned.death;p=0.7} @self ~onDeath
+  - sound{s=entity.drowned.hurt;p=0.7} @self ~onDamaged
   - signal{s=CaptainDead} @MIR{r=10;t=ParrotMinion} ~onDeath
 
 ParrotMinion:
