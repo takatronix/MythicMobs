@@ -1,0 +1,28 @@
+MinerSkeleton:
+  Type: Skeleton
+  Display: '&e&l鉄鉱スケルトン'
+  Health: 46
+  Damage: 5
+  AITargetSelectors:
+  - 1 players
+  Drops:
+  - exp 6 1
+  - MinerSkeleton_bone_meal 1 0.3
+  Disguise:
+    Type: MinerSkeleton
+  Equipment:
+  - iron_pickaxe MAINHAND
+  - raw_iron OFFHAND
+  Options:
+    MovementSpeed: 0.24
+    FollowRange: 16
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    AttackSpeed: 0.24
+    Silent: true
+    KnockbackResistance: 0.45
+    PreventOtherDrops: true
+  Skills:
+  - Skill{s=PickaxeThrow} @target ~onTimer:80 0.45
+  - sound{s=entity.skeleton.death;p=0.8} @self ~onDeath
+  - sound{s=entity.skeleton.hurt;p=0.8} @self ~onDamaged
