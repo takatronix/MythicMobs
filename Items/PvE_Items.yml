@@ -66,6 +66,60 @@ Pirate_Sword:
   Id: IRON_SWORD
   Model: 8
 
+StoneGuardian_Stone:
+  Id: WOODEN_HOE
+  Model: 14
+
+JadeKnight_Sword:
+  Id: IRON_SWORD
+  Model: 13
+  Attributes:
+    MainHand:
+      Damage: 0
+
+JadeKnight_Shield:
+  Id: SHIELD
+  Options:
+    Color: BLACK
+  BannerLayers:
+  - YELLOW DIAGONAL_RIGHT
+  - YELLOW GRADIENT
+  - YELLOW GRADIENT_UP
+  - YELLOW BORDER
+  - GREEN CURLY_BORDER
+  - GREEN RHOMBUS_MIDDLE
+  - YELLOW FLOWER
+
+AmethystMage_Wand:
+  Id: IRON_SHOVEL
+  Model: 10
+
+AmethystMage_Projectile:
+  Id: WOODEN_HOE
+  Model: 20
+
+OneEyedPiglin_Axe:
+  Id: IRON_SWORD
+  Model: 18
+  Attributes:
+    MainHand:
+      Damage: 0
+
+Redcap_Axe:
+  Id: IRON_SWORD
+  Model: 4
+  Attributes:
+    MainHand:
+      Damage: 0
+
+LegTrap_Open:
+  Id: STONE_HOE
+  Model: 44
+
+LegTrap_Close:
+  Id: STONE_HOE
+  Model: 45
+
 #---PvE0 Drops without others---
 
 emojikun_red_dye:
@@ -179,3 +233,66 @@ Archelon_shell:
   Amount: 1
   Lore:
   - '&f古代の亀の甲羅。'
+
+#---PvE3 Drops---
+
+OneEyedPiglin_Bone:
+  Id: bone
+  Display: '&e◆ 骨のネックレス'
+  Amount: 1
+  Lore:
+  - '&f金であしらわれた骨のネックレス。'
+
+JadeKnight_Head:
+  Id: player_head
+  Display: '&e◆ ヒスイの兜'
+  Amount: 1
+  Lore:
+  - '&fエメラルドには劣るが頑丈な兜。'
+  Data: 3
+  Options:
+    SkinTexture: ewogICJ0aW1lc3RhbXAiIDogMTYyNzgyMDk4OTc1MywKICAicHJvZmlsZUlkIiA6ICJkNDdiNDA0OWQ3MGI0MGZhYmFkN2U3ZTdiNTViMWQxMSIsCiAgInByb2ZpbGVOYW1lIiA6ICJSYXBjcmFmdDIwMDAiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzZhMjAyZDlhOTQzYTljZWEzYTM3NTM1OTJmMTE0ZTNjYzBhM2I3NWIyNmM5OWUyZDgzZTFiODRkNzFkYzIwOCIKICAgIH0KICB9Cn0=
+
+DiamondCreeper_Gunpowder:
+  Id: gunpowder
+  Display: '&e◆ ダイヤモンドダスト'
+  Amount: 1
+  Lore:
+  - '&fまばゆい光を放つ粉。'
+
+MinerZombie_Coal:
+  Id: coal
+  Display: '&e◆ 風化した石炭'
+  Amount: 1
+  Lore:
+  - '&f触れると崩れてしまいそう。'
+
+MinerSkeleton_bone_meal:
+  Id: bone_meal
+  Display: '&e◆ 砕けたホネ'
+  Amount: 1
+  Lore:
+  - '&f長い労働で砕けてしまった骨。'
+
+StoneGuardian_gray_dye:
+  Id: gray_dye
+  Display: '&e◆ まんまる石'
+  Amount: 1
+  Lore:
+  - '&f石の番人が持っていた驚くほど丸い石。'
+
+AmethystMage_purple_dye:
+  Id: purple_dye
+  Display: '&e◆ 崩れたアメジスト'
+  Amount: 1
+  Lore:
+  - '&f強い魔力によって崩れてしまった'
+  - '&fアメジスト。'
+
+LavaRider_redstone:
+  Id: redstone
+  Display: '&e◆ 赤熱器官'
+  Amount: 1
+  Lore:
+  - '&f炎を生成する器官。'
+  - '&fいまだに熱を帯びている。'
