@@ -19,7 +19,7 @@ Man10_G:
     PreventRandomEquipment: true
     Silent: true
   Skills:
-  - sound{s=entity.generic.eat;p=1.2} ~onDamaged
+  - sound{s=entity.generic.eat;p=1.2} @self ~onDamaged
 
 Man10_W:
   Type: ZOMBIE
@@ -43,7 +43,7 @@ Man10_W:
     Silent: true
   Skills:
   - mount{type=Man10_G} ~onSpawn
-  - sound{s=entity.generic.eat;p=1.0} ~onDamaged
+  - sound{s=entity.generic.eat;p=1.0} @self ~onDamaged
 
 Man10_P:
   Type: ZOMBIE
@@ -67,7 +67,7 @@ Man10_P:
     Silent: true
   Skills:
   - mount{type=Man10_W} ~onSpawn
-  - sound{s=entity.generic.eat;p=0.8} ~onDamaged
+  - sound{s=entity.generic.eat;p=0.8} @self ~onDamaged
 
 GreenBatMan:
   Type: ZOMBIE
