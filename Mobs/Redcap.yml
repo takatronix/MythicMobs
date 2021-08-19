@@ -1,12 +1,12 @@
 Redcap:
   Type: ZOMBIE
   Display: '&e&lレッドキャップ'
-  Health: 50
-  Damage: 5
+  Health: 100
+  Damage: 7
   AIGoalSelectors:
-  - 0 clear
-  - 1 meleeattack
-  - 2 randomstroll
+  - clear
+  - meleeattack
+  - randomstroll
   AITargetSelectors:
   - 1 players
   Drops:
@@ -16,24 +16,31 @@ Redcap:
   Equipment:
   - Redcap_Axe MAINHAND
   Options:
-    MovementSpeed: 0.15
-    FollowRange: 16
+    MovementSpeed: 0.2
+    FollowRange: 32
     PreventRandomEquipment: true
     PreventSunburn: true
     AttackSpeed: 0.24
     Silent: true
-    KnockbackResistance: 0.45
+    KnockbackResistance: 1
     PreventOtherDrops: true
+    PreventJockeyMounts: true
+    PreventTransformation: true
   Skills:
-  - skill{s=RedcapStoneTrap} ~onTimer:20
-  - skill{s=RedcapAway} ~onDamaged <50%
-  - skill{s=LegTrapThrow} @target ~onTimer:120
+  - skill{s=RedcapPoisonPotion} ~onTimer:140 0.7
+  - skill{s=LegTrapThrow} @target ~onTimer:60 >60% 0.85
+  - skill{s=LegTrap2Throw} @target ~onTimer:100 <59% 0.7
   - skill{s=RedCapDeath} ~onDeath
+  - sound{s=entity.witch.death;p=0.5;v=0.8} @self ~onDeath
+  - sound{s=entity.witch.hurt;p=0.5;v=0.8} @self ~onDamaged
+  - sound{s=entity.player.attack.sweep;p=0.4} @self ~onAttack
+#  - skill{s=RedcapAway}
+
 
 LegTrap:
   Type: ZOMBIE
   Display: ''
-  Health: 20
+  Health: 32
   Damage: 0
   AIGoalSelectors:
   - 0 clear
@@ -44,14 +51,22 @@ LegTrap:
   - LegTrap_Open HEAD
   Options:
     Collidable: false
-    Invincible: true
+    Invincible: false
     MovementSpeed: 0.01
     FollowRange: 2
+    KnockbackResistance: 1
     Silent: true
     ApplyInvisibility: true
     PreventRandomEquipment: true
     PreventSunburn: true
     PreventOtherDrops: true
+    PreventJockeyMounts: true
+    PreventTransformation: true
   Skills:
   - skill{s=LegTrapActivate} ~onAttack =100%
   - skill{s=LegTrapRemove} ~onSignal:RedCapDead
+  - effect:particles{p=cloud;a=5;hs=0.25;vs=0.25} @origin ~onDeath
+  - sound{s=entity.item.break;p=0.6;v=0.6} @self ~onDeath
+  - sound{s=block.chain.break;p=0.7;v=0.8} @self ~onDamaged
+  - remove @self ~onDeath
+  
