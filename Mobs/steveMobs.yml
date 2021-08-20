@@ -1,10 +1,10 @@
 steve:
   Type: ZOMBIE
   Display: 'steve'
-  Health: 30
+  Health: 300
   Damage: 10
-  Armor: 1
-  Faction: steve
+  Armor: 0
+  Faction: Test
   
   Options:
     PreventSunburn: true
@@ -46,5 +46,3 @@ steve:
   - 0 clear
   - players
   
-  DamageModifiers:
-  - POISON 0
