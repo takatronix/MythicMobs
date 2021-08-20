@@ -1,7 +1,0 @@
-{ 
-"custom.teemo.hurt": { "category": "hostile", "sounds": [ { "name": "custom/mobs/teemo/hurt" }, { "name": "custom/mobs/teemo/hurt2" }, { "name": "custom/mobs/teemo/hurt1" } ], "subtitle": "Teemo gets hurt" }, 
-"custom.teemo.death": { "category": "hostile", "sounds": [ { "name": "custom/mobs/teemo/death" } ], "subtitle": "Teemo gets killed" }, 
-"custom.teemo.kill": { "category": "hostile", "sounds": [ { "name": "custom/mobs/teemo/kill" } ], "subtitle": "Teemo kills" }, 
-"custom.teemo.run": { "category": "hostile", "sounds": [ { "name": "custom/mobs/teemo/run" } ], "subtitle": "Teemo runs" }, 
-"custom.teemo.laugh": { "category": "hostile", "sounds": [ { "name": "custom/mobs/teemo/laugh" } ], "subtitle": "Teemo laughs" } 
-}
