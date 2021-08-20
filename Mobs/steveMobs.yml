@@ -1,29 +1,26 @@
 steve:
   Type: ZOMBIE
   Display: 'steve'
-  Health: 30
-  Damage: 10
-  Armor: 0
-  Faction: Test
+  Health: 20
+  Damage: 3
+  Armor: 1
   
   Options:
     PreventSunburn: true
     Silent: true
     PreventOtherDrops: true
     PreventItemPickup: true
-    KnockbackResistance: 1
+    PreventRandomEquipment: true
+    KnockbackResistance: 0
     PreventJockeyMounts: true
     
-  
   AIGoalSelector:
   - 0 clear
-  - 1 randomstroll
+  - 1 meleeattack
+  - 2 randomstroll
   
   Drops:
-#  - <item/exp/mythicitems/droptable - definable> <amount> <chance>
   # - dieamond_sword 1 0.1
-  # - money 3 0.25
-  # - exp 2000 0.6
   
   BossBar:
     Enabled: true
@@ -32,18 +29,17 @@ steve:
     Color: RED
     Title: '&6steve &f- <mob.hp>'
     
-  KillMessages:
-  - '&2死んだ時のメッセージ' 
+#  KillMessages:
+#  - '&2死んだ時のメッセージ' 
     
   Skills:
   - model{mid=steve;n=false} @self ~onSpawn
-  - skill{s=KeepDistance} @self ~onTimer:20
-  - skill{s=GetCloser} @self ~onTimer:20
-  - skill{s=Run} @self ~onTimer:40
-  - state{s=hurt} @self ~onDamaged
-  - state{s=death;li=3;lo=3} @self ~onDeath
+#  - skill{s=KeepDistance} @self ~onTimer:20
+#  - skill{s=GetCloser} @self ~onTimer:20
+#  - state{s=hurt} @self ~onDamaged
+#  - state{s=death;li=3;lo=3} @self ~onDeath
   
   AITargetSelectors:
-  - 0 clear
   - players
-  
+#  DamageModifiers:
+#  - POISON 0
