@@ -1,7 +1,7 @@
 steve:
   Type: ZOMBIE
   Display: 'steve'
-  Health: 300
+  Health: 30
   Damage: 10
   Armor: 0
   Faction: Test
