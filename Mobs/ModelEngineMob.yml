@@ -30,13 +30,13 @@ ModelEngine:
     Range: 20
     Style: SEGMENTED_10
     Color: RED
-    Title: '&6Teemo &f- <mob.hp>'
+    Title: '&6ModelEngine &f- <mob.hp>'
     
   KillMessages:
   - '&2死んだ時のメッセージ' 
     
   Skills:
-  - model{mid=ModelEngine;n=false} @self ~onSpawn
+  - model{mid=modelengine;n=false} @self ~onSpawn
   - skill{s=KeepDistance} @self ~onTimer:20
   - skill{s=GetCloser} @self ~onTimer:20
   - state{s=hurt} @self ~onDamaged
