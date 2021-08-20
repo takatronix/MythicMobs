@@ -1,0 +1,155 @@
+TeemoCancel:
+  Skills:
+  - CancelEvent
+  - skill{s=TeemoBlind} @self
+
+TeemoShoot:
+  Conditions:
+  - targetwithin {d=20} true
+  - targetinlineofsight true
+  Skills:
+  - look{headOnly=false;immediately=true;repeat=50;repeatInterval=1} @target
+  - state{s=shoot} @self
+  - potion{type=SLOW;duration=2;lvl=6;force=true} @self
+  - potion{type=SLOW;duration=25;lvl=7;delay=2;force=true} @self
+  - delay 10
+  - projectile{onTick=TeemoShootT;onHit=TeemoShootH;v=13;i=1;hR=1;vR=1;syo=0.6;HitNonPlayers=true;mr=20;tyo=0.25} @target
+  - projectile{onTick=TeemoShootT;v=13;i=1;hR=1;vR=1;syo=0.6;HitNonPlayers=true;mr=20;tyo=0.25;delay=1} @target
+  - sound{s=item.crossbow.shoot;p=1;v=2} @selflocation
+
+TeemoShootT:
+  Skills:
+  - effect:particles{p=spell_mob;c=#70AD47;vS=0.05;hS=0.05;speed=0,size=0.5;a=3} @origin
+
+  
+TeemoShootH:
+  Skills:
+  - damage{a=4} @target
+  - potion{type=POISON;duration=40;lvl=2;force=true} @target
+
+KeepDistance:
+  Conditions:
+  - playerwithin{r=10} true
+  Skills:
+  - runaigoalselector{goal=clear} @self
+  - runaigoalselector{goal=fleeplayers} @self
+  
+GetCloser:
+  Conditions:
+  - playerwithin{r=10} false
+  Skills:
+  - runaigoalselector{goal=clear} @self
+  - runaigoalselector{goal=movetowardstarget} @self
+  - runaigoalselector{goal=lookatplayers} @self
+  - runaigoalselector{goal=avoidzombies} @self
+  
+
+TeemoBlind:
+  Cooldown: 14
+  Conditions:
+  - targetwithin {d=20} true
+  - targetinlineofsight true
+  Skills:
+  - look{headOnly=false;immediately=true;repeat=60;repeatInterval=1} @target
+  - state{s=shoot} @self
+  - potion{type=SLOW;duration=2;lvl=6;force=true} @self
+  - potion{type=SLOW;duration=25;lvl=7;delay=2;force=true} @self
+  - delay 10
+  - projectile{onTick=TeemoBlindT;onHit=TeemoBlindH;v=13;i=1;hR=1;vR=1;syo=0.6;HitNonPlayers=true;mr=20;tyo=0.25} @target
+  - projectile{onTick=TeemoBlindT;v=13;i=1;hR=1;vR=1;syo=0.6;HitNonPlayers=true;mr=20;tyo=0.25;delay=1} @target
+  - sound{s=entity.ghast.shoot;p=1;v=2} @selflocation
+
+TeemoBlindT:
+  Skills:
+  - effect:particles{p=reddust;c=#990099;a=1;s=0.00;hs=0.00;vs=0.00;forwardOffset=0.6563;y=-0.0313;Size=0.35;delay=0;sideOffset=0.0938} @origin
+  - effect:particles{p=reddust;c=#990099;a=1;s=0.00;hs=0.00;vs=0.00;forwardOffset=0.6563;y=0.0000;Size=0.35;delay=0;sideOffset=0.0000} @origin
+  - effect:particles{p=reddust;c=#990099;a=1;s=0.00;hs=0.00;vs=0.00;forwardOffset=0.5469;y=-0.0625;Size=0.35;delay=0;sideOffset=0.1875} @origin
+  - effect:particles{p=reddust;c=#808080;a=1;s=0.00;hs=0.00;vs=0.00;forwardOffset=0.5469;y=-0.0313;Size=0.35;delay=0;sideOffset=0.0938} @origin
+  - effect:particles{p=reddust;c=#808080;a=1;s=0.00;hs=0.00;vs=0.00;forwardOffset=0.5469;y=0.0000;Size=0.35;delay=0;sideOffset=0.0000} @origin
+  - effect:particles{p=reddust;c=#990099;a=1;s=0.00;hs=0.00;vs=0.00;forwardOffset=0.5469;y=0.0313;Size=0.35;delay=0;sideOffset=-0.0938} @origin
+  - effect:particles{p=reddust;c=#800000;a=1;s=0.00;hs=0.00;vs=0.00;forwardOffset=0.4375;y=-0.0625;Size=0.35;delay=0;sideOffset=0.1875} @origin
+  - effect:particles{p=reddust;c=#808080;a=1;s=0.00;hs=0.00;vs=0.00;forwardOffset=0.4375;y=-0.0313;Size=0.35;delay=0;sideOffset=0.0938} @origin
+  - effect:particles{p=reddust;c=#808080;a=1;s=0.00;hs=0.00;vs=0.00;forwardOffset=0.4375;y=0.0000;Size=0.35;delay=0;sideOffset=0.0000} @origin
+  - effect:particles{p=reddust;c=#800000;a=1;s=0.00;hs=0.00;vs=0.00;forwardOffset=0.4375;y=0.0313;Size=0.35;delay=0;sideOffset=-0.0938} @origin
+  - effect:particles{p=reddust;c=#808080;a=1;s=0.00;hs=0.00;vs=0.00;forwardOffset=0.3281;y=-0.0313;Size=0.35;delay=0;sideOffset=0.0938} @origin
+  - effect:particles{p=reddust;c=#808080;a=1;s=0.00;hs=0.00;vs=0.00;forwardOffset=0.3281;y=0.0000;Size=0.35;delay=0;sideOffset=0.0000} @origin
+  - effect:particles{p=reddust;c=#808080;a=1;s=0.00;hs=0.00;vs=0.00;forwardOffset=0.2188;y=-0.0313;Size=0.35;delay=0;sideOffset=0.0938} @origin
+  - effect:particles{p=reddust;c=#808080;a=1;s=0.00;hs=0.00;vs=0.00;forwardOffset=0.2188;y=0.0000;Size=0.35;delay=0;sideOffset=0.0000} @origin
+  - effect:particles{p=reddust;c=#808080;a=1;s=0.00;hs=0.00;vs=0.00;forwardOffset=0.1094;y=-0.0313;Size=0.35;delay=0;sideOffset=0.0938} @origin
+  - effect:particles{p=reddust;c=#808080;a=1;s=0.00;hs=0.00;vs=0.00;forwardOffset=0.1094;y=0.0000;Size=0.35;delay=0;sideOffset=0.0000} @origin
+  - effect:particles{p=reddust;c=#990099;a=1;s=0.00;hs=0.00;vs=0.00;forwardOffset=0.6563;y=0.0938;Size=0.35;delay=0;sideOffset=-0.0313} @origin
+  - effect:particles{p=reddust;c=#990099;a=1;s=0.00;hs=0.00;vs=0.00;forwardOffset=0.6563;y=0.0000;Size=0.35;delay=0;sideOffset=0.0000} @origin
+  - effect:particles{p=reddust;c=#990099;a=1;s=0.00;hs=0.00;vs=0.00;forwardOffset=0.5469;y=0.1875;Size=0.35;delay=0;sideOffset=-0.0625} @origin
+  - effect:particles{p=reddust;c=#808080;a=1;s=0.00;hs=0.00;vs=0.00;forwardOffset=0.5469;y=0.0938;Size=0.35;delay=0;sideOffset=-0.0313} @origin
+  - effect:particles{p=reddust;c=#808080;a=1;s=0.00;hs=0.00;vs=0.00;forwardOffset=0.5469;y=0.0000;Size=0.35;delay=0;sideOffset=0.0000} @origin
+  - effect:particles{p=reddust;c=#990099;a=1;s=0.00;hs=0.00;vs=0.00;forwardOffset=0.5469;y=-0.0938;Size=0.35;delay=0;sideOffset=0.0313} @origin
+  - effect:particles{p=reddust;c=#800000;a=1;s=0.00;hs=0.00;vs=0.00;forwardOffset=0.4375;y=0.1875;Size=0.35;delay=0;sideOffset=-0.0625} @origin
+  - effect:particles{p=reddust;c=#808080;a=1;s=0.00;hs=0.00;vs=0.00;forwardOffset=0.4375;y=0.0938;Size=0.35;delay=0;sideOffset=-0.0313} @origin
+  - effect:particles{p=reddust;c=#808080;a=1;s=0.00;hs=0.00;vs=0.00;forwardOffset=0.4375;y=0.0000;Size=0.35;delay=0;sideOffset=0.0000} @origin
+  - effect:particles{p=reddust;c=#800000;a=1;s=0.00;hs=0.00;vs=0.00;forwardOffset=0.4375;y=-0.0938;Size=0.35;delay=0;sideOffset=0.0313} @origin
+  - effect:particles{p=reddust;c=#808080;a=1;s=0.00;hs=0.00;vs=0.00;forwardOffset=0.3281;y=0.0938;Size=0.35;delay=0;sideOffset=-0.0313} @origin
+  - effect:particles{p=reddust;c=#808080;a=1;s=0.00;hs=0.00;vs=0.00;forwardOffset=0.3281;y=0.0000;Size=0.35;delay=0;sideOffset=0.0000} @origin
+  - effect:particles{p=reddust;c=#808080;a=1;s=0.00;hs=0.00;vs=0.00;forwardOffset=0.2188;y=0.0938;Size=0.35;delay=0;sideOffset=-0.0313} @origin
+  - effect:particles{p=reddust;c=#808080;a=1;s=0.00;hs=0.00;vs=0.00;forwardOffset=0.2188;y=0.0000;Size=0.35;delay=0;sideOffset=0.0000} @origin
+  - effect:particles{p=reddust;c=#808080;a=1;s=0.00;hs=0.00;vs=0.00;forwardOffset=0.1094;y=0.0938;Size=0.35;delay=0;sideOffset=-0.0313} @origin
+  - effect:particles{p=reddust;c=#808080;a=1;s=0.00;hs=0.00;vs=0.00;forwardOffset=0.1094;y=0.0000;Size=0.35;delay=0;sideOffset=0.0000} @origin
+
+TeemoRun:
+  Conditions:
+  - playerwithin {d=20} true
+  Cooldown: 22
+  Skills:
+  - sound{s=custom.teemo.run;p=1;v=2} @self
+  - potion{type=SPEED;duration=140;lvl=2;force=true} @self
+
+  
+TeemoBlindH:
+  Skills:
+  - damage{a=4} @target
+  - potion{type=BLINDNESS;duration=80;lvl=2;force=true} @target
+  - potion{type=WEAKNESS;duration=80;lvl=5;force=true} @target
+  
+TeemoShroom:
+  Conditions:
+  - targetwithin {d=20} true
+  - targetinlineofsight true
+  Cooldown: 34
+  Skills:
+  - state{s=throw} @self
+  - potion{type=SLOW;duration=2;lvl=6;force=true} @self
+  - potion{type=SLOW;duration=25;lvl=7;delay=2;force=true} @self
+  - delay 10
+  - projectile{bulletType=MOB;mob=Shroom;onTick=TeemoShroomT;onEnd=TeemoShroomE;v=13;i=1;syo=1,HitNonPlayers=true;g=1.5;sfo=2;mr=20;tyo=1.5;vO=1.5} @Forward{f=5}
+  - sound{s=custom.teemo.laugh;p=1;v=2} @self
+
+TeemoShroomT:
+  Skills:
+  - effect:particles{p=reddust;c=#FF00FF;vS=0.2;hS=0.2;speed=1}
+  
+TeemoShroomE:
+  Skills:
+  - summon{m=ShroomInvis;a=1;radius=0.1} @origin
+  
+ShroomInvisExplode:
+  Conditions:
+  - playerwithin{d=3}
+  Skills:
+  - sound{s=custom.teemo.laugh;p=1;v=2} @self
+  - explode
+  - effect:particlering{particle=reddust;c=#FF00FF;amount=200;radius=1;s=50;hS=1;vS=0;y=0.25} @self
+  - damage{a=4} @PIR{r=4}
+  - potion{type=POISON;duration=100;lvl=2;force=true} @PIR{r=4}
+  - potion{type=SLOW;duration=100;lvl=2;force=true} @PIR{r=4}
+  - effect:bloodyScreen{d=100} @PIR{r=4}
+  - suicide
+  
+ShroomDamaged:
+  Skills:
+  - sound{s=custom.teemo.laugh;p=1;v=2} @self
+  - explode
+  - effect:particlering{particle=reddust;c=#FF00FF;amount=200;radius=1;s=50;hS=1;vS=0;y=0.25} @self
+  - damage{a=4} @PIR{r=4}
+  - potion{type=POISON;duration=100;lvl=2;force=true} @PIR{r=4}
+  - potion{type=SLOW;duration=100;lvl=2;force=true} @PIR{r=4}
+  - effect:bloodyScreen{d=100} @PIR{r=4}
+  - suicide
