@@ -1,0 +1,29 @@
+KeepDistance:
+  Conditions:
+  - playerwithin{r=10} true
+  Skills:
+  - runaigoalselector{goal=clear} @self
+  - runaigoalselector{goal=fleeplayers} @self
+  
+GetCloser:
+  Conditions:
+  - playerwithin{r=10} false
+  Skills:
+  - runaigoalselector{goal=clear} @self
+  - runaigoalselector{goal=movetowardstarget} @self
+  - runaigoalselector{goal=lookatplayers} @self
+  - runaigoalselector{goal=avoidzombies} @self
+  
+Run:
+  Conditions:
+  - playerwithin {d=20} true
+  Cooldown: 22
+  Skills:
+  - potion{type=SPEED;duration=140;lvl=2;force=true} @self
+
+KeepDistance:
+  Conditions:
+  - playerwithin{r=10} true
+  Skills:
+  - runaigoalselector{goal=clear} @self
+  - runaigoalselector{goal=fleeplayers} @self
