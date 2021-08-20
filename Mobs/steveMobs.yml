@@ -1,10 +1,10 @@
-ModelEngine:
+steve:
   Type: ZOMBIE
-  Display: 'ModelEngine'
+  Display: 'steve'
   Health: 30
   Damage: 10
   Armor: 0
-  Faction: ModelEngine
+  Faction: steve
   
   Options:
     PreventSunburn: true
@@ -30,13 +30,13 @@ ModelEngine:
     Range: 20
     Style: SEGMENTED_10
     Color: RED
-    Title: '&6ModelEngine &f- <mob.hp>'
+    Title: '&6steve &f- <mob.hp>'
     
   KillMessages:
   - '&2死んだ時のメッセージ' 
     
   Skills:
-  - model{mid=modelengine;n=false} @self ~onSpawn
+  - model{mid=steve;n=false} @self ~onSpawn
   - skill{s=KeepDistance} @self ~onTimer:20
   - skill{s=GetCloser} @self ~onTimer:20
   - state{s=hurt} @self ~onDamaged
