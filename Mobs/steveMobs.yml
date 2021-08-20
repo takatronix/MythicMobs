@@ -39,6 +39,7 @@ steve:
   - model{mid=steve;n=false} @self ~onSpawn
   - skill{s=KeepDistance} @self ~onTimer:20
   - skill{s=GetCloser} @self ~onTimer:20
+  - skill{s=Run} @self ~onTimer:40
   - state{s=hurt} @self ~onDamaged
   - state{s=death;li=3;lo=3} @self ~onDeath
   
