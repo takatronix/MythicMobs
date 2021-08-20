@@ -1,0 +1,28 @@
+GhoulChest:
+  Type: ZOMBIE
+  Display: 'ひとくいチェスト'
+  Health: 20
+  Damage: 3
+  Options:
+    PreventSunburn: true
+    Silent: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    KnockbackResistance: 0.7
+    PreventJockeyMounts: true 
+  AIGoalSelector:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll
+  AITargetSelectors:
+  - players
+  Drops: 
+  Skills:
+  - model{mid=mimic;n=false} @self ~onSpawn
+  - state{s=attack} @self ~onAttack
+  - state{s=hurt} @self ~onDamaged
+  - sound{s=entity.fox.bite;p=0.4} @self ~onAttack
+  - sound{s=block.wood.break;p=0.7;v=1.2} @self ~onDamaged
+  - sound{s=block.chest.open;p=0.5;v=0.8} @self ~onDeath
+  - effect:particles{p=cloud;a=5;hs=0.25;vs=0.35;y=0.5} @self ~onDeath
