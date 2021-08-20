@@ -3,7 +3,7 @@ steve:
   Display: 'steve'
   Health: 30
   Damage: 10
-  Armor: 0
+  Armor: 1
   Faction: steve
   
   Options:
