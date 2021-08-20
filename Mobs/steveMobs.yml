@@ -4,7 +4,6 @@ steve:
   Health: 20
   Damage: 3
   Armor: 1
-  
   Options:
     PreventSunburn: true
     Silent: true
@@ -12,33 +11,27 @@ steve:
     PreventItemPickup: true
     PreventRandomEquipment: true
     KnockbackResistance: 0
-    PreventJockeyMounts: true
-    
+    PreventJockeyMounts: true 
   AIGoalSelector:
   - 0 clear
   - 1 meleeattack
-  - 2 randomstroll
-  
+  - 2 randomstroll 
   Drops:
-  # - dieamond_sword 1 0.1
-  
+  # - dieamond_sword 1 0.1 
   BossBar:
     Enabled: true
     Range: 20
     Style: SEGMENTED_10
     Color: RED
-    Title: '&6steve &f- <mob.hp>'
-    
+    Title: '&6steve &f- <mob.hp>'   
 #  KillMessages:
-#  - '&2死んだ時のメッセージ' 
-    
+#  - '&2死んだ時のメッセージ'   
   Skills:
   - model{mid=steve;n=false} @self ~onSpawn
 #  - skill{s=KeepDistance} @self ~onTimer:20
 #  - skill{s=GetCloser} @self ~onTimer:20
-#  - state{s=hurt} @self ~onDamaged
-#  - state{s=death;li=3;lo=3} @self ~onDeath
-  
+  - state{s=attack} @self ~onAttack
+  - state{s=hurt} @self ~onDamaged
   AITargetSelectors:
   - players
 #  DamageModifiers:
