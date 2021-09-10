@@ -1,10 +1,97 @@
 #RedCap
+
 #ターゲットへ毒のスプラッシュポーションを投げる
-RedcapPoisonPotion:
+PoisonPotionThrow:
+  Cooldown: 4
+  Conditions:
+  - targetwithin 8 true
   Skills:
-  - shootpotion{type=POISON;duration=60;level=1;velocity=3} @target
-  - delay 8
-  - sound{s=entity.witch.celebrate;p=0.6;v=0.8} @self
+  - projectile{bulletType=ITEM;material=potion;oT=PoisonPotionThrowTick;oE=PoisonPotionThrowEnd;i=1;hnp=false;sE=true;v=10;mr=16;vO=2;g=0.98} @RLNTE{a=2;r=8;s=4;minr=5}
+  - sound{s=entity.splash_potion.throw;p=0.7}
+  - delay 2
+  - sound{s=entity.splash_potion.throw;p=0.5}
+PoisonPotionThrowTick:
+  Skills:
+  - effect:particles{p=SPELL_WITCH;a=1;hs=0;vs=0} @origin
+PoisonPotionThrowEnd:
+  Skills:
+  - effect:particlesphere{p=SPELL_WITCH;a=80;r=2} @origin
+  - potion{t=POISON;d=70;l=1} @PNTL{r=3}
+  - sound{s=block.glass.break;p=0.7} @origin
+  - delay 4
+  - sound{s=entity.witch.celebrate;p=0.6;v=0.8} @PIR{r=4}
+
+HealPotionConsume:
+#  Cooldown: 16
+  Conditions:
+  Skills:
+  - potion{t=SLOW;d=50;l=7} @self
+  - equip{item=potion MAINHAND}
+  - sound{s=entity.bat.takeoff;p=0.8} @self
+  - delay 4
+  - sound{s=entity.generic.drink;p=0.8} @self
+  - delay 10
+  - sound{s=entity.generic.drink;p=0.8} @self
+  - delay 10
+  - message{msg="&c&l<mob.name>&f は回復のポーションを飲み干した！"} @PIR{r=15}
+  - effect:particlesphere{p=reddust;c=#71ff5e;radius=3;a=500;hs=0.1;vs=0.1} @origin
+  - delay 3
+  - heal{a=120} @self
+  - delay 2
+  - equip{item=Redcap_Axe MAINHAND}
+
+#MolotovThrow:
+#  Cooldown: 8
+#  Skills:
+#  - projectile{bulletType=ITEM;material=splash_potion;oT=MolotovThrowTick;oH=MolotovThrowHit;oE=MolotovThrowEnd;i=2;hp=false;hnp=false;sE=false;v=8;mr=16;vO=1;g=0.96} @RLNTE{a=1;r=8;s=5;minr=6}
+#  - sound{s=entity.splash_potion.throw;p=0.6}
+#MolotovThrowTick:
+#  Skills:
+#  - effect:particles{p=flame;a=1;hs=0;vs=0} @Origin
+#MolotovThrowEnd:
+#  Skills:
+#  - setblock{m=FIRE} @Ring{radius=2;points=6;yoffset=0}
+#  - sound{s=block.glass.break;p=0.6} @origin
+
+#火炎瓶をターゲットへ投擲
+#MolotovPotionThrow:
+#  Cooldown: 10
+#  Skills:
+#  - projectile{bulletType=ITEM;material=splash_potion;oT=MolotovPotionThrowTick;oH=MolotovPotionThrowHit;oE=MolotovPotionThrowEnd;i=2;hnp=false;sE=true;v=7;mr=16;vO=1;g=0.96} @target
+#  - sound{s=entity.splash_potion.throw;p=0.5}
+#MolotovPotionThrowTick:
+#  Skills:
+#  - effect:particles{p=flame;a=1;hs=0;vs=0} @origin
+#MolotovPotionThrowHit:
+#  Skills:
+#  - ignite{ticks=80} @PIR{r=3}
+#MolotovPotionThrowEnd:
+#  Skills:
+#  - effect:particles{p=flame;a=10;hs=0.25;vs=0.4} @origin
+#  - sound{s=block.glass.break;p=0.7} @origin
+#  - delay 8
+#  - sound{s=entity.witch.celebrate;p=0.6;v=0.8} @origin
+
+#プレイヤーへ斧を自身の前で回転させるように投擲
+RedcapAxeThrow:
+  Cooldown: 16
+  Skills:
+  - projectile{bulletType=MYTHICITEM ;material=Redcap_Axe;oT=RedcapAxeThrowTick;oH=RedcapAxeThrowHit;oE=RedcapAxeThrowEnd;i=1;hnp=false;sE=false;v=5;mr=16;vO=1;g=0.96} @target
+  - sound{s=entity.player.attack.sweep;p=0.3} @origin
+  - delay 3
+  - sound{s=entity.player.attack.sweep;p=0.5} @origin
+  - delay 3
+  - sound{s=entity.player.attack.sweep;p=0.3} @origin
+  - delay 3
+  - sound{s=entity.player.attack.sweep;p=0.5} @origin
+RedcapAxeThrowTick:
+  Skills:
+  - effect:particles{p=CRIT;a=1;hs=0;vs=0} @origin
+RedcapAxeThrowHit:
+  Skills:
+  - damage{a=15}
+RedcapAxeThrowEnd:
+  Skills:
 
 #プレイヤーが半径5ブロックにいる時、プレイヤーから距離をとる
 #RedcapAway:
@@ -18,18 +105,11 @@ RedcapPoisonPotion:
 #  - delay 20
 #  - potionclear{} @self
 
-#金ブロック上にいる時、ターゲットへスプラッシュポーションを投げる
-RedcapGoldTrap:
-  Conditions:
-  - onblock{m=GOLD_BLOCK} true
-  Skills:
-  - shootpotion{type=SLOW;duration=80;level=3;velocity=3} @target
-
 #自分の半径のランダム座標へ山なりに１つトラバサミを投げ、その座標にLegTrapをスポーン
 LegTrapThrow:
   Cooldown: 2
   Skills:
-  - projectile{bulletType=MYTHICITEM;material=LegTrap_Open;oT=LegTrapThrowTick;oH=LegTrapThrowHit;oE=LegTrapThrowEnd;i=1;hp=false;hnp=false;sE=false;v=7;mr=16;vO=2;g=0.9} @RLNTE{a=1;r=5;s=3;minr=3}
+  - projectile{bulletType=MYTHICITEM;material=LegTrap_Open;oT=LegTrapThrowTick;oE=LegTrapThrowEnd;i=1;hp=false;hnp=false;sE=false;v=7;mr=16;vO=2;g=0.9} @RLNTE{a=1;r=5;s=3;minr=3}
   - sound{s=entity.splash_potion.throw;p=0.6}
 LegTrapThrowTick:
   Skills:
@@ -45,7 +125,7 @@ LegTrapThrowEnd:
 LegTrap2Throw:
   Cooldown: 6
   Skills:
-  - projectile{bulletType=MYTHICITEM;material=LegTrap_Open;oT=LegTrapThrow2Tick;oH=LegTrapThrow2Hit;oE=LegTrapThrow2End;i=1;hp=false;hnp=false;sE=false;v=8;mr=16;vO=2;g=0.9} @RLNTE{a=2;r=10;s=5;minr=6}
+  - projectile{bulletType=MYTHICITEM;material=LegTrap_Open;oT=LegTrapThrow2Tick;oE=LegTrapThrow2End;i=1;hp=false;hnp=false;sE=false;v=8;mr=16;vO=2;g=0.9} @RLNTE{a=2;r=10;s=5;minr=6}
   - sound{s=entity.splash_potion.throw;p=0.6}
   - delay 6
   - sound{s=entity.splash_potion.throw;p=0.6}
@@ -59,14 +139,30 @@ LegTrapThrow2End:
   - delay 2
   - summon{t=LegTrap}
 
-#死亡時、パーティクルと範囲内のプレイヤーへメッセージと周りのLegTrapを削除
+#自分の半径のランダム座標へ山なりに１つガストの火炎放射トラップを投げ、その座標にGhastStatueをスポーン
+GhastStatueThrow:
+  Cooldown: 20
+  Skills:
+  - projectile{bulletType=MYTHICITEM;material=GhastStatue_Normal;oT=GhastStatueThrowTick;oE=GhastStatueThrowEnd;i=1;hp=false;hnp=false;sE=false;v=5;mr=16;vO=2;g=0.97} @RLNTE{a=1;r=13;s=5;minr=9}
+  - sound{s=entity.experience_bottle.throw;p=0.6}
+GhastStatueThrowTick:
+  Skills:
+  - effect:particles{p=flame;a=1;hs=0;vs=0} @origin
+GhastStatueThrowEnd:
+  Skills:
+  - effect:particles{p=flame;a=10;hs=0.25;vs=0.4} @origin
+  - sound{s=entity.horse.armor;p=0.3} @origin
+  - delay 4
+  - summon{t=GhastStatue}
+
+#死亡時、パーティクルと範囲内のプレイヤーへメッセージと周りのLegTrapとGhastStatueを削除
 RedCapDeath:
   Skills:
   - effect:particlesphere{p=cloud;a=40;hS=0.6;vS=0.6;s=3;r=6} @self 
 #  - delay 4
 #  - message{m="<mob.name>&f<&co> ぐはっ、ここまでか...。"} @PIR{r=30}
   - delay 20
-  - signal{s=RedCapDead} @MIR{r=30;t=LegTrap}
+  - signal{s=RedCapDead} @MIR{r=30;t=LegTrap,GhastStatue}
 #  - delay 10
 #  - command{c="mythicmobs i give <trigger.name> KingSlime_Core"} @Trigger ~onDeath
 #  - command{c="dm end <trigger.name> pve1"} @Trigger ~onDeath
@@ -98,5 +194,38 @@ LegTrapRemove:
   - sound{s=entity.item.break;p=0.6;v=0.6} @self
   - delay 4
   - remove @self
-  
 
+
+#GhastStatue
+#頭に別の3Dモデルを装備、射程範囲内の敵に火炎を放射して延焼効果を付与し、一定時間放射すると元の3Dモデルを頭に装備、攻撃時にはガストの悲鳴
+GhastStatueFlamethrow:
+  Conditions:
+  - targetwithin 10 true
+  Skills:
+  - equip{item=GhastStatue_Rage HEAD}
+  - delay 3
+  - sound{s=item.firecharge.use;p=0.5;v=0.6} @self
+  - delay 2
+  - sound{s=item.firecharge.use;p=0.6;v=0.6} @self
+  - delay 2
+  - sound{s=item.firecharge.use;p=0.6;v=0.6} @self
+  - delay 2
+  - runaigoalselector{goal=lookatplayers} @self
+  - projectile{i=1;oT=GhastStatueFlamethrowTick;oH=GhastStatueFlamethrowHit;hnp=true;mr=8;sE=false} @target
+  - delay 30
+  - equip{item=GhastStatue_Normal HEAD}
+GhastStatueFlamethrowTick:
+  Skills:
+  - effect:particles{particle=flame;a=12;s=0.1;hs=0.2;vs=0.2} @origin
+GhastStatueFlamethrowHit:
+  Skills:
+  - damage{a=1;pkb=true}
+  - ignite{t=80}
+
+#死亡時に自身を消滅
+GhastStatueRemove:
+  Skills:
+  - effect:particles{p=cloud;a=7;hs=0.3;vs=0.3} @origin
+  - sound{s=entity.item.break;p=0.4;v=0.6} @self
+  - delay 4
+  - remove @self
