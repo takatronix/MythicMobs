@@ -1,0 +1,27 @@
+kyoshinhei:
+  Type: ZOMBIE
+  Display: 'test'
+  Health: 80
+  Damage: 1
+  Options:
+    PreventSunburn: true
+    Silent: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    MovementSpeed: 0.16
+    FollowRange: 24
+    KnockbackResistance: 1
+    PreventJockeyMounts: true 
+  BossBar:
+    Enabled: true
+    Title: '&c<caster.name> &f[&c<&heart> &f<caster.hp>/<caster.mhp>]'
+    Range: 20
+    Color: BLUE
+    Style: SEGMENTED_12
+  AIGoalSelector:
+  - 0 clear
+  Skills:
+  - model{mid=kyoshinhei;n=false} @self ~onSpawn
+  - effect:particles{p=CAMPFIRE_COSY_SMOKE;a=1;hs=0;vs=0;y=6;sideOffset=1.2;fromorigin=true} @self ~onTimer:10
+  - effect:particles{p=CAMPFIRE_COSY_SMOKE;a=1;hs=0.05;vs=0.05;y=6;sideOffset=-1.2;fromorigin=true} @self ~onTimer:10
