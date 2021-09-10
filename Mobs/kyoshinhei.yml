@@ -25,3 +25,4 @@ kyoshinhei:
   - model{mid=kyoshinhei;n=false} @self ~onSpawn
   - effect:particles{p=CAMPFIRE_COSY_SMOKE;a=1;hs=0;vs=0;y=6;sideOffset=1.2;fromorigin=true} @self ~onTimer:10
   - effect:particles{p=CAMPFIRE_COSY_SMOKE;a=1;hs=0.05;vs=0.05;y=6;sideOffset=-1.2;fromorigin=true} @self ~onTimer:10
+  - potionclear{} @self ~onTimer:10
