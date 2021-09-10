@@ -1,0 +1,30 @@
+PeridotKnight:
+  Type: Zombie
+  Display: '&e&lペリドットナイト'
+  Health: 56
+  Damage: 6
+  Drops:
+  - exp 6 1
+  - PeridotKnight_Head 1 0.3
+  AITargetSelectors:
+  - 1 players
+  Disguise:
+    Type: PeridotKnight
+  Equipment:
+  - PeridotKnight_Sword MAINHAND
+  - PeridotKnight_Shield OFFHAND
+  Options:
+    MovementSpeed: 0.24
+    FollowRange: 16
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    AttackSpeed: 0.24
+    Silent: true
+    KnockbackResistance: 0.75
+    PreventOtherDrops: true
+  Skills:
+  - skill{s=PeridotKnigtAttack} ~onAttack
+  - skill{s=PeridotKnightRush} @target ~onTimer:100 <60% 0.55
+  - sound{s=entity.player.attack.strong;p=1.2} @self ~onAttack
+  - sound{s=entity.phantom.hurt;p=0.6} @self ~onDamaged
+  - sound{s=entity.phantom.death;p=0.6} @self ~onDeath
