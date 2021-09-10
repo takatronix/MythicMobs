@@ -70,14 +70,14 @@ StoneGuardian_Stone:
   Id: WOODEN_HOE
   Model: 14
 
-JadeKnight_Sword:
+PeridotKnight_Sword:
   Id: IRON_SWORD
   Model: 13
   Attributes:
     MainHand:
       Damage: 0
 
-JadeKnight_Shield:
+PeridotKnight_Shield:
   Id: SHIELD
   Options:
     Color: BLACK
@@ -108,6 +108,9 @@ OneEyedPiglin_Axe:
 Redcap_Axe:
   Id: IRON_SWORD
   Model: 4
+#  Enchantments:
+#  - KNOCKBACK:2
+#  - DAMAGE_ALL:1
   Attributes:
     MainHand:
       Damage: 0
@@ -119,6 +122,14 @@ LegTrap_Open:
 LegTrap_Close:
   Id: STONE_HOE
   Model: 45
+
+GhastStatue_Normal:
+  Id: STONE_HOE
+  Model: 49
+
+GhastStatue_Rage:
+  Id: STONE_HOE
+  Model: 50
 
 #---PvE0 Drops without others---
 
@@ -243,15 +254,15 @@ OneEyedPiglin_Bone:
   Lore:
   - '&f金であしらわれた骨のネックレス。'
 
-JadeKnight_Head:
+PeridotKnight_Head:
   Id: player_head
-  Display: '&e◆ ヒスイの兜'
+  Display: '&e◆ ペリドットナイトの兜'
   Amount: 1
   Lore:
   - '&fエメラルドには劣るが頑丈な兜。'
   Data: 3
   Options:
-    SkinTexture: ewogICJ0aW1lc3RhbXAiIDogMTYyNzgyMDk4OTc1MywKICAicHJvZmlsZUlkIiA6ICJkNDdiNDA0OWQ3MGI0MGZhYmFkN2U3ZTdiNTViMWQxMSIsCiAgInByb2ZpbGVOYW1lIiA6ICJSYXBjcmFmdDIwMDAiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzZhMjAyZDlhOTQzYTljZWEzYTM3NTM1OTJmMTE0ZTNjYzBhM2I3NWIyNmM5OWUyZDgzZTFiODRkNzFkYzIwOCIKICAgIH0KICB9Cn0=
+    SkinTexture: ewogICJ0aW1lc3RhbXAiIDogMTYyOTcyNjYyODM5NiwKICAicHJvZmlsZUlkIiA6ICJmZDYwZjM2ZjU4NjE0ZjEyYjNjZDQ3YzJkODU1Mjk5YSIsCiAgInByb2ZpbGVOYW1lIiA6ICJSZWFkIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzEyMDRlMGZmYmFmMzg5YzBlZmRjYzQzYTQ1MDM2YmIwYTJhNTc0NjI3NzRiZTY1NWU5YzYzOTY2MDM1ZTI5MjkiCiAgICB9CiAgfQp9
 
 DiamondCreeper_Gunpowder:
   Id: gunpowder
@@ -296,3 +307,21 @@ LavaRider_redstone:
   Lore:
   - '&f炎を生成する器官。'
   - '&fいまだに熱を帯びている。'
+
+JadeGeneral_flint:
+  Id: flint
+  Display: '&e◆ ヒスイの槍の穂先'
+  Amount: 1
+  Lore:
+  - '&fヒスイの将軍が持っていた槍の穂先。'
+  - '&f空を切り裂くほど鋭く硬い。'
+
+#Redcap_:
+#  Id: 
+#  Display: '&e◆ &c'
+#  Amount: 1
+#  Enchantments:
+#  - DURABILITY:1
+#  Lore:
+#  - ''
+#  - ''
