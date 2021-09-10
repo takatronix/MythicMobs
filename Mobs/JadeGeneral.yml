@@ -1,0 +1,34 @@
+JadeGeneral:
+  Type: ZOMBIE
+  Display: 'ヒスイの将軍'
+  Health: 76
+  Damage: 7
+  Armor: 4
+  Options:
+    PreventSunburn: true
+    Silent: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    MovementSpeed: 0.18
+    FollowRange: 24
+    KnockbackResistance: 0.95
+    PreventJockeyMounts: true 
+  AIGoalSelector:
+  - 0 clear
+  - 1 randomstroll
+  AITargetSelectors:
+  - players
+  Drops:
+  - exp 8 1
+  - JadeGeneral_flint 1 0.25
+  Skills:
+  - model{mid=general_armor;n=false} @self ~onSpawn
+  - state{s=hurt} @self ~onDamaged
+  - skill{s=JadeGeneralAttack} ~onAttack
+  - skill{s=JadeGeneralAttack2} @self ~onTimer:170 <70% 0.55
+  - skill{s=JadeGeneralAttack3} @self ~onTimer:100 0.85
+  - sound{s=entity.phantom.hurt;p=0} @self ~onDamaged
+  - sound{s=entity.phantom.death;p=0} @self ~onDeath
+  - effect:particles{p=cloud;a=5;hs=0.25;vs=0.35;y=0.5} @self ~onDeath
+  - potion{t=SLOW_DIGGING;d=100000;l=6;p=false} @self ~onSpawn
