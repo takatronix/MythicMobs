@@ -64,32 +64,73 @@ DiamondCreeper_Explode:
   - sound{s=entity.generic.explode;p=0.8}
   - effect:itemspray{i=diamond;a=8;v=2;yv=1;d=60} @origin
 
-#---JadeKnight---
-JadeKnigtAttack:
+#---PeridotKnight---
+PeridotKnigtAttack:
   Skills:
-  - effect:particles{p=SCRAPE;a=5;hs=0.3;vs=0.3;y=1} @target
+  - effect:particles{p=SCRAPE;a=3;hs=0.15;vs=0.15;y=1} @target
   - sound{s=entity.player.attack.sweep;p=1.2}
-JadeKnightRush:
+
+PeridotKnightRush:
   Skills:
   - teleport{sh=2;sv=0} @target
-  - effect:particles{p=sweepAttack;a=3;vs=0.35;hs=0.35;s=0;y=1} @target
+  - effect:particles{p=sweepAttack;a=2;vs=0.2;hs=0.2;s=0;y=1} @target
   - damage{a=5;i=false} @target
   - effect:sound{s=entity.player.attack.sweep;v=1;p=0.6}
   - delay 5
   - teleport{sh=3;sv=0} @target
-  - effect:particles{p=sweepAttack;a=4;vs=0.4;hs=0.4;s=0;y=0} @target
+  - effect:particles{p=sweepAttack;a=3;vs=0.25;hs=0.25;s=0;y=0} @target
   - damage{a=5;i=false} @target
   - effect:sound{s=entity.player.attack.sweep;v=0.8;p=1}
+
+#---JadeGeneral---
+JadeGeneralAttack:
+  Skills:
+  - potion{t=SLOW;d=10;l=10;p=false} @self
+  - state{s=attack} @self
   - delay 5
-  - teleport{sh=2;sv=0} @target
-  - effect:particles{p=sweepAttack;a=3;vs=0.35;hs=0.35;s=0;y=1} @target
-  - damage{a=5;i=false} @target
-  - effect:sound{s=entity.player.attack.sweep;v=1;p=0.6}
-  - delay 5
-  - teleport{sh=3;sv=0} @target
-  - effect:particles{p=sweepAttack;a=4;vs=0.4;hs=0.4;s=0;y=0} @target
-  - damage{a=5;i=false} @target
-  - effect:sound{s=entity.player.attack.sweep;v=0.8;p=1}
+  - sound{s=entity.player.attack.sweep;p=0.7}
+  - effect:particles{p=SCRAPE;a=5;hs=0.3;vs=0.3;y=1} @target
+
+JadeGeneralAttack2:
+  Cooldown: 7
+  Conditions:
+  - targetinlineofsight true
+  - targetwithin{d=5} true
+  Skills:
+  - potion{t=SLOW;d=34;l=10;p=false} @self
+  - state{s=attack2} @self
+  - delay 12
+  - sound{s=entity.player.attack.sweep;p=1.2} @self
+  - delay 2
+  - sound{s=entity.player.attack.sweep;p=0.8} @self
+  - delay 2
+  - sound{s=entity.player.attack.sweep;p=1.2} @self
+  - delay 2
+  - sound{s=entity.player.attack.sweep;p=0.8} @self
+  - delay 2
+  - sound{s=entity.player.attack.sweep;p=1.2} @self
+  - delay 2
+  - sound{s=entity.player.attack.sweep;p=0.8} @self
+  - delay 16
+  - sound{s=entity.player.attack.strong;p=0.7} @self
+  - delay 2
+  - damage{a=13} @EIR{r=6;limit=1;sort=NEAREST;target=players}
+  - effect:particles{p=SCRAPE;a=5;hs=0.3;vs=0.3;y=1} @target
+  - delay 2
+
+JadeGeneralAttack3:
+  Cooldown: 3
+  Conditions:
+  - targetinlineofsight true
+  Skills:
+  - potion{t=SLOW;d=24;l=10;p=false} @self
+  - state{s=attack3} @self
+  - delay 24
+  - sound{s=entity.player.attack.sweep;p=0.8} @self
+  - delay 2
+  - damage{a=9} @EIR{r=4;limit=3;sort=NEAREST;target=players}
+  - effect:particles{p=SCRAPE;a=5;hs=0.3;vs=0.3;y=1} @target
+  - delay 2
 
 #---LavaRider---
 LavaFlamethrower:
@@ -128,3 +169,4 @@ StoneGuardianShootHit:
   Skills:
   - damage{a=7;ia=false}
   - sound{s=entity.item.break;p=0.3}
+
