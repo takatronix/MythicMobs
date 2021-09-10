@@ -1,46 +1,62 @@
 Redcap:
   Type: ZOMBIE
-  Display: '&e&lレッドキャップ'
-  Health: 100
-  Damage: 7
+  Display: '&c&lレッドキャップ'
+  Health: 250
+  Damage: 11
+  Armor: 4
   AIGoalSelectors:
-  - clear
-  - meleeattack
-  - randomstroll
+  - 1 meleeattack
+  - 2 randomstroll
   AITargetSelectors:
   - 1 players
-  Drops:
-  - exp 6 1
   Disguise:
     Type: Redcap
   Equipment:
   - Redcap_Axe MAINHAND
   Options:
-    MovementSpeed: 0.2
+    MovementSpeed: 0.18
     FollowRange: 32
     PreventRandomEquipment: true
     PreventSunburn: true
-    AttackSpeed: 0.24
     Silent: true
     KnockbackResistance: 1
     PreventOtherDrops: true
     PreventJockeyMounts: true
     PreventTransformation: true
+  BossBar:
+    Enabled: true
+    Title: '&c<caster.name> &f[&c<&heart> &f<caster.hp>/<caster.mhp>]'
+    Range: 20
+    Color: RED
+    Style: SEGMENTED_12
+#    CreateFog: true
+  DamageModifiers:
+  - PROJECTILE 0.45
+  - POISON 0
+  - FIRE_TICK 0
+  - FIRE 0
   Skills:
-  - skill{s=RedcapPoisonPotion} ~onTimer:140 0.7
+  - potion{t=SLOW_DIGGING;d=100000;l=5;p=false} @self ~onSpawn
+  - skill{s=PoisonPotionThrow} @target ~onTimer:180 0.65
+#  - skill{s=MolotovPotionThrow} @target ~onTimer:260 0.45
+  - skill{s=RedcapAxeThrow} @target ~onTimer:340 0.55
   - skill{s=LegTrapThrow} @target ~onTimer:60 >60% 0.85
   - skill{s=LegTrap2Throw} @target ~onTimer:100 <59% 0.7
+  - skill{s=GhastStatueThrow} @target <70% 0.45
   - skill{s=RedCapDeath} ~onDeath
   - sound{s=entity.witch.death;p=0.5;v=0.8} @self ~onDeath
   - sound{s=entity.witch.hurt;p=0.5;v=0.8} @self ~onDamaged
   - sound{s=entity.player.attack.sweep;p=0.4} @self ~onAttack
+  - skill{s=HealPotionConsume} @self =15%
+  - throw{v=10;vy=0} @target ~onAttack
+  - extinguish{} @self ~onTimer:1
 #  - skill{s=RedcapAway}
 
 
 LegTrap:
   Type: ZOMBIE
-  Display: ''
-  Health: 32
+  Display: 'レッドキャップ'
+  Health: 22
   Damage: 0
   AIGoalSelectors:
   - 0 clear
@@ -56,12 +72,18 @@ LegTrap:
     FollowRange: 2
     KnockbackResistance: 1
     Silent: true
+    LockPitch: true
     ApplyInvisibility: true
     PreventRandomEquipment: true
     PreventSunburn: true
     PreventOtherDrops: true
     PreventJockeyMounts: true
     PreventTransformation: true
+  DamageModifiers:
+  - PROJECTILE 0
+  - POISON 0
+  - FIRE_TICK 0
+  - FIRE 0
   Skills:
   - skill{s=LegTrapActivate} ~onAttack =100%
   - skill{s=LegTrapRemove} ~onSignal:RedCapDead
@@ -69,4 +91,45 @@ LegTrap:
   - sound{s=entity.item.break;p=0.6;v=0.6} @self ~onDeath
   - sound{s=block.chain.break;p=0.7;v=0.8} @self ~onDamaged
   - remove @self ~onDeath
+  - extinguish{} @self ~onTimer:1
+
+
+GhastStatue:
+  Type: ZOMBIE
+  Display: 'レッドキャップ'
+  Health: 36
+  Damage: 0
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - players
+  Equipment:
+  - GhastStatue_Normal HEAD
+  Options:
+    Collidable: true
+    Invincible: false
+    MovementSpeed: 0.01
+    FollowRange: 10
+    KnockbackResistance: 1
+    Silent: true
+    LockPitch: true
+    ApplyInvisibility: true
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    PreventOtherDrops: true
+    PreventJockeyMounts: true
+    PreventTransformation: true
+  DamageModifiers:
+  - PROJECTILE 0.4
+  - POISON 0
+  - FIRE_TICK 0
+  - FIRE 0
+  Skills:
+  - skill{s=GhastStatueFlamethrow} @target ~onTimer:100 0.75
+  - skill{s=GhastStatueRemove} ~onSignal:RedCapDead
+  - effect:particles{p=cloud;a=5;hs=0.25;vs=0.25} @origin ~onDeath
+  - sound{s=entity.item.break;p=0.6;v=0.6} @self ~onDeath
+  - sound{s=block.chain.break;p=0.7;v=0.8} @self ~onDamaged
+  - remove @self ~onDeath
+  - extinguish{} @self ~onTimer:1
   
