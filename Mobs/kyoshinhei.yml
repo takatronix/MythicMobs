@@ -1,7 +1,7 @@
 kyoshinhei:
   Type: ZOMBIE
   Display: 'test'
-  Health: 1
+  Health: 1000
   Damage: 10
   Options:
     PreventSunburn: true
