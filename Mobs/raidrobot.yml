@@ -1,7 +1,7 @@
 raidrobot:
   Type: ZOMBIE
-  Display: 'test'
-  Health: 1000
+  Display: '&9&lMan10 Armored Military Autobot'
+  Health: 2250000
   Damage: 10
   Options:
     PreventSunburn: true
@@ -13,9 +13,9 @@ raidrobot:
     FollowRange: 50
     KnockbackResistance: 1
     PreventJockeyMounts: true 
+    NoAI: true
   BossBar:
     Enabled: true
-    Title: '&c<caster.name> &f[&c<&heart> &f<caster.hp>/<caster.mhp>]'
     Range: 50
     Color: BLUE
     Style: SEGMENTED_12
