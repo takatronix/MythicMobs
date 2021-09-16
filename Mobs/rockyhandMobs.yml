@@ -1,0 +1,340 @@
+leftrockyhand:
+  type: WITHER_SKELETON
+  Display: '遺跡の守り手'
+  Health: 1500
+  Damage: 6
+  Armor: 6
+  Options:
+    PreventSunburn: true
+    Silent: true
+    PreventOtherDrops: true
+    PrevetItemPickup: true
+    KnockbackResistance: 0.9
+    NoDamageTicks: 0
+    PreventJockeyMounts: true
+    FollowRange: 30
+    MaxCombatDistance: 140
+    MovementSpeed: 0.37
+    PreventRandomEquipment: true
+    PreventTransformation: true
+    Despawn: false
+  AIGoalSelector:
+    - clear
+    - meleeattack
+    - randomstroll
+  KillMessages:
+    - '<target.name> は守り手の怒りを買った'
+  BossBar:
+    Enabled: true
+    Title: '遺跡の守り手'
+    Range: 70
+    Color: RED
+    Style: SOLID
+  AITargetSelectors:
+  - players
+  Drops:
+    - stone 1 1
+  Skills:
+  - model{mid=rockyhand;name=false} @self ~onSpawn
+  - bodyclamp{angle=1} @self ~onSpawn
+  - skill{s=RockySummonRHand} @self ~onAttack <70%
+  - skill{s=RockyLSkillAttack;sync=true} ~onAttack >70%
+  - skill{s=RockyLSkillAttackLowHealth;sync=true} ~onAttack <70%
+  - skill{s=RockyLSkillTimer;sync=true} ~onTimer:100 >70%
+  - skill{s=RockyLSkillTimerLowHealth;sync=true} ~onTimer:100 <70%
+
+rightrockyhand:
+  type: WITHER_SKELETON
+  Display: '遺跡の護り手'
+  Health: 1500
+  Damage: 6
+  Armor: 6
+  Options:
+    PreventSunburn: true
+    Silent: true
+    PreventOtherDrops: true
+    PrevetItemPickup: true
+    NoDamageTicks: 0
+    KnockbackResistance: 0.9
+    PreventJockeyMounts: true
+    FollowRange: 30
+    MaxCombatDistance: 140
+    MovementSpeed: 0.37
+    PreventRandomEquipment: true
+    PreventTransformation: true
+    Despawn: false
+  AIGoalSelector:
+    - clear
+    - meleeattack
+    - randomstroll
+  KillMessages:
+    - '<target.name> は護り手の怒りを買った'
+  BossBar:
+    Enabled: true
+    Title: '遺跡の護り手'
+    Range: 70
+    Color: RED
+    Style: SOLID
+  AITargetSelectors:
+  - players
+  Drops:
+    - stone 1 1
+  Skills:
+  - model{mid=righthand;name=false} @self ~onSpawn
+  - bodyclamp{angle=1} @self ~onSpawn
+  - skill{s=RockyRighthandonSpanw} ~onSpawn
+  - skill{s=RockyRSkillAttack;sync=true} ~onAttack >70%
+  - skill{s=RockyRSkillAttackLowHealth;sync=true} ~onAttack <70%
+  - skill{s=RockyRSkillTimer;sync=true} ~onTimer:100 >70%
+  - skill{s=RockyRSkillTimerLowHealth;sync=true} ~onTimer:100 <70%
+
+RockyPunchTarget:
+  Type: SILVERFISH
+  Display: 'fingerguntarget'
+  Health: 100
+  Damage: 0
+  Options:
+    NoDamageTicks: 100
+    Silent: true
+    NoGravity: true
+    MovementSpeed: 0
+    NoAI: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventBlockInfection: true
+  Skills:
+   - potion{type=INVISIBILITY;duration=2000;level=1} @self ~onSpawn
+   - addtag{t=punchtarget} @self ~onSpawn
+
+RockyFingerGunTarget:
+  Type: SILVERFISH
+  Display: 'fingerguntarget'
+  Health: 100
+  Damage: 0
+  Options:
+    NoDamageTicks: 100
+    Silent: true
+    NoGravity: true
+    MovementSpeed: 0
+    NoAI: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventBlockInfection: true
+    Invisible: true
+    Collidable: false
+  Skills:
+  - potion{type=INVISIBILITY;duration=2000;level=1;p=false} @self ~onSpawn
+  - skill{s=RockyFingerTarget} @self ~onSpawn
+  KillMessages:
+  - '<target.name> は守り手に撃ち抜かれた'
+
+RockyLightTarget:
+  Type: SILVERFISH
+  Display: 'fingerguntarget'
+  Health: 100
+  Damage: 0
+  Options:
+    NoDamageTicks: 100
+    Silent: true
+    NoGravity: true
+    MovementSpeed: 0
+    NoAI: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventBlockInfection: true
+    Collidable: false
+  Skills:
+  - potion{type=INVISIBILITY;duration=2000;level=1;p=false} @self ~onSpawn
+  - skill{s=RIFM-ENDLight} @self ~onSpawn
+  - suicide ~onSpawn
+  KillMessages:
+  - '<target.name> は黒こげになった'
+
+RockyKnifehandTarget:
+  Type: SILVERFISH
+  Display: 'rockyknifehandtarget'
+  Health: 100
+  Damage: 0
+  Options:
+    NoDamageTicks: 100
+    Silent: true
+    NoGravity: true
+    MovementSpeed: 0
+    NoAI: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventBlockInfection: true
+    Collidable: false
+  Skills:
+  - skill{s=RCK-Damage} @self ~onSpawn
+  KillMessages:
+  - '<target.name> は真っ二つになった'
+
+RockyKnifehandEffectTarget:
+  Type: SILVERFISH
+  Display: 'rockyknifehandtarget'
+  Health: 100
+  Damage: 0
+  Options:
+    NoDamageTicks: 100
+    Silent: true
+    NoGravity: true
+    MovementSpeed: 0
+    NoAI: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventBlockInfection: true
+    Collidable: false
+  Skills:
+  - potion{type=INVISIBILITY;duration=2000;level=1;p=false} @self ~onSpawn
+  - effect:particleline{speed=0.1;xs=0.7;zs=0.7;particle=sweep_attack;amount=2;syo=0.7;tyo=0.7} @parent ~onSpawn
+  - remove @self ~onSpawn
+
+RockyDiserstarTotem:
+  Type: SILVERFISH
+  Display: 'rockyfireballtotem'
+  Health: 100
+  Damage: 0
+  Options:
+    NoDamageTicks: 100
+    Silent: true
+    NoGravity: true
+    MovementSpeed: 0
+    NoAI: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventBlockInfection: true
+    Collidable: false
+  Skills:
+  - potion{type=INVISIBILITY;duration=2000;level=1;p=false} @self ~onSpawn
+  - skill{s=RockyDiserstarTotem} @self ~onSpawn
+
+RockyDLTarget:
+  Type: SILVERFISH
+  Display: 'rockydltarget'
+  Health: 100
+  Damage: 0
+  Options:
+    NoDamageTicks: 100
+    Silent: true
+    NoGravity: true
+    MovementSpeed: 0
+    NoAI: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventBlockInfection: true
+    Collidable: false
+  Skills:
+  - potion{type=INVISIBILITY;duration=2000;level=1;p=false} @self ~onSpawn
+  - skill{s=RockyDLTarget} @self ~onSpawn
+  KillMessages:
+  - '<target.name> は黒こげになった'
+
+RockyDLRTarget:
+  Type: SILVERFISH
+  Display: 'rockydlrtarget'
+  Health: 100
+  Damage: 0
+  Options:
+    NoDamageTicks: 100
+    Silent: true
+    NoGravity: true
+    MovementSpeed: 0
+    NoAI: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventBlockInfection: true
+    Collidable: false
+  Skills:
+  - potion{type=INVISIBILITY;duration=2000;level=1;p=false} @self ~onSpawn
+  - skill{s=RockyDLRTarget} @self ~onSpawn
+
+RockyDivingWarpTarget:
+  Type: SILVERFISH
+  Display: 'rockydivingwarptarget'
+  Health: 100
+  Damage: 0
+  Options:
+    NoDamageTicks: 100
+    Silent: true
+    NoGravity: true
+    MovementSpeed: 0
+    NoAI: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventBlockInfection: true
+    Collidable: false
+  Skills:
+  - potion{type=INVISIBILITY;duration=2000;level=1;p=false} @self ~onSpawn
+  KillMessages:
+    - '<target.name> は星になった'
+
+RockyScatterMinion:
+  Type: WITHER_SKELETON
+  Display: '遺跡の護人'
+  Health: 100
+  Options:
+    PreventOtherDrops: true
+    PreventItemPickup: true
+  Equipment:
+    - NETHERITE_SWORD HAND
+  Skills:
+  - skill{s=RockyScatterMinion} @self ~onSpawn
+  KillMessage:
+  - '<target.name> は護人の怒りを買った'
+
+RockySummonRTarget:
+  Type: SILVERFISH
+  Display: 'rockysummontarget'
+  Health: 100
+  Damage: 0
+  Options:
+    NoDamageTicks: 100
+    Silent: true
+    NoGravity: true
+    MovementSpeed: 0
+    NoAI: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventBlockInfection: true
+    Collidable: false
+  Skills:
+  - potion{type=INVISIBILITY;duration=2000;level=1;p=false} @self ~onSpawn
+  - summon{mob=rightrockyhand} @selflocation ~onSpawn
+  - remove @self ~onSpawn
+
+RockySnatchTotem:
+  Type: SILVERFISH
+  Display: 'rockysnatchtotem'
+  Health: 100
+  Damage: 0
+  Options:
+    NoDamageTicks: 100
+    Silent: true
+    NoGravity: true
+    MovementSpeed: 0
+    NoAI: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventBlockInfection: true
+    Collidable: false
+  Skills:
+  - potion{type=INVISIBILITY;duration=2000;level=1;p=false} @self ~onSpawn
+  - skill{s=RockySnatchTotem} @self ~onSpawn
+
+RockySnatchTarget:
+  Type: SILVERFISH
+  Display: 'rockysnatchtarget'
+  Health: 100
+  Damage: 0
+  Options:
+    NoDamageTicks: 100
+    Silent: true
+    MovementSpeed: 0
+    NoAI: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventBlockInfection: true
+    Collidable: false
+  Skills:
+  - potion{type=INVISIBILITY;duration=2000;level=1;p=false} @self ~onSpawn
