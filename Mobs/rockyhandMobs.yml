@@ -267,6 +267,7 @@ RockyDivingWarpTarget:
     PreventBlockInfection: true
     Collidable: false
   Skills:
+  - addtag{t=warpTarget} @self ~onSpawn
   - potion{type=INVISIBILITY;duration=2000;level=1;p=false} @self ~onSpawn
   KillMessages:
     - '<target.name> は星になった'
