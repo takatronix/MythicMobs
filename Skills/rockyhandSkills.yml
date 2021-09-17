@@ -167,7 +167,7 @@ RockyFingerGun:
 RockyFingerTarget:
   Skills:
   - delay 4
-  - damage{a=150} @playersinradius{r=1.5}
+  - damage{a=16;ia=true;type=VOID} @playersinradius{r=1.5}
   - effect:particles{particle=lava;amount=5;speed=3} @selflocation{y=0.5}
   - effect:particleline{particle=reddust;color=#ff00ff;targetYOffset=6} @parent #
   - delay 2
@@ -762,10 +762,3 @@ RockySnatchPlayer:
   Skills:
   - teleport{spreadh=2} @trigger
   - jump{v=-0.2} @self
-
-RockyOnDeath:
-  Conditions:
-  - hastag{t=theLastOne} true
-  Skills:
-  - command{c="mraid current win"}
-  - message{m='<テストメッセージ>最後の一体死亡'} @playersinradius{r=100}
