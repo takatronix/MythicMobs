@@ -67,7 +67,7 @@ RockyPunchTargetSkill:
   Conditions:
   - hastag{t=punchtarget} true
   Skills:
-  - damage{a=6} @PlayersInRadius{r=5}
+  - damage{a=16} @PlayersInRadius{r=5}
   - sudoskill{s=RockyPunchKnockback} @PlayersInRadius{r=5}
   - teleportin{vector=0,-10,0} @self
   - remove @self
@@ -86,11 +86,11 @@ RockyRightSlap:
   - setAI{ai=false} @self
   - delay 42
   - sudoskill{s=RockySlapDamage;cat=true} @EIC{a=45;r=10;rot=0.0}
-  - damage{a=10} @EIC{a=45;r=10;rot=0.0}
+  - damage{a=30} @EIC{a=45;r=10;rot=0.0}
   - sound{s=entity.player.attack.knockback;p=0.6} @playersinradius{r=100}
   - delay 4
   - sudoskill{s=RockySlapDamage;cat=true} @EIC{a=45;r=10;rot=-90.0}
-  - damage{a=10} @EIC{a=45;r=10;rot=-90.0}
+  - damage{a=30} @EIC{a=45;r=10;rot=-90.0}
   - delay 21
   - setAI{ai=true} @self
   - removetag{t=skillRunning} @self
@@ -109,11 +109,11 @@ RockyLeftSlap:
   - setAI{ai=false} @self
   - delay 42
   - sudoskill{s=RockySlapDamage;cat=true} @EIC{a=45;r=10;rot=0.0}
-  - damage{a=10} @EIC{a=45;r=10;rot=0.0}
+  - damage{a=30} @EIC{a=45;r=10;rot=0.0}
   - sound{s=entity.player.attack.knockback;p=0.6} @playersinradius{r=100}
   - delay 4
   - sudoskill{s=RockySlapDamage;cat=true} @EIC{a=45;r=10;rot=90.0}
-  - damage{a=10} @EIC{a=45;r=10;rot=90.0}
+  - damage{a=30} @EIC{a=45;r=10;rot=90.0}
   - delay 21
   - setAI{ai=true} @self
   - removetag{t=skillRunning} @self
@@ -134,7 +134,7 @@ RockySwingDown:
   - addtag{t=skillRunning} @self
   - setAI{ai=false} @self
   - delay 57
-  - damage{a=26} @playersinradius{r=8}
+  - damage{a=50} @playersinradius{r=8}
   - potion{type=SLOW;duration=40;level=1;particles=false} @playersinradius{r=8}
   - sound{s=block.stone.break;p=0;v=2} @playersinradius{r=100}
   - sound{s=entity.skeleton.converted_to_stray;p=0;v=0.8} @playersinradius{r=100}
@@ -145,7 +145,7 @@ RockySwingDown:
 RockyFingerGun:
   Conditions:
   - children{name='遺跡の護り手'} false
-  - playernotwithin{d=20} true
+  - playernotwithin{d=6} true
   - hastag{t=skillRunning} false
   Skills:
   - state{s=finger_gun} @self
@@ -167,7 +167,7 @@ RockyFingerGun:
 RockyFingerTarget:
   Skills:
   - delay 4
-  - damage{a=18} @playersinradius{r=1.5}
+  - damagepercent{percent=0.6} @playersinradius{r=1.5}
   - effect:particles{particle=lava;amount=5;speed=3} @selflocation{y=0.5}
   - effect:particleline{particle=reddust;color=#ff00ff;targetYOffset=6} @parent #
   - delay 2
@@ -223,7 +223,7 @@ RockyHammering:
   - addtag{t=skillRunning} @self
   - setAI{ai=false} @self
   - delay 31
-  - damage{a=25} @PlayersInRadius{r=7}
+  - damage{a=50} @PlayersInRadius{r=7}
   - sound{s=entity.generic.explode;p=0.3;v=1.0} @playersinradius{r=100}
   - blockwave{duration=20;material=stone;radius=7;radiusY=1;velocity=10;shape=sphere} @selflocation
   - sudoskill{skill=RockyHammeringDamage} @PlayersInRadius{r=7}
@@ -243,13 +243,13 @@ RockyTripleHammering:
   - addtag{t=skillRunning} @self
   - setAI{ai=false} @self
   - delay 13
-  - damage{a=6} @PlayersInRadius{r=4}
+  - damage{a=12} @PlayersInRadius{r=4}
   - sound{s=entity.generic.explode;p=0.8;v=0.3} @playersinradius{r=100}
   - delay 10
-  - damage{a=6} @PlayersInRadius{r=4}
+  - damage{a=12} @PlayersInRadius{r=4}
   - sound{s=entity.generic.explode;p=0.8;v=0.3} @playersinradius{r=100}
   - delay 7
-  - damage{a=6} @PlayersInRadius{r=4}
+  - damage{a=12} @PlayersInRadius{r=4}
   - sound{s=entity.generic.explode;p=0.8;v=0.3} @playersinradius{r=100}
   - delay 20
   - removetag{t=skillRunning} @self
@@ -295,7 +295,7 @@ RSM-Tick:
   - effect:particles{p=lava;amount=1;speed=0;hS=0.2;vS=0.2} @origin
 RSM-Hit:
   Skills:
-  - damage{a=8}
+  - damage{a=16}
   - effect:explosion{amount=5;speed=2}
   - sound{s=entity.generic.explode;v=3}
   - ignite{ticks=200}
@@ -334,7 +334,7 @@ RIFM-End:
   - summon{mob=RockyLightTarget;amount=1}
 RIFM-ENDLight:
   Skills:
-  - damage{a=25} @playersinradius{r=8}
+  - damage{a=60} @playersinradius{r=8}
   - stun{d=60;f=true} @playersinradius{r=8}
   - ignite{ticks=60} @playersinradius{r=8}
   - effect:lightning @Ring{radius=8;points=8;yoffset=0}
@@ -411,7 +411,7 @@ RCKEf-End:
 RCK-Damage:
   Skills:
   - potion{type=INVISIBILITY;duration=2000;level=1} @self
-  - damage{a=10} @playersinradius{r=4}
+  - damage{a=25} @playersinradius{r=4}
   - teleportin{vector=0,-10,0} @self
   - delay 1
   - remove
@@ -532,7 +532,7 @@ RockyDLTarget:
   Skills:
   - effect:particles{particle=flash;amount=2;speed=2} @selflocation{y=0.4}
   - delay 15
-  - damage{a=6} @playersinradius{r=3}
+  - damage{a=18} @playersinradius{r=3}
   - ignite{ticks=80} @playersinradius{r=3}
   - effect:lightning @selflocation{y=-0.5}
   - remove @self
@@ -549,16 +549,16 @@ RockyRollingPunch:
   - delay 1
   - lunge{v=18000} @forward{f=50;y=17}
   - delay 1
-  - damage{a=6} @PlayersInRadius{r=5}
+  - damage{a=10} @PlayersInRadius{r=5}
   - sudoskill{s=RockyRPKnockback;cat=true} @PlayersInRadius{r=5}
   - delay 1
-  - damage{a=6} @PlayersInRadius{r=5}
+  - damage{a=10} @PlayersInRadius{r=5}
   - sudoskill{s=RockyRPKnockback;cat=true} @PlayersInRadius{r=5}
   - delay 1
-  - damage{a=6} @PlayersInRadius{r=5}
+  - damage{a=10} @PlayersInRadius{r=5}
   - sudoskill{s=RockyRPKnockback;cat=true} @PlayersInRadius{r=5}
   - delay 1
-  - damage{a=6} @PlayersInRadius{r=5}
+  - damage{a=10} @PlayersInRadius{r=5}
   - sudoskill{s=RockyRPKnockback;cat=true} @PlayersInRadius{r=5}
   - delay 10
   - removetag{t=skillRunning} @self  
@@ -625,7 +625,7 @@ RockyDivingWarpTarget:
   - effect:blockmask{m=end_portal;r=5;d=40} @selflocation{y=0}
   - effect:blockunmask{r=5;shape=cube} @selflocation{y=5}
   - delay 8
-  - damage{a=22} @playersinradius{r=5}
+  - damage{a=70} @playersinradius{r=5}
   - sudoskill{skill=RockyDWJump;cat=true} @playersinradius{r=5}
   - blockwave{duration=40;material=obsidian;radius=4;radiusY=1;velocity=10;shape=sphere;onlyair=true} @self
   - remove @self
@@ -674,7 +674,7 @@ RockyRighthandonSpanw:
   - state{s=spawn} @self
   - addtag{t=skillRunning} @self
   - blockwave{duration=40;material=obsidian;radius=5;radiusY=1;velocity=2;shape=sphere;onlyair=true} @self
-  - damage{a=40} @playersinradius{r=4}
+  - damage{a=100} @playersinradius{r=4}
   - removetag{t=skillRunning} @self
 
 RockySnatch:
@@ -691,7 +691,7 @@ RockySnatch:
   - skill{s=RockyPunch} @self
 RockySnatchTotem:
   Skills:
-  - summon{mob=RockySnatchTarget} @playersinradius{r=100;rm=15}
+  - summon{mob=RockySnatchTarget} @playersinradius{r=100;rm=40}
   - summon{mob=RockySnatchTarget} @RLNTE{a=2;r=35;s=10;minr=30}
   - delay 2
   - sudoskill{skill=RockySnatchTarget;cat=true} @children
