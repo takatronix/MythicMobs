@@ -49,7 +49,7 @@ RockyPunch:
   - setAI{ai=false} @self
   - command{c="execute at @e[limit=1,sort=nearest,tag=punch] run tp @e[limit=1,type=minecraft:wither_skeleton,sort=nearest] ~ ~ ~ facing entity @p"}
   - delay 18
-  - damage{a=6} @PlayersInRadius{r=5}
+  - damage{a=20} @PlayersInRadius{r=5}
   - sudoskill{s=RockySlapDamage;cat=true} @PlayersInRadius{r=5}
   - sound{s=entity.player.attack.sweep;p=0.5} @playersinradius{r=100}
   - delay 1
@@ -67,7 +67,7 @@ RockyPunchTargetSkill:
   Conditions:
   - hastag{t=punchtarget} true
   Skills:
-  - damage{a=16} @PlayersInRadius{r=5}
+  - damage{a=20} @PlayersInRadius{r=5}
   - sudoskill{s=RockyPunchKnockback} @PlayersInRadius{r=5}
   - teleportin{vector=0,-10,0} @self
   - remove @self
@@ -763,3 +763,9 @@ RockySnatchPlayer:
   - teleport{spreadh=2} @trigger
   - jump{v=-0.2} @self
 
+RockyOnDeath:
+  Conditions:
+  - hastag{t=theLastOne} true
+  Skills:
+  - command{c="mraid current win"}
+  - message{m='<テストメッセージ>最後の一体死亡'} @playersinradius{r=100}
