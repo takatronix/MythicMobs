@@ -135,6 +135,7 @@ RockySwingDown:
   - setAI{ai=false} @self
   - delay 57
   - damage{a=50} @playersinradius{r=8}
+  - command{c="mraid radiusExecute <caster.uuid> 7 mraid vision spider <name>"}
   - potion{type=SLOW;duration=40;level=1;particles=false} @playersinradius{r=8}
   - sound{s=block.stone.break;p=0;v=2} @playersinradius{r=100}
   - sound{s=entity.skeleton.converted_to_stray;p=0;v=0.8} @playersinradius{r=100}
@@ -157,9 +158,7 @@ RockyFingerGun:
   - summon{mob=RockyFingerGunTarget;amount=1} @playersinradius{r=60;sort=FURTHEST;limit=1}
   - command{c="execute as @e[limit=1,sort=nearest,tag=fingergun] at @s run tp @s ~ ~ ~ facing entity @e[limit=1,sort=nearest,name="fingerguntarget"]"}
   - delay 4
-  #- effect:particleline{particle=reddust;color=#ff00ff;startYOffset=6} @children{name='fingerguntarget'}
   - sound{s=entity.blaze.death;p=1.5;v=0.4} @playersinradius{r=100}
-  #- sudoskill{s=RockyFingerTarget;cat=true} @children{name='fingerguntarget'}
   - delay 20
   - removetag{t=skillRunning} @self
   - removetag{t=fingergun} @self
