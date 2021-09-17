@@ -154,7 +154,7 @@ RockyFingerGun:
   - setAI{ai=false} @self
   - command{c="execute as @e[limit=1,sort=nearest,tag=fingergun] at @s run tp @s ~ ~ ~ facing entity @a[limit=1,sort=furthest,distance=..90]"}
   - delay 54
-  - summon{mob=RockyFingerGunTarget;amount=1} @playersinradius{r=60;sort=FURTHEST}
+  - summon{mob=RockyFingerGunTarget;amount=1} @playersinradius{r=60;sort=FURTHEST;limit=1}
   - command{c="execute as @e[limit=1,sort=nearest,tag=fingergun] at @s run tp @s ~ ~ ~ facing entity @e[limit=1,sort=nearest,name="fingerguntarget"]"}
   - delay 4
   #- effect:particleline{particle=reddust;color=#ff00ff;startYOffset=6} @children{name='fingerguntarget'}
@@ -167,7 +167,7 @@ RockyFingerGun:
 RockyFingerTarget:
   Skills:
   - delay 4
-  - damagepercent{percent=0.6} @playersinradius{r=1.5}
+  - damage{a=150} @playersinradius{r=1.5}
   - effect:particles{particle=lava;amount=5;speed=3} @selflocation{y=0.5}
   - effect:particleline{particle=reddust;color=#ff00ff;targetYOffset=6} @parent #
   - delay 2
@@ -188,21 +188,21 @@ RockyTripleFingerGun:
   - setAI{ai=false} @self
   - command{c="execute as @e[limit=1,sort=nearest,tag=fingergun] at @s run tp @s ~ ~ ~ facing entity @a[limit=1,sort=furthest,distance=..90]"}
   - delay 57
-  - summon{mob=RockyFingerGunTarget;amount=1} @playersinradius{r=60;sort=FURTHEST}
+  - summon{mob=RockyFingerGunTarget;amount=1} @playersinradius{r=60;sort=FURTHEST;limit=1}
   - command{c="execute as @e[limit=1,sort=nearest,tag=fingergun] at @s run tp @s ~ ~ ~ facing entity @e[limit=1,sort=nearest,name="fingerguntarget"]"}
   - delay 4
   #- effect:particleline{particle=reddust;color=#ff00ff;startYOffset=6} @children{name='fingerguntarget'}
   - sound{s=entity.blaze.death;p=1.5;v=0.4} @playersinradius{r=100}
   #- sudoskill{s=RockyFingerTarget;cat=true} @children{name='fingerguntarget'}
   - delay 3
-  - summon{mob=RockyFingerGunTarget;amount=1} @playersinradius{r=60;sort=FURTHEST}
+  - summon{mob=RockyFingerGunTarget;amount=1} @playersinradius{r=60;sort=FURTHEST;limit=1}
   - command{c="execute as @e[limit=1,sort=nearest,tag=fingergun] at @s run tp @s ~ ~ ~ facing entity @e[limit=1,sort=nearest,name="fingerguntarget"]"}
   - delay 4
   #- effect:particleline{particle=reddust;color=#ff00ff;startYOffset=6} @children{name=fingerguntarget}
   - sound{s=entity.blaze.death;p=1.5;v=0.4} @playersinradius{r=100}
   #- sudoskill{s=RockyFingerTarget;cat=true} @children{name='fingerguntarget'}
   - delay 6
-  - summon{mob=RockyFingerGunTarget;amount=1} @playersinradius{r=60;sort=FURTHEST}
+  - summon{mob=RockyFingerGunTarget;amount=1} @playersinradius{r=60;sort=FURTHEST;limit=1}
   - command{c="execute as @e[limit=1,sort=nearest,tag=fingergun] at @s run tp @s ~ ~ ~ facing entity @e[limit=1,sort=nearest,name="fingerguntarget"]"}
   - delay 4
   #- effect:particleline{particle=reddust;color=#ff00ff;startYOffset=6} @children{name='fingerguntarget'}
@@ -411,7 +411,7 @@ RCKEf-End:
 RCK-Damage:
   Skills:
   - potion{type=INVISIBILITY;duration=2000;level=1} @self
-  - damage{a=25} @playersinradius{r=4}
+  - damage{a=40} @playersinradius{r=4}
   - teleportin{vector=0,-10,0} @self
   - delay 1
   - remove
@@ -691,7 +691,7 @@ RockySnatch:
   - skill{s=RockyPunch} @self
 RockySnatchTotem:
   Skills:
-  - summon{mob=RockySnatchTarget} @playersinradius{r=100;rm=40}
+  - summon{mob=RockySnatchTarget} @playersinradius{r=100;rm=40;limit=1}
   - summon{mob=RockySnatchTarget} @RLNTE{a=2;r=35;s=10;minr=30}
   - delay 2
   - sudoskill{skill=RockySnatchTarget;cat=true} @children
