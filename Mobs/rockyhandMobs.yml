@@ -9,7 +9,7 @@ leftrockyhand:
     Silent: true
     PreventOtherDrops: true
     PrevetItemPickup: true
-    KnockbackResistance: 0.9
+    KnockbackResistance: 1
     NoDamageTicks: 0
     PreventJockeyMounts: true
     FollowRange: 30
@@ -55,7 +55,7 @@ rightrockyhand:
     PreventOtherDrops: true
     PrevetItemPickup: true
     NoDamageTicks: 0
-    KnockbackResistance: 0.9
+    KnockbackResistance: 1
     PreventJockeyMounts: true
     FollowRange: 30
     MaxCombatDistance: 140
