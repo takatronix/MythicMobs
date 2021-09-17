@@ -135,7 +135,7 @@ RockySwingDown:
   - setAI{ai=false} @self
   - delay 57
   - damage{a=50} @playersinradius{r=8}
-  - command{c="mraid radiusExecute <caster.uuid> 7 mraid vision spider <name>"}
+  - command{c="mraid radiusExecute <caster.uuid> 7 mraid vision spider <name>"} @self
   - potion{type=SLOW;duration=40;level=1;particles=false} @playersinradius{r=8}
   - sound{s=block.stone.break;p=0;v=2} @playersinradius{r=100}
   - sound{s=entity.skeleton.converted_to_stray;p=0;v=0.8} @playersinradius{r=100}
@@ -153,10 +153,10 @@ RockyFingerGun:
   - addtag{t=skillRunning} @self
   - addtag{t=fingergun} @self
   - setAI{ai=false} @self
-  - command{c="execute as @e[limit=1,sort=nearest,tag=fingergun] at @s run tp @s ~ ~ ~ facing entity @a[limit=1,sort=furthest,distance=..90]"}
+  - command{c="execute as @e[limit=1,sort=nearest,tag=fingergun] at @s run tp @s ~ ~ ~ facing entity @a[limit=1,sort=furthest,distance=..90]"} @self
   - delay 54
   - summon{mob=RockyFingerGunTarget;amount=1} @playersinradius{r=60;sort=FURTHEST;limit=1}
-  - command{c="execute as @e[limit=1,sort=nearest,tag=fingergun] at @s run tp @s ~ ~ ~ facing entity @e[limit=1,sort=nearest,name="fingerguntarget"]"}
+  - command{c="execute as @e[limit=1,sort=nearest,tag=fingergun] at @s run tp @s ~ ~ ~ facing entity @e[limit=1,sort=nearest,name="fingerguntarget"]"} @self
   - delay 4
   - sound{s=entity.blaze.death;p=1.5;v=0.4} @playersinradius{r=100}
   - delay 20
@@ -185,24 +185,24 @@ RockyTripleFingerGun:
   - addtag{t=skillRunning} @self
   - addtag{t=fingergun} @self
   - setAI{ai=false} @self
-  - command{c="execute as @e[limit=1,sort=nearest,tag=fingergun] at @s run tp @s ~ ~ ~ facing entity @a[limit=1,sort=furthest,distance=..90]"}
+  - command{c="execute as @e[limit=1,sort=nearest,tag=fingergun] at @s run tp @s ~ ~ ~ facing entity @a[limit=1,sort=furthest,distance=..90]"} @self
   - delay 57
   - summon{mob=RockyFingerGunTarget;amount=1} @playersinradius{r=60;sort=FURTHEST;limit=1}
-  - command{c="execute as @e[limit=1,sort=nearest,tag=fingergun] at @s run tp @s ~ ~ ~ facing entity @e[limit=1,sort=nearest,name="fingerguntarget"]"}
+  - command{c="execute as @e[limit=1,sort=nearest,tag=fingergun] at @s run tp @s ~ ~ ~ facing entity @e[limit=1,sort=nearest,name="fingerguntarget"]"} @self
   - delay 4
   #- effect:particleline{particle=reddust;color=#ff00ff;startYOffset=6} @children{name='fingerguntarget'}
   - sound{s=entity.blaze.death;p=1.5;v=0.4} @playersinradius{r=100}
   #- sudoskill{s=RockyFingerTarget;cat=true} @children{name='fingerguntarget'}
   - delay 3
   - summon{mob=RockyFingerGunTarget;amount=1} @playersinradius{r=60;sort=FURTHEST;limit=1}
-  - command{c="execute as @e[limit=1,sort=nearest,tag=fingergun] at @s run tp @s ~ ~ ~ facing entity @e[limit=1,sort=nearest,name="fingerguntarget"]"}
+  - command{c="execute as @e[limit=1,sort=nearest,tag=fingergun] at @s run tp @s ~ ~ ~ facing entity @e[limit=1,sort=nearest,name="fingerguntarget"]"} @self
   - delay 4
   #- effect:particleline{particle=reddust;color=#ff00ff;startYOffset=6} @children{name=fingerguntarget}
   - sound{s=entity.blaze.death;p=1.5;v=0.4} @playersinradius{r=100}
   #- sudoskill{s=RockyFingerTarget;cat=true} @children{name='fingerguntarget'}
   - delay 6
   - summon{mob=RockyFingerGunTarget;amount=1} @playersinradius{r=60;sort=FURTHEST;limit=1}
-  - command{c="execute as @e[limit=1,sort=nearest,tag=fingergun] at @s run tp @s ~ ~ ~ facing entity @e[limit=1,sort=nearest,name="fingerguntarget"]"}
+  - command{c="execute as @e[limit=1,sort=nearest,tag=fingergun] at @s run tp @s ~ ~ ~ facing entity @e[limit=1,sort=nearest,name="fingerguntarget"]"} @self
   - delay 4
   #- effect:particleline{particle=reddust;color=#ff00ff;startYOffset=6} @children{name='fingerguntarget'}
   - sound{s=entity.blaze.death;p=1.5;v=0.4} @playersinradius{r=100}
