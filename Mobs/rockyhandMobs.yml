@@ -42,6 +42,8 @@ leftrockyhand:
   - skill{s=RockyLSkillAttackLowHealth;sync=true} ~onAttack <70%
   - skill{s=RockyLSkillTimer;sync=true} ~onTimer:100 >70%
   - skill{s=RockyLSkillTimerLowHealth;sync=true} ~onTimer:100 <70%
+  - skill{s=RockyOnDeath} @self ~onDeath
+  - addtag{tag=theLastOne} @MobsInRadius{r=500;types=WITHER_SKELETON} ~onDeath
 
 rightrockyhand:
   type: WITHER_SKELETON
@@ -87,6 +89,8 @@ rightrockyhand:
   - skill{s=RockyRSkillAttackLowHealth;sync=true} ~onAttack <70%
   - skill{s=RockyRSkillTimer;sync=true} ~onTimer:100 >70%
   - skill{s=RockyRSkillTimerLowHealth;sync=true} ~onTimer:100 <70%
+  - skill{s=RockyOnDeath} @self ~onDeath
+  - addtag{tag=theLastOne} @MobsInRadius{r=500;types=WITHER_SKELETON} ~onDeath
 
 RockyPunchTarget:
   Type: SILVERFISH
