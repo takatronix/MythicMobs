@@ -40,9 +40,10 @@ leftrockyhand:
   - skill{s=RockySummonRHand} @self ~onAttack <70%
   - skill{s=RockyLSkillAttack;sync=true} ~onAttack >70%
   - skill{s=RockyLSkillAttackLowHealth;sync=true} ~onAttack <70%
-  - skill{s=RockyLSkillTimer;sync=true} ~onTimer:100 >70%
-  - skill{s=RockyLSkillTimerLowHealth;sync=true} ~onTimer:100 <70%
+  #- skill{s=RockyLSkillTimer;sync=true} ~onTimer:100 >70%
+  #- skill{s=RockyLSkillTimerLowHealth;sync=true} ~onTimer:100 <70%
   - command{c="mraid current win"} @self ~onDeath
+  - skill{s=RockySnap} @self ~onDamaged
 
 rightrockyhand:
   type: WITHER_SKELETON
