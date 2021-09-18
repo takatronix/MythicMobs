@@ -778,7 +778,7 @@ RockySnap:
   - potion{type=HUNGER;duration=400;level=3} @playersinradius{r=20}
   - potion{type=WITHER;duration=400;level=1} @playersinradius{r=10}
   - potion{type=WEAKNESS;duration=600;level=1} @playersinradius{r=4}
+  - sound{s=item.totem.use;v=1;pitch=0} @playersinradius{r=120}
   - command{c="mraid radiusExecute <caster.uuid> 100 mraid vision creeper <name>"} @self
   - removetag{t=skillRunning} @self
   - setAI{ai=true} @self
-  - sound{s=item.totem.use;v=1;pitch=0} @playersinradius{r=120}
