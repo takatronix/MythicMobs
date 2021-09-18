@@ -37,7 +37,8 @@ leftrockyhand:
   Skills:
   - model{mid=rockyhand;name=false} @self ~onSpawn
   - bodyclamp{angle=1} @self ~onSpawn
-  - skill{s=RockySummonRHand} @self ~onAttack <70%
+  - addtag{t=finishedSummoning} @self ~onSpawn
+  #- skill{s=RockySummonRHand} @self ~onAttack <70%
   - skill{s=RockyLSkillAttack;sync=true} ~onAttack >70%
   - skill{s=RockyLSkillAttackLowHealth;sync=true} ~onAttack <70%
   - skill{s=RockyLSkillTimer;sync=true} ~onTimer:100 >70%
