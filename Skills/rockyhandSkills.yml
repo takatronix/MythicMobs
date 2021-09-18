@@ -46,8 +46,6 @@ RockyBackSpawnPoint:
   - playerwithin{d=300} false
   Skills:
   - teleport @location{c=-96,64,-519,0,0}
-  - model{r=true;name=false} @self
-  - model{r=false;name=false} @self
 
 
 RockyPunch:
