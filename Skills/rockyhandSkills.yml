@@ -5,6 +5,7 @@ RockyLSkillAttack: #左
   - CancelEvent
 RockyLSkillTimer:
   Skills:
+  - skill{s=RockyBackSpawnPoint} @self
   - randomskill{skills=RockyFingerGun,RockyTripleFingerGun,RockyRollingPunch,RockyJump;sync=true} @self
 RockyLSkillAttackLowHealth: #50以下
   Conditions:
@@ -16,6 +17,7 @@ RockyLSkillTimerLowHealth:
   Conditions:
   - hastag{t=finishedSummoning} true
   Skills:
+  - skill{s=RockyBackSpawnPoint} @self
   - randomskill{skills=RockySnatch,RockyDivingWarp,RockyTripleFingerGun,RockySnap;sync=true} @self
 
 RockyRangedAttack: #共通
@@ -28,6 +30,7 @@ RockyRSkillAttack: #右
   - CancelEvent
 RockyRSkillTimer:
   Skills:
+  - skill{s=RockyBackSpawnPoint} @self
   - randomskill{skills=RockyFingerGun,RockyTripleFingerGun;sync=true} @self
 RockyRSkillAttackLowHealth: #50以下
   Skills:
@@ -35,7 +38,14 @@ RockyRSkillAttackLowHealth: #50以下
   - CancelEvent
 RockyRSkillTimerLowHealth:
   Skills:
+  - skill{s=RockyBackSpawnPoint} @self
   - randomskill{skills=RockyTripleFingerGun,RockyDiserstar,RockyScatter,RockyIndexFingerMagic;sync=true} @self
+
+RockyBackSpawnPoint:
+  Conditions:
+  - playerwithin{d=300} false
+  Skills:
+  - teleport @location{c=-96,64,-519,0,0}
 
 
 RockyPunch:
@@ -165,14 +175,13 @@ RockyFingerGun:
 RockyFingerTarget:
   Skills:
   - delay 4
+  - damage{a=8} @playersinradius{r=1.5}
   - damage{a=16;ia=true;type=VOID} @playersinradius{r=1.5}
   - effect:particles{particle=lava;amount=5;speed=3} @selflocation{y=0.5}
   - effect:particleline{particle=reddust;color=#ff00ff;targetYOffset=6} @parent #
   - delay 2
   - teleportin{vector=0,-10,0} @self
   - remove @self
-
-
 
 RockyTripleFingerGun:
  Conditions:
