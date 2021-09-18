@@ -10,13 +10,13 @@ RockyLSkillAttackLowHealth: #50以下
   Conditions:
   - hastag{t=finishedSummoning} true
   Skills:
-  - randomskill{skills=RockyPunch,RockyLeftSlap,RockyRollingPunch,RockyCrossKnifehand,RockyKnifehand;sync=true} @self
+  - randomskill{skills=RockyPunch,RockyLeftSlap,RockyRollingPunch,RockyCrossKnifehand,RockyKnifehand,RockySnap;sync=true} @self
   - CancelEvent
 RockyLSkillTimerLowHealth:
   Conditions:
   - hastag{t=finishedSummoning} true
   Skills:
-  - randomskill{skills=RockySnatch,RockyDivingWarp,RockyTripleFingerGun;sync=true} @self
+  - randomskill{skills=RockySnatch,RockyDivingWarp,RockyTripleFingerGun,RockySnap;sync=true} @self
 
 RockyRangedAttack: #共通
   Skills:
@@ -49,6 +49,7 @@ RockyPunch:
   - setAI{ai=false} @self
   - command{c="execute at @e[limit=1,sort=nearest,tag=punch] run tp @e[limit=1,type=minecraft:wither_skeleton,sort=nearest] ~ ~ ~ facing entity @p"}
   - delay 18
+  - command{c="mraid radiusExecute <caster.uuid> 5 mraid vision 2 spider <name>"} @self
   - damage{a=20} @PlayersInRadius{r=5}
   - sudoskill{s=RockySlapDamage;cat=true} @PlayersInRadius{r=5}
   - sound{s=entity.player.attack.sweep;p=0.5} @playersinradius{r=100}
@@ -69,6 +70,7 @@ RockyPunchTargetSkill:
   Skills:
   - damage{a=20} @PlayersInRadius{r=5}
   - sudoskill{s=RockyPunchKnockback} @PlayersInRadius{r=5}
+  - command{c="mraid radiusExecute <caster.uuid> 5 mraid vision 2 spider <name>"} @self
   - teleportin{vector=0,-10,0} @self
   - remove @self
 RockyPunchKnockback:
@@ -133,7 +135,7 @@ RockySwingDown:
   - setAI{ai=false} @self
   - delay 57
   - damage{a=50} @playersinradius{r=8}
-  - command{c="mraid radiusExecute <caster.uuid> 5 mraid vision spider <name>"} @self
+  - command{c="mraid radiusExecute <caster.uuid> 5 mraid vision 2 spider <name>"} @self
   - potion{type=SLOW;duration=40;level=1;particles=false} @playersinradius{r=8}
   - sound{s=block.stone.break;p=0;v=2} @playersinradius{r=100}
   - sound{s=entity.skeleton.converted_to_stray;p=0;v=0.8} @playersinradius{r=100}
@@ -763,12 +765,13 @@ RockySnatchPlayer:
 
 RockySnap:
   Conditions:
+  - CoolDown 60
   - hastag{t=skillRunning} false
   Skills:
   - state{s=snap} @self
   - addtag{t=skillRunning} @self
   - setAI{ai=false} @self
-  - delay 70
+  - delay 72
   - potion{type=POISON;duration=600;level=0} @playersinradius{r=100}
   - potion{type=SLOW;duration=600;level=0} @playersinradius{r=100}
   - potion{type=WITHER;duration=600;level=0} @playersinradius{r=50}
@@ -779,6 +782,6 @@ RockySnap:
   - potion{type=WITHER;duration=400;level=1} @playersinradius{r=10}
   - potion{type=WEAKNESS;duration=600;level=1} @playersinradius{r=4}
   - sound{s=item.totem.use;v=1;pitch=0} @playersinradius{r=120}
-  - command{c="mraid radiusExecute <caster.uuid> 100 mraid vision creeper <name>"} @self
+  - command{c="mraid radiusExecute <caster.uuid> 100 mraid vision 4 creeper <name>"} @self
   - removetag{t=skillRunning} @self
   - setAI{ai=true} @self
