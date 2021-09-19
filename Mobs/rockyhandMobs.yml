@@ -93,7 +93,7 @@ rightrockyhand:
 
 testLhand:
   type: WITHER_SKELETON
-  Display: 'テスト用-遺跡の守り手'
+  Display: 'テスト用.遺跡の守り手'
   Health: 100
   Damage: 6
   Armor: 6
@@ -117,7 +117,7 @@ testLhand:
     - randomstroll
   BossBar:
     Enabled: true
-    Title: 'テスト用-遺跡の守り手'
+    Title: 'テスト用.遺跡の守り手'
     Range: 70
     Color: RED
     Style: SOLID
