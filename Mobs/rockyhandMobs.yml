@@ -344,7 +344,10 @@ RockySnatchTarget:
   - potion{type=INVISIBILITY;duration=2000;level=1;p=false} @self ~onSpawn
 
 TestMan:
-  Type: WITHER_SKELETON:
+  Type: WITHER_SKELETON
+  Display: 'testman'
+  Health: 100
+  Damage: 0
   Skills:
   - blockwave{duration=20;material=stone;radius=7;radiusY=1;velocity=10;shape=sphere} @selflocation
   - remove @self
