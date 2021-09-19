@@ -7,7 +7,7 @@ RockyLSkillTimer:
   Skills:
   - skill{s=RockyBackSpawnPoint} @self
   - randomskill{skills=RockyFingerGun,RockyTripleFingerGun,RockyRollingPunch,RockyJump;sync=true} @self
-RockyLSkillAttackLowHealth: #50以下
+RockyLSkillAttackLowHealth: #70以下
   Conditions:
   - hastag{t=finishedSummoning} true
   Skills:
@@ -18,7 +18,7 @@ RockyLSkillTimerLowHealth:
   - hastag{t=finishedSummoning} true
   Skills:
   - skill{s=RockyBackSpawnPoint} @self
-  - skill{s=RockySnap} @self 0.04
+  - skill{s=RockySnap} @self 0.02
   - randomskill{skills=RockySnatch,RockyDivingWarp,RockyTripleFingerGun;sync=true} @self
 
 RockyRangedAttack: #共通
@@ -33,9 +33,9 @@ RockyRSkillTimer:
   Skills:
   - skill{s=RockyBackSpawnPoint} @self
   - randomskill{skills=RockyFingerGun,RockyTripleFingerGun;sync=true} @self
-RockyRSkillAttackLowHealth: #50以下
+RockyRSkillAttackLowHealth: #70以下
   Skills:
-  - randomskill{skills=RockyPunch,RockyRightSlap,RockyHammering,RockyDiserstar,RockyScatter;sync=true} @self
+  - randomskill{skills=RockyPunch,RockyRightSlap,RockyHammering,RockyDiserstar,RockyScatter,RockyCountdown;sync=true} @self
   - CancelEvent
 RockyRSkillTimerLowHealth:
   Skills:
@@ -798,9 +798,9 @@ RockyCountdown:
   - addtag{t=skillRunning} @self
   - setAI{ai=false} @self
   - delay 90
-  - sudoskill{s=RockyCountdownTarget;cat=true} @PlayersInRadius{r=12}
+  - sudoskill{s=RockyCountdownTarget;cat=true} @PlayersInRadius{r=20}
   - delay 1
-  - sudoskill{s=RockyCountdownEnderman;cat=true} @MIR{r=12;types=ENDERMAN}
+  - sudoskill{s=RockyCountdownEnderman;cat=true} @MIR{r=20;types=ENDERMAN}
   - delay 14
   - removetag{t=skillRunning} @self
   - setAI{ai=true} @self
