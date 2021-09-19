@@ -155,7 +155,6 @@ RockySwingDown:
 
 RockyFingerGun:
   Conditions:
-  - playernotwithin{d=6} true
   - hastag{t=skillRunning} false
   Skills:
   - state{s=finger_gun} @self
@@ -185,8 +184,6 @@ RockyFingerTarget:
 
 RockyTripleFingerGun:
  Conditions:
-  - children{name='遺跡の護り手'} false
-  - playernotwithin{d=20} true
   - hastag{t=skillRunning} false
  Skills:
   - state{s=triple_finger_gun} @self
