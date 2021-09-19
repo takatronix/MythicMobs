@@ -792,7 +792,7 @@ RockySnap:
 
 RockyCountdown:
   Conditions:
-  - hastag{t=SkillRunning} false
+  - hastag{t=skillRunning} false
   Skills:
   - state{s=countdown} @self
   - addtag{t=skillRunning} @self
@@ -805,10 +805,13 @@ RockyCountdown:
 RockyCountdownTarget:
   Skills:
   - command{c="mraid vision 3 enderman <caster.name>"} @self
+  - sudoskill{s=RockyCountDownEnderma;cat=true} @MIR{r=2,types=ENDERMAN}
+RockyCountDownEnderman:
+  Skills:
   - delay 5
-  - potion{type=LEVITATION;duration=10;level=1} @MIR{r=3,types=ENDERMAN}
+  - potion{type=LEVITATION;duration=10;level=1} @self
   - delay 10
-  - potion{type=LEVITATION;duration=10;level=5} @MIR{r=3,types=ENDERMAN}
+  - potion{type=LEVITATION;duration=10;level=5} @self
   - delay 10
-  - potion{type=LEVITATION;duration=15;level=10} @MIR{r=3,types=ENDERMAN}
+  - potion{type=LEVITATION;duration=15;level=10} @self
   - delay 15
