@@ -349,5 +349,5 @@ TestMan:
   Health: 100
   Damage: 0
   Skills:
-  - blockwave{duration=20;material=stone;radius=7;radiusY=1;velocity=10;shape=sphere} @selflocation
-  - remove @self
+  - blockwave{duration=20;material=stone;radius=7;radiusY=1;velocity=10;shape=sphere} @selflocation ~onSpawn
+  - remove @self ~onSpawn
