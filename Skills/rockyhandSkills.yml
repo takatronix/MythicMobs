@@ -789,3 +789,26 @@ RockySnap:
   - command{c="mraid radiusExecute <caster.uuid> 20 mraid vision 1 creeper <name>"} @self
   - removetag{t=skillRunning} @self
   - setAI{ai=true} @self
+
+RockyCountdown:
+  Conditions:
+  - hastag{t=SkillRunning} false
+  Skills:
+  - state{s=countdown} @self
+  - addtag{t=skillRunning} @self
+  - setAI{ai=false} @self
+  - delay 90
+  - potion{type=WEAKNESS;duration=600;level=1} @mobsinradius{r=4}
+  - delay 15
+  - removetag{t=skillRunning} @self
+  - setAI{ai=true} @self
+RockyCountdownTarget:
+  Skills:
+  - command{c="mraid vision 3 enderman <caster.name>"} @self
+  - delay 5
+  - potion{type=LEVITATION;duration=10;level=1} @MIR{r=3,types=ENDERMAN}
+  - delay 10
+  - potion{type=LEVITATION;duration=10;level=5} @MIR{r=3,types=ENDERMAN}
+  - delay 10
+  - potion{type=LEVITATION;duration=15;level=10} @MIR{r=3,types=ENDERMAN}
+  - delay 15
