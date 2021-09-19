@@ -813,6 +813,8 @@ RockyCountdownEnderman:
   - potion{type=LEVITATION;duration=10;level=1} @self
   - delay 10
   - potion{type=LEVITATION;duration=15;level=8} @self
-  - delay 15
+  - delay 10
   - potion{type=LEVITATION;duration=30;level=18} @self
-  - delay 30
+  - delay 15
+  - potion{type=LEVITATION;duration=30;level=25} @self
+  - delay 15
