@@ -90,7 +90,6 @@ rightrockyhand:
   - skill{s=RockyRSkillTimer;sync=true} ~onTimer:100 >70%
   - skill{s=RockyRSkillTimerLowHealth;sync=true} ~onTimer:100 <70%
   - command{c="mraid current win"} @self ~onDeath
-  - skill{s=RockyCountdown} @self ~onDamaged
 
 RockyPunchTarget:
   Type: SILVERFISH
