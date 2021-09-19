@@ -805,8 +805,8 @@ RockyCountdown:
 RockyCountdownTarget:
   Skills:
   - command{c="mraid vision 3 enderman <caster.name>"} @self
-  - sudoskill{s=RockyCountDownEnderma;cat=true} @MIR{r=2,types=ENDERMAN}
-RockyCountDownEnderman:
+  - sudoskill{s=RockyCountdownEnderma;cat=true} @EIR{r=2,types=ENDERMAN}
+RockyCountdownEnderman:
   Skills:
   - delay 5
   - potion{type=LEVITATION;duration=10;level=1} @self
