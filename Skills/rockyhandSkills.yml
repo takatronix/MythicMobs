@@ -800,7 +800,7 @@ RockyCountdown:
   - delay 90
   - sudoskill{s=RockyCountdownTarget;cat=true} @PlayersInRadius{r=12}
   - delay 1
-  - sudoskill{s=RockyCountdownEnderman;cat=true} @MIR{r=12,types=ENDERMAN}
+  - sudoskill{s=RockyCountdownEnderman;cat=true} @MIR{r=12;types=ENDERMAN}
   - delay 14
   - removetag{t=skillRunning} @self
   - setAI{ai=true} @self
@@ -812,7 +812,7 @@ RockyCountdownEnderman:
   - delay 4
   - potion{type=LEVITATION;duration=10;level=1} @self
   - delay 10
-  - potion{type=LEVITATION;duration=10;level=5} @self
-  - delay 10
-  - potion{type=LEVITATION;duration=15;level=10} @self
+  - potion{type=LEVITATION;duration=15;level=8} @self
   - delay 15
+  - potion{type=LEVITATION;duration=30;level=18} @self
+  - delay 30
