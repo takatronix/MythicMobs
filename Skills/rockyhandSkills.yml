@@ -18,7 +18,8 @@ RockyLSkillTimerLowHealth:
   - hastag{t=finishedSummoning} true
   Skills:
   - skill{s=RockyBackSpawnPoint} @self
-  - randomskill{skills=RockySnatch,RockyDivingWarp,RockyTripleFingerGun,RockySnap;sync=true} @self
+  - skill{s=RockySnap} @self 0.04
+  - randomskill{skills=RockySnatch,RockyDivingWarp,RockyTripleFingerGun;sync=true} @self
 
 RockyRangedAttack: #共通
   Skills:
@@ -771,7 +772,6 @@ RockySnatchPlayer:
 
 RockySnap:
   Conditions:
-  - CoolDown 60
   - hastag{t=skillRunning} false
   Skills:
   - state{s=snap} @self
