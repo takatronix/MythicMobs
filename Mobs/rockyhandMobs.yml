@@ -90,45 +90,7 @@ rightrockyhand:
   - skill{s=RockyRSkillTimer;sync=true} ~onTimer:100 >70%
   - skill{s=RockyRSkillTimerLowHealth;sync=true} ~onTimer:100 <70%
   - command{c="mraid current win"} @self ~onDeath
-
-testLhand:
-  type: WITHER_SKELETON
-  Display: 'テスト用.遺跡の守り手'
-  Health: 100
-  Damage: 6
-  Armor: 6
-  Options:
-    PreventSunburn: true
-    Silent: true
-    PreventOtherDrops: true
-    PrevetItemPickup: true
-    KnockbackResistance: 1
-    NoDamageTicks: 0
-    PreventJockeyMounts: true
-    FollowRange: 30
-    MaxCombatDistance: 140
-    MovementSpeed: 0.37
-    PreventRandomEquipment: true
-    PreventTransformation: true
-    Despawn: false
-  AIGoalSelector:
-    - clear
-    - meleeattack
-    - randomstroll
-  BossBar:
-    Enabled: true
-    Title: 'テスト用.遺跡の守り手'
-    Range: 70
-    Color: RED
-    Style: SOLID
-  AITargetSelectors:
-  - players
-  Drops:
-    - stone 1 1
-  Skills:
-  - model{mid=rockyhand;name=false} @self ~onSpawn
-  - bodyclamp{angle=1} @self ~onSpawn
-  - skill{s=RockySnap} @self ~onDamaged
+  - skill{s=RockyCountdown} @self ~onDamaged
 
 RockyPunchTarget:
   Type: SILVERFISH
