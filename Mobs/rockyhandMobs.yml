@@ -1,7 +1,7 @@
 leftrockyhand:
   type: WITHER_SKELETON
   Display: '遺跡の守り手'
-  Health: 100000
+  Health: 60000
   Damage: 6
   Armor: 6
   Options:
@@ -37,8 +37,8 @@ leftrockyhand:
   Skills:
   - model{mid=rockyhand;name=false} @self ~onSpawn
   - bodyclamp{angle=1} @self ~onSpawn
-  - addtag{t=finishedSummoning} @self ~onSpawn
-  #- skill{s=RockySummonRHand} @self ~onAttack <70%
+  #- addtag{t=finishedSummoning} @self ~onSpawn 右手を隠す時に有効にする
+  - skill{s=RockySummonRHand} @self ~onAttack <70%
   - skill{s=RockyLSkillAttack;sync=true} ~onAttack >70%
   - skill{s=RockyLSkillAttackLowHealth;sync=true} ~onAttack <70%
   - skill{s=RockyLSkillTimer;sync=true} ~onTimer:100 >70%
@@ -48,7 +48,7 @@ leftrockyhand:
 rightrockyhand:
   type: WITHER_SKELETON
   Display: '遺跡の護り手'
-  Health: 150000
+  Health: 50000
   Damage: 6
   Armor: 6
   Options:
