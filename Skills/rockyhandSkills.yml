@@ -798,7 +798,7 @@ RockyCountdown:
   - addtag{t=skillRunning} @self
   - setAI{ai=false} @self
   - delay 90
-  - potion{type=WEAKNESS;duration=600;level=1} @mobsinradius{r=4}
+  - sudoskill{s=RockyCountdownTarget;cat=true} @PlayersInRadius{r=12}
   - delay 15
   - removetag{t=skillRunning} @self
   - setAI{ai=true} @self
