@@ -800,7 +800,7 @@ RockyCountdown:
   - delay 90
   - sudoskill{s=RockyCountdownTarget;cat=true} @PlayersInRadius{r=12}
   - delay 1
-  - sudoskill{s=RockyCountdownEnderma;cat=true} @MIR{r=12,types=ENDERMAN}
+  - sudoskill{s=RockyCountdownEnderman;cat=true} @MIR{r=12,types=ENDERMAN}
   - delay 14
   - removetag{t=skillRunning} @self
   - setAI{ai=true} @self
