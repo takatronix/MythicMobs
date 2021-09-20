@@ -1,7 +1,7 @@
 leftrockyhand:
   type: WITHER_SKELETON
   Display: '遺跡の守り手'
-  Health: 60000
+  Health: 600
   Damage: 6
   Armor: 6
   Options:
@@ -105,6 +105,7 @@ RockyPunchTarget:
     PreventOtherDrops: true
     PreventItemPickup: true
     PreventBlockInfection: true
+    ApplyInvisibility: true
   Skills:
    - potion{type=INVISIBILITY;duration=2000;level=1} @self ~onSpawn
    - addtag{t=punchtarget} @self ~onSpawn
@@ -125,9 +126,11 @@ RockyFingerGunTarget:
     PreventBlockInfection: true
     Invisible: true
     Collidable: false
+    ApplyInvisibility: true
   Skills:
   - potion{type=INVISIBILITY;duration=2000;level=1;p=false} @self ~onSpawn
   - skill{s=RockyFingerTarget} @self ~onSpawn
+  - skill{s=RockyRemoveTarget} @self ~onSpawn
   KillMessages:
   - '<target.name> は守り手に撃ち抜かれた'
 
@@ -146,6 +149,7 @@ RockyLightTarget:
     PreventItemPickup: true
     PreventBlockInfection: true
     Collidable: false
+    ApplyInvisibility: true
   Skills:
   - potion{type=INVISIBILITY;duration=2000;level=1;p=false} @self ~onSpawn
   - skill{s=RIFM-ENDLight} @self ~onSpawn
@@ -168,6 +172,7 @@ RockyKnifehandTarget:
     PreventItemPickup: true
     PreventBlockInfection: true
     Collidable: false
+    ApplyInvisibility: true
   Skills:
   - skill{s=RCK-Damage} @self ~onSpawn
   KillMessages:
@@ -188,6 +193,7 @@ RockyKnifehandEffectTarget:
     PreventItemPickup: true
     PreventBlockInfection: true
     Collidable: false
+    ApplyInvisibility: true
   Skills:
   - potion{type=INVISIBILITY;duration=2000;level=1;p=false} @self ~onSpawn
   - effect:particleline{speed=0.1;xs=0.7;zs=0.7;particle=sweep_attack;amount=2;syo=0.7;tyo=0.7} @parent ~onSpawn
@@ -208,6 +214,7 @@ RockyDiserstarTotem:
     PreventItemPickup: true
     PreventBlockInfection: true
     Collidable: false
+    ApplyInvisibility: true
   Skills:
   - potion{type=INVISIBILITY;duration=2000;level=1;p=false} @self ~onSpawn
   - skill{s=RockyDiserstarTotem} @self ~onSpawn
@@ -227,6 +234,7 @@ RockyDLTarget:
     PreventItemPickup: true
     PreventBlockInfection: true
     Collidable: false
+    ApplyInvisibility: true
   Skills:
   - potion{type=INVISIBILITY;duration=2000;level=1;p=false} @self ~onSpawn
   - skill{s=RockyDLTarget} @self ~onSpawn
@@ -248,6 +256,7 @@ RockyDLRTarget:
     PreventItemPickup: true
     PreventBlockInfection: true
     Collidable: false
+    ApplyInvisibility: true
   Skills:
   - potion{type=INVISIBILITY;duration=2000;level=1;p=false} @self ~onSpawn
   - skill{s=RockyDLRTarget} @self ~onSpawn
@@ -267,16 +276,18 @@ RockyDivingWarpTarget:
     PreventItemPickup: true
     PreventBlockInfection: true
     Collidable: false
+    ApplyInvisibility: true
   Skills:
   - addtag{t=warpTarget} @self ~onSpawn
   - potion{type=INVISIBILITY;duration=2000;level=1;p=false} @self ~onSpawn
+  - skill{s=RockyRemoveTarget} @self ~onSpawn
   KillMessages:
-    - '<target.name> は星になった'
+  - '<target.name> は星になった'
 
 RockyScatterMinion:
   Type: WITHER_SKELETON
   Display: '遺跡の護人'
-  Health: 100
+  Health: 10
   Options:
     PreventOtherDrops: true
     PreventItemPickup: true
@@ -302,6 +313,7 @@ RockySummonRTarget:
     PreventItemPickup: true
     PreventBlockInfection: true
     Collidable: false
+    ApplyInvisibility: true
   Skills:
   - potion{type=INVISIBILITY;duration=2000;level=1;p=false} @self ~onSpawn
   - summon{mob=rightrockyhand} @selflocation ~onSpawn
@@ -322,6 +334,7 @@ RockySnatchTotem:
     PreventItemPickup: true
     PreventBlockInfection: true
     Collidable: false
+    ApplyInvisibility: true
   Skills:
   - potion{type=INVISIBILITY;duration=2000;level=1;p=false} @self ~onSpawn
   - skill{s=RockySnatchTotem} @self ~onSpawn
@@ -340,8 +353,28 @@ RockySnatchTarget:
     PreventItemPickup: true
     PreventBlockInfection: true
     Collidable: false
+    ApplyInvisibility: true
   Skills:
   - potion{type=INVISIBILITY;duration=2000;level=1;p=false} @self ~onSpawn
+
+RockyInfinityGunTarget:
+  Type: SILVERFISH
+  Display: 'rockyinfinityguntarget'
+  Health: 100
+  Damage: 0
+  Options:
+    NoDamageTicks: 100
+    Silent: true
+    MovementSpeed: 0
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventBlockInfection: true
+    Collidable: false
+    ApplyInvisibility: true
+  Skills:
+  - potion{type=INVISIBILITY;duration=2000;level=1;p=false} @self ~onSpawn
+  - skill{s=RockyInfinityGunTarget} @self ~onSpawn
+  - skill{s=RockyRemoveTarget} @self ~onSpawn
 
 TestMan:
   Type: WITHER_SKELETON
@@ -349,5 +382,14 @@ TestMan:
   Health: 100
   Damage: 0
   Skills:
-  - blockwave{duration=20;material=stone;radius=7;radiusY=1;velocity=10;shape=sphere} @selflocation ~onSpawn
+  - effect:blockunmask{r=20} @selflocation ~onSpawn
+  - remove @self ~onSpawn
+
+TestMan2:
+  Type: WITHER_SKELETON
+  Display: 'testman2'
+  Health: 100
+  Damage: 0
+  Skills:
+  - blockwave{duration=100;material=stone;radius=5;radiusY=5;velocity=10;shape=sphere} @selflocation ~onSpawn
   - remove @self ~onSpawn
