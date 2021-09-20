@@ -637,7 +637,7 @@ RockyDivingWarpTarget:
   - damage{a=70} @playersinradius{r=5}
   - sudoskill{skill=RockyDWJump;cat=true} @playersinradius{r=5}
   - blockwave{duration=40;material=obsidian;radius=4;radiusY=1;velocity=10;shape=sphere;onlyair=true} @self
-  - delay 41
+  - delay 48
   - effect:blockunmask{r=5} @selflocation
   - remove @self
 RockyDWCtoP:
@@ -689,7 +689,7 @@ RockyRighthandonSpanw:
   - addtag{t=skillRunning} @self
   - blockwave{duration=40;material=obsidian;radius=5;radiusY=1;velocity=2;shape=sphere;onlyair=true} @self
   - damage{a=100} @playersinradius{r=4}
-  - delay 41
+  - delay 48
   - effect:blockunmask{r=6} @selflocation
   - removetag{t=skillRunning} @self
 
