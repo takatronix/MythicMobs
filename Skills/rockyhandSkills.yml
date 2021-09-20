@@ -1,6 +1,7 @@
 
 RockyLSkillAttack: #左
   Skills:
+  - skill{s=RockyInfinityGun} @self
   - randomskill{skills=RockyPunch,RockyLeftSlap,RockySwingDown,RockyKnifehand;sync=true} @self
   - CancelEvent
 RockyLSkillTimer:
@@ -231,7 +232,9 @@ RockyHammering:
   - sound{s=entity.generic.explode;p=0.3;v=1.0} @playersinradius{r=100}
   - blockwave{duration=20;material=stone;radius=7;radiusY=1;velocity=10;shape=sphere} @selflocation
   - sudoskill{skill=RockyHammeringDamage} @PlayersInRadius{r=7}
-  - delay 40
+  - delay 20
+  - effect:blockunmask{r=8} @selflocation
+  - delay 20
   - removetag{t=skillRunning} @self
   - setAI{ai=true} @self
 RockyHammeringDamage:
@@ -268,7 +271,9 @@ RockyScatter:
   - setAI{ai=false} @self
   - delay 21
   - blockwave{n=1;duration=20;material=magma_block;radius=2;radiusY=1;velocity=1;shape=sphere} @forward{f=3;y=0.0}
-  - delay 11
+  - delay 7
+  - effect:blockunmask{r=3} @selflocation
+  - delay 4
   - effect:particleline{particle=lava;xs=1;zs=1;syo=13;amount=4;fromOrigin=true} @SelfLocation{y=28.0}
   - skill{s=RockyScatterMissile} @RLNTE{a=3;r=14;s=2;minr=10}
   - skill{s=RockyScatterMissile} @playersinradius{radius=100;limit=2;sort=RANDOM}
@@ -607,9 +612,8 @@ RockyDivingWarp:
 RockyDivingWarpPunch:
   Skills:
   - delay 30
-  - sudoskill{skill=RockyDivingWarpTarget;cat=true} @children
+  - sudoskill{skill=RockyDivingWarpTarget} @children
   - delay 20
-  - teleport @children
   - state{s=diving_warp_punch} @self
   - delay 20
   - removetag{t=skillRunning} @self
@@ -630,11 +634,18 @@ RockyDivingWarpTarget:
   - effect:blockmask{m=crying_obsidian;r=6;d=40} @selflocation{y=0}
   - effect:blockmask{m=end_portal;r=5;d=40} @selflocation{y=0}
   - effect:blockunmask{r=5;shape=cube} @selflocation{y=5}
-  - delay 8
+  - delay 5
+  - sudoskill{skill=RockyDWCtoP;cat=true} @parent
+  - delay 3
   - damage{a=70} @playersinradius{r=5}
   - sudoskill{skill=RockyDWJump;cat=true} @playersinradius{r=5}
   - blockwave{duration=40;material=obsidian;radius=4;radiusY=1;velocity=10;shape=sphere;onlyair=true} @self
+  - delay 15
+  - effect:blockunmask{r=5} @selflocation
   - remove @self
+RockyDWCtoP:
+  Skills:
+  - teleport @trigger
 RockyDWJump:
   Skills:
   - lunge{velocity=1;velocityY=2} @trigger
@@ -681,6 +692,8 @@ RockyRighthandonSpanw:
   - addtag{t=skillRunning} @self
   - blockwave{duration=40;material=obsidian;radius=5;radiusY=1;velocity=2;shape=sphere;onlyair=true} @self
   - damage{a=100} @playersinradius{r=4}
+  - delay 5
+  - effect:blockunmask{r=6} @selflocation
   - removetag{t=skillRunning} @self
 
 RockySnatch:
@@ -818,3 +831,49 @@ RockyCountdownEnderman:
   - delay 15
   - potion{type=LEVITATION;duration=30;level=25} @self
   - delay 15
+
+RockyRemoveTarget:
+  Skills:
+  - delay 60
+  - remove @self
+
+RockyInfinityGun:
+  Conditions:
+  - hastag{t=skillRunning} false
+  Skills:
+  - addtag{t=skillRunning} @self
+  - setAI{ai=false} @self
+  - delay 40
+  - sudoskill{s=RockyInfinityGunPlayer;cat=true} @playersinradius{r=200;limit=5;sort=RANDOM}
+  - delay 4
+  - sudoskill{s=RockyInfinityGunPlayer;cat=true} @playersinradius{r=200;limit=5;sort=RANDOM}
+  - delay 4
+  - sudoskill{s=RockyInfinityGunPlayer;cat=true} @playersinradius{r=200;limit=5;sort=RANDOM}
+  - delay 4
+  - sudoskill{s=RockyInfinityGunPlayer;cat=true} @playersinradius{r=200;limit=5;sort=RANDOM}
+  - delay 4
+  - sudoskill{s=RockyInfinityGunPlayer;cat=true} @playersinradius{r=200;limit=5;sort=RANDOM}
+  - delay 4
+  - sudoskill{s=RockyInfinityGunPlayer;cat=true} @playersinradius{r=200;limit=5;sort=RANDOM}
+  - delay 4
+  - sudoskill{s=RockyInfinityGunPlayer;cat=true} @playersinradius{r=200;limit=5;sort=RANDOM}
+  - delay 4
+  - sudoskill{s=RockyInfinityGunPlayer;cat=true} @playersinradius{r=200;limit=5;sort=RANDOM}
+  - delay 4
+  - sudoskill{s=RockyInfinityGunPlayer;cat=true} @playersinradius{r=200;limit=5;sort=RANDOM}
+  - delay 4
+  - sudoskill{s=RockyInfinityGunPlayer;cat=true} @playersinradius{r=200;limit=5;sort=RANDOM}
+  - delay 10
+  - removetag{t=skillRunning} @self
+  - setAI{ai=true} @self
+RockyInfinityGunPlayer:
+  Skills:
+  - effect:particleline{particle=reddust;color=#ff00ff} @selflocation{y=40}
+  - sound{s=entity.blaze.death;p=1.5;v=0.2} @self
+  - summon{mob=RockyInfinityGunTarget} @selflocation{y=10}
+RockyInfinityGunTarget:
+  Skills:
+  - message{m='aaa'} @owner
+  - damage{a=20} @NearestPlayer{r=70}
+  - message{m='eeeee'} @NearestPlayer{r=70}
+  - remove @self
