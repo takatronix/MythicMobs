@@ -1,7 +1,6 @@
 
 RockyLSkillAttack: #左
   Skills:
-  - skill{s=RockyInfinityGun} @self
   - randomskill{skills=RockyPunch,RockyLeftSlap,RockySwingDown,RockyKnifehand;sync=true} @self
   - CancelEvent
 RockyLSkillTimer:
