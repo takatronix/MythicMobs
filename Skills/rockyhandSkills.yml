@@ -687,10 +687,13 @@ RockyRighthandonSpanw:
   Skills:
   - state{s=spawn} @self
   - addtag{t=skillRunning} @self
-  - blockwave{duration=40;material=obsidian;radius=5;radiusY=1;velocity=2;shape=sphere;onlyair=true} @self
+  - setAI{ai=false} @self
+  - blockwave{duration=10;material=obsidian;radius=5;radiusY=1;velocity=2;shape=sphere;onlyair=true} @self
   - damage{a=100} @playersinradius{r=4}
-  - delay 48
+  - delay 18
   - effect:blockunmask{r=6} @selflocation
+  - delay 20
+  - setAI{ai=true} @self
   - removetag{t=skillRunning} @self
 
 RockySnatch:
@@ -831,7 +834,7 @@ RockyCountdownEnderman:
 
 RockyRemoveTarget:
   Skills:
-  - delay 60
+  - delay 120
   - remove @self
 
 RockyInfinityGun:
