@@ -231,9 +231,8 @@ RockyHammering:
   - sound{s=entity.generic.explode;p=0.3;v=1.0} @playersinradius{r=100}
   - blockwave{duration=20;material=stone;radius=7;radiusY=1;velocity=10;shape=sphere} @selflocation
   - sudoskill{skill=RockyHammeringDamage} @PlayersInRadius{r=7}
-  - delay 20
+  - delay 40
   - effect:blockunmask{r=8} @selflocation
-  - delay 20
   - removetag{t=skillRunning} @self
   - setAI{ai=true} @self
 RockyHammeringDamage:
@@ -270,9 +269,7 @@ RockyScatter:
   - setAI{ai=false} @self
   - delay 21
   - blockwave{n=1;duration=20;material=magma_block;radius=2;radiusY=1;velocity=1;shape=sphere} @forward{f=3;y=0.0}
-  - delay 7
-  - effect:blockunmask{r=3} @selflocation
-  - delay 4
+  - delay 11
   - effect:particleline{particle=lava;xs=1;zs=1;syo=13;amount=4;fromOrigin=true} @SelfLocation{y=28.0}
   - skill{s=RockyScatterMissile} @RLNTE{a=3;r=14;s=2;minr=10}
   - skill{s=RockyScatterMissile} @playersinradius{radius=100;limit=2;sort=RANDOM}
@@ -281,6 +278,7 @@ RockyScatter:
   - skill{s=RockyScatterMissile} @RLNTE{a=5;r=25;s=2;minr=20}
   - effect:particleline{particle=lava;xs=3;zs=3;syo=23;amount=5;fromOrigin=true} @SelfLocation{y=48.0}
   - delay 10
+  - effect:blockunmask{r=3} @forward{f=3;y=0.0}
   - skill{s=RockyScatterMissile} @RLNTE{a=6;r=35;s=2;minr=30}
   - skill{s=RockyScatterMissile} @playersinradius{radius=100;limit=2;sort=RANDOM}
   - effect:particleline{particle=lava;xs=6;zs=6;syo=43;amount=5;fromOrigin=true} @SelfLocation{y=68.0}
@@ -639,7 +637,7 @@ RockyDivingWarpTarget:
   - damage{a=70} @playersinradius{r=5}
   - sudoskill{skill=RockyDWJump;cat=true} @playersinradius{r=5}
   - blockwave{duration=40;material=obsidian;radius=4;radiusY=1;velocity=10;shape=sphere;onlyair=true} @self
-  - delay 15
+  - delay 41
   - effect:blockunmask{r=5} @selflocation
   - remove @self
 RockyDWCtoP:
@@ -691,7 +689,7 @@ RockyRighthandonSpanw:
   - addtag{t=skillRunning} @self
   - blockwave{duration=40;material=obsidian;radius=5;radiusY=1;velocity=2;shape=sphere;onlyair=true} @self
   - damage{a=100} @playersinradius{r=4}
-  - delay 5
+  - delay 41
   - effect:blockunmask{r=6} @selflocation
   - removetag{t=skillRunning} @self
 
