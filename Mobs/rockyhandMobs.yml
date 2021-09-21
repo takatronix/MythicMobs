@@ -382,8 +382,9 @@ TestMan:
   Health: 100
   Damage: 0
   Skills:
-  - effect:blockunmask{r=20} @selflocation ~onSpawn
-  - remove @self ~onSpawn
+  - skill{s=RockyInfinityGun} @self ~onSpawn
+  - delay 80
+  - remove @self
 
 TestMan2:
   Type: WITHER_SKELETON
