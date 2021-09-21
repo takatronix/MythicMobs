@@ -839,41 +839,46 @@ RockyRemoveTarget:
 
 RockyInfinityGun:
   Conditions:
-  - hastag{t=skillRunning} false
+  #- hastag{t=skillRunning} false
   Skills:
   - addtag{t=skillRunning} @self
   - setAI{ai=false} @self
   - delay 40
-  - sudoskill{s=RockyInfinityGunPlayer;cat=true} @playersinradius{r=200;limit=5;sort=RANDOM}
+  - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=5;sort=RANDOM}
   - delay 4
-  - sudoskill{s=RockyInfinityGunPlayer;cat=true} @playersinradius{r=200;limit=5;sort=RANDOM}
+  - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=5;sort=RANDOM}
   - delay 4
-  - sudoskill{s=RockyInfinityGunPlayer;cat=true} @playersinradius{r=200;limit=5;sort=RANDOM}
+  - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=5;sort=RANDOM}
   - delay 4
-  - sudoskill{s=RockyInfinityGunPlayer;cat=true} @playersinradius{r=200;limit=5;sort=RANDOM}
+  - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=5;sort=RANDOM}
   - delay 4
-  - sudoskill{s=RockyInfinityGunPlayer;cat=true} @playersinradius{r=200;limit=5;sort=RANDOM}
+  - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=5;sort=RANDOM}
   - delay 4
-  - sudoskill{s=RockyInfinityGunPlayer;cat=true} @playersinradius{r=200;limit=5;sort=RANDOM}
+  - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=5;sort=RANDOM}
   - delay 4
-  - sudoskill{s=RockyInfinityGunPlayer;cat=true} @playersinradius{r=200;limit=5;sort=RANDOM}
+  - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=5;sort=RANDOM}
   - delay 4
-  - sudoskill{s=RockyInfinityGunPlayer;cat=true} @playersinradius{r=200;limit=5;sort=RANDOM}
+  - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=5;sort=RANDOM}
   - delay 4
-  - sudoskill{s=RockyInfinityGunPlayer;cat=true} @playersinradius{r=200;limit=5;sort=RANDOM}
+  - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=5;sort=RANDOM}
   - delay 4
-  - sudoskill{s=RockyInfinityGunPlayer;cat=true} @playersinradius{r=200;limit=5;sort=RANDOM}
+  - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=5;sort=RANDOM}
   - delay 10
   - removetag{t=skillRunning} @self
   - setAI{ai=true} @self
 RockyInfinityGunPlayer:
   Skills:
-  - effect:particleline{particle=reddust;color=#ff00ff} @selflocation{y=40}
-  - sound{s=entity.blaze.death;p=1.5;v=0.2} @self
-  - summon{mob=RockyInfinityGunTarget} @selflocation{y=10}
+  - summon{mob=RockyInfinityGunTarget} @forward{f=3;y=-3}
 RockyInfinityGunTarget:
   Skills:
-  - message{m='aaa'} @owner
-  - damage{a=20} @NearestPlayer{r=70}
-  - message{m='eeeee'} @NearestPlayer{r=70}
+  - sudoskill{s=RockyInfinityGunPtoT;sio=true;cat=true} @owner
+RockyInfinityGunPtoT:
+  Skills:
+  - sudoskill{s=RockyInfinityGunDamage;cat=true} @trigger
+  - effect:particleline{particle=reddust;color=#ff00ff;startYOffset=-3} @selflocation{y=40}
+RockyInfinityGunDamage:
+  Skills:
+  - setowner @self
+  - damage{a=8} @trigger
+  - damage{a=20;ia=true;type=VOID} @trigger
   - remove @self
