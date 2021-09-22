@@ -81,13 +81,13 @@ RockyPunchTargetSkill:
   Skills:
   - damage{a=20} @PlayersInRadius{r=5}
   - sudoskill{s=RockyPunchKnockback} @PlayersInRadius{r=5}
-  - command{c="mraid radiusExecute <caster.uuid> 5 mraid vision 2 spider <name>"} @self
   - teleportin{vector=0,-10,0} @self
   - remove @self
 RockyPunchKnockback:
   Skills:
   - leap{velocity=-1000} @trigger
   - jump{velocity=0.6}
+  - command{c="mraid vision 2 spider <caster.name>"}
 
 RockyRightSlap:
   Conditions:
@@ -875,7 +875,7 @@ RockyInfinityGunTarget:
 RockyInfinityGunPtoT:
   Skills:
   - sudoskill{s=RockyInfinityGunDamage;cat=true} @trigger
-  - effect:particleline{particle=reddust;color=#ff00ff;startYOffset=-3} @selflocation{y=40}
+  - effect:particleline{particle=reddust;color=#8b008b;startYOffset=-3} @selflocation{y=40}
 RockyInfinityGunDamage:
   Skills:
   - setowner @self
