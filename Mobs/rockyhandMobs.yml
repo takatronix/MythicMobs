@@ -375,6 +375,8 @@ RockyInfinityGunTarget:
   - potion{type=INVISIBILITY;duration=2000;level=1;p=false} @self ~onSpawn
   - skill{s=RockyInfinityGunTarget} @self ~onSpawn
   - skill{s=RockyRemoveTarget} @self ~onSpawn
+  KillMessage:
+  - '<target.name> は紫紺の雨に降られた'
 
 TestMan:
   Type: WITHER_SKELETON
