@@ -295,7 +295,7 @@ RockyScatterMinion:
     - NETHERITE_SWORD HAND
   Skills:
   - skill{s=RockyScatterMinion} @self ~onSpawn
-  KillMessage:
+  KillMessages:
   - '<target.name> は護人の怒りを買った'
 
 RockySummonRTarget:
@@ -375,7 +375,7 @@ RockyInfinityGunTarget:
   - potion{type=INVISIBILITY;duration=2000;level=1;p=false} @self ~onSpawn
   - skill{s=RockyInfinityGunTarget} @self ~onSpawn
   - skill{s=RockyRemoveTarget} @self ~onSpawn
-  KillMessage:
+  KillMessages:
   - '<target.name> は紫紺の雨に降られた'
 
 TestMan:
