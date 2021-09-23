@@ -879,6 +879,6 @@ RockyInfinityGunPtoT:
 RockyInfinityGunDamage:
   Skills:
   - setowner @self
-  - damage{a=8} @trigger
   - damage{a=20;ia=true;type=VOID} @trigger
+  - damage{a=20} @trigger
   - remove @self
