@@ -46,7 +46,7 @@ RockyBackSpawnPoint:
   Conditions:
   - playerwithin{d=300} false
   Skills:
-  - teleport @location{c=-96,64,-519,0,0}
+  - teleport @CasterSpawnLocation
 
 
 RockyPunch:
@@ -604,7 +604,7 @@ RockyDivingWarp:
   - effect:blockmask{m=crying_obsidian;r=6;d=60} @selflocation{y=0}
   - effect:blockmask{m=end_portal;r=5;d=60} @selflocation{y=0}
   - effect:blockunmask{r=5;shape=cube} @selflocation{y=5}
-  - summon{mob=RockyDivingWarpTarget;amount=1} @PlayersInRadius{r=50;sort=FURTHEST;limit=1}
+  - summon{mob=RockyDivingWarpTarget;amount=1} @PlayersInRadius{r=80;sort=FURTHEST;limit=1}
   - skill{s=RockyDivingWarpPunch} @self
 RockyDivingWarpPunch:
   Skills:
@@ -837,35 +837,88 @@ RockyRemoveTarget:
   - delay 120
   - remove @self
 
-RockyInfinityGun:
+RockyInfinityGun: #26秒 520
   Conditions:
-  #- hastag{t=skillRunning} false
+  - hastag{t=skillRunning} false
   Skills:
-  - addtag{t=skillRunning} @self
+  - state{s=madness}
   - setAI{ai=false} @self
+  - addtag{t=skillRunning} @self
+  - delay 102
+  - teleportin{vector=0,2,0}
+  - delay 1
+  - teleportin{vector=0,2,0}
+  - delay 1
+  - teleportin{vector=0,2,0}
+  - delay 1
+  - teleportin{vector=0,2,0}
+  - delay 1
+  - teleportin{vector=0,2,0}
+  - delay 1
+  - teleportin{vector=0,2,0}
+  - delay 1
+  - teleportin{vector=0,2,0}
+  - delay 1
+  - teleportin{vector=0,2,0}
+  - delay 18
+  - orbital{onTick=RockyIGO-Tick;points=50;interval=2;duration=393;charges=1;r=9;oy=18;vy=180;reverse=true;rx=135;ry=135} @self
+  - delay 30
+  - orbital{onTick=RockyIGO-Tick;points=50;interval=2;duration=363;charges=1;r=9;oy=18;vy=180;reverse=true;rx=135;ry=135} @self
+  - delay 30
+  - orbital{onTick=RockyIGO-Tick;points=50;interval=2;duration=333;charges=1;r=9;oy=18;vy=180;reverse=true;rx=135;ry=135} @self
+  - delay 60
+  - orbital{onTick=RockyIGOM-Tick;points=50;interval=1;duration=273;charges=1;r=0.1;oy=20;vy=180;reverse=true;rx=135;ry=135} @self
+  - delay 273
+  - sound{s=entity.blaze.death;p=1.75;v=1} @playersinradius{r=200}
+  - delay 1
+  - sound{s=entity.blaze.death;p=1.75;v=1} @playersinradius{r=200}
+  - delay 1
+  - sound{s=entity.blaze.death;p=1.75;v=1} @playersinradius{r=200}
+  - delay 4
+  - effect:particleline{particle=reddust;color=#da70d6;amount=40;syo=21;xs=1;xz=1} @selflocation{y=40}
+  - delay 11
+  - setAI{ai=true} @self
+  - removetag{t=skillRunning}
+  - effect:bloodyScreen{d=5} @PIR{r=200}
+  - sound{s=item.trident.thunder;v=0.5;pitch=2} @playersinradius{r=200}
+  - sound{s=block.anvil.place;v=0.1;pitch=2} @playersinradius{r=200}
+  - delay 30
+  - effect:bloodyScreen{d=5} @PIR{r=200}
+  - sound{s=item.trident.thunder;v=0.5;pitch=2} @playersinradius{r=200}
+  - sound{s=block.anvil.place;v=0.1;pitch=2} @playersinradius{r=200}
+  - delay 30
+  - effect:bloodyScreen{d=5} @PIR{r=200}
+  - sound{s=item.trident.thunder;v=0.5;pitch=2} @playersinradius{r=200}
+  - sound{s=block.anvil.place;v=0.1;pitch=2} @playersinradius{r=200}
   - delay 40
-  - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=5;sort=RANDOM}
+  - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=8;sort=RANDOM}
   - delay 4
-  - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=5;sort=RANDOM}
+  - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=8;sort=RANDOM}
   - delay 4
-  - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=5;sort=RANDOM}
+  - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=8;sort=RANDOM}
   - delay 4
-  - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=5;sort=RANDOM}
+  - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=8;sort=RANDOM}
   - delay 4
-  - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=5;sort=RANDOM}
+  - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=8;sort=RANDOM}
   - delay 4
-  - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=5;sort=RANDOM}
+  - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=8;sort=RANDOM}
   - delay 4
-  - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=5;sort=RANDOM}
+  - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=8;sort=RANDOM}
   - delay 4
-  - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=5;sort=RANDOM}
+  - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=8;sort=RANDOM}
   - delay 4
-  - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=5;sort=RANDOM}
+  - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=8;sort=RANDOM}
   - delay 4
-  - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=5;sort=RANDOM}
+  - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=8;sort=RANDOM}
   - delay 10
   - removetag{t=skillRunning} @self
   - setAI{ai=true} @self
+RockyIGO-Tick:
+  Skills:
+  - effect:particles{particle=reddust;color=#8b008b;amount=60;speed=0;hS=0.2;vS=0.2} @origin
+RockyIGOM-Tick:
+  Skills:
+  - effect:particlesphere{particle=reddust;color=#4b0082;amount=200;radius=2} @origin
 RockyInfinityGunPlayer:
   Skills:
   - summon{mob=RockyInfinityGunTarget} @forward{f=3;y=-3}
