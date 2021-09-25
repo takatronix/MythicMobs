@@ -1,15 +1,19 @@
 
 RockyLSkillAttack: #左
+  Conditions:
+  - hastag{t=madness} false
   Skills:
   - randomskill{skills=RockyPunch,RockyLeftSlap,RockySwingDown,RockyKnifehand;sync=true} @self
   - CancelEvent
 RockyLSkillTimer:
   Skills:
   - skill{s=RockyBackSpawnPoint} @self
+  - skill{s=RockyInfinityGun} @self
   - randomskill{skills=RockyFingerGun,RockyTripleFingerGun,RockyRollingPunch,RockyJump;sync=true} @self
 RockyLSkillAttackLowHealth: #70以下
   Conditions:
   - hastag{t=finishedSummoning} true
+  - hastag{t=madness} false
   Skills:
   - randomskill{skills=RockyPunch,RockyLeftSlap,RockyRollingPunch,RockyCrossKnifehand,RockyKnifehand,RockySnap;sync=true} @self
   - CancelEvent
@@ -18,6 +22,7 @@ RockyLSkillTimerLowHealth:
   - hastag{t=finishedSummoning} true
   Skills:
   - skill{s=RockyBackSpawnPoint} @self
+  - skill{s=RockyInfinityGun} @self
   - skill{s=RockySnap} @self 0.02
   - randomskill{skills=RockySnatch,RockyDivingWarp,RockyTripleFingerGun;sync=true} @self
 
@@ -840,6 +845,7 @@ RockyRemoveTarget:
 RockyInfinityGun: #26秒 520
   Conditions:
   - hastag{t=skillRunning} false
+  - hastag{t=madness} true
   Skills:
   - state{s=madness}
   - setAI{ai=false} @self
@@ -911,8 +917,10 @@ RockyInfinityGun: #26秒 520
   - delay 4
   - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=8;sort=RANDOM}
   - delay 10
-  - removetag{t=skillRunning} @self
   - setAI{ai=true} @self
+  - delay 30
+  - removetag{t=skillRunning} @self
+  - removetag{t=madness} @self
 RockyIGO-Tick:
   Skills:
   - effect:particles{particle=reddust;color=#8b008b;amount=60;speed=0;hS=0.2;vS=0.2} @origin
@@ -927,6 +935,7 @@ RockyInfinityGunTarget:
   - sudoskill{s=RockyInfinityGunPtoT;sio=true;cat=true} @owner
 RockyInfinityGunPtoT:
   Skills:
+  - sound{s=entity.blaze.death;p=1.5;v=0.4} @playersinradius{r=100}
   - sudoskill{s=RockyInfinityGunDamage;cat=true} @trigger
   - effect:particleline{particle=reddust;color=#8b008b;startYOffset=-3} @selflocation{y=40}
 RockyInfinityGunDamage:
