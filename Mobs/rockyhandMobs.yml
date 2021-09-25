@@ -38,13 +38,14 @@ leftrockyhand:
   - model{mid=rockyhand;name=false} @self ~onSpawn
   - bodyclamp{angle=1} @self ~onSpawn
   #- addtag{t=finishedSummoning} @self ~onSpawn 右手を隠す時に有効にする
+  - addtag{t=madness} @self ~onTimer:1200
+  - removetag{t=madness} @self ~onSpawn
   - skill{s=RockySummonRHand} @self ~onAttack <70%
   - skill{s=RockyLSkillAttack;sync=true} ~onAttack >70%
   - skill{s=RockyLSkillAttackLowHealth;sync=true} ~onAttack <70%
   - skill{s=RockyLSkillTimer;sync=true} ~onTimer:100 >70%
   - skill{s=RockyLSkillTimerLowHealth;sync=true} ~onTimer:100 <70%
   - command{c="mraid current win"} @self ~onDeath
-  - skill{s=RockyInfinityGun} @self ~onDamaged
 
 rightrockyhand:
   type: WITHER_SKELETON
