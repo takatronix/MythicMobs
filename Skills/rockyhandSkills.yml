@@ -3,7 +3,7 @@ RockyLSkillAttack: #左
   Conditions:
   - hastag{t=madness} false
   Skills:
-  - randomskill{skills=RockyPunch,RockyLeftSlap,RockySwingDown,RockyKnifehand;sync=true} @self
+  - randomskill{skills=RockyPunch,RockyLeftSlap,RockySwingDown,RockyKnifehand,RockyRest;sync=true} @self
   - CancelEvent
 RockyLSkillTimer:
   Skills:
@@ -15,7 +15,7 @@ RockyLSkillAttackLowHealth: #70以下
   - hastag{t=finishedSummoning} true
   - hastag{t=madness} false
   Skills:
-  - randomskill{skills=RockyPunch,RockyLeftSlap,RockyRollingPunch,RockyCrossKnifehand,RockyKnifehand,RockySnap;sync=true} @self
+  - randomskill{skills=RockyPunch,RockyLeftSlap,RockyRollingPunch,RockyCrossKnifehand,RockyKnifehand,RockySnap,RockyRest;sync=true} @self
   - CancelEvent
 RockyLSkillTimerLowHealth:
   Conditions:
@@ -32,7 +32,7 @@ RockyRangedAttack: #共通
 
 RockyRSkillAttack: #右
   Skills:
-  - randomskill{skills=RockyPunch,RockyRightSlap,RockySwingDown,RockyTripleHammering;sync=true} @self
+  - randomskill{skills=RockyPunch,RockyRightSlap,RockySwingDown,RockyTripleHammering,RockyRest;sync=true} @self
   - CancelEvent
 RockyRSkillTimer:
   Skills:
@@ -40,7 +40,7 @@ RockyRSkillTimer:
   - randomskill{skills=RockyFingerGun,RockyTripleFingerGun;sync=true} @self
 RockyRSkillAttackLowHealth: #70以下
   Skills:
-  - randomskill{skills=RockyPunch,RockyRightSlap,RockyHammering,RockyDiserstar,RockyScatter,RockyCountdown;sync=true} @self
+  - randomskill{skills=RockyPunch,RockyRightSlap,RockyHammering,RockyDiserstar,RockyScatter,RockyCountdown,RockyRest;sync=true} @self
   - CancelEvent
 RockyRSkillTimerLowHealth:
   Skills:
@@ -180,8 +180,8 @@ RockyFingerGun:
 RockyFingerTarget:
   Skills:
   - delay 4
-  - damage{a=8} @playersinradius{r=1.5}
   - damage{a=16;ia=true;type=VOID} @playersinradius{r=1.5}
+  - damage{a=8} @playersinradius{r=1.5}
   - effect:particles{particle=lava;amount=5;speed=3} @selflocation{y=0.5}
   - effect:particleline{particle=reddust;color=#ff00ff;targetYOffset=6} @parent #
   - delay 2
@@ -660,6 +660,29 @@ RockySummonRHand:
   - addtag{t=skillRunning} @self
   - addtag{t=finishedSummoning} @self
   - setAI{ai=false} @self
+  - state{s=down} @self
+  - delay 240
+  - state{s=diving_warp} @self
+  - delay 18
+  - effect:particles{amount=70;speed=0;hs=1.8;particle=large_smoke} @selflocation{y=0.2}
+  - delay 4
+  - effect:particles{amount=70;speed=0;hs=1.8;particle=large_smoke} @selflocation{y=0.2}
+  - delay 4
+  - effect:particles{amount=70;speed=0;hs=1.8;particle=large_smoke} @selflocation{y=0.2}
+  - delay 10
+  - effect:particles{amount=120;speed=1;hs=1.8;particle=large_smoke} @selflocation{y=-0.2}
+  - delay 2
+  - sound{s=block.end_portal.spawn;v=3;pitch=1.5} @self
+  - effect:blockmask{m=crying_obsidian;r=6;d=60} @selflocation{y=0}
+  - effect:blockmask{m=end_portal;r=5;d=60} @selflocation{y=0}
+  - effect:blockunmask{r=5;shape=cube} @selflocation{y=5}
+  - summon{mob=RockyDivingWarpTarget;amount=1} @CasterSpawnLocation
+  - delay 30
+  - sudoskill{skill=RockyDivingWarpTarget} @children
+  - delay 20
+  - state{s=diving_warp_punch} @self
+  - delay 28
+  - state{s=summon_righthand} @self
   - setrotation{pitch=0} @self
   - sound{s=block.end_portal.spawn;v=3;pitch=2} @self
   - effect:blockmask{m=crying_obsidian;r=7;d=110} @forward{f=13;y=0}
@@ -847,6 +870,7 @@ RockyInfinityGun: #26秒 520
   - hastag{t=skillRunning} false
   - hastag{t=madness} true
   Skills:
+  - removetag{t=madness} @self
   - state{s=madness}
   - setAI{ai=false} @self
   - addtag{t=skillRunning} @self
@@ -920,7 +944,6 @@ RockyInfinityGun: #26秒 520
   - setAI{ai=true} @self
   - delay 30
   - removetag{t=skillRunning} @self
-  - removetag{t=madness} @self
 RockyIGO-Tick:
   Skills:
   - effect:particles{particle=reddust;color=#8b008b;amount=60;speed=0;hS=0.2;vS=0.2} @origin
@@ -944,3 +967,13 @@ RockyInfinityGunDamage:
   - damage{a=20;ia=true;type=VOID} @trigger
   - damage{a=20} @trigger
   - remove @self
+
+RockyRest:
+  Conditions:
+  - hastag{t=skillRunning} false
+  Skills:
+  - addtag{t=skillRunning} @self
+  - setAI{ai=false} @self
+  - delay 150
+  - setAI{ai=true} @self
+  - removetag{t=skillRunning} @self
