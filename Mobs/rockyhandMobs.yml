@@ -38,7 +38,7 @@ leftrockyhand:
   - model{mid=rockyhand;name=false} @self ~onSpawn
   - bodyclamp{angle=1} @self ~onSpawn
   #- addtag{t=finishedSummoning} @self ~onSpawn 右手を隠す時に有効にする
-  - addtag{t=madness} @self ~onTimer:1200
+  - addtag{t=madness} @self ~onTimer:9600
   - removetag{t=madness} @self ~onSpawn
   - skill{s=RockySummonRHand} @self ~onAttack <70%
   - skill{s=RockyLSkillAttack;sync=true} ~onAttack >70%
