@@ -974,6 +974,7 @@ RockyRest:
   Skills:
   - addtag{t=skillRunning} @self
   - setAI{ai=false} @self
+  - state{s=rest}
   - delay 150
   - setAI{ai=true} @self
   - removetag{t=skillRunning} @self
