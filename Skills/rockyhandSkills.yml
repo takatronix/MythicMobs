@@ -38,7 +38,7 @@ RockyRSkillTimer:
   Skills:
   - skill{s=RockyBackSpawnPoint} @self
   - randomskill{skills=RockyFingerGun,RockyTripleFingerGun;sync=true} @self
-RockyRSkillAttackLowHealth: #70以下
+RockyRSkillAttackLowHealth: #80以下
   Skills:
   - randomskill{skills=RockyPunch,RockyRightSlap,RockyHammering,RockyDiserstar,RockyScatter,RockyCountdown,RockyRest;sync=true} @self
   - CancelEvent
@@ -79,7 +79,6 @@ RockyPunch:
   - setAI{ai=true} @self
   - removetag{t=skillRunning} @self
   - removetag{t=punch} @self
-  - skill{s=RockyRangedAttack;sync=true} >50%
 RockyPunchTargetSkill:
   Conditions:
   - hastag{t=punchtarget} true
@@ -112,8 +111,6 @@ RockyRightSlap:
   - delay 21
   - setAI{ai=true} @self
   - removetag{t=skillRunning} @self
-  - skill{s=RockyRSkillTimer;sync=true} >50%
-  - skill{s=RockyRSkillTimerLowHealth;sync=true} <50%
 
 RockyLeftSlap:
   Conditions:
@@ -133,8 +130,6 @@ RockyLeftSlap:
   - delay 21
   - setAI{ai=true} @self
   - removetag{t=skillRunning} @self
-  - skill{s=RockyLSkillTimer;sync=true} >50%
-  - skill{s=RockyLSkillTimerLowHealth;sync=true} <50%
 RockySlapDamage:
   Skills:
   - leap{velocity=-800} @trigger
@@ -943,6 +938,8 @@ RockyInfinityGun: #26秒 520
   - delay 10
   - setAI{ai=true} @self
   - delay 30
+  - state{s=down}
+  - delay 240
   - removetag{t=skillRunning} @self
 RockyIGO-Tick:
   Skills:
