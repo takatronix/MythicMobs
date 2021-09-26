@@ -79,8 +79,8 @@ RockyPunch:
   - setAI{ai=true} @self
   - removetag{t=skillRunning} @self
   - removetag{t=punch} @self
-  - skill{s=RockyRSkillTimer;sync=true} >50%
-  - skill{s=RockyRSkillTimerLowHealth;sync=true} <50%
+  - skill{s=RockyRSkillTimer;sync=true} >50% 0.7
+  - skill{s=RockyRSkillTimerLowHealth;sync=true} <50% 0.7
 RockyPunchTargetSkill:
   Conditions:
   - hastag{t=punchtarget} true
@@ -815,14 +815,14 @@ RockySnap:
   - addtag{t=skillRunning} @self
   - setAI{ai=false} @self
   - delay 72
-  - potion{type=HUNGER;duration=600;level=0} @playersinradius{r=70}
-  - potion{type=POISON;duration=600;level=0} @playersinradius{r=50}
-  - potion{type=SLOW;duration=600;level=0} @playersinradius{r=25}
+  - potion{type=HUNGER;duration=400;level=0} @playersinradius{r=70}
+  - potion{type=POISON;duration=400;level=0} @playersinradius{r=50}
+  - potion{type=SLOW;duration=400;level=0} @playersinradius{r=25}
   - potion{type=POISON;duration=400;level=1} @playersinradius{r=15}
-  - potion{type=SLOW;duration=600;level=2} @playersinradius{r=10}
+  - potion{type=SLOW;duration=400;level=2} @playersinradius{r=10}
   - potion{type=HUNGER;duration=400;level=3} @playersinradius{r=7}
   - potion{type=WITHER;duration=400;level=2} @playersinradius{r=6}
-  - potion{type=WEAKNESS;duration=600;level=1} @playersinradius{r=4}
+  - potion{type=WEAKNESS;duration=400;level=1} @playersinradius{r=4}
   - sound{s=item.totem.use;v=1;pitch=0} @playersinradius{r=120}
   - command{c="mraid radiusExecute <caster.uuid> 20 mraid vision 1 creeper <name>"} @self
   - removetag{t=skillRunning} @self
