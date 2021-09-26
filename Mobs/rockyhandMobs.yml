@@ -289,7 +289,7 @@ RockyDivingWarpTarget:
 RockyScatterMinion:
   Type: WITHER_SKELETON
   Display: '遺跡の護人'
-  Health: 25
+  Health: 10
   Options:
     PreventOtherDrops: true
     PreventItemPickup: true
