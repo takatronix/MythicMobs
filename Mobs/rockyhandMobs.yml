@@ -87,10 +87,10 @@ rightrockyhand:
   - model{mid=righthand;name=false} @self ~onSpawn
   - bodyclamp{angle=1} @self ~onSpawn
   - skill{s=RockyRighthandonSpanw} ~onSpawn
-  - skill{s=RockyRSkillAttack;sync=true} ~onAttack >70%
-  - skill{s=RockyRSkillAttackLowHealth;sync=true} ~onAttack <70%
-  - skill{s=RockyRSkillTimer;sync=true} ~onTimer:100 >70%
-  - skill{s=RockyRSkillTimerLowHealth;sync=true} ~onTimer:100 <70%
+  - skill{s=RockyRSkillAttack;sync=true} ~onAttack >80%
+  - skill{s=RockyRSkillAttackLowHealth;sync=true} ~onAttack <80%
+  - skill{s=RockyRSkillTimer;sync=true} ~onTimer:100 >80%
+  - skill{s=RockyRSkillTimerLowHealth;sync=true} ~onTimer:100 <80%
   - command{c="mraid current win"} @self ~onDeath
 
 RockyPunchTarget:
