@@ -513,7 +513,10 @@ RockyDiserstarTotem:
   - summon{mob=RockyDLTarget} @PLIR{r=100;limit=2;sort=RANDOM}
   - summon{mob=RockyDLRTarget} @selflocation{y=-32.0}
   - delay 30
-  - summon{mob=RockyDLTarget} @PLIR{r=100;limit=3;sort=RANDOM}
+  - summon{mob=RockyDLTarget} @PLIR{r=100;limit=2;sort=RANDOM}
+  - summon{mob=RockyDLRTarget} @selflocation{y=-32.0}
+  - delay 30
+  - summon{mob=RockyDLTarget} @PLIR{r=100;limit=2;sort=RANDOM}
   - summon{mob=RockyDLRTarget} @selflocation{y=-32.0}
   - delay 30
   - summon{mob=RockyDLTarget} @PLIR{r=100;limit=3;sort=RANDOM}
@@ -522,13 +525,10 @@ RockyDiserstarTotem:
   - summon{mob=RockyDLTarget} @PLIR{r=100;limit=3;sort=RANDOM}
   - summon{mob=RockyDLRTarget} @selflocation{y=-32.0}
   - delay 30
-  - summon{mob=RockyDLTarget} @PLIR{r=100;limit=4;sort=RANDOM}
+  - summon{mob=RockyDLTarget} @PLIR{r=100;limit=3;sort=RANDOM}
   - summon{mob=RockyDLRTarget} @selflocation{y=-32.0}
   - delay 30
-  - summon{mob=RockyDLTarget} @PLIR{r=100;limit=4;sort=RANDOM}
-  - summon{mob=RockyDLRTarget} @selflocation{y=-32.0}
-  - delay 30
-  - summon{mob=RockyDLTarget} @PLIR{r=100;limit=5;sort=RANDOM}
+  - summon{mob=RockyDLTarget} @PLIR{r=100;limit=3;sort=RANDOM}
   - summon{mob=RockyDLRTarget} @selflocation{y=-32.0}
   - delay 100
   - remove @self
