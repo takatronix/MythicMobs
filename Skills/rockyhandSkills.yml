@@ -79,6 +79,8 @@ RockyPunch:
   - setAI{ai=true} @self
   - removetag{t=skillRunning} @self
   - removetag{t=punch} @self
+  - skill{s=RockyRSkillTimer;sync=true} >50%
+  - skill{s=RockyRSkillTimerLowHealth;sync=true} <50%
 RockyPunchTargetSkill:
   Conditions:
   - hastag{t=punchtarget} true
