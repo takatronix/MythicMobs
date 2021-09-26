@@ -958,7 +958,7 @@ RockyInfinityGunTarget:
   - sudoskill{s=RockyInfinityGunPtoT;sio=true;cat=true} @owner
 RockyInfinityGunPtoT:
   Skills:
-  - sound{s=entity.blaze.death;p=1.5;v=0.4} @playersinradius{r=100}
+  - sound{s=entity.blaze.death;p=1.5;v=0.4} @self
   - sudoskill{s=RockyInfinityGunDamage;cat=true} @trigger
   - effect:particleline{particle=reddust;color=#8b008b;startYOffset=-3} @selflocation{y=40}
 RockyInfinityGunDamage:
