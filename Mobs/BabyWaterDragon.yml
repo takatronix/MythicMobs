@@ -30,6 +30,7 @@ BabyWaterDragon:
   Skills:
   - command{c="mythicmobs i give <trigger.name> BabyWaterDragon_Scale"} @Trigger ~onDeath
   - command{c="dm end <trigger.name> pve2"} @Trigger ~onDeath
+  - command{c="minecraft:teleport <trigger.name> -73 208 33 -180 0"} @Trigger ~onDeath
   - skill{s=WaterBreath} @target ~onTimer:60
   - skill{s=Gekirin} @self ~onDamaged <30%
   - effect:particles{p=villager_angry;amount=20;speed=0;hS=0.3;vS=0.3} @self ~onTimer:40 <30%

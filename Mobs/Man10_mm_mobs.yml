@@ -272,5 +272,6 @@ KingSlime_3:
   Skills:
   - command{c="mythicmobs i give <trigger.name> KingSlime_Core"} @Trigger ~onDeath
   - command{c="dm end <trigger.name> pve1"} @Trigger ~onDeath
+  - command{c="minecraft:teleport <trigger.name> -73 208 15 -180 0"} @Trigger ~onDeath
   - remove @MIR{r=20;t=KnightSlime} ~onDeath
 
