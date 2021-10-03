@@ -918,7 +918,11 @@ RockyInfinityGun: #26秒 520
   - sound{s=item.trident.thunder;v=0.5;pitch=2} @playersinradius{r=200}
   - sound{s=block.anvil.place;v=0.1;pitch=2} @playersinradius{r=200}
   - delay 40
-  - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=4;sort=RANDOM}
+  - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=3;sort=RANDOM}
+  - delay 4
+  - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=3;sort=RANDOM}
+  - delay 4
+  - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=3;sort=RANDOM}
   - delay 4
   - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=4;sort=RANDOM}
   - delay 4
@@ -926,22 +930,16 @@ RockyInfinityGun: #26秒 520
   - delay 4
   - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=4;sort=RANDOM}
   - delay 4
-  - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=4;sort=RANDOM}
+  - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=5;sort=RANDOM}
   - delay 4
-  - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=4;sort=RANDOM}
+  - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=5;sort=RANDOM}
   - delay 4
-  - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=4;sort=RANDOM}
+  - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=6;sort=RANDOM}
   - delay 4
-  - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=4;sort=RANDOM}
-  - delay 4
-  - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=4;sort=RANDOM}
-  - delay 4
-  - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=4;sort=RANDOM}
+  - sudoskill{s=RockyInfinityGunPlayer} @playersinradius{r=200;limit=6;sort=RANDOM}
   - delay 10
   - setAI{ai=true} @self
   - delay 30
-  - state{s=down}
-  - delay 240
   - removetag{t=skillRunning} @self
 RockyIGO-Tick:
   Skills:
