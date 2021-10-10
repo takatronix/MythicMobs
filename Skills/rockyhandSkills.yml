@@ -504,31 +504,31 @@ RockyDiserstarTotem:
   - effect:particleorbital{r=19;points=7;t=300;i=1;vy=580;particle=end_rod} @self
   - effect:particleorbital{r=24;points=8;t=300;i=1;vy=680;particle=end_rod} @self
   - delay 20
-  - summon{mob=RockyDLTarget} @PLIR{r=100;limit=2;sort=RANDOM}
+  - summon{mob=RockyDLTarget} @playersinradius{r=100;sort=RANDOM;limit=2}
   - summon{mob=RockyDLRTarget} @selflocation{y=-32.0}
   - delay 20
-  - summon{mob=RockyDLTarget} @PLIR{r=100;limit=2;sort=RANDOM}
+  - summon{mob=RockyDLTarget} @playersinradius{r=100;sort=RANDOM;limit=2}
   - summon{mob=RockyDLRTarget} @selflocation{y=-32.0}
   - delay 25
-  - summon{mob=RockyDLTarget} @PLIR{r=100;limit=2;sort=RANDOM}
+  - summon{mob=RockyDLTarget} @playersinradius{r=100;sort=RANDOM;limit=3}
   - summon{mob=RockyDLRTarget} @selflocation{y=-32.0}
   - delay 30
-  - summon{mob=RockyDLTarget} @PLIR{r=100;limit=2;sort=RANDOM}
+  - summon{mob=RockyDLTarget} @playersinradius{r=100;sort=RANDOM;limit=3}
   - summon{mob=RockyDLRTarget} @selflocation{y=-32.0}
   - delay 30
-  - summon{mob=RockyDLTarget} @PLIR{r=100;limit=2;sort=RANDOM}
+  - summon{mob=RockyDLTarget} @playersinradius{r=100;sort=RANDOM;limit=4}
   - summon{mob=RockyDLRTarget} @selflocation{y=-32.0}
   - delay 30
-  - summon{mob=RockyDLTarget} @PLIR{r=100;limit=3;sort=RANDOM}
+  - summon{mob=RockyDLTarget} @playersinradius{r=100;sort=RANDOM;limit=6}
   - summon{mob=RockyDLRTarget} @selflocation{y=-32.0}
   - delay 30
-  - summon{mob=RockyDLTarget} @PLIR{r=100;limit=3;sort=RANDOM}
+  - summon{mob=RockyDLTarget} @playersinradius{r=100;sort=RANDOM;limit=7}
   - summon{mob=RockyDLRTarget} @selflocation{y=-32.0}
   - delay 30
-  - summon{mob=RockyDLTarget} @PLIR{r=100;limit=3;sort=RANDOM}
+  - summon{mob=RockyDLTarget} @playersinradius{r=100;sort=RANDOM;limit=8}
   - summon{mob=RockyDLRTarget} @selflocation{y=-32.0}
   - delay 30
-  - summon{mob=RockyDLTarget} @PLIR{r=100;limit=3;sort=RANDOM}
+  - summon{mob=RockyDLTarget} @playersinradius{r=100;sort=RANDOM;limit=10}
   - summon{mob=RockyDLRTarget} @selflocation{y=-32.0}
   - delay 100
   - remove @self
