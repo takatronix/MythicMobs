@@ -40,7 +40,7 @@ RockyRSkillTimer:
   - randomskill{skills=RockyFingerGun,RockyTripleFingerGun;sync=true} @self
 RockyRSkillAttackLowHealth: #80以下
   Skills:
-  - randomskill{skills=RockyPunch,RockyRightSlap,RockyHammering,RockyDiserstar,RockyScatter,RockyCountdown,RockyRest;sync=true} @self
+  - randomskill{skills=RockyIndexFingerMagic,RockyFingerGun,RockyPunch,RockyRightSlap,RockyHammering,RockyDiserstar,RockyScatter,RockyCountdown,RockyRest;sync=true} @self
   - CancelEvent
 RockyRSkillTimerLowHealth:
   Skills:
