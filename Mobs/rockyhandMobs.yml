@@ -35,7 +35,7 @@ leftrockyhand:
   Drops:
     - stone 1 1
   Skills:
-  - model{mid=rockyhand;name=false} @self ~onSpawn
+  - model{tint=false;mid=rockyhand;name=false} @self ~onSpawn
   - bodyclamp{angle=1} @self ~onSpawn
   #- addtag{t=finishedSummoning} @self ~onSpawn 右手を隠す時に有効にする
   - addtag{t=madness} @self ~onTimer:9600
@@ -84,7 +84,7 @@ rightrockyhand:
   Drops:
     - stone 1 1
   Skills:
-  - model{mid=righthand;name=false} @self ~onSpawn
+  - model{tint=false;mid=righthand;name=false} @self ~onSpawn
   - bodyclamp{angle=1} @self ~onSpawn
   - skill{s=RockyRighthandonSpanw} ~onSpawn
   - skill{s=RockyRSkillAttack;sync=true} ~onAttack >80%
@@ -398,14 +398,3 @@ TestMan2:
   Skills:
   - blockwave{duration=100;material=stone;radius=5;radiusY=5;velocity=10;shape=sphere} @selflocation ~onSpawn
   - remove @self ~onSpawn
-
-TestMan3:
-  Type: WITHER_SKELETON
-  Display: 'testman3'
-  Health: 1
-  Damage: 0
-  Skills:
-  - skill{s=a} @self ~onSpawn
-  - skill{s=b} @self ~onSpawn
-  - skill{s=c} @self ~onSpawn
-  - skill{s=d} @self ~onSpawn
