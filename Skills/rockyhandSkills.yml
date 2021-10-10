@@ -539,7 +539,7 @@ RockyDLRTarget:
 RockyDLTarget:
   Skills:
   - effect:particles{particle=flash;amount=2;speed=2} @selflocation{y=0.4}
-  - delay 15
+  - delay 20
   - damage{a=5;ia=true;type=VOID} @playersinradius{r=3}
   - ignite{ticks=80} @playersinradius{r=3}
   - effect:lightning @selflocation{y=-0.5}
