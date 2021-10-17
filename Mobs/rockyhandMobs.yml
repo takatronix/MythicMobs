@@ -37,7 +37,7 @@ leftrockyhand:
   Skills:
   - model{tint=false;mid=rockyhand;name=false} @self ~onSpawn
   - bodyclamp{angle=1} @self ~onSpawn
-  - addtag{t=RockyHand} @self
+  - addtag{t=RockyHand} @self ~onSpawn
   - command{c="execute in minecraft:arena run kill @e[tag=Rockyspawned]"} @self ~onSpawn
   - command{c="execute in minecraft:arena run tag @e[t=RockyHand] add RockySpawned"} @self ~onSpawn
   #- addtag{t=finishedSummoning} @self ~onSpawn 右手を隠す時に有効にする
