@@ -35,8 +35,11 @@ leftrockyhand:
   Drops:
     - stone 1 1
   Skills:
+  - addtag{t=protect} @self ~onSpawn
   - model{tint=false;mid=rockyhand;name=false} @self ~onSpawn
   - bodyclamp{angle=1} @self ~onSpawn
+  - command{c="execute in minecraft:arena run kill @e[name=&dq遺跡の守り手&dq,tag!=protect]"} @self ~onSpawn
+  - removetag{t=protect} @self ~onSpawn
   #- addtag{t=finishedSummoning} @self ~onSpawn 右手を隠す時に有効にする
   - addtag{t=madness} @self ~onTimer:9600
   - removetag{t=madness} @self ~onSpawn
