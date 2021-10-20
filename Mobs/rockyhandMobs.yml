@@ -18,6 +18,8 @@ leftrockyhand:
     PreventRandomEquipment: true
     PreventTransformation: true
     Despawn: false
+  LevelModifiers:
+    Health: 1000
   AIGoalSelector:
     - clear
     - meleeattack
@@ -49,6 +51,7 @@ leftrockyhand:
   - skill{s=RockyLSkillTimer;sync=true} ~onTimer:100 >70%
   - skill{s=RockyLSkillTimerLowHealth;sync=true} ~onTimer:100 <70%
   - command{c="mraid current win"} @self ~onDeath
+  - sound{s=entity.zombie.break_wooden_door;v=0.2;pitch=1.5} @trigger ~onDamaged
 
 rightrockyhand:
   type: WITHER_SKELETON
@@ -70,6 +73,8 @@ rightrockyhand:
     PreventRandomEquipment: true
     PreventTransformation: true
     Despawn: false
+  LevelModifiers:
+    Health: 1000
   AIGoalSelector:
     - clear
     - meleeattack
@@ -95,6 +100,7 @@ rightrockyhand:
   - skill{s=RockyRSkillTimer;sync=true} ~onTimer:100 >80%
   - skill{s=RockyRSkillTimerLowHealth;sync=true} ~onTimer:100 <80%
   - command{c="mraid current win"} @self ~onDeath
+  - sound{s=entity.zombie.break_wooden_door;v=0.2;pitch=1.5} @trigger ~onDamaged
 
 RockyPunchTarget:
   Type: SILVERFISH
