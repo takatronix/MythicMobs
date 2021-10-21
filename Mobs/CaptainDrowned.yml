@@ -30,7 +30,7 @@ CaptainDrowned:
   - sound{s=entity.player.attack.sweep;p=1.4} @self ~onAttack
   - sound{s=entity.drowned.death;p=0.7} @self ~onDeath
   - sound{s=entity.drowned.hurt;p=0.7} @self ~onDamaged
-  - signal{s=CaptainDead} @MIR{r=10;t=ParrotMinion} ~onDeath
+  - signal{s=CaptainDead} @MIR{r=30;t=ParrotMinion} ~onDeath
 
 ParrotMinion:
   Type: PARROT
