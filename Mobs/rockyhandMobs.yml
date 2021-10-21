@@ -1,7 +1,7 @@
 leftrockyhand:
   type: WITHER_SKELETON
   Display: '遺跡の守り手'
-  Health: 50000
+  Health: 40000
   Damage: 6
   Armor: 6
   Options:
@@ -18,6 +18,8 @@ leftrockyhand:
     PreventRandomEquipment: true
     PreventTransformation: true
     Despawn: false
+  LevelModifiers:
+    Health: 1000
   AIGoalSelector:
     - clear
     - meleeattack
@@ -37,6 +39,9 @@ leftrockyhand:
   Skills:
   - model{tint=false;mid=rockyhand;name=false} @self ~onSpawn
   - bodyclamp{angle=1} @self ~onSpawn
+  - addtag{t=RockyHand} @self ~onSpawn
+  - command{c="execute in minecraft:arena run kill @e[tag=RockySpawned]"} @self ~onSpawn
+  - command{c="execute in minecraft:arena run tag @e[tag=RockyHand] add RockySpawned"} @self ~onSpawn
   #- addtag{t=finishedSummoning} @self ~onSpawn 右手を隠す時に有効にする
   - addtag{t=madness} @self ~onTimer:9600
   - removetag{t=madness} @self ~onSpawn
@@ -46,11 +51,12 @@ leftrockyhand:
   - skill{s=RockyLSkillTimer;sync=true} ~onTimer:100 >70%
   - skill{s=RockyLSkillTimerLowHealth;sync=true} ~onTimer:100 <70%
   - command{c="mraid current win"} @self ~onDeath
+  - sound{s=entity.zombie.break_wooden_door;v=0.2;pitch=1.5} @trigger ~onDamaged
 
 rightrockyhand:
   type: WITHER_SKELETON
   Display: '遺跡の護り手'
-  Health: 50000
+  Health: 37000
   Damage: 6
   Armor: 6
   Options:
@@ -67,6 +73,8 @@ rightrockyhand:
     PreventRandomEquipment: true
     PreventTransformation: true
     Despawn: false
+  LevelModifiers:
+    Health: 1000
   AIGoalSelector:
     - clear
     - meleeattack
@@ -92,6 +100,7 @@ rightrockyhand:
   - skill{s=RockyRSkillTimer;sync=true} ~onTimer:100 >80%
   - skill{s=RockyRSkillTimerLowHealth;sync=true} ~onTimer:100 <80%
   - command{c="mraid current win"} @self ~onDeath
+  - sound{s=entity.zombie.break_wooden_door;v=0.2;pitch=1.5} @trigger ~onDamaged
 
 RockyPunchTarget:
   Type: SILVERFISH
