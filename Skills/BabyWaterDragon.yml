@@ -1,16 +1,16 @@
 WaterBreath:
   Skills:
   - projectile{onTick=WaterBreath-Tick;onHit=WaterBreath-Hit;v=8;i=1;hR=2;vR=2;sE=false;sB=false}
-  - sound{s=entity.ender_dragon.growl;pitch=2} @SelfLocation
+  - sound{s=entity.ender_dragon.growl;v=0.4;pitch=2} @self
 WaterBreath-Tick:
   Skills:
   - effect:particles{p=dripwater;amount=40;speed=0;hS=0.4;vS=0.4} @origin
 WaterBreath-Hit:
   Skills:
-  - damage{a=20}
-  - potion{type=SLOW;duration=100;l=1}
+  - damage{a=18}
+  - potion{type=SLOW;duration=80;l=1}
 Gekirin:
   Skills:
-  - potion{type=SPEED;duration=100000;l=18}
+  - potion{type=SPEED;duration=100000;l=5}
   - potion{type=DAMAGE_RESISTANCE;duration=100000;l=1}
   - potion{type=INCREASE_DAMAGE;duration=100000;l=1}
