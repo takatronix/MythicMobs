@@ -219,7 +219,7 @@ KnightSlime:
     PreventOtherDrops: true
     Size: 3
   Skills:
-  - potion{type=POISON;duration=200;level=2} @PIR{r=10} ~onDeath
+  - potion{type=POISON;duration=160;level=2} @PIR{r=10} ~onDeath
   - leap{velocity=100} @PIR{r=30} ~onTimer:40
 
 KingSlime_2:
@@ -262,6 +262,8 @@ KingSlime_3:
     Range: 20
     Color: GREEN
     Style: SOLID
+  DamageModifiers:
+  - FIRE_TICK 0
   Equipment:
   - SLIME_BLOCK HEAD
   - IRON_CHESTPLATE CHEST
@@ -270,8 +272,9 @@ KingSlime_3:
   - NETHERITE_SWORD HAND
   - IRON_SWORD OFFHAND
   Skills:
-  - command{c="mythicmobs i give <trigger.name> KingSlime_Core"} @Trigger ~onDeath
+  - command{c="mm i give <trigger.name> KingSlime_Core"} @Trigger ~onDeath
   - command{c="dm end <trigger.name> pve1"} @Trigger ~onDeath
   - command{c="minecraft:teleport <trigger.name> -73 208 15 -180 0"} @Trigger ~onDeath
   - remove @MIR{r=20;t=KnightSlime} ~onDeath
+  - extinguish{} @self ~onTimer:1
 
