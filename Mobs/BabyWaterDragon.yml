@@ -18,6 +18,8 @@ BabyWaterDragon:
     Range: 20
     Color: BLUE
     Style: SOLID
+  DamageModifiers:
+  - FIRE_TICK 0
   Options:
     MovementSpeed: 0.1
     FollowRange: 20
@@ -28,9 +30,10 @@ BabyWaterDragon:
     Silent: true
     PreventOtherDrops: true
   Skills:
-  - command{c="mythicmobs i give <trigger.name> BabyWaterDragon_Scale"} @Trigger ~onDeath
-  - command{c="dm end <trigger.name> pve2"} @Trigger ~onDeath
-  - command{c="minecraft:teleport <trigger.name> -73 208 33 -180 0"} @Trigger ~onDeath
-  - skill{s=WaterBreath} @target ~onTimer:60
+  - command{c="mm i give <trigger.name> BabyWaterDragon_Scale"} @trigger ~onDeath
+  - command{c="dm end <trigger.name> pve2"} @trigger ~onDeath
+  - command{c="minecraft:teleport <trigger.name> -73 208 33 -180 0"} @trigger ~onDeath
+  - skill{s=WaterBreath} @target ~onTimer:65 0.75
   - skill{s=Gekirin} @self ~onDamaged <30%
   - effect:particles{p=villager_angry;amount=20;speed=0;hS=0.3;vS=0.3} @self ~onTimer:40 <30%
+  - extinguish{} @self ~onTimer:1
