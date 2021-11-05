@@ -30,9 +30,9 @@ BabyWaterDragon:
     Silent: true
     PreventOtherDrops: true
   Skills:
-  - command{c="mm i give <trigger.name> BabyWaterDragon_Scale"} @trigger ~onDeath
-  - command{c="dm end <trigger.name> pve2"} @trigger ~onDeath
-  - command{c="minecraft:teleport <trigger.name> -73 208 33 -180 0"} @trigger ~onDeath
+  - command{c="mm i give <trigger.name> BabyWaterDragon_Scale"} @NearestPlayer{r=10} ~onDeath
+  - command{c="dm end <trigger.name> pve2"} @NearestPlayer{r=10} ~onDeath
+  - command{c="minecraft:teleport <trigger.name> -73 208 33 -180 0"} @NearestPlayer{r=10} ~onDeath
   - skill{s=WaterBreath} @target ~onTimer:65 0.75
   - skill{s=Gekirin} @self ~onDamaged <30%
   - effect:particles{p=villager_angry;amount=20;speed=0;hS=0.3;vS=0.3} @self ~onTimer:40 <30%
