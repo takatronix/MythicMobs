@@ -272,9 +272,9 @@ KingSlime_3:
   - NETHERITE_SWORD HAND
   - IRON_SWORD OFFHAND
   Skills:
-  - command{c="mm i give <trigger.name> KingSlime_Core"} @Trigger ~onDeath
-  - command{c="dm end <trigger.name> pve1"} @Trigger ~onDeath
-  - command{c="minecraft:teleport <trigger.name> -73 208 15 -180 0"} @Trigger ~onDeath
+  - command{c="mm i give <trigger.name> KingSlime_Core"} @NearestPlayer{r=10} ~onDeath
+  - command{c="dm end <trigger.name> pve1"} @NearestPlayer{r=10} ~onDeath
+  - command{c="minecraft:teleport <trigger.name> -73 208 15 -180 0"} @NearestPlayer{r=10} ~onDeath
   - remove @MIR{r=20;t=KnightSlime} ~onDeath
   - extinguish{} @self ~onTimer:1
 
