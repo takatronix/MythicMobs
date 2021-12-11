@@ -1,7 +1,7 @@
 leftrockyhand:
   type: WITHER_SKELETON
   Display: '遺跡の守り手'
-  Health: 40000
+  Health: 50000
   Damage: 6
   Armor: 6
   Options:
@@ -56,7 +56,7 @@ leftrockyhand:
 rightrockyhand:
   type: WITHER_SKELETON
   Display: '遺跡の護り手'
-  Health: 37000
+  Health: 47000
   Damage: 6
   Armor: 6
   Options:
