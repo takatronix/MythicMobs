@@ -1,7 +1,7 @@
 leftrockyhand:
   type: WITHER_SKELETON
   Display: '遺跡の守り手'
-  Health: 50000
+  Health: 70000
   Damage: 6
   Armor: 6
   Options:
@@ -43,7 +43,7 @@ leftrockyhand:
   - command{c="execute in minecraft:arena run kill @e[tag=RockySpawned]"} @self ~onSpawn
   - command{c="execute in minecraft:arena run tag @e[tag=RockyHand] add RockySpawned"} @self ~onSpawn
   #- addtag{t=finishedSummoning} @self ~onSpawn 右手を隠す時に有効にする
-  - addtag{t=madness} @self ~onTimer:9600
+  - addtag{t=madness} @self ~onTimer:4800
   - removetag{t=madness} @self ~onSpawn
   - skill{s=RockySummonRHand} @self ~onAttack <70%
   - skill{s=RockyLSkillAttack;sync=true} ~onAttack >70%
@@ -56,7 +56,7 @@ leftrockyhand:
 rightrockyhand:
   type: WITHER_SKELETON
   Display: '遺跡の護り手'
-  Health: 47000
+  Health: 67000
   Damage: 6
   Armor: 6
   Options:
