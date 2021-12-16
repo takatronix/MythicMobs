@@ -15,7 +15,7 @@ RockyLSkillAttackLowHealth: #70以下
   - hastag{t=finishedSummoning} true
   - hastag{t=madness} false
   Skills:
-  - randomskill{skills=RockyPunch,RockyLeftSlap,RockyRollingPunch,RockyCrossKnifehand,RockyKnifehand,RockySnap,RockyRest;sync=true} @self
+  - randomskill{skills=RockyPunch,RockyLeftSlap,RockyRollingPunch,RockyCrossKnifehand,RockyKnifehand,RockySnap;sync=true} @self
   - CancelEvent
 RockyLSkillTimerLowHealth:
   Conditions:
@@ -40,7 +40,7 @@ RockyRSkillTimer:
   - randomskill{skills=RockyFingerGun,RockyTripleFingerGun;sync=true} @self
 RockyRSkillAttackLowHealth: #80以下
   Skills:
-  - randomskill{skills=RockyIndexFingerMagic,RockyFingerGun,RockyPunch,RockyRightSlap,RockyHammering,RockyDiserstar,RockyScatter,RockyCountdown,RockyRest;sync=true} @self
+  - randomskill{skills=RockyIndexFingerMagic,RockyFingerGun,RockyPunch,RockyRightSlap,RockyHammering,RockyDiserstar,RockyScatter,RockyCountdown;sync=true} @self
   - CancelEvent
 RockyRSkillTimerLowHealth:
   Skills:
@@ -168,15 +168,15 @@ RockyFingerGun:
   - delay 54
   - summon{mob=RockyFingerGunTarget;amount=1} @playersinradius{r=200;sort=FURTHEST;limit=1}
   - command{c="execute as @e[limit=1,sort=nearest,tag=fingergun] at @s run tp @s ~ ~ ~ facing entity @e[limit=1,sort=nearest,name="fingerguntarget"]"} @self
-  - delay 4
+  - delay 2
   - sound{s=entity.blaze.death;p=1.5;v=0.4} @playersinradius{r=100}
-  - delay 20
+  - delay 22
   - removetag{t=skillRunning} @self
   - removetag{t=fingergun} @self
   - setAI{ai=true} @self
 RockyFingerTarget:
   Skills:
-  - delay 4
+  - delay 2
   - damage{a=16;ia=true;type=VOID} @playersinradius{r=1.5}
   - damage{a=8} @playersinradius{r=1.5}
   - effect:particles{particle=lava;amount=5;speed=3} @selflocation{y=0.5}
@@ -196,25 +196,25 @@ RockyTripleFingerGun:
   - delay 57
   - summon{mob=RockyFingerGunTarget;amount=1} @playersinradius{r=200;sort=FURTHEST;limit=1}
   - command{c="execute as @e[limit=1,sort=nearest,tag=fingergun] at @s run tp @s ~ ~ ~ facing entity @e[limit=1,sort=nearest,name="fingerguntarget"]"} @self
-  - delay 4
+  - delay 2
   #- effect:particleline{particle=reddust;color=#ff00ff;startYOffset=6} @children{name='fingerguntarget'}
   - sound{s=entity.blaze.death;p=1.5;v=0.4} @playersinradius{r=100}
   #- sudoskill{s=RockyFingerTarget;cat=true} @children{name='fingerguntarget'}
-  - delay 3
+  - delay 5
   - summon{mob=RockyFingerGunTarget;amount=1} @playersinradius{r=200;sort=FURTHEST;limit=1}
   - command{c="execute as @e[limit=1,sort=nearest,tag=fingergun] at @s run tp @s ~ ~ ~ facing entity @e[limit=1,sort=nearest,name="fingerguntarget"]"} @self
-  - delay 4
+  - delay 2
   #- effect:particleline{particle=reddust;color=#ff00ff;startYOffset=6} @children{name=fingerguntarget}
   - sound{s=entity.blaze.death;p=1.5;v=0.4} @playersinradius{r=100}
   #- sudoskill{s=RockyFingerTarget;cat=true} @children{name='fingerguntarget'}
-  - delay 6
+  - delay 8
   - summon{mob=RockyFingerGunTarget;amount=1} @playersinradius{r=200;sort=FURTHEST;limit=1}
   - command{c="execute as @e[limit=1,sort=nearest,tag=fingergun] at @s run tp @s ~ ~ ~ facing entity @e[limit=1,sort=nearest,name="fingerguntarget"]"} @self
-  - delay 4
+  - delay 2
   #- effect:particleline{particle=reddust;color=#ff00ff;startYOffset=6} @children{name='fingerguntarget'}
   - sound{s=entity.blaze.death;p=1.5;v=0.4} @playersinradius{r=100}
   #- sudoskill{s=RockyFingerTarget;cat=true} @children{name='fingerguntarget'}
-  - delay 20
+  - delay 22
   - removetag{t=skillRunning} @self
   - removetag{t=fingergun} @self
   - setAI{ai=true} @self
