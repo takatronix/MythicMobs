@@ -34,11 +34,11 @@ Demon:
   - skill{s=DemonRandomSkill} @self ~onTimer:200
   - skill{s=DemonRandomSkillSecond} @self ~onTimer:150
   - skill{s=DemonSecondLevelAlwaysAttack} @self ~onTimer:80
-  - setvariable{var=caster.skillnow;type=STRING;value="false"} @self ~onSpawn
-  - setvariable{var=caster.WentToSecondLevel;type=STRING;value="false"} @self ~onSpawn
-  - setvariable{var=caster.protect;type=STRING;value="false"} @self ~onSpawn
+
+
   - skill{s=DemonCancelAttack;sync=true} @self ~onAttack
   - skill{s=DemonGoToSecondLevel} @self ~onDamaged <10%
+  - skill{s=DemonLastAttack} @self ~onDamaged <10%
   - skill{s=DemonProtectDamage;sync=true} @self ~onDamaged
   - command{c="mraid current win"} @self ~onDeath
 
@@ -188,4 +188,48 @@ DemonUpperSlumSlumTargetSecondMob:
   KillMessages:
   - '<target.name> は拳に貫き通された'
 
+DemonLastAttackMob:
+  Type: SILVERFISH
+  Display: 'DemonLastAttackMob'
+  Health: 100
+  Damage: 0
+  Options:
+    NoDamageTicks: 100
+    Silent: true
+    NoGravity: true
+    MovementSpeed: 0
+    NoAI: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventBlockInfection: true
+    Invisible: true
+    Collidable: false
+    ApplyInvisibility: true
+  Skills:
+  - potion{type=INVISIBILITY;duration=2000;level=1;p=false} @self ~onSpawn
+  - skill{s=DemonLastAttackMob} @self ~onSpawn
+  KillMessages:
+  - '<target.name> は爆散した'
 
+DemonLastAttackMobSecond:
+  Type: SILVERFISH
+  Display: 'DemonLastAttackMobSecond'
+  Health: 100
+  Damage: 0
+  Options:
+    NoDamageTicks: 100
+    Silent: true
+    NoGravity: true
+    MovementSpeed: 0
+    NoAI: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventBlockInfection: true
+    Invisible: true
+    Collidable: false
+    ApplyInvisibility: true
+  Skills:
+  - potion{type=INVISIBILITY;duration=2000;level=1;p=false} @self ~onSpawn
+  - skill{s=DemonLastAttackMobSecond} @self ~onSpawn
+  KillMessages:
+  - '<target.name> は爆散した'
