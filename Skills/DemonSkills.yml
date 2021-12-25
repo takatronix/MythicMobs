@@ -26,7 +26,7 @@ DemonRandomSkillSecond:
   Conditions:
   - vareq{var=caster.WentToSecondLevel;value="true"}
   Skills:
-  - randomskill{skills=DemonTripleUpperSlum,DemonUpperSlum,DemonChargePunch,DemonUpperSlumSlum,DemonScream,DemonJump;sync=true} @self
+  - randomskill{skills=DemonTripleUpperSlum,DemonUpperSlum,DemonChargePunch,DemonUpperSlumSlum,DemonScream,DemonJump,DemonTripleUpperSlum,DemonUpperSlum,DemonChargePunch,DemonUpperSlumSlum,DemonScream;sync=true} @self
 
 DemonUpperSlumParticle:
   Skills:
@@ -250,7 +250,6 @@ DemonGoToSecondLevel:
   - skill{s=DemonAddSkillNow;repeat=200;repeatInterval=1} @self
   - setvariable{var=caster.WentToSecondLevel;type=STRING;value="true"} @self
   - setvariable{var=caster.protect;type=STRING;value="true"} @self
-  - setAI{ai=false} @self
   - delay 200
   - skill{s=DemonAddSkillNow} @self
   - setAI{ai=false} @self
@@ -263,25 +262,86 @@ DemonGoToSecondLevel:
   - delay 100
   - sound{s=item.trident.thunder;p=0.5;v=2} @PIR{r=100}
   - sound{s=item.trident.thunder;p=0.5;v=2} @PIR{r=100}
-  - sound{s=item.trident.thunder;p=0.5;v=2} @PIR{r=100}
   - setname{name=§6§lTrue§f§l-§5§lDemon} @self
   - enchant{m=demon;pid=group17;en=true;em=true} @self
   - enchant{m=demon;pid=group19;en=true;em=true} @self
   - enchant{m=demon;pid=group;en=true;em=true} @self
   - delay 40
   - setvariable{var=caster.protect;type=STRING;value="false"} @self
+  - setvariable{var=caster.WentToSecondLevelTrue;type=STRING;value="true"} @self
   - setAI{ai=true} @self
   - skill{s=DemonRemoveSkillNow} @self
   - skill{s=DemonUpperSlumSlum} @self
 
 DemonSecondLevelAlwaysAttack:
   Conditions:
-  - vareq{var=caster.WentToSecondLevel;value="true"}
+  - vareq{var=caster.WentToSecondLevelTrue;value="true"}
   Skills:
   - sudoskill{s=DemonSecondLevelAlwaysAttackTarget;cat=true} @PIR{r=100;sort=RANDOM;limit=2}
 
 DemonSecondLevelAlwaysAttackTarget:
   Skills:
-  - damage{a=3;ia=true} @self
+  - damage{a=2;ia=true} @self
   - effect:particleline{particle=flame;amount=10;ys=20} @self
-  - jump{v=0.3}
+
+DemonLastAttack:
+  Conditions:
+  - vareq{var=caster.skillnow;value="false"}
+  - vareq{var=caster.WentToSecondLevel;value="true"}
+  - vareq{var=caster.WentToSecondLevelTrue;value="true"}
+  - vareq{var=caster.usedLastAttack;value="false"}
+  Skills:
+  - skill{s=DemonAddSkillNow} @self
+  - setvariable{var=caster.protect;type=STRING;value="true"} @self
+  - setvariable{var=caster.usedLastAttack;type=STRING;value="true"} @self
+  - setAI{ai=false} @self
+  - state{s=scream;speed=0.3} @self
+  - sound{s=entity.ender_dragon.growl;v=1;p=0.5} @PIR{r=200}
+  - delay 120
+  - effect:bloodyScreen{d=10} @PIR{r=200}
+  - sound{s=item.trident.thunder;v=1;pitch=2} @playersinradius{r=200}
+  - sound{s=block.anvil.place;v=0.2;pitch=2} @playersinradius{r=200}
+  - delay 30
+  - effect:bloodyScreen{d=10} @PIR{r=200}
+  - sound{s=item.trident.thunder;v=1;pitch=2} @playersinradius{r=200}
+  - sound{s=block.anvil.place;v=0.2;pitch=2} @playersinradius{r=200}
+  - delay 30
+  - effect:bloodyScreen{d=10} @PIR{r=200}
+  - sound{s=item.trident.thunder;v=1;pitch=2} @playersinradius{r=200}
+  - sound{s=block.anvil.place;v=0.2;pitch=2} @playersinradius{r=200}
+  - delay 30
+  - summon{mob=DemonLastAttackMob;r=9;repeat=70;repeatInterval=6} @PIR{r=200;sort=RANDOM;limit=3}
+  - delay 150
+  - effect:bloodyScreen{d=10} @PIR{r=200}
+  - sound{s=item.trident.thunder;v=1;pitch=2} @playersinradius{r=200}
+  - sound{s=block.anvil.place;v=0.2;pitch=2} @playersinradius{r=200}
+  - delay 30
+  - effect:bloodyScreen{d=10} @PIR{r=200}
+  - sound{s=item.trident.thunder;v=1;pitch=2} @playersinradius{r=200}
+  - sound{s=block.anvil.place;v=0.2;pitch=2} @playersinradius{r=200}
+  - delay 30
+  - effect:bloodyScreen{d=10} @PIR{r=200}
+  - sound{s=item.trident.thunder;v=1;pitch=2} @playersinradius{r=200}
+  - sound{s=block.anvil.place;v=0.2;pitch=2} @playersinradius{r=200}
+  - delay 30
+  - summon{mob=DemonLastAttackMobSecond;r=9;repeat=38;repeatInterval=5} @PIR{r=200;sort=RANDOM;limit=3}
+  - delay 190
+  - setvariable{var=caster.protect;type=STRING;value="false"} @self
+  - setAI{ai=true} @self
+  - skill{s=DemonRemoveSkillNow} @self
+
+DemonLastAttackMob:
+  Skills:
+  - blockwave{duration=20;material=magma_block;radius=7;radiusY=3;velocity=2;shape=sphere} @selflocation
+  - damage{a=15} @PIR{r=7}
+  - sound{s=entity.generic.explode;p=0.6;v=0.5} @PIR{r=100}
+  - armordamage{a=15} @PIR{r=7}
+  - remove @self
+
+DemonLastAttackMobSecond:
+  Skills:
+  - blockwave{duration=20;material=crying_obsidian;radius=7;radiusY=3;velocity=2;shape=sphere} @selflocation
+  - damage{a=20} @PIR{r=7}
+  - sound{s=entity.wither.hurt;p=0.5;v=0.5} @PIR{r=100}
+  - armordamage{a=20} @PIR{r=7}
+  - remove @self
