@@ -56,7 +56,7 @@ DemonUpperSlum:
   - delay 55
   - setAI{ai=false} @self
   - delay 1
-  - blockwave{duration=40;material=magma_block;radius=10;radiusY=5;velocity=3;shape=sphere} @selflocation
+  - blockwave{duration=40;material=magma_block;radius=10;radiusY=4;velocity=3;shape=sphere} @selflocation
   - skill{s=DemonUpperSlumParticle} @self
   - sound{s=entity.generic.explode;p=0.6} @PIR{r=100}
   - summon{mob=DemonUpperSlumTargetMob;a=1} @self
@@ -147,7 +147,7 @@ DemonUpperSlumSlumTargetFirstMob:
   - damage{a=20} @PIR{r=15}
   - potion{t=SLOW;l=100;d=200} @PIR{r=10}
   - potion{t=JUMP;l=200;d=200} @PIR{r=15}
-  - blockwave{duration=22;material=magma_block;radius=15;radiusY=5;velocity=2;shape=sphere} @selflocation
+  - blockwave{duration=22;material=magma_block;radius=15;radiusY=3;velocity=2;shape=sphere} @selflocation
   - armordamage{a=20} @PIR{r=5}
   - remove @self
 
@@ -157,7 +157,7 @@ DemonUpperSlumSlumTargetSecondMob:
   - damage{a=8;ia=true} @PIR{r=7}
   - damage{a=20} @PIR{r=15}
   - sudoskill{s=DemonUpperSlumSlumTarget;cat=true} @PIR{r=15}
-  - blockwave{duration=30;material=crying_obsidian;radius=15;radiusY=5;velocity=2;shape=sphere} @selflocation
+  - blockwave{duration=30;material=crying_obsidian;radius=15;radiusY=3;velocity=2;shape=sphere} @selflocation
   - armordamage{a=25} @PIR{r=5}
   - remove @self
 
@@ -332,7 +332,7 @@ DemonLastAttack:
 
 DemonLastAttackMob:
   Skills:
-  - blockwave{duration=20;material=magma_block;radius=7;radiusY=3;velocity=2;shape=sphere} @selflocation
+  - blockwave{duration=20;material=magma_block;radius=7;radiusY=2;velocity=1;shape=sphere} @selflocation
   - damage{a=15} @PIR{r=7}
   - sound{s=entity.generic.explode;p=0.6;v=0.5} @PIR{r=100}
   - armordamage{a=15} @PIR{r=7}
@@ -340,7 +340,7 @@ DemonLastAttackMob:
 
 DemonLastAttackMobSecond:
   Skills:
-  - blockwave{duration=20;material=crying_obsidian;radius=7;radiusY=3;velocity=2;shape=sphere} @selflocation
+  - blockwave{duration=20;material=crying_obsidian;radius=7;radiusY=2;velocity=1;shape=sphere} @selflocation
   - damage{a=20} @PIR{r=7}
   - sound{s=entity.wither.hurt;p=0.5;v=0.5} @PIR{r=100}
   - armordamage{a=20} @PIR{r=7}
