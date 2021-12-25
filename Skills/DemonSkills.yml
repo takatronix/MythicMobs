@@ -4,27 +4,27 @@ DemonCancelAttack:
 
 DemonProtectDamage:
   Conditions:
-  - vareq{var=caster.protect;value="true"}
+  - hastag{t=protect} true
   Skills:
   - CancelEvent
 
 DemonAddSkillNow:
   Skills:
-  - setvariable{var=caster.skillnow;type=STRING;value="true"} @self
+  - addtag{t=skillnow} @self
 
 DemonRemoveSkillNow:
   Skills:
-  - setvariable{var=caster.skillnow;type=STRING;value="false"} @self
+  - removetag{t=skillnow} @self
 
 DemonRandomSkill:
   Conditions:
-  - vareq{var=caster.WentToSecondLevel;value="false"}
+  - hastag{t=WentToSecondLevel} false
   Skills:
   - randomskill{skills=DemonUpperSlum,DemonChargePunch,DemonJump;sync=true} @self
 
 DemonRandomSkillSecond:
   Conditions:
-  - vareq{var=caster.WentToSecondLevel;value="true"}
+  - hastag{t=WentToSecondLevel} true
   Skills:
   - randomskill{skills=DemonTripleUpperSlum,DemonUpperSlum,DemonChargePunch,DemonUpperSlumSlum,DemonScream,DemonJump,DemonTripleUpperSlum,DemonUpperSlum,DemonChargePunch,DemonUpperSlumSlum,DemonScream;sync=true} @self
 
@@ -44,7 +44,7 @@ DemonUpperSlumParticlePlus:
 
 DemonUpperSlum:
   Conditions:
-  - vareq{var=caster.skillnow;value="false"}
+  - hastag{t=skillnow} false
   Skills:
   - skill{s=DemonAddSkillNow} @self
   - setAI{ai=false} @self
@@ -79,7 +79,7 @@ DemonUpperSlumTarget:
 
 DemonChargePunch:
   Conditions:
-  - vareq{var=caster.skillnow;value="false"}
+  - hastag{t=skillnow} false
   Skills:
   - skill{s=DemonAddSkillNow} @self
   - look @PIR{r=30;sort=NEAREST}
@@ -122,7 +122,7 @@ DemonChargePunchTarget:
 
 DemonUpperSlumSlum:
   Conditions:
-  - vareq{var=caster.skillnow;value="false"}
+  - hastag{t=skillnow} false
   Skills:
   - skill{s=DemonAddSkillNow} @self
   - setAI{ai=false} @self
@@ -168,7 +168,7 @@ DemonUpperSlumSlumTarget:
 
 DemonScream:
   Conditions:
-  - vareq{var=caster.skillnow;value="false"}
+  - hastag{t=skillnow} false
   Skills:
   - skill{s=DemonAddSkillNow} @self
   - setAI{ai=false} @self
@@ -188,7 +188,7 @@ DemonScream:
 
 DemonJump:
   Conditions:
-  - vareq{var=caster.skillnow;value="false"}
+  - hastag{t=skillnow} false
   Skills:
   - skill{s=DemonAddSkillNow} @self
   - setAI{ai=false} @self
@@ -204,7 +204,7 @@ DemonJump:
 
 DemonTripleUpperSlum:
   Conditions:
-  - vareq{var=caster.skillnow;value="false"}
+  - hastag{t=skillnow} false
   Skills:
   - skill{s=DemonAddSkillNow} @self
   - setAI{ai=false} @self
@@ -245,11 +245,11 @@ DemonTripleUpperSlumMirrorAttack:
 
 DemonGoToSecondLevel:
   Conditions:
-  - vareq{var=caster.WentToSecondLevel;value="false"}
+  - hastag{t=WentToSecondLevel} false
   Skills:
   - skill{s=DemonAddSkillNow;repeat=200;repeatInterval=1} @self
-  - setvariable{var=caster.WentToSecondLevel;type=STRING;value="true"} @self
-  - setvariable{var=caster.protect;type=STRING;value="true"} @self
+  - addtag{t=WentToSecondLevel} @self
+  - addtag{t=protect} @self
   - delay 200
   - skill{s=DemonAddSkillNow} @self
   - setAI{ai=false} @self
@@ -267,15 +267,15 @@ DemonGoToSecondLevel:
   - enchant{m=demon;pid=group19;en=true;em=true} @self
   - enchant{m=demon;pid=group;en=true;em=true} @self
   - delay 40
-  - setvariable{var=caster.protect;type=STRING;value="false"} @self
-  - setvariable{var=caster.WentToSecondLevelTrue;type=STRING;value="true"} @self
+  - removetag{t=protect} @self
+  - addtag{t=WentToSecondLevelTrue} @self
   - setAI{ai=true} @self
   - skill{s=DemonRemoveSkillNow} @self
   - skill{s=DemonUpperSlumSlum} @self
 
 DemonSecondLevelAlwaysAttack:
   Conditions:
-  - vareq{var=caster.WentToSecondLevelTrue;value="true"}
+  - hastag{t=WentToSecondLevelTrue} @self
   Skills:
   - sudoskill{s=DemonSecondLevelAlwaysAttackTarget;cat=true} @PIR{r=100;sort=RANDOM;limit=2}
 
@@ -286,14 +286,14 @@ DemonSecondLevelAlwaysAttackTarget:
 
 DemonLastAttack:
   Conditions:
-  - vareq{var=caster.skillnow;value="false"}
-  - vareq{var=caster.WentToSecondLevel;value="true"}
-  - vareq{var=caster.WentToSecondLevelTrue;value="true"}
-  - vareq{var=caster.usedLastAttack;value="false"}
+  - hastag{t=skillnow} false
+  - hastag{t=WentToSecondLevel} true
+  - hastag{t=WentToSecondLevelTrue} true
+  - hastag{t=usedLastAttack} false
   Skills:
   - skill{s=DemonAddSkillNow} @self
-  - setvariable{var=caster.protect;type=STRING;value="true"} @self
-  - setvariable{var=caster.usedLastAttack;type=STRING;value="true"} @self
+  - addtag{t=protect} @self
+  - addtag{t=usedLastAttack} @self
   - setAI{ai=false} @self
   - state{s=scream;speed=0.3} @self
   - sound{s=entity.ender_dragon.growl;v=1;p=0.5} @PIR{r=200}
@@ -326,7 +326,7 @@ DemonLastAttack:
   - delay 30
   - summon{mob=DemonLastAttackMobSecond;r=9;repeat=38;repeatInterval=5} @PIR{r=200;sort=RANDOM;limit=3}
   - delay 190
-  - setvariable{var=caster.protect;type=STRING;value="false"} @self
+  - removetag{t=protect} @self
   - setAI{ai=true} @self
   - skill{s=DemonRemoveSkillNow} @self
 
