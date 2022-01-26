@@ -68,8 +68,8 @@ DemonUpperSlumTargetMob:
   Skills:
   - damage{a=10;ia=true} @PIR{r=6}
   - damage{a=30} @PIR{r=10}
-  - armordamage{a=25} @PIR{r=5}
-  - armordamage{a=10} @PIR{r=7}
+  - armordamage{a=10} @PIR{r=5}
+  - armordamage{a=15} @PIR{r=7}
   - ignite{t=100} @PIR{r=7}
   - sudoskill{s=DemonUpperSlumTarget;cat=true} @PIR{r=10}
   - remove @self
@@ -122,7 +122,7 @@ DemonChargePunch:
 
 DemonChargePunchTarget:
   Skills:
-  - damage{a=8;pi=true} @PIR{r=4}
+  - damage{a=6;pi=true;ia=true} @PIR{r=4}
   - potion{t=SLOW;l=4;d=150} @PIR{r=4}
   - potion{t=POISON;l=2;d=200} @PIR{r=4}
   - ignite{t=100} @PIR{r=4}
@@ -158,7 +158,7 @@ DemonUpperSlumSlumTargetFirstMob:
   - ignite{t=160} @PIR{r=10}
   - blockwave{duration=22;material=magma_block;radius=15;radiusY=3;velocity=2;shape=sphere} @selflocation
   - armordamage{a=15} @PIR{r=10}
-  - armordamage{a=30} @PIR{r=5}
+  - armordamage{a=15} @PIR{r=5}
   - remove @self
 
 DemonUpperSlumSlumTargetSecondMob:
@@ -168,8 +168,8 @@ DemonUpperSlumSlumTargetSecondMob:
   - damage{a=20} @PIR{r=15}
   - sudoskill{s=DemonUpperSlumSlumTarget;cat=true} @PIR{r=15}
   - blockwave{duration=30;material=crying_obsidian;radius=15;radiusY=3;velocity=2;shape=sphere} @selflocation
-  - armordamage{a=20} @PIR{r=10}
-  - armordamage{a=40} @PIR{r=5}
+  - armordamage{a=15} @PIR{r=10}
+  - armordamage{a=10} @PIR{r=5}
   - remove @self
 
 DemonUpperSlumSlumTarget:
@@ -192,8 +192,8 @@ DemonScream:
   - command{c="mraid radiusExecute <caster.uuid> 100 minecraft:effect clear <name> minecraft:fire_resistance"} @self
   - potion{t=SLOW;d=200;l=5} @PIR{r=100}
   - potion{t=HUNGER;d=140;l=100} @PIR{r=100}
-  - potion{t=WEAKNESS;d=300;l=2} @PIR{r=10}
-  - potion{t=WITHER;d=100;l=2} @PIR{r=15}
+  - potion{t=WEAKNESS;d=300;l=2} @PIR{r=8}
+  - potion{t=WITHER;d=100;l=3} @PIR{r=10}
   - potion{t=SLOW;d=300;l=100} @PIR{r=100;limit=1;sort=FURTHEST}
   - potion{t=JUMP;d=300;l=200} @PIR{r=100;limit=1;sort=FURTHEST}
   - command{c="mraid radiusExecute <caster.uuid> 100 mraid vision 2 creeper <name>"} @self
@@ -213,7 +213,7 @@ DemonJump:
   - sound{s=entity.enderman.teleport;v=2} @PIR{r=100}
   - teleport @PIR{limit=1;sort=FURTHEST;r=100}
   - delay 30
-  - damage{a=10} @PIR{r=3}
+  - damage{a=20} @PIR{r=3}
   - setAI{ai=true} @self
   - skill{s=DemonRemoveSkillNow} @self
 
