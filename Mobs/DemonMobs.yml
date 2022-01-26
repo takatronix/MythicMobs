@@ -1,7 +1,7 @@
 Demon:
   Type: WITHER_SKELETON
   Display: '§d§lInsect§f§l-§5§lDemon'
-  Health: 8000
+  Health: 10000
   Damage: 6
   Armor: 8
   Options:
@@ -233,3 +233,26 @@ DemonLastAttackMobSecond:
   - skill{s=DemonLastAttackMobSecond} @self ~onSpawn
   KillMessages:
   - '<target.name> は爆散した'
+
+DemonSecondLevelAlwaysAttackTarget:
+  Type: SILVERFISH
+  Display: 'DemonSecondLevelAlwaysAttackTarget'
+  Health: 100
+  Damage: 0
+  Options:
+    NoDamageTicks: 100
+    Silent: true
+    NoGravity: true
+    MovementSpeed: 0
+    NoAI: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventBlockInfection: true
+    Invisible: true
+    Collidable: false
+    ApplyInvisibility: true
+  Skills:
+  - potion{type=INVISIBILITY;duration=2000;level=1;p=false} @self ~onSpawn
+  - skill{s=DemonSecondLevelAlwaysAttackTarget} @self ~onSpawn
+  KillMessages:
+  - '<target.name> は熱さに耐えきれなかった'
