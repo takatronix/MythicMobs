@@ -60,10 +60,6 @@ Sakura_Footballfish:
     Silent: true
     ModifyBoundingBox: true
     PreventOtherDrops: true
-  AIGoalSelector:
-  - 0 clear
-  - 1 meleeattack
-  - 2 randomstroll 
   BossBar:
     Enabled: true
     Range: 10
