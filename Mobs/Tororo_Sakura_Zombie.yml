@@ -1,6 +1,6 @@
 Sakura_Zombie_1:
   Type: ZOMBIE
-  Display: '§d桜§fの§6屍'
+  Display: '§d桜§fの§5屍'
   Health: 30
   Damage: 4
   Armor: 6
@@ -28,7 +28,7 @@ Sakura_Zombie_1:
 
 Sakura_Zombie_2:
   Type: ZOMBIE
-  Display: '§d桜§fの§6屍'
+  Display: '§d桜§fの§e屍'
   Health: 70
   Damage: 6
   Armor: 6
@@ -83,7 +83,7 @@ Sakura_Zombie_3:
 
 Sakura_Zombie_4:
   Type: ZOMBIE
-  Display: '§d桜§fの§6屍'
+  Display: '§d桜§fの§4屍'
   Health: 160
   Damage: 12
   Armor: 6

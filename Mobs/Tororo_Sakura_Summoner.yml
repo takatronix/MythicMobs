@@ -1,6 +1,6 @@
 Sakura_Summoner_1:
   Type: SKELETON
-  Display: '§d§l桜§fを§a§l咲§fかせるもの'
+  Display: '§d§l桜§fを§5§l咲§fかせるもの'
   Health: 20
   Damage: 15
   Armor: 8
@@ -32,7 +32,7 @@ Sakura_Summoner_1:
 
 Sakura_Summoner_2:
   Type: SKELETON
-  Display: '§d§l桜§fを§a§l咲§fかせるもの'
+  Display: '§d§l桜§fを§b§l咲§fかせるもの'
   Health: 50
   Damage: 15
   Armor: 8
@@ -96,7 +96,7 @@ Sakura_Summoner_3:
 
 Sakura_Summoner_4:
   Type: SKELETON
-  Display: '§d§l桜§fを§a§l咲§fかせるもの'
+  Display: '§d§l桜§fを§4§l咲§fかせるもの'
   Health: 100
   Damage: 15
   Armor: 8
