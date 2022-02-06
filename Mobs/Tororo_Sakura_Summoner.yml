@@ -1,0 +1,127 @@
+Sakura_Summoner_1:
+  Type: SKELETON
+  Display: '§d§l桜§fを§a§l咲§fかせるもの'
+  Health: 20
+  Damage: 15
+  Armor: 8
+  Options:
+    PreventSunburn: true
+    PreventOtherDrops: true
+    PrevetItemPickup: true
+    FollowRange: 20
+    MaxCombatDistance: 140
+    MovementSpeed: 0.2
+    PreventRandomEquipment: true
+    PreventTransformation: true
+  Drops:
+  - Sakura_Drop
+  Equipment:
+  - Sakura_Enchant_Head HEAD
+  - BOW HAND
+  AIGoalSelector:
+  - clear
+  - meleeattack
+  AITargetSelectors:
+  - players
+  Disguise:
+    Type: EVOKER
+    ShowName: true
+  Skills:
+  - potion{t=POISON;d=40;l=1} @target ~onAttack
+  - potion{t=WITHER;d=40;l=1} @target ~onAttack
+
+Sakura_Summoner_2:
+  Type: SKELETON
+  Display: '§d§l桜§fを§a§l咲§fかせるもの'
+  Health: 50
+  Damage: 15
+  Armor: 8
+  Options:
+    PreventSunburn: true
+    PreventOtherDrops: true
+    PrevetItemPickup: true
+    FollowRange: 20
+    MaxCombatDistance: 140
+    MovementSpeed: 0.2
+    PreventRandomEquipment: true
+    PreventTransformation: true
+  Drops:
+  - Sakura_Drop
+  Equipment:
+  - Sakura_Enchant_Head HEAD
+  - BOW HAND
+  AIGoalSelector:
+  - clear
+  - meleeattack
+  AITargetSelectors:
+  - players
+  Disguise:
+    Type: EVOKER
+    ShowName: true
+  Skills:
+  Skills:
+  - skill{s=Summoner_2;sync=true} @target ~onAttack
+
+Sakura_Summoner_3:
+  Type: SKELETON
+  Display: '§d§l桜§fを§a§l咲§fかせるもの'
+  Health: 70
+  Damage: 15
+  Armor: 8
+  Options:
+    PreventSunburn: true
+    PreventOtherDrops: true
+    PrevetItemPickup: true
+    FollowRange: 20
+    MaxCombatDistance: 140
+    MovementSpeed: 0.2
+    PreventRandomEquipment: true
+    PreventTransformation: true
+  Drops:
+  - Sakura_Drop
+  Equipment:
+  - Sakura_Enchant_Head HEAD
+  - BOW HAND
+  AIGoalSelector:
+  - clear
+  - meleeattack
+  AITargetSelectors:
+  - players
+  Disguise:
+    Type: EVOKER
+    ShowName: true
+  Skills:
+  Skills:
+  - skill{s=Summoner_3;sync=true} @target ~onAttack
+
+Sakura_Summoner_4:
+  Type: SKELETON
+  Display: '§d§l桜§fを§a§l咲§fかせるもの'
+  Health: 100
+  Damage: 15
+  Armor: 8
+  Options:
+    PreventSunburn: true
+    PreventOtherDrops: true
+    PrevetItemPickup: true
+    FollowRange: 20
+    MaxCombatDistance: 140
+    MovementSpeed: 0.2
+    PreventRandomEquipment: true
+    PreventTransformation: true
+  Drops:
+  - Sakura_Drop
+  Equipment:
+  - Sakura_Enchant_Head HEAD
+  - BOW HAND
+  AIGoalSelector:
+  - clear
+  - meleeattack
+  AITargetSelectors:
+  - players
+  Disguise:
+    Type: EVOKER
+    ShowName: true
+  Skills:
+  - skill{s=Summoner_4;sync=true} @target ~onAttack
+
