@@ -11,7 +11,7 @@ SpringSlime:
     Size: 1
 
 Sakura_Owl:
-  type: CHICKEN
+  Type: PARROT
   Display: 'フクロウ'
   Health: 180
   Damage: 6
@@ -44,11 +44,11 @@ Sakura_Owl:
   - model{tint=false;mid=owl;name=false} @self ~onSpawn
 
 Sakura_Footballfish:
-  Type: GUARDIAN
-  Display: '§f§lチョウチンアンコウ'
+  Type: DROWNED
+  Display: '§f§l迷宮の食いしん坊'
   Health: 1000
-  Damage: 20
-  Armor: 1
+  Damage: 10
+  Armor: 5
   Options:
     MovementSpeed: 0.2
     FollowRange: 16
@@ -63,14 +63,13 @@ Sakura_Footballfish:
   BossBar:
     Enabled: true
     Range: 10
-    Style: SEGMENTED_10
-    Color: RED
-    Title: '&6迷宮のヌシ'   
-#  KillMessages:
-#  - '&2死んだ時のメッセージ'   
+    Color: BLUE
+    Title: '&3迷宮の食いしん坊'   
+  KillMessages:
+  - '<target.name>は食いしん坊の腹に還った'   
   Skills:
   - model{mid=spring_footballfish;n=false} @self ~onSpawn
   - state{s=attack} @self ~onAttack
-  - state{s=hurt} @self ~onDamaged
+  - skill{s=Sakura_Footballfish_Bite} @self ~onTimer:60
   AITargetSelectors:
   - players
