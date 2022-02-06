@@ -1,0 +1,17 @@
+Sakura_Head:
+  Id: FLOWERING_AZALEA_LEAVES
+  Amount: 1
+
+Sakura_Enchant_Head:
+  Id: FLOWERING_AZALEA_LEAVES
+  Amount: 1
+  Enchantments:
+  - DAMAGE_ALL:1
+
+Sakura_ChestPlate:
+  Id: LEATHER_CHESTPLATE
+  Amount: 1
+  Enchantments:
+  - DAMAGE_ALL:1
+  Options:
+    Color: 238,130,238
