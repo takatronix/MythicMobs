@@ -1,0 +1,57 @@
+
+#存在しないものが存在する時　あなたはとある判断を迫られる　深淵を覗く時　深淵もまたこちらを覗いているのだ
+  
+S_FF_Walk:
+  Conditions:
+  - playerwithin{d=25} true
+  Cooldown: 22
+  Skills:
+  - potion{type=SPEED;duration=140;lvl=2;force=true} @self
+  - state{s=walk}
+
+S_FF_Attack:
+  Conditions:
+  - playerwithin{d=10} true
+  - hastag{t=skillRunning} false
+  Skills:
+  - state{s=attack} @self
+  - addtag{t=skillRunning} @self
+  - damage{a=15} @t
+  - potion{t=POISON;d=40;l=1} @t
+  - delay 20
+  - removetag{t=skillRunning} @self
+
+S_FF_Warp:
+  Conditions:
+  - playerwithin{d=10} true
+  - hastag{t=skillRunning} false
+  Skills:
+  - state{s=warp} @self
+  - addtag{t=skillRunning} @self
+  - damage{a=25} @PlayersInRadius{r=5}
+  - potion{t=POISON;d=60;l=1} @PlayersInRadius{r=5}
+  - delay 55
+  - removetag{t=skillRunning} @self
+
+S_FF_Skill:
+  Conditions:
+  - playerwithin{d=10} true
+  - hastag{t=skillRunning} false
+  Skills:
+  - state{s=skill} @self
+  - addtag{t=skillRunning} @self
+  - damage{a=15} @PlayersInRadius{r=5}
+  - potion{t=POISON;d=60;l=1} @PlayersInRadius{r=5}
+  - potion{t=WITHER;d=60;l=2} @PlayersInRadius{r=5}
+  - delay 50
+  - removetag{t=skillRunning} @self
+
+S_FF_Death:
+  Conditions:
+  - playerwithin{d=10} true
+  Skills:
+  - state{s=death} @self
+  - damage{a=30} @PlayersInRadius{r=7}
+  - potion{t=WITHER;d=200;l=3} @PlayersInRadius{r=5}
+  - potion{t=POISON;d=200;l=2} @PlayersInRadius{r=10}
+  - message{m="<mob.name>&f<&co> 森の呪いを思い知れ！"} @PlayersInRadius{r=10}

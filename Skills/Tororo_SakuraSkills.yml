@@ -16,5 +16,5 @@ Summoner_4:
   Skills:
   - CancelEvent
   - damage{a=15} @target
-  - potion{t=POISON;d=40;l=2} @target
-  - potion{t=WITHER;d=40;l=2} @target
+  - potion{t=POISON;d=60;l=2} @target
+  - potion{t=WITHER;d=60;l=2} @target
