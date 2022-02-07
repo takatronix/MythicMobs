@@ -1,0 +1,111 @@
+Sakura_Zombie_NEO_1:
+  Type: ZOMBIE
+  Display: '§d§l桜§fの§7§l屍'
+  Health: 50
+  Damage: 6
+  Armor: 8
+  Options:
+    PreventSunburn: true
+    PreventOtherDrops: true
+    PrevetItemPickup: true
+    FollowRange: 20
+    MaxCombatDistance: 140
+    MovementSpeed: 0.3
+    PreventRandomEquipment: true
+    PreventTransformation: true
+  Drops:
+  - Sakura_Drop
+  Equipment:
+  - Sakura_Enchant_Head HEAD
+  - Sakura_ChestPlate CHESTPLATE
+  AIGoalSelector:
+  - clear
+  - meleeattack
+  AITargetSelectors:
+  - players
+  Skills:
+  - potion{t=poison;d=40} @target ~onAttack
+
+Sakura_Zombie_NEO_2:
+  Type: ZOMBIE
+  Display: '§d§l桜§fの§e§l屍'
+  Health: 100
+  Damage: 8
+  Armor: 8
+  Options:
+    PreventSunburn: true
+    PreventOtherDrops: true
+    PrevetItemPickup: true
+    FollowRange: 20
+    MaxCombatDistance: 140
+    MovementSpeed: 0.3
+    PreventRandomEquipment: true
+    PreventTransformation: true
+  Drops:
+  - Sakura_Drop
+  Equipment:
+  - Sakura_Enchant_Head HEAD
+  - Sakura_ChestPlate CHESTPLATE
+  AIGoalSelector:
+  - clear
+  - meleeattack
+  AITargetSelectors:
+  - players
+  Skills:
+  - potion{t=poison;d=60} @target ~onAttack
+
+Sakura_Zombie_NEO_3:
+  Type: ZOMBIE
+  Display: '§d§l桜§fの§6§l屍'
+  Health: 140
+  Damage: 12
+  Armor: 8
+  Options:
+    PreventSunburn: true
+    PreventOtherDrops: true
+    PrevetItemPickup: true
+    FollowRange: 20
+    MaxCombatDistance: 140
+    MovementSpeed: 0.3
+    PreventRandomEquipment: true
+    PreventTransformation: true
+  Drops:
+  - Sakura_Drop
+  Equipment:
+  - Sakura_Enchant_Head HEAD
+  - Sakura_ChestPlate CHESTPLATE
+  AIGoalSelector:
+  - clear
+  - meleeattack
+  AITargetSelectors:
+  - players
+  Skills:
+  - potion{t=poison;d=70} @target ~onAttack
+
+Sakura_Zombie_NEO_4:
+  Type: ZOMBIE
+  Display: '§d§l桜§fの§4§l屍'
+  Health: 200
+  Damage: 14
+  Armor: 8
+  Options:
+    PreventSunburn: true
+    PreventOtherDrops: true
+    PrevetItemPickup: true
+    FollowRange: 20
+    MaxCombatDistance: 140
+    MovementSpeed: 0.3
+    PreventRandomEquipment: true
+    PreventTransformation: true
+  Drops:
+  - Sakura_Drop
+  Equipment:
+  - Sakura_Enchant_Head HEAD
+  - Sakura_ChestPlate CHESTPLATE
+  AIGoalSelector:
+  - clear
+  - meleeattack
+  AITargetSelectors:
+  - players
+  Skills:
+  - potion{t=poison;d=80} @target ~onAttack

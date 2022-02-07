@@ -1,0 +1,40 @@
+
+#存在しないものが存在する時　あなたはとある判断を迫られる　深淵を覗く時　深淵もまたこちらを覗いているのだ
+
+Sakura_defender:
+  Type: ZOMBIE
+  Display: '森の守護者'
+  Health: 1200
+  Damage: 20
+  Armor: 6
+  Options:
+    PreventSunburn: true
+    Silent: true
+    PreventOtherDrops: false
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    KnockbackResistance: 0
+    PreventJockeyMounts: true 
+    NoDamageTicks: 10
+  AITargetSelectors:
+  - 1 players
+  Drops:
+  - diamond 32 1
+  BossBar:
+    Enabled: true
+    Range: 30
+    Style: SEGMENTED_10
+    Color: PINK
+    Title: '&6森の守護者'   
+  KillMessages:
+  - '<target.name> は森の理に導かれた'
+  Skills:
+  - model{tint=false;mid=spring_forest_fairy;n=false} @self ~onSpawn
+  - skill{s=S_FF_Warp;sync=true} @self ~onAttack 0.4 <90%
+  - skill{s=S_FF_Skill;sync=true} @self ~onAttack 0.4 <90%
+  - skill{s=S_FF_Attack;sync=true} @self ~onAttack
+  - skill{s=S_FF_Death} @self ~onDeath
+  DamageModifiers:
+  - POISON 0
+  - MAGIC 0
+  - FIRE_TICK 0
