@@ -1,6 +1,6 @@
 Sakura_Zombie_1:
   Type: ZOMBIE
-  Display: '§d桜§fの§5屍'
+  Display: '§d桜§fの§7屍'
   Health: 30
   Damage: 4
   Armor: 6
@@ -79,7 +79,7 @@ Sakura_Zombie_3:
   AITargetSelectors:
   - players
   Skills:
-  - potion{t=weakness;d=60} @target ~onAttack
+  - potion{t=weakness;d=60;l=2} @target ~onAttack
 
 Sakura_Zombie_4:
   Type: ZOMBIE
@@ -106,5 +106,5 @@ Sakura_Zombie_4:
   AITargetSelectors:
   - players
   Skills:
-  - potion{t=weakness;d=100} @target ~onAttack
+  - potion{t=weakness;d=100;l=2} @target ~onAttack
 
