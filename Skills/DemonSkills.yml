@@ -187,15 +187,18 @@ DemonScream:
   - sound{s=entity.wolf.howl;v=1.5} @PIR{r=100}
   - delay 30
   - command{c="mraid radiusExecute <caster.uuid> 100 minecraft:effect clear <name> minecraft:absorption"} @self
-  - command{c="mraid radiusExecute <caster.uuid> 100 minecraft:effect clear <name> minecraft:regeneration"} @self
-  - command{c="mraid radiusExecute <caster.uuid> 100 minecraft:effect clear <name> minecraft:strength"} @self
-  - command{c="mraid radiusExecute <caster.uuid> 100 minecraft:effect clear <name> minecraft:fire_resistance"} @self
+  - command{c="mraid radiusExecute <caster.uuid> 50 minecraft:effect clear <name> minecraft:regeneration"} @self
+  - command{c="mraid radiusExecute <caster.uuid> 10 minecraft:effect clear <name> minecraft:strength"} @self
+  - command{c="mraid radiusExecute <caster.uuid> 30 minecraft:effect clear <name> minecraft:fire_resistance"} @self
   - potion{t=SLOW;d=200;l=5} @PIR{r=100}
-  - potion{t=HUNGER;d=140;l=100} @PIR{r=100}
-  - potion{t=WEAKNESS;d=300;l=2} @PIR{r=8}
+  - potion{t=HUNGER;d=140;l=200} @PIR{r=100}
+  - potion{t=WEAKNESS;d=140;l=5} @PIR{r=8}
   - potion{t=WITHER;d=100;l=3} @PIR{r=10}
+  - potion{t=SLOW_DIGGING;d=240;l=100} @PIR{r=5}
   - potion{t=SLOW;d=300;l=100} @PIR{r=100;limit=1;sort=FURTHEST}
   - potion{t=JUMP;d=300;l=200} @PIR{r=100;limit=1;sort=FURTHEST}
+  - potion{t=DAMAGE_RESISTANCE;d=120;l=200} @PIR{r=100;limit=1;sort=FURTHEST}
+  - sethealth{a=10} @PIR{r=100}
   - command{c="mraid radiusExecute <caster.uuid> 100 mraid vision 2 creeper <name>"} @self
   - delay 40
   - skill{s=DemonRemoveSkillNow} @self
@@ -213,7 +216,10 @@ DemonJump:
   - sound{s=entity.enderman.teleport;v=2} @PIR{r=100}
   - teleport @PIR{limit=1;sort=FURTHEST;r=100}
   - delay 30
-  - damage{a=20} @PIR{r=3}
+  - damage{a=50} @PIR{r=6}
+  - effect:particlering{particle=reddust;color=#0000ff;radius=6;points=100;amount=10} @self
+  - effect:particlering{particle=reddust;color=#ff0000;radius=6;points=100;amount=10;y=1} @self
+
   - setAI{ai=true} @self
   - skill{s=DemonRemoveSkillNow} @self
 
@@ -223,7 +229,6 @@ DemonTripleUpperSlum:
   - hastag{t=skillnow} false
   Skills:
   - skill{s=DemonAddSkillNow} @self
-  - setAI{ai=false} @self
   - setrotationplus{pitch=0;yaw=180} @self
   - lockhead{lp=true;ly=true} @self
   - summonplus{mob=DemonUpperSlumMirrorFirst;x=-4;z=5}
@@ -233,7 +238,7 @@ DemonTripleUpperSlum:
   - state{s=upper_slum} @self
   - sound{s=block.respawn_anchor.deplete;p=0.4;v=2} @PIR{r=100}
   - delay 76
-  - blockwave{duration=40;material=magma_block;radius=12;radiusY=5;velocity=3;shape=sphere} @forward{f=-2}
+  - blockwave{duration=40;material=magma_block;radius=10;radiusY=4;velocity=3;shape=sphere} @selflocation
   - skill{s=DemonUpperSlumParticle} @self
   - sound{s=entity.generic.explode;p=0.6} @PIR{r=100}
   - summon{mob=DemonUpperSlumTargetMob;a=1} @self
@@ -248,12 +253,12 @@ DemonTripleUpperSlum:
 DemonTripleUpperSlumMirrorAttack:
   Skills:
   - delay 10
-  - setAI{ai=false} @self
   - potion{t=SPEED;d=120;l=3} @self 
   - state{s=upper_slum} @self
   - sound{s=block.respawn_anchor.deplete;p=0.4;v=2} @PIR{r=100}
   - delay 76
   - skill{s=DemonUpperSlumParticle} @self
+  - blockwave{duration=40;material=magma_block;radius=10;radiusY=4;velocity=3;shape=sphere} @selflocation
   - sound{s=entity.generic.explode;p=0.6} @PIR{r=100}
   - summon{mob=DemonUpperSlumTargetMob;a=1} @self
   - delay 40
@@ -274,10 +279,11 @@ DemonGoToSecondLevel:
   - setmaxhealth{a=90000} @self
   - heal{a=18000;repeat=5;repeatInterval=20} @self
   - effect:lightning{repeat=4;repeatInterval=20} @self
+  - damage{a=15;ia=true;repeat=4;repeatInterval=20} @PIR{r=3}
   - sound{s=entity.player.levelup;v=2;p=0.5;repeat=4;repeatInterval=20} @PIR{r=100}
   - delay 100
-  - sound{s=item.trident.thunder;p=0.5;v=2} @PIR{r=100}
-  - sound{s=item.trident.thunder;p=0.5;v=2} @PIR{r=100}
+  - sound{s=item.trident.thunder;p=0.5;v=1} @PIR{r=100}
+  - sound{s=item.trident.thunder;p=0.5;v=1} @PIR{r=100}
   - setname{name=§6§lTrue§f§l-§5§lDemon} @self
   - enchant{m=demon;pid=group17;en=true;em=true} @self
   - enchant{m=demon;pid=group19;en=true;em=true} @self
@@ -299,9 +305,9 @@ DemonSecondLevelAlwaysAttackTarget:
   Skills:
   - effect:particles{particle=flash;amount=2;speed=2;d=30} @selflocation{y=0.4}
   - delay 30
-  - damage{a=2;ia=true} @PIR{r=3}
-  - armordamage{a=10} @PIR{r=3}
-  - ignite{t=40} @PIR{r=3}
+  - damage{a=2;ia=true} @PIR{r=2}
+  - armordamage{a=5} @PIR{r=2}
+  - ignite{t=40} @PIR{r=2}
   - effect:lightning @self
   - remove @self
 
@@ -331,7 +337,7 @@ DemonLastAttack:
   - sound{s=item.trident.thunder;v=1;pitch=2} @playersinradius{r=200}
   - sound{s=block.anvil.place;v=0.2;pitch=2} @playersinradius{r=200}
   - delay 30
-  - summon{mob=DemonLastAttackMob;r=9;repeat=70;repeatInterval=6} @PIR{r=200;sort=RANDOM;limit=3}
+  - summon{mob=DemonLastAttackMob;r=9;repeat=70;repeatInterval=6} @PIR{r=200;sort=RANDOM;limit=4}
   - delay 150
   - effect:bloodyScreen{d=10} @PIR{r=200}
   - sound{s=item.trident.thunder;v=1;pitch=2} @playersinradius{r=200}
@@ -345,7 +351,7 @@ DemonLastAttack:
   - sound{s=item.trident.thunder;v=1;pitch=2} @playersinradius{r=200}
   - sound{s=block.anvil.place;v=0.2;pitch=2} @playersinradius{r=200}
   - delay 30
-  - summon{mob=DemonLastAttackMobSecond;r=9;repeat=38;repeatInterval=5} @PIR{r=200;sort=RANDOM;limit=3}
+  - summon{mob=DemonLastAttackMobSecond;r=9;repeat=38;repeatInterval=5} @PIR{r=200;sort=RANDOM;limit=4}
   - delay 190
   - removetag{t=protect} @self
   - setAI{ai=true} @self
