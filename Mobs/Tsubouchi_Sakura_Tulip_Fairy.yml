@@ -1,0 +1,29 @@
+Sakura_Tulip_Fairy:
+  Type: VEX
+  Display: '§aチューリップ§bの§c妖精'
+  Health: 50
+  Damage: 10
+  Armor: 4
+  Options:
+    PreventSunburn: true
+    PreventOtherDrops: true
+    PrevetItemPickup: false
+    FollowRange: 20
+    MaxCombatDistance: 140
+    MovementSpeed: 1
+    PreventRandomEquipment: true
+    PreventTransformation: true
+  Drops:
+  - diamond 1 0.9
+  AIGoalSelector:
+  - clear
+  - meleeattack
+  AITargetSelectors:
+  - players
+  Skills:
+  - potion{t=HEAL;l=129} @target ~onAttack 0.01 <30%
+  - potion{t=POISON;d=40;l=3} @target ~onAttack
+  DamageModifiers:
+  - POISON 0
+  - MAGIC 0
+  - FIRE_TICK 0

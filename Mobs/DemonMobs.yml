@@ -34,12 +34,11 @@ Demon:
   - skill{s=DemonRandomSkill} @self ~onTimer:200
   - skill{s=DemonRandomSkillSecond} @self ~onTimer:150
   - skill{s=DemonSecondLevelAlwaysAttack} @self ~onTimer:80
-
-
   - skill{s=DemonCancelAttack;sync=true} @self ~onAttack
   - skill{s=DemonGoToSecondLevel} @self ~onDamaged <10%
   - skill{s=DemonLastAttack} @self ~onDamaged <10%
   - skill{s=DemonProtectDamage;sync=true} @self ~onDamaged
+  - sound{s=block.anvil.place;v=0.1;p=0.5} @trigger ~onDamaged
   - command{c="mraid current win"} @self ~onDeath
 
 DemonUpperSlumMirrorFirst:
@@ -55,7 +54,6 @@ DemonUpperSlumMirrorFirst:
     PrevetItemPickup: true
     KnockbackResistance: 1
     NoDamageTicks: 1
-    NoAI: true
     PreventJockeyMounts: true
     MaxCombatDistance: 140
     MovementSpeed: 0
@@ -82,7 +80,6 @@ DemonUpperSlumMirrorSecond:
     PrevetItemPickup: true
     KnockbackResistance: 1
     NoDamageTicks: 1
-    NoAI: true
     PreventJockeyMounts: true
     MaxCombatDistance: 140
     MovementSpeed: 0
