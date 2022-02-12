@@ -21,7 +21,6 @@ Sakura_Tulip_Fairy:
   AITargetSelectors:
   - players
   Skills:
-  - potion{t=HEAL;l=129} @target ~onAttack 0.01 <30%
   - potion{t=POISON;d=40;l=3} @target ~onAttack
   DamageModifiers:
   - POISON 0

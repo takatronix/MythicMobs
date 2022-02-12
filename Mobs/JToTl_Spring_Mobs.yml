@@ -1,4 +1,4 @@
-SpringSlime:
+Sakura_Slime:
   Type: SLIME
   Health: 30
   LevelModifiers:
@@ -10,9 +10,31 @@ SpringSlime:
     PreventSlimeSplit: true
     Size: 1
 
+Sakura_Volcano:
+  Type: BLAZE
+  Health: 5000
+  Damage: 20
+  Armor: 10
+  Options:
+    PreventSunburn: true
+    Silent: true
+    PreventOtherDrops: true
+    PrevetItemPickup: true
+    KnockbackResistance: 1
+    NoDamageTicks: 1
+    PreventJockeyMounts: true
+    FollowRange: 30
+    MaxCombatDistance: 140
+    MovementSpeed: 0.37
+    PreventRandomEquipment: true
+    PreventTransformation: true
+    Despawn: false
+  Skills:
+  - model{tint=false;mid=spring_volcanic;name=false} @self ~onSpawn
+
 Sakura_Owl:
   Type: PARROT
-  Display: 'フクロウ'
+  Display: '幸福のフクロウ'
   Health: 180
   Damage: 6
   Armor: 6
@@ -36,8 +58,8 @@ Sakura_Owl:
     - clear
     - meleeattack
     - randomstroll
-  AITargetSelectors:
-  - players
+  # AITargetSelectors:
+  # - players
   Drops:
     - stone 1 1
   Skills:
@@ -45,7 +67,7 @@ Sakura_Owl:
 
 Sakura_Footballfish:
   Type: DROWNED
-  Display: '§f§l迷宮の食いしん坊'
+  Display: '§f§l大食らい'
   Health: 1000
   Damage: 10
   Armor: 5
@@ -64,12 +86,10 @@ Sakura_Footballfish:
     Enabled: true
     Range: 10
     Color: BLUE
-    Title: '&3迷宮の食いしん坊'   
+    Title: '&3§l大食らい'   
   KillMessages:
-  - '<target.name>は食いしん坊の腹に還った'   
+  - '<target.name>は大食らいの腹に還った'   
   Skills:
   - model{mid=spring_footballfish;n=false} @self ~onSpawn
   - state{s=attack} @self ~onAttack
-  - skill{s=Sakura_Footballfish_Bite} @self ~onTimer:60
-  AITargetSelectors:
-  - players
+  - skill{s=Sakura_Footballfish_Bite} @self ~onTimer:60 0.5
