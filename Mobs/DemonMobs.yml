@@ -1,5 +1,5 @@
 Demon:
-  Type: WITHER_SKELETON
+  Type: SILVERFISH
   Display: '§d§lInsect§f§l-§5§lDemon'
   Health: 10000
   Damage: 6
