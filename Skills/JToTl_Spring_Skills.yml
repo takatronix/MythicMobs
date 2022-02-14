@@ -1,7 +1,6 @@
-# For more information, check out the plugin manual or join us on Discord:
-# http://www.mythicmobs.net
-#  
 
+
+#大食らい
 Sakura_Footballfish_Bite:
   Conditions:
   - targetwithin 25
@@ -11,3 +10,114 @@ Sakura_Footballfish_Bite:
   - delay 20
   - potion{type=INCREASE_DAMAGE;duration=10;level=6;p=false} @self
   - lunge{v=1} @self
+
+
+#火山
+Sakura_Volcano_FromAttack:
+  Skills:
+  - skill{s=Sakura_Volcano_Attack} @target
+  - CancelEvent
+
+Sakura_Volcano_FromShoot:
+  Skills:
+  - skill{s=Sakura_Volcano_Fireball} @target
+  - CancelEvent
+
+Sakura_Volcano_FromTimer:
+  Skills:
+  - randomskill{skills=Sakura_Volcano_Snap,Sakura_Volcano_Rest,Sakura_Volcano_Firestorm}
+
+
+Sakura_Volcano_Fireball:
+  Conditions:
+  - hastag{t=skillRunning} false
+  Skills:
+  - addtag{t=skillRunning} @self
+  - state{s=fireball} @self
+  - setAI{ai=false} @self
+  - delay 7
+  - projectile{onTick=SV_Fireball-Tick;onHit=SV_Firevall-Hit;v=18;i=1;syo=5;sfo=4;sso=2} @target
+  - sound{s=entity.blaze.shoot;v=1;pitch=1.5}
+  - delay 7
+  - projectile{onTick=SV_Fireball-Tick;onHit=SV_Firevall-Hit;v=18;i=1;syo=5;sfo=4;sso=2} @target
+  - sound{s=entity.blaze.shoot;v=1;pitch=1.5}
+  - delay 7
+  - projectile{onTick=SV_Fireball-Tick;onHit=SV_Firevall-Hit;v=18;i=1;syo=5;sfo=4;sso=2} @target
+  - sound{s=entity.blaze.shoot;v=1;pitch=1.5}
+  - delay 7
+  - projectile{onTick=SV_Fireball-Tick;onHit=SV_Firevall-Hit;v=18;i=1;syo=5;sfo=4;sso=2} @target
+  - sound{s=entity.blaze.shoot;v=1;pitch=1.5}
+  - delay 7
+  - projectile{onTick=SV_Fireball-Tick;onHit=SV_Firevall-Hit;v=18;i=1;syo=5;sfo=4;sso=2} @target
+  - sound{s=entity.blaze.shoot;v=1;pitch=1.5}
+  - delay 5
+  - setAI{ai=true} @self
+  - removetag{t=skillRunning} @self
+SV_Fireball-Tick:
+  Skills:
+  - effect:particles{p=flame;amount=10;speed=0;hS=0.2;vS=0.2}
+SV_Firevall-Hit:
+  Skills:
+  - damage{a=10}
+  - ignite{t=2000}
+
+
+Sakura_Volcano_Firestorm:
+  Conditions:
+  - hastag{t=skillRunning} false
+  Skills:
+  - addtag{t=skillRunning} @self
+  - state{s=firestorm} @self
+  - setAI{ai=false} @self
+  - delay 74
+  - projectile{onTick=SV_Firestorm-Tick;onHit=SV_Firestorm-HitAndEnd;onEnd=SV_Firestorm-HitandEnd;i=1;syo=8;v=40} @ring{radius=10;point=20}
+  - projectile{onTick=SV_Firestorm-Tick;onHit=SV_Firestorm-HitAndEnd;onEnd=SV_Firestorm-HitandEnd;i=1;syo=10;v=40} @ring{radius=12;point=32}
+  - projectile{onTick=SV_Firestorm-Tick;onHit=SV_Firestorm-HitAndEnd;onEnd=SV_Firestorm-HitandEnd;i=1;syo=12;v=40} @ring{radius=15;point=43}
+  - delay 2
+  - sound{s=entity.blaze.shoot;v=1;pitch=1.5}
+  - delay 2
+  - sound{s=entity.blaze.shoot;v=1;pitch=1.5}
+  - delay 2
+  - sound{s=entity.blaze.shoot;v=1;pitch=1.5}
+  - delay 20
+  - setAI{ai=true} @self
+  - removetag{t=skillRunning} @self
+SV_Firestorm-Tick:
+  Skills:
+  - effect:particles{p=flame;amount=10;speed=0;hS=0.02;vS=0.02}
+SV_Firestorm-HitAndEnd:
+  Skills:
+  - blockwave{n=1;duration=20;material=magma_block;radius=0.5;radiusY=1;velocity=1;shape=sphere} @selflocation
+  - damage{a=10;ia=true;type=VOID} @playersinradius{r=1}
+  - damage{a=15} @playersinradius{r=1}
+
+
+Sakura_Volcano_Attack:
+  Conditions:
+  - hastag{t=skillRunning} false
+  Skills:
+  - state{s=attack} @self
+  - damage{a=15} @target
+  - ignite{t=20000}
+
+Sakura_Volcano_Snap:
+  Conditions:
+  - hastag{t=skillRunning} false
+  Skills:
+  - addtag{t=skillRunning} @self
+  - state{s=snap} @self
+  - setAI{ai=false} @self
+  - delay 24
+  - setAI{ai=true} @self
+  - removetag{t=skillRunning} @self
+
+Sakura_Volcano_Rest:
+  Conditions:
+  - hastag{t=skillRunning} false
+  Skills:
+  - addtag{t=skillRunning} @self
+  - state{s=rest} @self
+  - setAI{ai=false} @self
+  - delay 48
+  - setAI{ai=true} @self
+  - removetag{t=skillRunning} @self
