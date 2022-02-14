@@ -1,4 +1,10 @@
 
+#共通
+SMobsRemoveTarget:
+  Skills:
+  - delay 120
+  - remove @self
+
 
 #大食らい
 Sakura_Footballfish_Bite:
@@ -87,9 +93,13 @@ SV_Firestorm-Tick:
   - effect:particles{p=flame;amount=10;speed=0;hS=0.02;vS=0.02}
 SV_Firestorm-HitAndEnd:
   Skills:
+  - summon{mob=SVFirestormTarget}
+SVFirestormTarget:
+  Skills:
   - blockwave{n=1;duration=20;material=magma_block;radius=0.5;radiusY=1;velocity=1;shape=sphere} @selflocation
   - damage{a=10;ia=true;type=VOID} @playersinradius{r=1}
   - damage{a=15} @playersinradius{r=1}
+  - remove @self
 
 
 Sakura_Volcano_Attack:
