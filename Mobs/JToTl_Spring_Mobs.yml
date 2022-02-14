@@ -97,3 +97,27 @@ Sakura_Footballfish:
   - model{mid=spring_footballfish;n=false} @self ~onSpawn
   - state{s=attack} @self ~onAttack
   - skill{s=Sakura_Footballfish_Bite} @self ~onTimer:60 0.5
+
+SVFirestormTarget:
+  Type: SILVERFISH
+  Display: 'SVFirestormTarget'
+  Health: 100
+  Damage: 0
+  Options:
+    NoDamageTicks: 100
+    Silent: true
+    NoGravity: true
+    MovementSpeed: 0
+    NoAI: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventBlockInfection: true
+    Invisible: true
+    Collidable: false
+    ApplyInvisibility: true
+  Skills:
+  - potion{type=INVISIBILITY;duration=2000;level=1;p=false} @self ~onSpawn
+  - skill{s=SVFirestormTarget} @self ~onSpawn
+  - skill{s=SMobsRemoveTarget} @self ~onSpawn
+  KillMessages:
+  - '<target.name> は蒸発した'
