@@ -12,7 +12,7 @@ Sakura_Slime:
 
 Sakura_Volcano:
   Type: BLAZE
-  Health: 5000
+  Health: 4000
   Damage: 20
   Armor: 10
   Options:
@@ -31,6 +31,10 @@ Sakura_Volcano:
     Despawn: false
   Skills:
   - model{tint=false;mid=spring_volcanic;name=false} @self ~onSpawn
+  - bodyclamp{angle=10} @self ~onSpawn
+  - skill{s=Sakura_Volcano_FromAttack;sync=true} ~onAttack
+  - skill{s=Sakura_Volcano_FromShoot;sync=true} ~onShoot
+  - skill{s=Sakura_Volcano_FromTimer;sync=true} ~onTimer:60
 
 Sakura_Owl:
   Type: PARROT
