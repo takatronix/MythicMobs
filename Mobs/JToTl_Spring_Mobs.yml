@@ -33,7 +33,9 @@ Sakura_Volcano:
     Enabled: true
     Range: 10
     Color: RED
-    Title: '§4§lちょーつよいよ'
+    Title: '§4§l魔神ヴルカノ'
+  KillMessages:
+  - '<target.name>は愚かにも魔神に立ち向かった'   
   Skills:
   - model{tint=false;mid=spring_volcanic;name=false} @self ~onSpawn
   - bodyclamp{angle=10} @self ~onSpawn
@@ -125,4 +127,28 @@ SVFirestormTarget:
   - skill{s=SVFirestormTarget} @self ~onSpawn
   - skill{s=SMobsRemoveTarget} @self ~onSpawn
   KillMessages:
-  - '<target.name> は蒸発した'
+  - '<target.name>は蒸発した'
+
+SVSnapTarget:
+  Type: SILVERFISH
+  Display: 'SVSnapTarget'
+  Health: 100
+  Damage: 0
+  Options:
+    NoDamageTicks: 100
+    Silent: true
+    NoGravity: true
+    MovementSpeed: 0
+    NoAI: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    PreventBlockInfection: true
+    Invisible: true
+    Collidable: false
+    ApplyInvisibility: true
+  Skills:
+  - potion{type=INVISIBILITY;duration=2000;level=1;p=false} @self ~onSpawn
+  - skill{s=SVSnapTarget} @self ~onSpawn
+  - skill{s=SMobsRemoveTarget} @self ~onSpawn
+  KillMessages:
+  - '<target.name>は骨だけになった'
