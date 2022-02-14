@@ -5,6 +5,11 @@ SMobsRemoveTarget:
   - delay 120
   - remove @self
 
+SPlayerKnockback:
+  Skills:
+  - leap{velocity=-1000} @trigger
+  - jump{velocity=0.2}
+
 
 #大食らい
 Sakura_Footballfish_Bite:
@@ -102,14 +107,15 @@ SVFirestormTarget:
   - sound{s=entity.generic.explode;v=0.5} @playersinradius{r=10}
   - remove @self
 
-
 Sakura_Volcano_Attack:
   Conditions:
   - hastag{t=skillRunning} false
   Skills:
   - state{s=attack} @self
+  - delay 10
+  - sudoskill{s=SPlayerKnockback;cat=true} @target
   - damage{a=15} @target
-  - ignite{t=20000}
+  - ignite{t=12000}
 
 Sakura_Volcano_Snap:
   Conditions:
@@ -118,9 +124,17 @@ Sakura_Volcano_Snap:
   - addtag{t=skillRunning} @self
   - state{s=snap} @self
   - setAI{ai=false} @self
+  - summon{mob=SVSnapTarget} @nearestplayer{r=50}
   - delay 24
   - setAI{ai=true} @self
   - removetag{t=skillRunning} @self
+SVSnapTarget:
+  Skills:
+  - delay 17
+  - effect:particleline{particle=lava;xs=1;zs=1;amount=3;fromOrigin=true} @selfLocation{y=4.0}
+  - damage{type=VOID;a=2} @nearestplayer{r=50}
+  - ignite{t=6000} @nearestplayer{r=50}
+  - remove @self
 
 Sakura_Volcano_Rest:
   Conditions:
@@ -129,6 +143,8 @@ Sakura_Volcano_Rest:
   - addtag{t=skillRunning} @self
   - state{s=rest} @self
   - setAI{ai=false} @self
-  - delay 48
+  - delay 28
+  - summon{mob=Sakura_Tulip_Fairy}
+  - delay 20
   - setAI{ai=true} @self
   - removetag{t=skillRunning} @self
