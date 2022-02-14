@@ -95,6 +95,7 @@ SV_Firestorm-HitAndEnd:
   Skills:
   - summon{mob=SVFirestormTarget}
 SVFirestormTarget:
+  Skills:
   - effect:particleline{particle=lava;xs=0.1;zs=0.1;amount=1;fromOrigin=true} @selfLocation{y=3.0}
   - damage{a=10;ia=true;type=VOID} @playersinradius{r=1}
   - damage{a=15} @playersinradius{r=1}
