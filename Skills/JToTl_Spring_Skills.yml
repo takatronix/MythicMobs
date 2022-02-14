@@ -80,11 +80,11 @@ Sakura_Volcano_Firestorm:
   - projectile{onTick=SV_Firestorm-Tick;onHit=SV_Firestorm-HitAndEnd;onEnd=SV_Firestorm-HitandEnd;i=1;syo=10;v=40} @ring{radius=12;point=32}
   - projectile{onTick=SV_Firestorm-Tick;onHit=SV_Firestorm-HitAndEnd;onEnd=SV_Firestorm-HitandEnd;i=1;syo=12;v=40} @ring{radius=15;point=43}
   - delay 2
-  - sound{s=entity.blaze.shoot;v=1;pitch=1.5}
+  - sound{s=entity.blaze.shoot;v=1;pitch=1.5} @playersinradius{r=30}
   - delay 2
-  - sound{s=entity.blaze.shoot;v=1;pitch=1.5}
+  - sound{s=entity.blaze.shoot;v=1;pitch=1.5} @playersinradius{r=30}
   - delay 2
-  - sound{s=entity.blaze.shoot;v=1;pitch=1.5}
+  - sound{s=entity.blaze.shoot;v=1;pitch=1.5} @playersinradius{r=30}
   - delay 20
   - setAI{ai=true} @self
   - removetag{t=skillRunning} @self
@@ -95,10 +95,10 @@ SV_Firestorm-HitAndEnd:
   Skills:
   - summon{mob=SVFirestormTarget}
 SVFirestormTarget:
-  Skills:
-  - blockwave{n=1;duration=20;material=magma_block;radius=0.5;radiusY=1;velocity=1;shape=sphere} @selflocation
+  - effect:particleline{particle=lava;xs=0.1;zs=0.1;amount=1;fromOrigin=true} @selfLocation{y=3.0}
   - damage{a=10;ia=true;type=VOID} @playersinradius{r=1}
   - damage{a=15} @playersinradius{r=1}
+  - sound{s=entity.generic.explode;v=0.5} @playersinradius{r=10}
   - remove @self
 
 
