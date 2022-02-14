@@ -29,6 +29,11 @@ Sakura_Volcano:
     PreventRandomEquipment: true
     PreventTransformation: true
     Despawn: false
+  BossBar:
+    Enabled: true
+    Range: 10
+    Color: RED
+    Title: '§4§lちょーつよいよ'
   Skills:
   - model{tint=false;mid=spring_volcanic;name=false} @self ~onSpawn
   - bodyclamp{angle=10} @self ~onSpawn
