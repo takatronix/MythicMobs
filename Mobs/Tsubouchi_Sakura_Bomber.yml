@@ -1,0 +1,29 @@
+Sakura_Bomber: ##Lv.2
+  Type: CREEPER
+  Display: '§d花見§fに来た§cリア充§fを§e爆破§fせし者'
+  Health: 30
+  Damage: 10
+  Armor: 2
+  Options:
+    PreventSunburn: true
+    PreventOtherDrops: true
+    PrevetItemPickup: false
+    FollowRange: 20
+    MaxCombatDistance: 140
+    MovementSpeed: 1.25
+    PreventRandomEquipment: true
+    PreventTransformation: true
+    ExplosionRadius: 5
+    SuperCharged: true
+    FuseTicks: 45
+  Drops:
+  - diamond 2 0.9
+  AIGoalSelector:
+  - clear
+  - meleeattack
+  AITargetSelectors:
+  - players
+  DamageModifiers:
+  - POISON 0
+  - MAGIC 0
+  - FIRE_TICK 0

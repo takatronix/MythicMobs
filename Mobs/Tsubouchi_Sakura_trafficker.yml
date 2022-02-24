@@ -1,0 +1,28 @@
+Sakura_trafficker: ##Lv.3
+  Type: PHANTOM
+  Display: '§dさくら§bの§6運び屋'
+  Health: 50
+  Damage: 10
+  Armor: 0
+  Options:
+    PreventSunburn: true
+    PreventOtherDrops: true
+    PrevetItemPickup: false
+    FollowRange: 20
+    MaxCombatDistance: 140
+    MovementSpeed: 1
+    PreventRandomEquipment: true
+    PreventTransformation: true
+  Drops:
+  - diamond 4 1
+  AIGoalSelector:
+  - clear
+  - meleeattack
+  AITargetSelectors:
+  - players
+  Skills:
+  - potion{t=POISON;d=60;l=2} @target ~onAttack
+  DamageModifiers:
+  - POISON 0
+  - MAGIC 0
+  - FIRE_TICK 0

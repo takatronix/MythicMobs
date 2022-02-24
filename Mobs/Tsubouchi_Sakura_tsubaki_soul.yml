@@ -1,0 +1,28 @@
+Sakura_tsubaki_soul: ##Lv.3
+  Type: BLAZE
+  Display: '§c椿油魂'
+  Health: 50
+  Damage: 13
+  Armor: 4
+  Options:
+    PreventSunburn: true
+    PreventOtherDrops: true
+    PrevetItemPickup: false
+    FollowRange: 20
+    MaxCombatDistance: 140
+    MovementSpeed: 1
+    PreventRandomEquipment: true
+    PreventTransformation: true
+  Drops:
+  - diamond 1 0.9
+  AIGoalSelector:
+  - clear
+  - meleeattack
+  AITargetSelectors:
+  - players
+    KillMessages:
+  - '<target.name> は椿油で燃えた'
+  DamageModifiers:
+  - POISON 0
+  - MAGIC 0
+  - FIRE_TICK 0
