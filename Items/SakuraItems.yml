@@ -15,3 +15,13 @@ Sakura_ChestPlate:
   - DAMAGE_ALL:1
   Options:
     Color: 238,130,238
+
+Sakura_Mochi:
+  Id: BAKED_POTATO
+  Amount: 1
+  Display: '§d§l桜餅'
+  Lore:
+  - '2022年春イベ収集用アイテム'
+  - '食べることもできる、らしい・・・'
+  NBT:
+    CustomModelData: 25
