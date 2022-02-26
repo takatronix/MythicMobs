@@ -10,7 +10,7 @@ Sakura_Bomber: ##Lv.2
     PrevetItemPickup: false
     FollowRange: 20
     MaxCombatDistance: 140
-    MovementSpeed: 1.25
+    MovementSpeed: 0.3
     PreventRandomEquipment: true
     PreventTransformation: true
     ExplosionRadius: 5
