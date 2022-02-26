@@ -19,10 +19,8 @@ Sakura_ChestPlate:
 Sakura_Mochi:
   Id: BAKED_POTATO
   Amount: 1
-  Display: '§d§l桜餅'
+  Display: '§d§l桜餅
+  CustomModelData: 25
   Lore:
   - '2022年春イベ収集用アイテム'
-  - '食べることもできる、らしい・・・'
-  NBT:
-    Base:
-      CustomModelData: 25
+  - '食べても美味しいすぐれもの！'
