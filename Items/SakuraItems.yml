@@ -24,4 +24,5 @@ Sakura_Mochi:
   - '2022年春イベ収集用アイテム'
   - '食べることもできる、らしい・・・'
   NBT:
-    CustomModelData: 25
+    Base:
+      CustomModelData: 25
