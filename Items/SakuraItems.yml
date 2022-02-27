@@ -28,9 +28,9 @@ Sakura_Mochi:
 Sakura_Mochi_zip:
   Id: BAKED_POTATO
   Amount: 1
-  Display: '§d§l桜餅§f'
+  Display: '§d§l桜餅§f.zip'
   CustomModelData: 25
   Lore:
-  - '§5解凍には10zipが必要です'
+  - '§5解凍には10-zipが必要です'
   Enchantments:
   - DURABILITY:10
