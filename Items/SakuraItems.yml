@@ -24,3 +24,13 @@ Sakura_Mochi:
   Lore:
   - '2022年春イベ収集用アイテム'
   - '食べても美味しいすぐれもの！'
+
+Sakura_Mochi_zip:
+  Id: BAKED_POTATO
+  Amount: 1
+  Display: '§d§l桜餅§f'
+  CustomModelData: 25
+  Lore:
+  - '§5解凍には10zipが必要です'
+  Enchantments:
+  - DURABILITY:10
