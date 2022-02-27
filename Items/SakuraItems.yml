@@ -31,6 +31,6 @@ Sakura_Mochi_zip:
   Display: '§d§l桜餅§f.zip'
   CustomModelData: 25
   Lore:
-  - '§5解凍には10-zipが必要です'
+  - '§5解凍には10-Zipが必要です'
   Enchantments:
   - DURABILITY:10
