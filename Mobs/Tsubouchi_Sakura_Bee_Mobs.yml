@@ -36,8 +36,10 @@ Sakura_Bee:
   - skill{s=S_Bee_Attack3;sync=true} @self ~onAttack 0.16 <80%
   - skill{s=S_Bee_Attack2;sync=true} @self ~onAttack 0.14 <90%
   - skill{s=S_Bee_Attack;sync=true} @self ~onAttack
-  - skill{s=S_FF_Death} @self ~onDeath
+  - skill{s=S_Bee_Death} @self ~onDeath
   DamageModifiers:
   - POISON 0
   - MAGIC 0
   - FIRE_TICK 0
+  Drops:
+  - Sakura_Mochi 32 1

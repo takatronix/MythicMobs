@@ -6,7 +6,7 @@ Sakura_defender:
   Display: '森の守護者'
   Health: 1200
   Damage: 20
-  Armor: 6
+  Armor: 10
   Options:
     PreventSunburn: true
     Silent: true
@@ -38,3 +38,5 @@ Sakura_defender:
   - POISON 0
   - MAGIC 0
   - FIRE_TICK 0
+  Drops:
+  - Sakura_Mochi 64 1

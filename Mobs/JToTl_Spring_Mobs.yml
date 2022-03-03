@@ -14,7 +14,7 @@ Sakura_Slime:
 
 Sakura_Volcano:
   Type: BLAZE
-  Health: 4000
+  Health: 2500
   Damage: 20
   Armor: 10
   Options:
@@ -44,6 +44,9 @@ Sakura_Volcano:
   - skill{s=Sakura_Volcano_FromAttack;sync=true} ~onAttack
   - skill{s=Sakura_Volcano_FromShoot;sync=true} ~onShoot
   - skill{s=Sakura_Volcano_FromTimer;sync=true} ~onTimer:60
+  - giveitem{i=Sakura_Mochi_zip} ~onDeath @trigger
+  - giveitem{i=Sakura_Mochi_zip} ~onDeath @trigger 0.5
+  - giveitem{i=Sakura_Mochi_zip} ~onDeath @trigger 0.5
 
 Sakura_Owl:
   Type: PARROT
@@ -83,7 +86,7 @@ Sakura_Footballfish:
   Display: '§f§l大食らい'
   Health: 1000
   Damage: 10
-  Armor: 5
+  Armor: 18
   Options:
     MovementSpeed: 0.2
     FollowRange: 16
@@ -106,6 +109,8 @@ Sakura_Footballfish:
   - model{mid=spring_footballfish;n=false} @self ~onSpawn
   - state{s=attack} @self ~onAttack
   - skill{s=Sakura_Footballfish_Bite} @self ~onTimer:60 0.5
+  Drops:
+  - Sakura_Mochi_zip 1 1
 
 SVFirestormTarget:
   Type: SILVERFISH
