@@ -44,9 +44,9 @@ Sakura_Volcano:
   - skill{s=Sakura_Volcano_FromAttack;sync=true} ~onAttack
   - skill{s=Sakura_Volcano_FromShoot;sync=true} ~onShoot
   - skill{s=Sakura_Volcano_FromTimer;sync=true} ~onTimer:60
-  - giveitem{i=Sakura_Mochi_zip} ~onDeath @trigger
-  - giveitem{i=Sakura_Mochi_zip} ~onDeath @trigger 0.5
-  - giveitem{i=Sakura_Mochi_zip} ~onDeath @trigger 0.5
+  - command{c="mm items give <trigger.name> Sakura_Mochi_zip"} ~onDeath @trigger
+  - command{c="mm items give <trigger.name> Sakura_Mochi_zip"} ~onDeath @trigger 0.5
+  - command{c="mm items give <trigger.name> Sakura_Mochi_zip"} ~onDeath @trigger 0.5
 
 Sakura_Owl:
   Type: PARROT
