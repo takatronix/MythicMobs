@@ -10,6 +10,12 @@ SPlayerKnockback:
   - leap{velocity=-1000} @trigger
   - jump{velocity=0.2}
 
+#1分後消滅
+SV_Remove:
+  Skills:
+  - delay 1200
+  - suicide @self
+
 
 #大食らい
 Sakura_Footballfish_Bite:
