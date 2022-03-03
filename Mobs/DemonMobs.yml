@@ -1,7 +1,7 @@
 Demon:
   Type: SILVERFISH
   Display: '§d§lInsect§f§l-§5§lDemon'
-  Health: 10000
+  Health: 12000
   Damage: 6
   Armor: 8
   Options:
@@ -30,7 +30,7 @@ Demon:
     Color: PURPLE
     Style: SOLID
   Skills:
-  - model{mid=demon;name=false} @self ~onSpawn
+  - model{mid=demon;name=false;tint=false} @self ~onSpawn
   - skill{s=DemonRandomSkill} @self ~onTimer:200
   - skill{s=DemonRandomSkillSecond} @self ~onTimer:150
   - skill{s=DemonSecondLevelAlwaysAttack} @self ~onTimer:80
