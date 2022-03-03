@@ -1,4 +1,4 @@
-Sakura_Tulip_Fairy:
+Sakura_Tulip_Fairy: #lv4
   Type: VEX
   Display: '§aチューリップ§bの§c妖精'
   Health: 50
@@ -26,3 +26,5 @@ Sakura_Tulip_Fairy:
   - POISON 0
   - MAGIC 0
   - FIRE_TICK 0
+  Drops:
+  - Sakura_Mochi 1 0.2

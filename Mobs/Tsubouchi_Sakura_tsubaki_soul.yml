@@ -20,9 +20,11 @@ Sakura_tsubaki_soul: ##Lv.3
   - meleeattack
   AITargetSelectors:
   - players
-    KillMessages:
+  KillMessages:
   - '<target.name> は椿油で燃えた'
   DamageModifiers:
   - POISON 0
   - MAGIC 0
   - FIRE_TICK 0
+  Drops:
+  - Sakura_Mochi 1 0.15

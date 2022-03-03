@@ -9,6 +9,8 @@ Sakura_Slime:
   Options:
     PreventSlimeSplit: true
     Size: 1
+  Drops:
+  - Sakura_Mochi 1 0.03
 
 Sakura_Volcano:
   Type: BLAZE

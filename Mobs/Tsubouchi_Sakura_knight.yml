@@ -1,4 +1,4 @@
-Sakura_knight: ##Lv.3
+Sakura_knight: ##Lv.4
   Type: VINDICATOR
   Display: '§dさくら§bナイト'
   Health: 70
@@ -30,3 +30,5 @@ Sakura_knight: ##Lv.3
   - POISON 0
   - MAGIC 0
   - FIRE_TICK 0
+  Drops:
+  - Sakura_Mochi 1 0.2

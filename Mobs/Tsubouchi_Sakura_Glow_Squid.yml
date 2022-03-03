@@ -21,3 +21,8 @@ Sakura_Glow_Squid: ##レア
   - POISON 0
   - MAGIC 0
   - FIRE_TICK 0
+  Drops:
+  - Sakura_Mochi 32 1
+  - Sakura_Mochi_zip 1 0.5
+  - Sakura_Mochi_zip 1 0.5
+  - Sakura_Mochi_zip 1 0.5

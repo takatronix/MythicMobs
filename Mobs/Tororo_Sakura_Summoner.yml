@@ -1,4 +1,4 @@
-Sakura_Summoner_1:
+Sakura_Summoner_1: #lv1
   Type: SKELETON
   Display: '§d§l桜§fを§7§l咲§fかせるもの'
   Health: 20
@@ -29,8 +29,10 @@ Sakura_Summoner_1:
   Skills:
   - potion{t=POISON;d=40;l=1} @target ~onAttack
   - potion{t=WITHER;d=40;l=1} @target ~onAttack
+  Drops:
+  - Sakura_Mochi 1 0.075
 
-Sakura_Summoner_2:
+Sakura_Summoner_2: #lv2
   Type: SKELETON
   Display: '§d§l桜§fを§b§l咲§fかせるもの'
   Health: 50
@@ -59,10 +61,11 @@ Sakura_Summoner_2:
     Type: EVOKER
     ShowName: true
   Skills:
-  Skills:
   - skill{s=Summoner_2;sync=true} @target ~onAttack
+  Drops:
+  - Sakura_Mochi 1 0.075
 
-Sakura_Summoner_3:
+Sakura_Summoner_3: #lv3
   Type: SKELETON
   Display: '§d§l桜§fを§a§l咲§fかせるもの'
   Health: 70
@@ -91,10 +94,11 @@ Sakura_Summoner_3:
     Type: EVOKER
     ShowName: true
   Skills:
-  Skills:
   - skill{s=Summoner_3;sync=true} @target ~onAttack
+  Drops:
+  - Sakura_Mochi 1 0.15
 
-Sakura_Summoner_4:
+Sakura_Summoner_4: #lv3
   Type: SKELETON
   Display: '§d§l桜§fを§4§l咲§fかせるもの'
   Health: 100
@@ -124,4 +128,6 @@ Sakura_Summoner_4:
     ShowName: true
   Skills:
   - skill{s=Summoner_4;sync=true} @target ~onAttack
+  Drops:
+  - Sakura_Mochi 1 0.15
 

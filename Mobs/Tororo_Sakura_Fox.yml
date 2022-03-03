@@ -1,4 +1,4 @@
-Sakura_Fox_1:
+Sakura_Fox_1: #lv1
   Type: ZOMBIE
   Display: '§d§l春§7§l狐'
   Health: 20
@@ -24,8 +24,10 @@ Sakura_Fox_1:
   Disguise:
     Type: FOX
     ShowName: true
+  Drops:
+  - Sakura_Mochi 1 0.075
 
-Sakura_Fox_2:
+Sakura_Fox_2: #lv2
   Type: ZOMBIE
   Display: '§d§l春§e§l狐'
   Health: 40
@@ -51,8 +53,10 @@ Sakura_Fox_2:
   Disguise:
     Type: FOX
     ShowName: true
+  Drops:
+  - Sakura_Mochi 1 0.09
 
-Sakura_Fox_3:
+Sakura_Fox_3: #lv3
   Type: ZOMBIE
   Display: '§d§l春§c§l狐'
   Health: 50
@@ -78,8 +82,10 @@ Sakura_Fox_3:
   Disguise:
     Type: FOX
     ShowName: true
+  Drops:
+  - Sakura_Mochi 1 0.09
   
-Sakura_Fox_4:
+Sakura_Fox_4: #lv3
   Type: ZOMBIE
   Display: '§d§l春§4§l狐'
   Health: 70
@@ -105,3 +111,5 @@ Sakura_Fox_4:
   Disguise:
     Type: FOX
     ShowName: true
+  Drops:
+  - Sakura_Mochi 1 0.15

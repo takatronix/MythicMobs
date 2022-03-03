@@ -1,4 +1,4 @@
-Sakura_Zombie_1:
+Sakura_Zombie_1: #lv1
   Type: ZOMBIE
   Display: '§d桜§fの§7屍'
   Health: 30
@@ -24,9 +24,11 @@ Sakura_Zombie_1:
   - players
   Skills:
   - potion{t=weakness;d=20} @target ~onAttack
+  Drops:
+  - Sakura_Mochi 1 0.075
 
 
-Sakura_Zombie_2:
+Sakura_Zombie_2: #lv2
   Type: ZOMBIE
   Display: '§d桜§fの§e屍'
   Health: 70
@@ -52,9 +54,11 @@ Sakura_Zombie_2:
   - players
   Skills:
   - potion{t=weakness;d=40} @target ~onAttack
+  Drops:
+  - Sakura_Mochi 1 0.09
 
 
-Sakura_Zombie_3:
+Sakura_Zombie_3: #lv3
   Type: ZOMBIE
   Display: '§d桜§fの§6屍'
   Health: 100
@@ -80,8 +84,10 @@ Sakura_Zombie_3:
   - players
   Skills:
   - potion{t=weakness;d=60;l=2} @target ~onAttack
+  Drops:
+  - Sakura_Mochi 1 0.15
 
-Sakura_Zombie_4:
+Sakura_Zombie_4: #lv4
   Type: ZOMBIE
   Display: '§d桜§fの§4屍'
   Health: 160
@@ -107,4 +113,6 @@ Sakura_Zombie_4:
   - players
   Skills:
   - potion{t=weakness;d=100;l=2} @target ~onAttack
+  Drops:
+  - Sakura_Mochi 1 0.2
 

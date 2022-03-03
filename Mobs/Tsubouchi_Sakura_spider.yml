@@ -1,4 +1,4 @@
-Sakura_spider: ##Lv.1
+Sakura_spider: ##Lv.3
   Type: SPIDER
   Display: '§dさくらくも'
   Health: 60
@@ -26,3 +26,5 @@ Sakura_spider: ##Lv.1
   - POISON 0
   - MAGIC 0
   - FIRE_TICK 0
+  Drops:
+  - Sakura_Mochi 1 0.15
