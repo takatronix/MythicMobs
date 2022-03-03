@@ -29,8 +29,7 @@ SV_Minion:
     PreventRandomEquipment: true
     PreventTransformation: true
   Skills:
-  - delay 1200
-  - suicide @self ~onSpawn
+  - skill{s=SV_Remove} @self ~onSpawn
 
 Sakura_Volcano:
   Type: BLAZE
