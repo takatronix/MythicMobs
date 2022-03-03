@@ -33,7 +33,7 @@ Sakura_Volcano:
     Despawn: false
   BossBar:
     Enabled: true
-    Range: 10
+    Range: 30
     Color: RED
     Title: '§4§l魔神ヴルカノ'
   KillMessages:
