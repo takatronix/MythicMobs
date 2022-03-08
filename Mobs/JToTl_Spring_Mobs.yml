@@ -11,7 +11,7 @@ Sakura_Slime:
     PreventSlimeSplit: true
     Size: 1
   Drops:
-  - Sakura_Mochi 1 0.03
+  - Sakura_Mochi 1 0.06
 
 SV_Minion:
   Display: "ヴルカノのしもべ"
@@ -65,6 +65,9 @@ Sakura_Volcano:
   - skill{s=Sakura_Volcano_FromShoot;sync=true} ~onShoot
   - skill{s=Sakura_Volcano_FromTimer;sync=true} ~onTimer:60
   - command{c="mm items give <trigger.name> Sakura_Mochi_zip"} ~onDeath @trigger
+  - command{c="mm items give <trigger.name> Sakura_Mochi_zip"} ~onDeath @trigger
+  - command{c="mm items give <trigger.name> Sakura_Mochi_zip"} ~onDeath @trigger
+  - command{c="mm items give <trigger.name> Sakura_Mochi_zip"} ~onDeath @trigger 0.5
   - command{c="mm items give <trigger.name> Sakura_Mochi_zip"} ~onDeath @trigger 0.5
   - command{c="mm items give <trigger.name> Sakura_Mochi_zip"} ~onDeath @trigger 0.5
 
@@ -130,7 +133,7 @@ Sakura_Footballfish:
   - state{s=attack} @self ~onAttack
   - skill{s=Sakura_Footballfish_Bite} @self ~onTimer:60 0.5
   Drops:
-  - Sakura_Mochi_zip 1 1
+  - Sakura_Mochi_zip 2 1
 
 SVFirestormTarget:
   Type: SILVERFISH

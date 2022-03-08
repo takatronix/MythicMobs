@@ -25,7 +25,7 @@ Sakura_Fox_1: #lv1
     Type: FOX
     ShowName: true
   Drops:
-  - Sakura_Mochi 1 0.075
+  - Sakura_Mochi 1 0.15
 
 Sakura_Fox_2: #lv2
   Type: ZOMBIE
@@ -54,7 +54,7 @@ Sakura_Fox_2: #lv2
     Type: FOX
     ShowName: true
   Drops:
-  - Sakura_Mochi 1 0.09
+  - Sakura_Mochi 1 0.18
 
 Sakura_Fox_3: #lv3
   Type: ZOMBIE
@@ -83,7 +83,7 @@ Sakura_Fox_3: #lv3
     Type: FOX
     ShowName: true
   Drops:
-  - Sakura_Mochi 1 0.09
+  - Sakura_Mochi 1 0.18
   
 Sakura_Fox_4: #lv3
   Type: ZOMBIE
@@ -112,4 +112,4 @@ Sakura_Fox_4: #lv3
     Type: FOX
     ShowName: true
   Drops:
-  - Sakura_Mochi 1 0.15
+  - Sakura_Mochi 1 0.3

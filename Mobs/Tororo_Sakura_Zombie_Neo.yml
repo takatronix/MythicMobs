@@ -26,12 +26,12 @@ Sakura_Zombie_NEO_1: #lv2
   Skills:
   - potion{t=poison;d=40} @target ~onAttack
   Drops:
-  - Sakura_Mochi 1 0.09
+  - Sakura_Mochi 1 0.18
 
 Sakura_Zombie_NEO_2: #lv3
   Type: ZOMBIE
   Display: '§d§l桜§fの§e§l屍'
-  Health: 100
+  Health: 70
   Damage: 8
   Armor: 8
   Options:
@@ -56,12 +56,12 @@ Sakura_Zombie_NEO_2: #lv3
   Skills:
   - potion{t=poison;d=60} @target ~onAttack
   Drops:
-  - Sakura_Mochi 1 0.15
+  - Sakura_Mochi 1 0.3
 
 Sakura_Zombie_NEO_3: #lv4
   Type: ZOMBIE
   Display: '§d§l桜§fの§6§l屍'
-  Health: 140
+  Health: 90
   Damage: 12
   Armor: 8
   Options:
@@ -86,12 +86,12 @@ Sakura_Zombie_NEO_3: #lv4
   Skills:
   - potion{t=poison;d=70} @target ~onAttack
   Drops:
-  - Sakura_Mochi 1 0.2
+  - Sakura_Mochi 1 0.4
 
 Sakura_Zombie_NEO_4: #lv5
   Type: ZOMBIE
   Display: '§d§l桜§fの§4§l屍'
-  Health: 200
+  Health: 110
   Damage: 14
   Armor: 8
   Options:
@@ -116,4 +116,4 @@ Sakura_Zombie_NEO_4: #lv5
   Skills:
   - potion{t=poison;d=80} @target ~onAttack
   Drops:
-  - Sakura_Mochi 1 0.21
+  - Sakura_Mochi 1 0.42
