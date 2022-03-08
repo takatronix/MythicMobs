@@ -1,20 +1,18 @@
 Summoner_2:
   Skills:
   - CancelEvent
-  - damage{a=8} @target
-  - potion{t=POISON;d=40;l=1} @target
-  - potion{t=WITHER;d=40;l=1} @target
+  - damage{a=4} @target
+  - potion{t=POISON;d=20;l=1} @target
 
 Summoner_3:
   Skills:
   - CancelEvent
-  - damage{a=10} @target
-  - potion{t=POISON;d=40;l=2} @target
-  - potion{t=WITHER;d=40;l=2} @target
+  - damage{a=6} @target
+  - potion{t=POISON;d=20;l=2} @target
 
 Summoner_4:
   Skills:
   - CancelEvent
-  - damage{a=15} @target
-  - potion{t=POISON;d=60;l=2} @target
-  - potion{t=WITHER;d=60;l=2} @target
+  - damage{a=9} @target
+  - potion{t=POISON;d=20;l=2} @target
+  - potion{t=WITHER;d=20;l=1} @target
