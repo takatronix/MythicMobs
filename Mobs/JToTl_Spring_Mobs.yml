@@ -1,6 +1,6 @@
 Sakura_Slime:
   Type: SLIME
-  Display: "春スライム"
+  Display: "春スライム §eLevel 1"
   Health: 30
   LevelModifiers:
     Health: 50
@@ -11,7 +11,7 @@ Sakura_Slime:
     PreventSlimeSplit: true
     Size: 1
   Drops:
-  - Sakura_Mochi 1 0.06
+  - Sakura_Mochi 1 0.09
 
 SV_Minion:
   Display: "ヴルカノのしもべ"
