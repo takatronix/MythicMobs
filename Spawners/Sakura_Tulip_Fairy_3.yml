@@ -1,0 +1,25 @@
+Sakura_Tulip_Fairy_3:
+  MobName: Sakura_Tulip_Fairy
+  World: spring_pve
+  X: -855
+  Y: 80
+  Z: -941
+  Radius: 0
+  UseTimer: true
+  MaxMobs: '3'
+  MobLevel: '1'
+  MobsPerSpawn: 1
+  Cooldown: 5
+  CooldownTimer: 0
+  Warmup: 10
+  WarmupTimer: 0
+  CheckForPlayers: true
+  ActivationRange: 40
+  ScalingRange: 25.0
+  LeashRange: 70
+  HealOnLeash: false
+  ResetThreatOnLeash: false
+  ShowFlames: false
+  Breakable: false
+  Conditions: []
+  ActiveMobs: 0

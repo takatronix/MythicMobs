@@ -1,0 +1,25 @@
+Sakura_Zombie_3_12:
+  MobName: Sakura_Zombie_3
+  World: spring_pve
+  X: -313
+  Y: 78
+  Z: 785
+  Radius: 10
+  UseTimer: true
+  MaxMobs: '6'
+  MobLevel: '1'
+  MobsPerSpawn: 1
+  Cooldown: 15
+  CooldownTimer: 0
+  Warmup: 5
+  WarmupTimer: 0
+  CheckForPlayers: true
+  ActivationRange: 40
+  ScalingRange: 25.0
+  LeashRange: 32
+  HealOnLeash: false
+  ResetThreatOnLeash: false
+  ShowFlames: false
+  Breakable: false
+  Conditions: []
+  ActiveMobs: 0

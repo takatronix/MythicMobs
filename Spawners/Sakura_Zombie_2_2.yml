@@ -1,0 +1,25 @@
+Sakura_Zombie_2_2:
+  MobName: Sakura_Zombie_2
+  World: spring_pve
+  X: 178
+  Y: 73
+  Z: 131
+  Radius: 10
+  UseTimer: true
+  MaxMobs: '6'
+  MobLevel: '2'
+  MobsPerSpawn: 1
+  Cooldown: 10
+  CooldownTimer: 0
+  Warmup: 5
+  WarmupTimer: 0
+  CheckForPlayers: true
+  ActivationRange: 40
+  ScalingRange: 25.0
+  LeashRange: 32
+  HealOnLeash: false
+  ResetThreatOnLeash: false
+  ShowFlames: false
+  Breakable: false
+  Conditions: []
+  ActiveMobs: 0
