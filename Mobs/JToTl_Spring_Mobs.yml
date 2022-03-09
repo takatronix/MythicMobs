@@ -1,6 +1,6 @@
 Sakura_Slime:
   Type: SLIME
-  Display: "春スライム §eLevel 1"
+  Display: "春スライム §e§lLevel §41"
   Health: 30
   LevelModifiers:
     Health: 50
