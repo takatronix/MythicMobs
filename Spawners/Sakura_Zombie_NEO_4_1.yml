@@ -1,0 +1,25 @@
+Sakura_Zombie_NEO_4_1:
+  MobName: Sakura_Zombie_NEO_4
+  World: spring_pve
+  X: 237
+  Y: 94
+  Z: -516
+  Radius: 10
+  UseTimer: true
+  MaxMobs: '3'
+  MobLevel: '1'
+  MobsPerSpawn: 1
+  Cooldown: 5
+  CooldownTimer: 0
+  Warmup: 10
+  WarmupTimer: 0
+  CheckForPlayers: true
+  ActivationRange: 40
+  ScalingRange: 25.0
+  LeashRange: 32
+  HealOnLeash: false
+  ResetThreatOnLeash: false
+  ShowFlames: false
+  Breakable: false
+  Conditions: []
+  ActiveMobs: 0
