@@ -1,0 +1,25 @@
+Sakura_Fox_1_5:
+  MobName: Sakura_Fox_1
+  World: spring_pve
+  X: 216
+  Y: 76
+  Z: 428
+  Radius: 100
+  UseTimer: true
+  MaxMobs: '10'
+  MobLevel: '1'
+  MobsPerSpawn: 1
+  Cooldown: 0
+  CooldownTimer: 0
+  Warmup: 10
+  WarmupTimer: 0
+  CheckForPlayers: true
+  ActivationRange: 130
+  ScalingRange: 25.0
+  LeashRange: 160
+  HealOnLeash: false
+  ResetThreatOnLeash: false
+  ShowFlames: false
+  Breakable: false
+  Conditions: []
+  ActiveMobs: 0

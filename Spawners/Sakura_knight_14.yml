@@ -1,0 +1,25 @@
+Sakura_knight_14:
+  MobName: Sakura_knight
+  World: spring_pve
+  X: -825
+  Y: 103
+  Z: -773
+  Radius: 10
+  UseTimer: true
+  MaxMobs: '4'
+  MobLevel: '1'
+  MobsPerSpawn: 1
+  Cooldown: 10
+  CooldownTimer: 0
+  Warmup: 10
+  WarmupTimer: 0
+  CheckForPlayers: true
+  ActivationRange: 40
+  ScalingRange: 25.0
+  LeashRange: 32
+  HealOnLeash: false
+  ResetThreatOnLeash: false
+  ShowFlames: false
+  Breakable: false
+  Conditions: []
+  ActiveMobs: 0

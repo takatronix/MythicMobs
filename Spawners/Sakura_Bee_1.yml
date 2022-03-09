@@ -1,0 +1,25 @@
+Sakura_Bee_1:
+  MobName: Sakura_Bee
+  World: spring_pve
+  X: -790
+  Y: 75
+  Z: 121
+  Radius: 0
+  UseTimer: true
+  MaxMobs: '1'
+  MobLevel: '1'
+  MobsPerSpawn: 1
+  Cooldown: 3600
+  CooldownTimer: 0
+  Warmup: 1800
+  WarmupTimer: 0
+  CheckForPlayers: true
+  ActivationRange: 40
+  ScalingRange: 25.0
+  LeashRange: 32
+  HealOnLeash: false
+  ResetThreatOnLeash: false
+  ShowFlames: false
+  Breakable: false
+  Conditions: []
+  ActiveMobs: 0
