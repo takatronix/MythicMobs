@@ -1,6 +1,6 @@
-Sakura_Temple_supergohst: ##Lv.3
+Sakura_Temple_supergohst: ##Lv.4
   Type: VEX
-  Display: '§4寺§bの§e強い§f幽霊'
+  Display: '§4寺§bの§e強い§f幽霊 §e§lLevel §44'
   Health: 50
   Damage: 10
   Armor: 4

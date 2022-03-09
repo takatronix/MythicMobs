@@ -1,6 +1,6 @@
 Sakura_Fox_1: #lv1
   Type: ZOMBIE
-  Display: '§d§l春§7§l狐'
+  Display: '§d§l春§7§l狐 §e§lLevel §41'
   Health: 20
   Damage: 6
   Armor: 5
@@ -29,7 +29,7 @@ Sakura_Fox_1: #lv1
 
 Sakura_Fox_2: #lv2
   Type: ZOMBIE
-  Display: '§d§l春§e§l狐'
+  Display: '§d§l春§e§l狐 §e§lLevel §42'
   Health: 40
   Damage: 10
   Armor: 5
@@ -58,7 +58,7 @@ Sakura_Fox_2: #lv2
 
 Sakura_Fox_3: #lv3
   Type: ZOMBIE
-  Display: '§d§l春§c§l狐'
+  Display: '§d§l春§c§l狐 §e§lLevel §42'
   Health: 50
   Damage: 15
   Armor: 5
@@ -87,7 +87,7 @@ Sakura_Fox_3: #lv3
   
 Sakura_Fox_4: #lv3
   Type: ZOMBIE
-  Display: '§d§l春§4§l狐'
+  Display: '§d§l春§4§l狐 §e§lLevel §43'
   Health: 70
   Damage: 20
   Armor: 5

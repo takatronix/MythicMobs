@@ -1,6 +1,6 @@
 Sakura_knight: ##Lv.4
   Type: VINDICATOR
-  Display: '§dさくら§bナイト'
+  Display: '§dさくら§bナイト §e§lLevel §44'
   Health: 70
   Damage: 15
   Armor: 4

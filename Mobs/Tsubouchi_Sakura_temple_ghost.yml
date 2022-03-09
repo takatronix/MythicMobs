@@ -1,6 +1,6 @@
-Sakura_temple_ghost: ##Lv.1
+Sakura_temple_ghost: ##Lv.2
   Type: ZOMBIE
-  Display: '§4寺§bの§f幽霊'
+  Display: '§4寺§bの§f幽霊 §e§lLevel §42'
   Health: 30
   Damage: 5
   Armor: 4
@@ -27,4 +27,4 @@ Sakura_temple_ghost: ##Lv.1
   - MAGIC 0
   - FIRE_TICK 0
   Drops:
-  - Sakura_Mochi 1 0.15
+  - Sakura_Mochi 1 0.18

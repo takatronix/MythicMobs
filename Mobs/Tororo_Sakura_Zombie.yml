@@ -1,6 +1,6 @@
 Sakura_Zombie_1: #lv1
   Type: ZOMBIE
-  Display: '§d桜§fの§7屍'
+  Display: '§d桜§fの§7屍 §e§lLevel §41'
   Health: 30
   Damage: 4
   Armor: 6
@@ -28,7 +28,7 @@ Sakura_Zombie_1: #lv1
 
 Sakura_Zombie_2: #lv2
   Type: ZOMBIE
-  Display: '§d桜§fの§e屍'
+  Display: '§d桜§fの§e屍 §e§lLevel §42'
   Health: 60
   Damage: 6
   Armor: 6
@@ -56,7 +56,7 @@ Sakura_Zombie_2: #lv2
 
 Sakura_Zombie_3: #lv3
   Type: ZOMBIE
-  Display: '§d桜§fの§6屍'
+  Display: '§d桜§fの§6屍 §e§lLevel §43'
   Health: 80
   Damage: 8
   Armor: 6
@@ -83,7 +83,7 @@ Sakura_Zombie_3: #lv3
 
 Sakura_Zombie_4: #lv4
   Type: ZOMBIE
-  Display: '§d桜§fの§4屍'
+  Display: '§d桜§fの§4屍 §e§lLevel §44'
   Health: 100
   Damage: 12
   Armor: 6

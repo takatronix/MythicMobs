@@ -1,6 +1,6 @@
-Sakura_Shark: #Lv.3
+Sakura_Shark: #Lv.4
   Type: DROWNED
-  Display: '§a春雨'
+  Display: '§a春雨 §e§lLevel §44'
   Health: 80
   Damage: 13
   Armor: 5
@@ -30,4 +30,4 @@ Sakura_Shark: #Lv.3
   - MAGIC 0
   - FIRE_TICK 0
   Drops:
-  - Sakura_Mochi 1 0.3
+  - Sakura_Mochi 1 0.4

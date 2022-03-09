@@ -1,6 +1,6 @@
-Sakura_trafficker: ##Lv.3
+Sakura_trafficker: ##Lv.4
   Type: PHANTOM
-  Display: '§dさくら§bの§6運び屋'
+  Display: '§dさくら§bの§6運び屋 §e§lLevel §44'
   Health: 50
   Damage: 10
   Armor: 0

@@ -1,6 +1,6 @@
 Sakura_Zombie_NEO_1: #lv2
   Type: ZOMBIE
-  Display: '§d§l桜§fの§7§l屍'
+  Display: '§d§l桜§fの§7§l屍 §e§lLevel §42'
   Health: 50
   Damage: 6
   Armor: 8
@@ -30,7 +30,7 @@ Sakura_Zombie_NEO_1: #lv2
 
 Sakura_Zombie_NEO_2: #lv3
   Type: ZOMBIE
-  Display: '§d§l桜§fの§e§l屍'
+  Display: '§d§l桜§fの§e§l屍 §e§lLevel §43'
   Health: 70
   Damage: 8
   Armor: 8
@@ -60,7 +60,7 @@ Sakura_Zombie_NEO_2: #lv3
 
 Sakura_Zombie_NEO_3: #lv4
   Type: ZOMBIE
-  Display: '§d§l桜§fの§6§l屍'
+  Display: '§d§l桜§fの§6§l屍 §e§lLevel §44'
   Health: 90
   Damage: 12
   Armor: 8
@@ -90,7 +90,7 @@ Sakura_Zombie_NEO_3: #lv4
 
 Sakura_Zombie_NEO_4: #lv5
   Type: ZOMBIE
-  Display: '§d§l桜§fの§4§l屍'
+  Display: '§d§l桜§fの§4§l屍 §e§lLevel §45'
   Health: 110
   Damage: 14
   Armor: 8

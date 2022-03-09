@@ -1,6 +1,6 @@
 Sakura_Bomber: ##Lv.2
   Type: CREEPER
-  Display: '§d花見§fに来た§cリア充§fを§e爆破§fせし者'
+  Display: '§d花見§fに来た§cリア充§fを§e爆破§fせし者 §e§lLevel §42'
   Health: 30
   Damage: 10
   Armor: 2
