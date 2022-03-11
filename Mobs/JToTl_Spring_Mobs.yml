@@ -133,8 +133,8 @@ Sakura_Footballfish:
   - model{mid=spring_footballfish;n=false} @self ~onSpawn
   - state{s=attack} @self ~onAttack
   - skill{s=Sakura_Footballfish_Bite} @self ~onTimer:60 0.5
-  Drops:
-  - Sakura_Mochi_zip 2 1
+  - command{c="mm items give <trigger.name> Sakura_Mochi_zip"} ~onDeath @trigger
+  - command{c="mm items give <trigger.name> Sakura_Mochi_zip"} ~onDeath @trigger
 
 SVFirestormTarget:
   Type: SILVERFISH
