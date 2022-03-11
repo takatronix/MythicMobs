@@ -15,6 +15,7 @@ Sakura_Bee:
     PreventRandomEquipment: true
     KnockbackResistance: 5
     PreventJockeyMounts: true 
+    Despawn: false
   AIGoalSelector:
   - 0 clear
   - 1 meleeattack
