@@ -16,6 +16,7 @@ Sakura_defender:
     KnockbackResistance: 0
     PreventJockeyMounts: true 
     NoDamageTicks: 10
+    Despawn: false
   AITargetSelectors:
   - 1 players
   Drops:
