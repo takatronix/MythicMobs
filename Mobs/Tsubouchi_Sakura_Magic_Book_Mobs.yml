@@ -17,6 +17,7 @@ Sakura_Magic_Book:
     PreventJockeyMounts: true 
     NoDamageTicks: 10
     MovementSpeed: 0.2
+    Despawn: false
   AITargetSelectors:
   - 1 players
   Drops:
