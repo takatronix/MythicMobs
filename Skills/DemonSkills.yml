@@ -60,7 +60,7 @@ DemonUpperSlum:
   - skill{s=DemonUpperSlumParticle} @self
   - sound{s=entity.generic.explode;p=0.6} @PIR{r=100}
   - summon{mob=DemonUpperSlumTargetMob;a=1} @self
-  - delay 40
+  - delay 41
   - blockunmask{r=10;m=magma_block} @selflocation
   - setAI{ai=true} @self
   - skill{s=DemonRemoveSkillNow} @self
@@ -161,7 +161,7 @@ DemonUpperSlumSlumTargetFirstMob:
   - armordamage{a=15} @PIR{r=10}
   - armordamage{a=15} @PIR{r=5}
   - remove @self
-  - delay 22
+  - delay 23
   - blockunmask{r=15;m=magma_block} @selflocation
 
 DemonUpperSlumSlumTargetSecondMob:
@@ -174,7 +174,7 @@ DemonUpperSlumSlumTargetSecondMob:
   - armordamage{a=15} @PIR{r=10}
   - armordamage{a=10} @PIR{r=5}
   - remove @self
-  - delay 30
+  - delay 31
   - blockunmask{r=15;m=crying_obsidian} @selflocation
 
 DemonUpperSlumSlumTarget:
@@ -247,7 +247,7 @@ DemonTripleUpperSlum:
   - skill{s=DemonUpperSlumParticle} @self
   - sound{s=entity.generic.explode;p=0.6} @PIR{r=100}
   - summon{mob=DemonUpperSlumTargetMob;a=1} @self
-  - delay 40
+  - delay 41
   - blockunmask{r=10;m=magma_block} @selflocation
   - setAI{ai=true} @self
   - skill{s=DemonRemoveSkillNow} @self
@@ -267,7 +267,7 @@ DemonTripleUpperSlumMirrorAttack:
   - blockwave{duration=40;material=magma_block;radius=10;radiusY=1;velocity=1;shape=sphere} @selflocation
   - sound{s=entity.generic.explode;p=0.6} @PIR{r=100}
   - summon{mob=DemonUpperSlumTargetMob;a=1} @self
-  - delay 40
+  - delay 41
   - blockunmask{r=10;m=magma_block} @selflocation
   - remove @self
 
@@ -372,7 +372,7 @@ DemonLastAttackMob:
   - sound{s=entity.generic.explode;p=0.6;v=0.5} @PIR{r=100}
   - armordamage{a=20} @PIR{r=7}
   - remove @self
-  - delay 20
+  - delay 21
   - blockunmask{r=7;m=magma_block} @selflocation
 
 DemonLastAttackMobSecond:
@@ -382,5 +382,5 @@ DemonLastAttackMobSecond:
   - sound{s=entity.wither.hurt;p=0.5;v=0.5} @PIR{r=100}
   - armordamage{a=30} @PIR{r=7}
   - remove @self
-  - delay 20
+  - delay 21
   - blockunmask{r=7;m=crying_obsidian} @selflocation
