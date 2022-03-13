@@ -121,7 +121,6 @@ Sakura_Footballfish:
     Silent: true
     ModifyBoundingBox: true
     PreventOtherDrops: true
-    Despawn: false
   BossBar:
     Enabled: true
     Range: 10
