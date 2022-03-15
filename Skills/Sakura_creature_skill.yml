@@ -1,0 +1,138 @@
+
+#存在しないものが存在する時　あなたはとある判断を迫られる　深淵を覗く時　深淵もまたこちらを覗いているのだ
+
+S_creature_SkillTimer:
+  Skills:
+  - randomskill{skills=S_creature_Heal,S_creature_shockwave,S_creature_summoned,S_creature_punch_fake,S_creature_single_laser;sync=true} @self
+
+S_creature_Heal:
+  Conditions:
+  - playerwithin{d=50} true
+  - hastag{t=heal} false
+  - hastag{t=skillRunning} false
+  Skills:
+  - state{s=heal} @self
+  - addtag{t=skillRunning} @self
+  - addtag{t=heal} @self
+  - setAI{ai=false} @self
+  - delay 15
+  - heal{amount=70} @self
+  - delay 20
+  - setAI{ai=true} @self
+  - removetag{t=skillRunning} @self
+  - delay 400
+  - removetag{t=heal} @self
+
+S_creature_shockwave:
+  Conditions:
+  - playerwithin{d=30} true
+  - hastag{t=skillRunning} false
+  Skills:
+  - state{s=shockwave} @self
+  - addtag{t=skillRunning} @self
+  - setAI{ai=false} @self
+  - delay 20
+  - potion{t=SLOW;d=100;l=2} @PlayersInRadius{r=10}
+  - delay 7
+  - setAI{ai=true} @self
+  - delay 10
+  - removetag{t=skillRunning} @self
+
+S_creature_left_jab:
+  Conditions:
+  - playerwithin{d=30} true
+  - hastag{t=skillRunning} false
+  Skills:
+  - state{s=shockwave} @self
+  - addtag{t=skillRunning} @self
+  - setAI{ai=false} @self
+  - delay 10
+  - damage{a=6} @t
+  - delay 5
+  - setAI{ai=true} @self
+  - delay 7
+  - removetag{t=skillRunning} @self
+
+S_creature_right_straight:
+  Conditions:
+  - playerwithin{d=30} true
+  - hastag{t=skillRunning} false
+  Skills:
+  - state{s=shockwave} @self
+  - addtag{t=skillRunning} @self
+  - setAI{ai=false} @self
+  - delay 10
+  - damage{a=10} @t
+  - delay 5
+  - setAI{ai=true} @self
+  - delay 7
+  - removetag{t=skillRunning} @self
+
+S_creature_left_hook:
+  Conditions:
+  - playerwithin{d=30} true
+  - hastag{t=skillRunning} false
+  Skills:
+  - state{s=shockwave} @self
+  - addtag{t=skillRunning} @self
+  - setAI{ai=false} @self
+  - delay 12
+  - damage{a=15} @t
+  - delay 5
+  - setAI{ai=true} @self
+  - delay 7
+  - removetag{t=skillRunning} @self
+
+S_creature_summoned:
+  Conditions:
+  - playerwithin{d=30} true
+  - hastag{t=skillRunning} false
+  Skills:
+  - state{s=summoned} @self
+  - addtag{t=skillRunning} @self
+  - setAI{ai=false} @self
+  - delay 10
+  - summon{mob=Sakura_knight} @nearestplayer{r=30}
+  - delay 17
+  - setAI{ai=true} @self
+  - delay 7
+  - removetag{t=skillRunning} @self
+
+S_creature_punch_fake:
+  Conditions:
+  - playerwithin{d=30} true
+  - hastag{t=skillRunning} false
+  Skills:
+  - state{s=punch_fake} @self
+  - addtag{t=skillRunning} @self
+  - setAI{ai=false} @self
+  - delay 15
+  - setAI{ai=true} @self
+  - delay 7
+  - removetag{t=skillRunning} @self
+
+S_creature_single_laser:
+  Conditions:
+  - playerwithin{d=40} true
+  - playerwithin{d=10} true
+  - hastag{t=skillRunning} false
+  Skills:
+  - state{s=punch_fake} @self
+  - addtag{t=skillRunning} @self
+  - setAI{ai=false} @self
+  - delay 20
+  - effect:particleline{particle=reddust;color=#00008b;amount=10;fromOrigin=true} @target
+  - damage{a=25} @t
+  - delay 10
+  - setAI{ai=true} @self
+  - delay 7
+  - removetag{t=skillRunning} @self
+
+S_creature_Death:
+  Conditions:
+  - playerwithin{d=20} true
+  Skills:
+  - state{s=self_destruction_and_die} @self
+  - delay 25
+  - sound{s=entity.firework_rocket.launch;v=1;pitch=1}
+  - damage{a=15} @PlayersInRadius{r=10}
