@@ -40,3 +40,39 @@ Sakura_creature:
   - POISON 0
   - MAGIC 0
   - FIRE_TICK 0
+  - PROJECTILE 0.2
+
+Sakura_creature_minion:
+  Type: VINDICATOR
+  Display: '§dさくら§bナイト §e§lLevel §44'
+  Health: 70
+  Damage: 15
+  Armor: 4
+  Options:
+    PreventSunburn: true
+    PreventOtherDrops: true
+    PrevetItemPickup: false
+    FollowRange: 20
+    MaxCombatDistance: 140
+    MovementSpeed: 0.2
+    PreventRandomEquipment: true
+    PreventTransformation: true
+  Drops:
+  - diamond 4 1
+  Disguise:
+    Type: ZOMBIE
+  Equipment:
+    - IRON_HELMET HEAD
+    - IRON_CHESTPLATE CHEST
+    - IRON_SWORD HAND
+  AIGoalSelector:
+  - clear
+  - meleeattack
+  AITargetSelectors:
+  - players
+  Skills:
+  - skill{s=SV_Remove} @self ~onSpawn
+  DamageModifiers:
+  - POISON 0
+  - MAGIC 0
+  - FIRE_TICK 0
