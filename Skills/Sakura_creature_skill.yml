@@ -129,10 +129,11 @@ S_creature_single_laser:
   - removetag{t=skillRunning} @self
 
 S_creature_Death:
-  Conditions:
-  - playerwithin{d=20} true
   Skills:
-  - state{s=self_destruction_and_die} @self
   - delay 25
   - sound{s=entity.firework_rocket.launch;v=1;pitch=1}
+  - effect:particles{p=explosion_emitter;a=10;s=2} @self
+  - sound{s=entity.generic.explode;v=1;pitch=0}
+  - sound{s=entity.generic.explode;v=1;pitch=1}
   - damage{a=15} @PlayersInRadius{r=10}
+  - delay 20
