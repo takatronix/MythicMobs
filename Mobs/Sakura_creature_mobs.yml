@@ -13,6 +13,7 @@ Sakura_creature:
     PreventOtherDrops: true
     PreventItemPickup: true
     PreventRandomEquipment: true
+    MaxCombatDistance: 10
     KnockbackResistance: 5
     PreventJockeyMounts: true 
   AIGoalSelector:
@@ -57,8 +58,6 @@ Sakura_creature_minion:
     MovementSpeed: 0.2
     PreventRandomEquipment: true
     PreventTransformation: true
-  Drops:
-  - diamond 4 1
   Disguise:
     Type: ZOMBIE
   Equipment:
