@@ -32,7 +32,7 @@ S_creature_shockwave:
   - addtag{t=skillRunning} @self
   - setAI{ai=false} @self
   - delay 20
-  - potion{t=SLOW;d=100;l=2} @PlayersInRadius{r=10}
+  - potion{t=SLOW;d=100;l=5} @PlayersInRadius{r=10}
   - delay 7
   - setAI{ai=true} @self
   - delay 10
@@ -92,7 +92,7 @@ S_creature_summoned:
   - addtag{t=skillRunning} @self
   - setAI{ai=false} @self
   - delay 10
-  - summon{mob=Sakura_knight} @nearestplayer{r=30}
+  - summon{mob=Sakura_creature_minion} @nearestplayer{r=30}
   - delay 17
   - setAI{ai=true} @self
   - delay 7
