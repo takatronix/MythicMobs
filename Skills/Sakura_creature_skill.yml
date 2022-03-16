@@ -121,7 +121,7 @@ S_creature_single_laser:
   - addtag{t=skillRunning} @self
   - setAI{ai=false} @self
   - delay 20
-  - effect:particleline{particle=reddust;color=#00008b;amount=10;syo=1;fromOrigin=true} @target
+  - effect:particleline{particle=reddust;color=#00008b;amount=10;syo=1;tyo=1;fromOrigin=true} @target
   - damage{a=25} @t
   - delay 10
   - setAI{ai=true} @self
