@@ -4,7 +4,7 @@
 Sakura_creature:
   Type: ZOMBIE
   Display: '&1&l深淵&f&lの&7&l破壊者'
-  Health: 700
+  Health: 1000
   Damage: 0
   Armor: 2
   Options:
@@ -32,7 +32,7 @@ Sakura_creature:
   - '<target.name>は&1&l深淵&f&lの&7&l破壊者&fに倒された' 
   Skills:
   - model{tint=false;mid=rock_creature_spring;n=false} @self ~onSpawn
-  - skill{s=S_creature_SkillTimer;sync=true} ~onTimer:100
+  - skill{s=S_creature_SkillTimer;sync=true} ~onTimer:40
   - skill{s=S_creature_left_hook;sync=true} @self ~onAttack 0.2
   - skill{s=S_creature_right_straight;sync=true} @self ~onAttack 0.3
   - skill{s=S_creature_left_jab;sync=true} @self ~onAttack
