@@ -135,5 +135,5 @@ S_creature_Death:
   - effect:particles{p=explosion_emitter;a=10;s=2} @self
   - sound{s=entity.generic.explode;v=1;pitch=0}
   - sound{s=entity.generic.explode;v=1;pitch=1}
-  - damage{a=15} @PlayersInRadius{r=10}
+  - damage{a=12;type=VOID} @PlayersInRadius{r=10}
   - delay 20
