@@ -4,7 +4,7 @@
 Sakura_creature:
   Type: ZOMBIE
   Display: '&1&l深淵&f&lの&7&l破壊者'
-  Health: 1000
+  Health: 800
   Damage: 0
   Armor: 2
   Options:
@@ -46,7 +46,7 @@ Sakura_creature:
 Sakura_creature_minion:
   Type: VINDICATOR
   Display: '§dさくら§bナイト §e§lLevel §44'
-  Health: 70
+  Health: 10
   Damage: 15
   Armor: 4
   Options:
