@@ -13,7 +13,7 @@ Sakura_creature:
     PreventOtherDrops: true
     PreventItemPickup: true
     PreventRandomEquipment: true
-    MaxCombatDistance: 10
+    MaxCombatDistance: 6
     KnockbackResistance: 5
     PreventJockeyMounts: true 
   AIGoalSelector:
