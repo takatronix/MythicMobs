@@ -21,7 +21,7 @@ Sakura_creature:
   - 1 meleeattack
   - 2 randomstroll 
   Drops:
-  - Sakura_Mochi_zip 2 1
+  - Sakura_Mochi_zip 3 1
   BossBar:
     Enabled: true
     Range: 20
