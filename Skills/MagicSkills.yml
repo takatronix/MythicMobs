@@ -1,0 +1,7 @@
+Burn_Arm_BlockWave:
+  Skills:
+  - blockwave{duration=22;material=magma_block;radius=3;radiusY=2;velocity=2;shape=sphere} @selflocation
+
+Burn_Arm_BlockWave_Second:
+  Skills:
+  - blockwave{duration=22;material=crying_obsidian;radius=7;radiusY=2;velocity=2;shape=sphere} @selflocation
