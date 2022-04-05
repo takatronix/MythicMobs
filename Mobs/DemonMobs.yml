@@ -1,7 +1,7 @@
 Demon:
   Type: SILVERFISH
   Display: '§d§lInsect§f§l-§5§lDemon'
-  Health: 12000
+  Health: 10000
   Damage: 6
   Armor: 8
   Options:
@@ -29,8 +29,11 @@ Demon:
     Range: 200
     Color: PURPLE
     Style: SOLID
+  KillMessages:
+  - '<target.name> は潰された
   Skills:
   - model{mid=demon;name=false;tint=false} @self ~onSpawn
+  - potion{type=FIRE_RESISTANCE;duration=200000;level=1;p=false} @self ~onSpawn
   - skill{s=DemonRandomSkill} @self ~onTimer:200
   - skill{s=DemonRandomSkillSecond} @self ~onTimer:150
   - skill{s=DemonSecondLevelAlwaysAttack} @self ~onTimer:80
