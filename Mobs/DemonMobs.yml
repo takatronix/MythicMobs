@@ -30,7 +30,7 @@ Demon:
     Color: PURPLE
     Style: SOLID
   KillMessages:
-  - '<target.name> は潰された
+  - '<target.name> は潰された'
   Skills:
   - model{mid=demon;name=false;tint=false} @self ~onSpawn
   - potion{type=FIRE_RESISTANCE;duration=200000;level=1;p=false} @self ~onSpawn
