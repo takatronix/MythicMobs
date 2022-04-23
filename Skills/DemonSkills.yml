@@ -160,9 +160,9 @@ DemonUpperSlumSlumTargetFirstMob:
   - blockwave{duration=22;material=magma_block;radius=15;radiusY=2;velocity=2;shape=sphere;hs=false} @selflocation
   - armordamage{a=10} @PIR{r=10}
   - armordamage{a=5} @PIR{r=5}
-  - remove @self
   - delay 23
   - blockunmask{r=15;m=magma_block} @selflocation
+  - remove @self
 
 DemonUpperSlumSlumTargetSecondMob:
   Skills:
@@ -173,9 +173,9 @@ DemonUpperSlumSlumTargetSecondMob:
   - blockwave{duration=30;material=crying_obsidian;radius=15;radiusY=2;velocity=2;shape=sphere;hs=false} @selflocation
   - armordamage{a=10} @PIR{r=10}
   - armordamage{a=10} @PIR{r=5}
-  - remove @self
   - delay 31
   - blockunmask{r=15;m=crying_obsidian} @selflocation
+  - remove @self
 
 DemonUpperSlumSlumTarget:
   Skills:
