@@ -35,7 +35,7 @@ Demon:
   - model{mid=demon;name=false;tint=false} @self ~onSpawn
   - potion{type=FIRE_RESISTANCE;duration=200000;level=1;p=false} @self ~onSpawn
   - skill{s=DemonRandomSkill} @self ~onTimer:200
-  - skill{s=DemonRandomSkillSecond} @self ~onTimer:150
+  - skill{s=DemonRandomSkillSecond} @self ~onTimer:200
   - skill{s=DemonSecondLevelAlwaysAttack} @self ~onTimer:80
   - skill{s=DemonCancelAttack;sync=true} @self ~onAttack
   - skill{s=DemonGoToSecondLevel} @self ~onDamaged <10%
@@ -59,7 +59,7 @@ DemonUpperSlumMirrorFirst:
     NoDamageTicks: 1
     PreventJockeyMounts: true
     MaxCombatDistance: 140
-    MovementSpeed: 0
+    MovementSpeed: 0.2
     PreventRandomEquipment: true
     PreventTransformation: true
     Despawn: false
@@ -85,7 +85,7 @@ DemonUpperSlumMirrorSecond:
     NoDamageTicks: 1
     PreventJockeyMounts: true
     MaxCombatDistance: 140
-    MovementSpeed: 0
+    MovementSpeed: 0.2
     PreventRandomEquipment: true
     PreventTransformation: true
     Despawn: false
