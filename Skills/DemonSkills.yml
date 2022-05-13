@@ -70,7 +70,7 @@ DemonUpperSlumTargetMob:
   - damage{a=10;ia=true} @PIR{r=6}
   - damage{a=30} @PIR{r=10}
   - armordamage{a=10} @PIR{r=5}
-  - armordamage{a=10} @PIR{r=7}
+  - armordamage{a=15} @PIR{r=7}
   - ignite{t=100} @PIR{r=7}
   - sudoskill{s=DemonUpperSlumTarget;cat=true} @PIR{r=10}
   - remove @self
@@ -155,11 +155,11 @@ DemonUpperSlumSlumTargetFirstMob:
   - damage{a=8;ia=true} @PIR{r=7}
   - damage{a=20} @PIR{r=15}
   - potion{t=SLOW;l=100;d=150} @PIR{r=10}
-  - potion{t=JUMP;l=200;d=200} @PIR{r=15}
+  - potion{t=JUMP;l=200;d=30} @PIR{r=15}
   - ignite{t=160} @PIR{r=10}
-  - blockwave{duration=22;material=magma_block;radius=15;radiusY=2;velocity=2;shape=sphere;hs=false} @selflocation
-  - armordamage{a=10} @PIR{r=10}
-  - armordamage{a=5} @PIR{r=5}
+  - blockwave{duration=22;material=magma_block;radius=15;velocity=1;shape=sphere;hs=false} @selflocation
+  - armordamage{a=12} @PIR{r=10}
+  - armordamage{a=8} @PIR{r=5}
   - delay 23
   - blockunmask{r=15;m=magma_block} @selflocation
   - remove @self
@@ -170,10 +170,10 @@ DemonUpperSlumSlumTargetSecondMob:
   - damage{a=10;ia=true} @PIR{r=7}
   - damage{a=20} @PIR{r=15}
   - sudoskill{s=DemonUpperSlumSlumTarget;cat=true} @PIR{r=15}
-  - blockwave{duration=30;material=crying_obsidian;radius=15;radiusY=2;velocity=2;shape=sphere;hs=false} @selflocation
-  - armordamage{a=10} @PIR{r=10}
-  - armordamage{a=10} @PIR{r=5}
-  - delay 31
+  - blockwave{duration=20;material=crying_obsidian;radius=15;velocity=1;shape=sphere;hs=false} @selflocation
+  - armordamage{a=12} @PIR{r=10}
+  - armordamage{a=13} @PIR{r=5}
+  - delay 21
   - blockunmask{r=15;m=crying_obsidian} @selflocation
   - remove @self
 
@@ -191,10 +191,10 @@ DemonScream:
   - state{s=scream} @self
   - sound{s=entity.wolf.howl;v=1.5} @PIR{r=100}
   - delay 30
-  - command{c="mraid radiusExecute <caster.uuid> 100 minecraft:effect clear <name> minecraft:absorption"} @self
-  - command{c="mraid radiusExecute <caster.uuid> 30 minecraft:effect clear <name> minecraft:regeneration"} @self
-  - command{c="mraid radiusExecute <caster.uuid> 10 minecraft:effect clear <name> minecraft:strength"} @self
-  - command{c="mraid radiusExecute <caster.uuid> 15 minecraft:effect clear <name> minecraft:fire_resistance"} @self
+  - radiuscommand{r=100;c="minecraft:effect clear <name> minecraft:absorption"} @self
+  - radiuscommand{r=30;c="minecraft:effect clear <name> minecraft:regeneration"} @self
+  - radiuscommand{r=5;c="minecraft:effect clear <name> minecraft:strength"} @self
+  - radiuscommand{r=10;c="minecraft:effect clear <name> minecraft:fire_resistance"} @self
   - potion{t=SLOW;d=200;l=2} @PIR{r=100}
   - potion{t=HUNGER;d=140;l=150} @PIR{r=100}
   - potion{t=WEAKNESS;d=140;l=5} @PIR{r=8}
@@ -204,7 +204,8 @@ DemonScream:
   - potion{t=JUMP;d=300;l=200} @PIR{r=100;limit=1;sort=FURTHEST}
   - potion{t=DAMAGE_RESISTANCE;d=150;l=200} @PIR{r=100;limit=1;sort=FURTHEST}
   - sethealth{a=10} @PIR{r=100}
-  - command{c="mraid radiusExecute <caster.uuid> 100 mraid vision 2 creeper <name>"} @self
+  - sethealth{a=3} @PIR{r=100;limit=3;sort=FURTHEST}
+  - radiuscommand{r=100;c="mraid vision 2 creeper <name>"} @self
   - delay 40
   - skill{s=DemonRemoveSkillNow} @self
   - skill{s=DemonJump} @self
@@ -225,7 +226,6 @@ DemonJump:
   - damage{a=50} @PIR{r=6}
   - effect:particlering{particle=reddust;color=#0000ff;radius=6;points=100;amount=10} @self
   - effect:particlering{particle=reddust;color=#ff0000;radius=6;points=100;amount=10;y=1} @self
-
   - setAI{ai=true} @self
   - skill{s=DemonRemoveSkillNow} @self
 
@@ -347,7 +347,7 @@ DemonLastAttack:
   - sound{s=item.trident.thunder;v=1;pitch=2} @playersinradius{r=200}
   - sound{s=block.anvil.place;v=0.2;pitch=2} @playersinradius{r=200}
   - delay 30
-  - summon{mob=DemonLastAttackMob;r=7;repeat=70;repeatInterval=6} @PIR{r=200;sort=RANDOM;limit=4}
+  - summon{mob=DemonLastAttackMob;r=7;yr=1;repeat=60;repeatInterval=7} @PIR{r=200;sort=RANDOM;limit=4}
   - delay 150
   - effect:bloodyScreen{d=10} @PIR{r=200}
   - sound{s=item.trident.thunder;v=1;pitch=2} @playersinradius{r=200}
@@ -361,28 +361,32 @@ DemonLastAttack:
   - sound{s=item.trident.thunder;v=1;pitch=2} @playersinradius{r=200}
   - sound{s=block.anvil.place;v=0.2;pitch=2} @playersinradius{r=200}
   - delay 30
-  - summon{mob=DemonLastAttackMobSecond;r=7;repeat=38;repeatInterval=5} @PIR{r=200;sort=RANDOM;limit=4}
-  - delay 190
+  - summon{mob=DemonLastAttackMobSecond;r=9;yr=1;repeat=38;repeatInterval=6} @PIR{r=200;sort=RANDOM;limit=3}
+  - delay 228
   - removetag{t=protect} @self
   - setAI{ai=true} @self
   - skill{s=DemonRemoveSkillNow} @self
 
 DemonLastAttackMob:
   Skills:
+  - effect:particles{particle=flash;amount=2;speed=2;d=30} @selflocation{y=0.4}
+  - delay 30
   - blockwave{duration=20;material=magma_block;radius=7;radiusY=2;velocity=2;shape=sphere;hs=false} @selflocation
   - damage{a=15} @PIR{r=7}
   - sound{s=entity.generic.explode;p=0.6;v=0.5} @PIR{r=100}
-  - armordamage{a=20} @PIR{r=7}
+  - armordamage{a=15} @PIR{r=7}
   - remove @self
   - delay 21
   - blockunmask{r=7;m=magma_block} @selflocation
 
 DemonLastAttackMobSecond:
   Skills:
+  - effect:particles{particle=flash;amount=2;speed=2;d=20} @selflocation{y=0.4}
+  - delay 20
   - blockwave{duration=20;material=crying_obsidian;radius=7;radiusY=2;velocity=2;shape=sphere;hs=false} @selflocation
   - damage{a=25} @PIR{r=7}
   - sound{s=entity.generic.explode;p=0.3;v=0.5} @PIR{r=100}
-  - armordamage{a=30} @PIR{r=7}
+  - armordamage{a=25} @PIR{r=7}
   - remove @self
   - delay 21
   - blockunmask{r=7;m=crying_obsidian} @selflocation
