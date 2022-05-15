@@ -56,7 +56,7 @@ DemonUpperSlum:
   - delay 55
   - setAI{ai=false} @self
   - delay 1
-  - blockwave{duration=40;material=magma_block;radius=10;radiusY=4;velocity=3;shape=sphere;hs=false} @selflocation
+  - blockwave{duration=40;material=magma_block;radius=10;radiusY=4;velocity=2;shape=sphere;hs=false} @selflocation
   - skill{s=DemonUpperSlumParticle} @self
   - sound{s=entity.generic.explode;p=0.6} @PIR{r=100}
   - summon{mob=DemonUpperSlumTargetMob;a=1} @self
@@ -123,10 +123,10 @@ DemonChargePunch:
 
 DemonChargePunchTarget:
   Skills:
-  - damage{a=6;pi=true;ia=true} @PIR{r=4}
+  - damage{a=12;pi=true;ia=true} @PIR{r=4}
   - potion{t=SLOW;l=4;d=100} @PIR{r=4}
-  - potion{t=POISON;l=3;d=200} @PIR{r=4}
-  - ignite{t=150} @PIR{r=4}
+  - potion{t=POISON;l=5;d=200} @PIR{r=4}
+  - ignite{t=200} @PIR{r=4}
   - remove @self
 
 DemonUpperSlumSlum:
@@ -158,8 +158,8 @@ DemonUpperSlumSlumTargetFirstMob:
   - potion{t=JUMP;l=200;d=30} @PIR{r=15}
   - ignite{t=160} @PIR{r=10}
   - blockwave{duration=22;material=magma_block;radius=15;velocity=1;shape=sphere;hs=false} @selflocation
-  - armordamage{a=12} @PIR{r=10}
-  - armordamage{a=8} @PIR{r=5}
+  - armordamage{a=15} @PIR{r=10}
+  - armordamage{a=10} @PIR{r=5}
   - delay 23
   - blockunmask{r=15;m=magma_block} @selflocation
   - remove @self
@@ -171,8 +171,8 @@ DemonUpperSlumSlumTargetSecondMob:
   - damage{a=20} @PIR{r=15}
   - sudoskill{s=DemonUpperSlumSlumTarget;cat=true} @PIR{r=15}
   - blockwave{duration=20;material=crying_obsidian;radius=15;velocity=1;shape=sphere;hs=false} @selflocation
-  - armordamage{a=12} @PIR{r=10}
-  - armordamage{a=13} @PIR{r=5}
+  - armordamage{a=15} @PIR{r=10}
+  - armordamage{a=15} @PIR{r=5}
   - delay 21
   - blockunmask{r=15;m=crying_obsidian} @selflocation
   - remove @self
@@ -244,6 +244,7 @@ DemonTripleUpperSlum:
   - state{s=upper_slum} @self
   - sound{s=block.respawn_anchor.deplete;p=0.4;v=2} @PIR{r=100}
   - delay 76
+  - setAI{ai=false} @self
   - blockwave{duration=40;material=magma_block;radius=10;radiusY=4;velocity=3;shape=sphere;hs=false} @selflocation
   - skill{s=DemonUpperSlumParticle} @self
   - sound{s=entity.generic.explode;p=0.6} @PIR{r=100}
@@ -264,11 +265,13 @@ DemonTripleUpperSlumMirrorAttack:
   - state{s=upper_slum} @self
   - sound{s=block.respawn_anchor.deplete;p=0.4;v=2} @PIR{r=100}
   - delay 76
+  - setAI{ai=false} @self
   - skill{s=DemonUpperSlumParticle} @self
   - blockwave{duration=40;material=magma_block;radius=10;radiusY=1;velocity=1;shape=sphere;hs=false} @selflocation
   - sound{s=entity.generic.explode;p=0.6} @PIR{r=100}
   - summon{mob=DemonUpperSlumTargetMob;a=1} @self
   - delay 41
+  - setAI{ai=true} @self
   - blockunmask{r=10;m=magma_block} @selflocation
   - remove @self
 
@@ -284,13 +287,12 @@ DemonGoToSecondLevel:
   - setAI{ai=false} @self
   - state{s=form_change} @self
   - delay 120
-  - setmaxhealth{a=90000} @self
-  - heal{a=18000;repeat=5;repeatInterval=20} @self
+  - setmaxhealth{a=120000} @self
+  - heal{a=24000;repeat=5;repeatInterval=20} @self
   - effect:lightning{repeat=4;repeatInterval=20} @self
   - damage{a=15;ia=true;repeat=4;repeatInterval=20} @PIR{r=3}
   - sound{s=entity.player.levelup;v=2;p=0.5;repeat=4;repeatInterval=20} @PIR{r=100}
   - delay 100
-  - sound{s=item.trident.thunder;p=0.5;v=1} @PIR{r=100}
   - sound{s=item.trident.thunder;p=0.5;v=1} @PIR{r=100}
   - setspeed{speed=1.2} @self
   - enchant{m=demon;pid=group17;en=true;em=true} @self
@@ -308,15 +310,15 @@ DemonSecondLevelAlwaysAttack:
   Conditions:
   - hastag{t=WentToSecondLevelTrue} @self
   Skills:
-  - summon{mob=DemonSecondLevelAlwaysAttackTarget;a=1} @PIR{r=100;sort=RANDOM;limit=2}
+  - summon{mob=DemonSecondLevelAlwaysAttackTarget;a=1} @PIR{r=100;sort=RANDOM;limit=3}
 
 DemonSecondLevelAlwaysAttackTarget:
   Skills:
   - effect:particles{particle=flash;amount=2;speed=2;d=30} @selflocation{y=0.4}
   - delay 30
-  - damage{a=2;ia=true} @PIR{r=2}
-  - armordamage{a=5} @PIR{r=2}
-  - ignite{t=40} @PIR{r=2}
+  - damage{a=6;ia=true} @PIR{r=2}
+  - armordamage{a=10} @PIR{r=2}
+  - ignite{t=60} @PIR{r=2}
   - effect:lightning @self
   - remove @self
 
@@ -347,7 +349,7 @@ DemonLastAttack:
   - sound{s=item.trident.thunder;v=1;pitch=2} @playersinradius{r=200}
   - sound{s=block.anvil.place;v=0.2;pitch=2} @playersinradius{r=200}
   - delay 30
-  - summon{mob=DemonLastAttackMob;r=7;yr=1;repeat=60;repeatInterval=7} @PIR{r=200;sort=RANDOM;limit=4}
+  - summon{mob=DemonLastAttackMob;r=7;yr=1;repeat=53;repeatInterval=8} @PIR{r=200;sort=RANDOM;limit=3}
   - delay 150
   - effect:bloodyScreen{d=10} @PIR{r=200}
   - sound{s=item.trident.thunder;v=1;pitch=2} @playersinradius{r=200}
@@ -361,7 +363,7 @@ DemonLastAttack:
   - sound{s=item.trident.thunder;v=1;pitch=2} @playersinradius{r=200}
   - sound{s=block.anvil.place;v=0.2;pitch=2} @playersinradius{r=200}
   - delay 30
-  - summon{mob=DemonLastAttackMobSecond;r=9;yr=1;repeat=38;repeatInterval=6} @PIR{r=200;sort=RANDOM;limit=3}
+  - summon{mob=DemonLastAttackMobSecond;r=9;yr=1;repeat=38;repeatInterval=6} @PIR{r=200;sort=RANDOM;limit=2}
   - delay 228
   - removetag{t=protect} @self
   - setAI{ai=true} @self
@@ -371,7 +373,7 @@ DemonLastAttackMob:
   Skills:
   - effect:particles{particle=flash;amount=2;speed=2;d=30} @selflocation{y=0.4}
   - delay 30
-  - blockwave{duration=20;material=magma_block;radius=7;radiusY=2;velocity=2;shape=sphere;hs=false} @selflocation
+  - blockwave{duration=20;material=magma_block;radius=7;velocity=1;shape=sphere;hs=false} @selflocation
   - damage{a=15} @PIR{r=7}
   - sound{s=entity.generic.explode;p=0.6;v=0.5} @PIR{r=100}
   - armordamage{a=15} @PIR{r=7}
@@ -383,7 +385,7 @@ DemonLastAttackMobSecond:
   Skills:
   - effect:particles{particle=flash;amount=2;speed=2;d=20} @selflocation{y=0.4}
   - delay 20
-  - blockwave{duration=20;material=crying_obsidian;radius=7;radiusY=2;velocity=2;shape=sphere;hs=false} @selflocation
+  - blockwave{duration=20;material=crying_obsidian;radius=7;velocity=1;shape=sphere;hs=false} @selflocation
   - damage{a=25} @PIR{r=7}
   - sound{s=entity.generic.explode;p=0.3;v=0.5} @PIR{r=100}
   - armordamage{a=25} @PIR{r=7}
