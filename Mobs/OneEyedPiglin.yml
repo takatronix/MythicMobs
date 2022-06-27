@@ -8,8 +8,7 @@ OneEyedPiglin:
   Drops:
   - exp 5 1
   - OneEyedPiglin_Bone 1 0.3
-  Disguise:
-    Type: OneEyedPiglin
+  Disguise: OneEyedPiglin
   Equipment:
   - OneEyedPiglin_Axe MAINHAND
   Options:

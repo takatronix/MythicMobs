@@ -8,8 +8,7 @@ LavaRider:
   Drops:
   - exp 5 1
   - LavaRider_redstone 1 0.3
-  Disguise:
-    Type: LavaRider
+  Disguise: LavaRider
   Equipment:
   Options:
     MovementSpeed: 0.2

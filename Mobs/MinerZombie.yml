@@ -8,8 +8,7 @@ MinerZombie:
   Drops:
   - exp 6 1
   - MinerZombie_Coal 1 0.3
-  Disguise:
-    Type: MinerZombie
+  Disguise: MinerZombie
   Equipment:
   - stone_pickaxe MAINHAND
   - coal OFFHAND

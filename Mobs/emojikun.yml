@@ -17,8 +17,7 @@ emojikun:
     KnockbackResistance: 0.55
     Silent: true
     PreventOtherDrops: true
-  Disguise:
-    Type: emojikun1
+  Disguise: emojikun1
   Skills:
   - sound{s=entity.villager.no;p=0.6;v=0.7} @self ~onAttack
   - sound{s=entity.villager.death;p=0.6;v=0.7} @self ~onDeath

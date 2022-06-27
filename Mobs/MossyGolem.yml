@@ -3,8 +3,7 @@ MossyGolem:
   Display: '&f&lモスゴーレム'
   Health: 46
   Damage: 6
-  Disguise:
-    Type: MossyGolem
+  Disguise: MossyGolem
   AITargetSelectors:
   - 1 players
   Drops:

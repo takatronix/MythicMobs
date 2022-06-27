@@ -8,8 +8,7 @@ AmethystMage:
   Drops:
   - exp 5 1
   - AmethystMage_purple_dye 1 0.25
-  Disguise:
-    Type: AmethystMage
+  Disguise: AmethystMage
   Equipment:
   - AmethystMage_Wand MAINHAND
   Options:

@@ -8,8 +8,7 @@ MinerSkeleton:
   Drops:
   - exp 6 1
   - MinerSkeleton_bone_meal 1 0.3
-  Disguise:
-    Type: MinerSkeleton
+  Disguise: MinerSkeleton
   Equipment:
   - iron_pickaxe MAINHAND
   - raw_iron OFFHAND

@@ -3,8 +3,7 @@ CaptainDrowned:
   Display: '&f&lキャプテン・ドラウンド'
   Health: 60
   Damage: 7
-  Disguise:
-    Type: CaptainDrowned
+  Disguise: CaptainDrowned
   AITargetSelectors:
   - 1 players
   Drops:

@@ -10,8 +10,7 @@ BabyWaterDragon:
   AITargetSelectors:
   - 0 clear
   - 1 players
-  Disguise:
-    Type: AXOLOTL
+  Disguise: AXOLOTL
   BossBar:
     Enabled: true
     Title: '&9&lベビーウォータードラゴン'

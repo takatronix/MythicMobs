@@ -3,8 +3,7 @@ PirateDrowned:
   Display: '&f&lパイレーツドラウンド'
   Health: 40
   Damage: 4
-  Disguise:
-    Type: PirateDrowned
+  Disguise: PirateDrowned
   AITargetSelectors:
   - 1 players
   Drops:

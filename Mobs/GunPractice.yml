@@ -4,8 +4,7 @@ Target1:
   Type: Zombie
   Health: 20
   Damage: 0
-  Disguise:
-    Type: Target
+  Disguise: Target
   Equipment:
   - Target HEAD
   AIGoalSelectors:
@@ -34,8 +33,7 @@ Target2:
   Type: Zombie
   Health: 20
   Damage: 0
-  Disguise:
-    Type: Target
+  Disguise: Target
   Equipment:
   - Target HEAD
   AIGoalSelectors:
@@ -64,8 +62,7 @@ Target3:
   Type: Zombie
   Health: 20
   Damage: 0
-  Disguise:
-    Type: Target
+  Disguise: Target
   Equipment:
   - Target HEAD
   AIGoalSelectors:
@@ -94,8 +91,7 @@ Target4:
   Type: Zombie
   Health: 20
   Damage: 0
-  Disguise:
-    Type: Target
+  Disguise: Target
   Equipment:
   - Target HEAD
   AIGoalSelectors:
@@ -124,8 +120,7 @@ Target5:
   Type: Zombie
   Health: 20
   Damage: 0
-  Disguise:
-    Type: Target
+  Disguise: Target
   Equipment:
   - Target HEAD
   AIGoalSelectors:
@@ -154,8 +149,7 @@ Target6:
   Type: Zombie
   Health: 20
   Damage: 0
-  Disguise:
-    Type: Target
+  Disguise: Target
   Equipment:
   - Target HEAD
   AIGoalSelectors:
@@ -184,8 +178,7 @@ Target7:
   Type: Zombie
   Health: 20
   Damage: 0
-  Disguise:
-    Type: Target
+  Disguise: Target
   Equipment:
   - Target HEAD
   AIGoalSelectors:
@@ -214,8 +207,7 @@ Target8:
   Type: Zombie
   Health: 20
   Damage: 0
-  Disguise:
-    Type: Target
+  Disguise: Target
   Equipment:
   - Target HEAD
   AIGoalSelectors:
@@ -244,8 +236,7 @@ Target9:
   Type: Zombie
   Health: 20
   Damage: 0
-  Disguise:
-    Type: Target
+  Disguise: Target
   Equipment:
   - Target HEAD
   AIGoalSelectors:
@@ -274,8 +265,7 @@ Target10:
   Type: Zombie
   Health: 20
   Damage: 0
-  Disguise:
-    Type: Target
+  Disguise: Target
   Equipment:
   - Target HEAD
   AIGoalSelectors:
@@ -306,8 +296,7 @@ Target11:
   Type: Zombie
   Health: 20
   Damage: 0
-  Disguise:
-    Type: Target
+  Disguise: Target
   Equipment:
   - Target HEAD
   AIGoalSelectors:
@@ -336,8 +325,7 @@ Target12:
   Type: Zombie
   Health: 20
   Damage: 0
-  Disguise:
-    Type: Target
+  Disguise: Target
   Equipment:
   - Target HEAD
   AIGoalSelectors:
@@ -366,8 +354,7 @@ Target13:
   Type: Zombie
   Health: 20
   Damage: 0
-  Disguise:
-    Type: Target
+  Disguise: Target
   Equipment:
   - Target HEAD
   AIGoalSelectors:
@@ -396,8 +383,7 @@ Target14:
   Type: Zombie
   Health: 20
   Damage: 0
-  Disguise:
-    Type: Target
+  Disguise: Target
   Equipment:
   - Target HEAD
   AIGoalSelectors:
@@ -426,8 +412,7 @@ Target15:
   Type: Zombie
   Health: 20
   Damage: 0
-  Disguise:
-    Type: Target
+  Disguise: Target
   Equipment:
   - Target HEAD
   AIGoalSelectors:
@@ -456,8 +441,7 @@ Target16:
   Type: Zombie
   Health: 20
   Damage: 0
-  Disguise:
-    Type: Target
+  Disguise: Target
   Equipment:
   - Target HEAD
   AIGoalSelectors:
@@ -486,8 +470,7 @@ Target17:
   Type: Zombie
   Health: 20
   Damage: 0
-  Disguise:
-    Type: Target
+  Disguise: Target
   Equipment:
   - Target HEAD
   AIGoalSelectors:
@@ -516,8 +499,7 @@ Target18:
   Type: Zombie
   Health: 20
   Damage: 0
-  Disguise:
-    Type: Target
+  Disguise: Target
   Equipment:
   - Target HEAD
   AIGoalSelectors:

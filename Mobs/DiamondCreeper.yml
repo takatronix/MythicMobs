@@ -8,8 +8,7 @@ DiamondCreeper:
   Drops:
   - exp 5 1
   - DiamondCreeper_Gunpowder 1 0.3
-  Disguise:
-    Type: DiamondCreeper
+  Disguise: DiamondCreeper
   Options:
     MovementSpeed: 0.3
     FollowRange: 16

@@ -8,8 +8,7 @@ StoneGuardian:
   Drops:
   - exp 5 1
   - StoneGuardian_gray_dye 1 0.3
-  Disguise:
-    Type: StoneGuardian
+  Disguise: StoneGuardian
   Equipment:
   - StoneGuardian_Stone MAINHAND
   Options:

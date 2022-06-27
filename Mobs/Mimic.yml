@@ -3,8 +3,7 @@ Mimic:
   Display: '&6&lミミック'
   Health: 28
   Damage: 5
-  Disguise:
-    Type: HUSK
+  Disguise: HUSK
   Equipment:
   - Mimic_Head HEAD
   AITargetSelectors:

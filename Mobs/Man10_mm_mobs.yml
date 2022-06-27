@@ -93,8 +93,7 @@ GreenBatMan:
     PreventSunburn: true
     PreventMobKillDrops: true
     PreventOtherDrops: true
-  Disguise:
-    Type: Steve
+  Disguise: Steve
   Skills:
   - effect:particles{p=sweepAttack;a=5;hs=0.35;vs=0.35;y=1} @target ~onAttack
 
@@ -142,8 +141,7 @@ SnowMan1:
     PreventMobKillDrops: true
     PreventOtherDrops: true
     PreventRandomEquipment: true
-  Disguise:
-    Type: Snowman
+  Disguise: Snowman
 
 Slime1:
   Type: SLIME
@@ -178,8 +176,7 @@ Spider1:
     PreventSlimeSplit: true
     PreventMobKillDrops: true
     PreventOtherDrops: true
-  Disguise:
-    Type: Spider
+  Disguise: Spider
 
 #---Boss Mob---
 

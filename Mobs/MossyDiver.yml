@@ -9,8 +9,7 @@ MossyDiver:
   - 2 randomstroll
   AITargetSelectors:
   - 1 players
-  Disguise:
-    Type: MossyDiver
+  Disguise: MossyDiver
   Drops:
   - MossyDiver_nautilus_shell 1 0.3
   - exp 6 1

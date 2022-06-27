@@ -12,8 +12,7 @@ Megalodon:
   Drops:
   - Megalodon_Fin 1 0.25
   - exp 7 1
-  Disguise:
-    Type: DROWNED
+  Disguise: DROWNED
   Equipment:
   - Shark_Head HEAD
   Options:

@@ -9,8 +9,7 @@ FireflySquid:
   - 2 randomstroll
   AITargetSelectors:
   - 1 players
-  Disguise:
-    Type: Glow_Squid
+  Disguise: Glow_Squid
   Drops:
   - Ikasu_Ink 1 0.3
   - exp 6 1

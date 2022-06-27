@@ -9,8 +9,7 @@ Redcap:
   - 2 randomstroll
   AITargetSelectors:
   - 1 players
-  Disguise:
-    Type: Redcap
+  Disguise: Redcap
   Equipment:
   - Redcap_Axe MAINHAND
   Options:

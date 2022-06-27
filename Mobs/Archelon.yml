@@ -12,8 +12,7 @@ Archelon:
   Drops:
   - Archelon_shell 1 0.3
   - exp 6 1
-  Disguise:
-    Type: Turtle
+  Disguise: Turtle
   Options:
     FollowRange: 16
     Silent: true

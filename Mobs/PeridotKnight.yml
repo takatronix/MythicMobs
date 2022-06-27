@@ -8,8 +8,7 @@ PeridotKnight:
   - PeridotKnight_Head 1 0.3
   AITargetSelectors:
   - 1 players
-  Disguise:
-    Type: PeridotKnight
+  Disguise: PeridotKnight
   Equipment:
   - PeridotKnight_Sword MAINHAND
   - PeridotKnight_Shield OFFHAND
