@@ -1,0 +1,18 @@
+Summer_Shell:
+  Id: IRON_NUGGET
+  CustomModelData: 58
+  Amount: 1
+  Display: '§b§l夏の貝殻'
+  Lore:
+  - '§d耳に当てると波の音が聞こえる...'
+  - '§f§l2022夏イベント専用収集アイテム'
+
+Sakura_Mochi_zip:
+  Id: IRON_NUGGET
+  CustomModelData: 58
+  Amount: 1
+  Display: '§b§l夏の貝殻§f.zip'
+  Lore:
+  - '§5解凍には10-Zipが必要です'
+  Enchantments:
+  - DURABILITY:10
