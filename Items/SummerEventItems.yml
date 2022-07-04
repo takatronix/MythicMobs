@@ -4,10 +4,10 @@ Summer_Shell:
   Amount: 1
   Display: '§b§l夏の貝殻'
   Lore:
-  - '§d耳に当てると波の音が聞こえる...'
+  - '§5耳に当てると波の音が聞こえる...'
   - '§f§l2022夏イベント専用収集アイテム'
 
-Sakura_Mochi_zip:
+Summer_Shell_zip:
   Id: IRON_NUGGET
   CustomModelData: 58
   Amount: 1
