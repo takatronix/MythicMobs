@@ -1,0 +1,90 @@
+Summer_Shell:
+  Id: IRON_NUGGET
+  CustomModelData: 58
+  Amount: 1
+  Display: '§b§l夏の貝殻'
+  Lore:
+  - '§5耳に当てると波の音が聞こえる...'
+  - '§f§l2022夏イベント専用収集アイテム'
+
+Summer_Shell_zip:
+  Id: IRON_NUGGET
+  CustomModelData: 58
+  Amount: 1
+  Display: '§b§l夏の貝殻§f.zip'
+  Lore:
+  - '§5解凍には10-Zipが必要です'
+  Enchantments:
+  - DURABILITY:10
+
+Summer_lot_special:
+  Id: GOLDEN_HOE
+  CustomModelData: 18
+  Amount: 1
+  Display: '§c§l夏祭り§e§lくじ §f- §6§l特等'
+  Lore:
+  - '§7交換所で景品と交換できます'
+
+Summer_lot_1st:
+  Id: GOLDEN_HOE
+  CustomModelData: 18
+  Amount: 1
+  Display: '§c§l夏祭り§e§lくじ §f- §b§l1等'
+  Lore:
+  - '§7交換所で景品と交換できます'
+
+Summer_lot_2nd:
+  Id: GOLDEN_HOE
+  CustomModelData: 18
+  Amount: 1
+  Display: '§c§l夏祭り§e§lくじ §f- §b§l2等'
+  Lore:
+  - '§7交換所で景品と交換できます'
+
+Summer_lot_3rd:
+  Id: GOLDEN_HOE
+  CustomModelData: 18
+  Amount: 1
+  Display: '§c§l夏祭り§e§lくじ §f- §b§l3等'
+  Lore:
+  - '§7交換所で景品と交換できます'
+
+Summer_lot_4th:
+  Id: GOLDEN_HOE
+  CustomModelData: 18
+  Amount: 1
+  Display: '§c§l夏祭り§e§lくじ §f- §2§l4等'
+  Lore:
+  - '§7交換所で景品と交換できます'
+
+Summer_lot_5th:
+  Id: GOLDEN_HOE
+  CustomModelData: 18
+  Amount: 1
+  Display: '§c§l夏祭り§e§lくじ §f- §2§l5等'
+  Lore:
+  - '§7交換所で景品と交換できます'
+
+Summer_lot_6th:
+  Id: GOLDEN_HOE
+  CustomModelData: 18
+  Amount: 1
+  Display: '§c§l夏祭り§e§lくじ §f- §2§l6等'
+  Lore:
+  - '§7交換所で景品と交換できます'
+
+Summer_lot_7th:
+  Id: GOLDEN_HOE
+  CustomModelData: 18
+  Amount: 1
+  Display: '§c§l夏祭り§e§lくじ §f- §l7等'
+  Lore:
+  - '§7交換所で景品と交換できます'
+
+Summer_lot_8th:
+  Id: GOLDEN_HOE
+  CustomModelData: 18
+  Amount: 1
+  Display: '§c§l夏祭り§e§lくじ §f- §l8等'
+  Lore:
+  - '§7交換所で景品と交換できます'
